@@ -1,0 +1,45 @@
+﻿using UnityEngine;
+
+
+public class CameraController : MonoBehaviour
+{
+    public Transform player;
+
+    private new Camera camera;
+
+    //Player vievport position
+    private Vector2 playerVPPos;
+
+    private Vector2 oldPosition;
+
+
+    void Start()
+    {
+        camera = GetComponent<Camera>();
+    }
+
+    void LateUpdate()
+    {
+        //Return a value between [0;1] - 0.5 if the player is in the mid of the camera
+        playerVPPos = camera.WorldToViewportPoint(player.position);
+
+        //If the player is in the right part of the screen
+        if (playerVPPos.x > 0.5F)
+        {
+            //Get the new camera position by interpolating the current position and the position of the player + 0.25
+            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x + 0.25f, transform.position.y, transform.position.z), 3f * Time.deltaTime);
+        }
+
+
+        //Control if the camera is out of the sprite map
+        float dx = oldPosition.x - player.transform.position.x;
+
+        if ((playerVPPos.x < 0.03f || playerVPPos.x > 1 - 0.03f) && Mathf.Abs(dx) < 1)
+        {
+            //Restore old player position (block him)
+            player.transform.position = new Vector2(oldPosition.x, player.transform.position.y);
+        }
+
+        oldPosition = player.transform.position;
+    }
+}
