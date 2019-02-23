@@ -2,10 +2,10 @@ fileFormatVersion: 2
 guid: dcbb48e878343b2438b39a02a451ee4f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pistol_idle_pistol_1
-    21300002: pistol_idle_pistol_2
-    21300004: pistol_idle_pistol_3
-    21300006: pistol_idle_pistol_4
+    21300000: idle_pistol_1
+    21300002: idle_pistol_2
+    21300004: idle_pistol_3
+    21300006: idle_pistol_4
     21300008: legs_idle_1
     21300010: legs_idle_2
     21300012: legs_idle_3
@@ -30,6 +30,34 @@ TextureImporter:
     21300050: legs_walking_5
     21300052: legs_walking_6
     21300054: legs_walking_7
+    21300056: fire_pistol_1
+    21300058: fire_pistol_2
+    21300060: fire_pistol_3
+    21300062: fire_pistol_4
+    21300064: fire_pistol_5
+    21300066: fire_pistol_6
+    21300068: fire_pistol_7
+    21300070: fire_pistol_8
+    21300072: fire_pistol_9
+    21300074: fire_pistol_10
+    21300076: pistol_up_1
+    21300078: pistol_up_2
+    21300080: pistol_up_3
+    21300082: pistol_up_4
+    21300084: pistol_up_firing_1
+    21300086: pistol_up_firing_2
+    21300088: pistol_up_firing_3
+    21300090: pistol_up_firing_4
+    21300092: pistol_up_firing_5
+    21300094: pistol_up_firing_6
+    21300096: pistol_up_firing_7
+    21300098: pistol_up_firing_8
+    21300100: pistol_up_firing_9
+    21300102: pistol_up_firing_10
+    21300104: pistol_up_firing_11
+    21300106: pistol_up_firing_12
+    21300108: pistol_up_firing_13
+    21300110: pistol_up_firing_14
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -123,15 +151,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pistol_idle_pistol_1
+      name: idle_pistol_1
       rect:
         serializedVersion: 2
         x: 12
         y: 4863
         width: 29
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,15 +171,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistol_idle_pistol_2
+      name: idle_pistol_2
       rect:
         serializedVersion: 2
         x: 45
         y: 4863
         width: 29
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,15 +191,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistol_idle_pistol_3
+      name: idle_pistol_3
       rect:
         serializedVersion: 2
         x: 78
         y: 4864
         width: 30
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,15 +211,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistol_idle_pistol_4
+      name: idle_pistol_4
       rect:
         serializedVersion: 2
         x: 112
         y: 4864
         width: 31
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,8 +338,8 @@ TextureImporter:
         y: 4723
         width: 32
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,8 +358,8 @@ TextureImporter:
         y: 4723
         width: 30
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,8 +378,8 @@ TextureImporter:
         y: 4724
         width: 28
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,8 +398,8 @@ TextureImporter:
         y: 4724
         width: 27
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,8 +418,8 @@ TextureImporter:
         y: 4723
         width: 29
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -410,8 +438,8 @@ TextureImporter:
         y: 4723
         width: 30
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,8 +458,8 @@ TextureImporter:
         y: 4722
         width: 32
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -450,8 +478,8 @@ TextureImporter:
         y: 4722
         width: 32
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -470,8 +498,8 @@ TextureImporter:
         y: 4723
         width: 32
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -490,8 +518,8 @@ TextureImporter:
         y: 4724
         width: 31
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -510,8 +538,8 @@ TextureImporter:
         y: 4723
         width: 31
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,8 +558,8 @@ TextureImporter:
         y: 4723
         width: 31
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.96, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +579,7 @@ TextureImporter:
         width: 18
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -571,7 +599,7 @@ TextureImporter:
         width: 21
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -591,7 +619,7 @@ TextureImporter:
         width: 24
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -611,7 +639,7 @@ TextureImporter:
         width: 14
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -631,7 +659,7 @@ TextureImporter:
         width: 19
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -651,7 +679,7 @@ TextureImporter:
         width: 26
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -671,13 +699,573 @@ TextureImporter:
         width: 16
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 9b924eed6c77e1e48b2f5789d7fa0ee9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_1
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 4869
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711dcd409ef105b43949cf1becae71e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 4869
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a28dce4a3d146f468ad05dff48386eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 4869
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4e12f0a6dbc1b49a168c11bb61310e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_4
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 4869
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f3e0c2fba962444b657633ea3f254b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_5
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 4869
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36392bc6d8c74b3499184e0c6d4b1b78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_6
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 4869
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52189b1dafcb6243804b8a9b88e2971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_7
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 4869
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7cf62863c4c7345984552f6acbad3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_8
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4866
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4182b43fe8daba44b05fb9cce5760be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_9
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 4865
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ca1ea42d7d76f42ab673d00a5f24a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_10
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 4866
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9f905cf22086241bb183751fdfa9dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_1
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 4867
+        width: 33
+        height: 25
+      alignment: 9
+      pivot: {x: 0.9, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5803e82be8f1c36479b4f09f54671605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_2
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 4867
+        width: 33
+        height: 25
+      alignment: 9
+      pivot: {x: 0.82, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ce2a051158fc84e9e733d09891468e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_3
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 4868
+        width: 31
+        height: 24
+      alignment: 9
+      pivot: {x: 0.89, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea9b16ce41cba64db67e4fdf5092af0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_4
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 4868
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 1, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77104650bb424e4696b131732946f2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4817
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 0.9, y: 0.35000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e79748006c1cd04d87ae501b0d3bcdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 4816
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 0.89, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c1d085f4f4342499b4cbaf82e6e17d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 4817
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 0.89, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8abe5e4c6bc2f4ea4a5d9d81dd2bc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 4817
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 0.89, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212514818edba7841a571f7d3bf02c04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_5
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 4817
+        width: 22
+        height: 64
+      alignment: 9
+      pivot: {x: 1.15, y: 0.14}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d224f42290127c4e9a2241373d607d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_6
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 4817
+        width: 22
+        height: 64
+      alignment: 9
+      pivot: {x: 1.15, y: 0.14}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a53a43c52c1894086d024dd57b0325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_7
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 4816
+        width: 22
+        height: 66
+      alignment: 9
+      pivot: {x: 1.15, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6138c646e0622444cada7487509b27e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 4817
+        width: 23
+        height: 39
+      alignment: 9
+      pivot: {x: 1.15, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5227ced47e50880459907ae92b4d3099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_9
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 4817
+        width: 25
+        height: 38
+      alignment: 9
+      pivot: {x: 1.15, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f68414f1e9b0e4aae0262c52b2efc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 4817
+        width: 25
+        height: 40
+      alignment: 9
+      pivot: {x: 1.15, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d71f5d487abc14f9f358e2dc62ef22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_11
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 4817
+        width: 24
+        height: 41
+      alignment: 9
+      pivot: {x: 1.15, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0160216e4e179b04bbc40264df93132c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_12
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 4817
+        width: 26
+        height: 40
+      alignment: 9
+      pivot: {x: 1, y: 0.22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2718ec98016cb14295bb23cca19130a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 4817
+        width: 26
+        height: 37
+      alignment: 9
+      pivot: {x: 1, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0638a6b8075b2459f30b90caa12429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol_up_firing_14
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 4817
+        width: 29
+        height: 27
+      alignment: 9
+      pivot: {x: 0.9, y: 0.33}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2546a1881312d848bac155e30de1150
       vertices: []
       indices: 
       edges: []
