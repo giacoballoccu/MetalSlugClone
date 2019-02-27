@@ -16,17 +16,16 @@ public class BulletMovement : MonoBehaviour
 
         Vector3 bulletDirection = transform.right;
 
-        fireTime = Time.time;
+        fireTime = lifeTime;
 
         rb.AddForce(bulletDirection * bulletForce, ForceMode2D.Impulse);
     }
 
     void Update()
     {
-        if (Time.time > lifeTime + fireTime)
-        {
+        fireTime -= Time.deltaTime;
+        if (fireTime <= 0)
             Destroy(this.gameObject);
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
