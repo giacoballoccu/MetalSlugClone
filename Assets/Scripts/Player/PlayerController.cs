@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     // Time shoot
-    private float myTime = 0.0f;
-    public float fireDelta = 0.5F;
-    private float nextFire = 0.5F;
+    private float shotTime = 0.0f;
+    public float fireDelta = 0.5f;
+    private float nextFire = 0.5f;
 
     //Bullet
     public GameObject projectile;
@@ -33,22 +33,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        myTime = myTime + Time.deltaTime;
+        shotTime = shotTime + Time.deltaTime;
 
         if (Input.GetButton("Fire1"))
         {
             topAnimator.SetBool("isFiring", true);
 
-            if (myTime > nextFire)
+            if (shotTime > nextFire)
             {
-                nextFire = myTime + fireDelta;
+                nextFire = shotTime + fireDelta;
 
                 Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
 
-                nextFire = nextFire - myTime;
-                myTime = 0.0F;
+                nextFire = nextFire - shotTime;
+                shotTime = 0.0f;
             }
-        } else
+        }
+        else
         {
             topAnimator.SetBool("isFiring", false);
         }
@@ -73,12 +74,15 @@ public class PlayerController : MonoBehaviour
             {
                 //Moving right
                 Flip();
-            } else if (moveH < 0 && facingRight)
+            }
+            else if (moveH < 0 && facingRight)
             {
                 //Moving left
                 Flip();
             }
-        } else {
+        }
+        else
+        {
             //No
             topAnimator.SetBool("isWalking", false);
             bottomAnimator.SetBool("isWalking", false);
