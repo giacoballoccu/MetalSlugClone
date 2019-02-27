@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float maxSpeed = 1f;
+    public float maxJump = 1f;
+    private bool isGrounded = false;
 
     //Sprite orientation
     private bool facingRight = true;
@@ -100,7 +102,6 @@ public class PlayerController : MonoBehaviour
             {
                 //Moving UP
                 topAnimator.SetBool("isLookingUp", true);
-                FlipShoot();
             }
             else if (moveH < 0)
             {
@@ -113,9 +114,29 @@ public class PlayerController : MonoBehaviour
             if (topAnimator.GetBool("isLookingUp"))
             {
                 topAnimator.SetBool("isLookingUp", false);
-                FlipShoot();
             }
         }
+
+        //Jump
+        if (Input.GetButton("Jump") && isGrounded)
+        {
+            rb.AddForce(new Vector3(0, maxJump, 0), ForceMode2D.Impulse);
+            topAnimator.SetBool("isJumping", true);
+            bottomAnimator.SetBool("isJumping", true);
+            isGrounded = false;
+        }
+
+        //Crouch
+        if (Input.GetButton("Crouch"))
+        {
+            topAnimator.SetBool("isCrouched", true);
+        }
+        else
+        {
+            topAnimator.SetBool("isCrouched", false);
+        }
+
+        FlipShoot();
     }
 
     //Flip sprite
@@ -127,24 +148,43 @@ public class PlayerController : MonoBehaviour
 
         //transform.localEulerAngles = transform.eulerAngles + new Vector3(0, 180, -2 * transform.eulerAngles.z);
         facingRight = !facingRight;
-
-        FlipShoot();
     }
 
     void FlipShoot()
     {
         if (topAnimator.GetBool("isLookingUp") && facingRight)
         {
+            //Fire up
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 90);
         } else if (topAnimator.GetBool("isLookingUp") && !facingRight) {
+            //Fire up
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 270);
-        } else if (facingRight)
+        } else if (topAnimator.GetBool("isCrouched") && !isGrounded && facingRight)
         {
+            //Fire down
+            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 270);
+        }
+        else if (topAnimator.GetBool("isCrouched") && !isGrounded && !facingRight)
+        {
+            //Fire down
+            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 90);
+        }
+        else if (facingRight)
+        {
+            //Fire right
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
         else
         {
+            //Fire left
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 180);
         }
+    }
+
+    void OnCollisionStay2D()
+    {
+        isGrounded = true;
+        topAnimator.SetBool("isJumping", false);
+        bottomAnimator.SetBool("isJumping", false);
     }
 }

@@ -58,6 +58,31 @@ TextureImporter:
     21300106: pistol_up_firing_12
     21300108: pistol_up_firing_13
     21300110: pistol_up_firing_14
+    21300112: jump_pistol_1
+    21300114: jump_pistol_2
+    21300116: jump_pistol_3
+    21300118: jump_pistol_4
+    21300120: jump_pistol_5
+    21300122: jump_pistol_6
+    21300124: legs_jump_1
+    21300126: legs_jump_2
+    21300128: legs_jump_3
+    21300130: legs_jump_4
+    21300132: legs_jump_5
+    21300134: legs_jump_6
+    21300136: legs_jump_run_1
+    21300138: legs_jump_run_2
+    21300140: legs_jump_run_3
+    21300142: legs_jump_run_4
+    21300144: legs_jump_run_5
+    21300146: legs_jump_run_6
+    21300148: fire_pistol_jump_crouched_1
+    21300150: fire_pistol_jump_crouched_2
+    21300152: fire_pistol_jump_crouched_3
+    21300154: fire_pistol_jump_crouched_4
+    21300156: fire_pistol_jump_crouched_5
+    21300158: fire_pistol_jump_crouched_6
+    21300160: fire_pistol_jump_crouched_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1266,6 +1291,506 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f2546a1881312d848bac155e30de1150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_pistol_1
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 4729
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 1.05, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f2a93f557867747b723b473f51d990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_pistol_2
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 4729
+        width: 29
+        height: 25
+      alignment: 9
+      pivot: {x: 1.04, y: 0.36}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77365f3b56302374ba2975b588dbb8b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_pistol_3
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 4729
+        width: 29
+        height: 24
+      alignment: 9
+      pivot: {x: 1.04, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec246db377455cc42b0e11029785b085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_pistol_4
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 4729
+        width: 29
+        height: 23
+      alignment: 9
+      pivot: {x: 1.04, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9766d48f93599ec46bf6a7b90a635506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_pistol_5
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 4730
+        width: 29
+        height: 22
+      alignment: 9
+      pivot: {x: 1.04, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5144b91a2be4c45815e2c3ca4e7880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_pistol_6
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 4729
+        width: 29
+        height: 23
+      alignment: 9
+      pivot: {x: 1.04, y: 0.44}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935feaf40a4647a40b377de72d4c525a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_1
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 3347
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3d1e3483418b64db076219a425fc37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_2
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 3347
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8199f77efe636e4419b00918db611ca7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_3
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 3347
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f60e3bb4b44579409e46aa4d3b46a81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_4
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 3349
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feefa27f7e73f624185c75cf3ad30ea1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_5
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 3352
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450080d5fabc8444c8fb892ff4327d4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_6
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 3353
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccefecfb0ec2f64281c564ad31d11e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_run_1
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 3350
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc3d13266c4a004783d4400f022e73f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_run_2
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 3352
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e860cd0d52a0f914c8750f04ca185d81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_run_3
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 3354
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2e96cfc73805049954f42d3d0ad163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_run_4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 3356
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43282ff9487c0224493a93d474aa846a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_run_5
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 3355
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25eec15af3778044da5538a192895618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs_jump_run_6
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 3354
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0177b5868c8c7994d8025b367073a17f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_1
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 4825
+        width: 20
+        height: 35
+      alignment: 9
+      pivot: {x: 1.3, y: 0.65}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61e0fe93e695f5439a0654814b92eda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_2
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 4808
+        width: 20
+        height: 52
+      alignment: 9
+      pivot: {x: 1.3, y: 0.77}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b917215e10de8d94c80cc79973f159df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_3
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 4808
+        width: 20
+        height: 52
+      alignment: 9
+      pivot: {x: 1.3, y: 0.77}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76784dbda42e21045a566c3a656a5dea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_4
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 4806
+        width: 20
+        height: 54
+      alignment: 9
+      pivot: {x: 1.31, y: 0.77}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec222ec6b6e59f4f8922fd9cf278f8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_5
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 4831
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 1.1, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c58f46f9aa5e844f9f5f1dc62cab01a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_6
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 4829
+        width: 20
+        height: 31
+      alignment: 9
+      pivot: {x: 1.3, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549fa9125cffbde47b27dbf67f2b8833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_pistol_jump_crouched_7
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 4827
+        width: 20
+        height: 33
+      alignment: 9
+      pivot: {x: 1.3, y: 0.65}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478f8727d2ab5f8439d4e6165347b1d2
       vertices: []
       indices: 
       edges: []
