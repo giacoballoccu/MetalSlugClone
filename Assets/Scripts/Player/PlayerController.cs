@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
         myTime = myTime + Time.deltaTime;
 
         if (Input.GetButton("Fire1"))
