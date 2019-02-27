@@ -8,7 +8,6 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float bulletForce = 3;
     public float lifeTime = 5;
-    public float fireTime;
 
     void Start()
     {
@@ -16,15 +15,13 @@ public class BulletMovement : MonoBehaviour
 
         Vector3 bulletDirection = transform.right;
 
-        fireTime = lifeTime;
-
         rb.AddForce(bulletDirection * bulletForce, ForceMode2D.Impulse);
     }
 
     void Update()
     {
-        fireTime -= Time.deltaTime;
-        if (fireTime <= 0)
+        lifeTime -= Time.deltaTime;
+        if (lifeTime <= 0)
             Destroy(this.gameObject);
     }
 
