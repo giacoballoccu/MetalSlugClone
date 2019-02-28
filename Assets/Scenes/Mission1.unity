@@ -558,10 +558,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 1.2
-  maxJump: 2
+  maxJump: 4
   topAnimator: {fileID: 1348051731}
   bottomAnimator: {fileID: 1164840617}
+  Up: {fileID: 1348051728}
   fireDelta: 0.2
+  jumpDelta: 0.8
   projectile: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
     type: 3}
   projSpawner: {fileID: 934734905}
@@ -850,7 +852,7 @@ GameObject:
   - component: {fileID: 1467035637}
   m_Layer: 0
   m_Name: walkable
-  m_TagString: Untagged
+  m_TagString: Walkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,6 +939,19 @@ EdgeCollider2D:
   - {x: -8.170645, y: -0.6997347}
   - {x: -7.89862, y: -0.72141343}
   - {x: -3.8935983, y: -0.6790441}
+  - {x: -0.6082902, y: -0.3071604}
+  - {x: 0.48137903, y: -0.4559375}
+  - {x: 0.9036398, y: -0.6429114}
+  - {x: 1.5631623, y: -0.7050824}
+  - {x: 1.789537, y: -0.716323}
+  - {x: 1.8147483, y: -0.3859191}
+  - {x: 2.533462, y: -0.49453717}
+  - {x: 3.0641704, y: -0.64733386}
+  - {x: 3.8237844, y: -0.82033765}
+  - {x: 5.120628, y: -0.77479315}
+  - {x: 5.9372315, y: -0.7532758}
+  - {x: 6.7741885, y: -0.6325418}
+  - {x: 7.7777476, y: -0.5512096}
   - {x: 8.05, y: 0}
 --- !u!95 &1467035637
 Animator:
@@ -1001,7 +1016,7 @@ GameObject:
   - component: {fileID: 1744704252}
   m_Layer: 0
   m_Name: sea waves
-  m_TagString: Untagged
+  m_TagString: Walkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

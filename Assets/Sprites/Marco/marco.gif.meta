@@ -83,6 +83,25 @@ TextureImporter:
     21300156: fire_pistol_jump_crouched_5
     21300158: fire_pistol_jump_crouched_6
     21300160: fire_pistol_jump_crouched_7
+    21300162: crouch_idle_1
+    21300164: crouch_idle_2
+    21300166: crouch_idle_3
+    21300168: crouch_idle_4
+    21300170: crouch_walking_1
+    21300172: crouch_walking_2
+    21300174: crouch_walking_3
+    21300176: crouch_walking_4
+    21300178: crouch_walking_5
+    21300180: crouch_walking_6
+    21300182: crouch_walking_7
+    21300184: crouch_firing_1
+    21300186: crouch_firing_2
+    21300188: crouch_firing_3
+    21300190: crouch_firing_4
+    21300192: crouch_firing_5
+    21300194: crouch_firing_6
+    21300196: crouch_firing_7
+    21300198: crouch_firing_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1791,6 +1810,386 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 478f8727d2ab5f8439d4e6165347b1d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_idle_1
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 4631
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346b2a4712b44de4aa1edb5cb4f4c2b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_idle_2
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 4631
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830a3a619f8cd774a9e2f228d91e81a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_idle_3
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 4631
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74f7251bc8471040b21e7b4e9f966a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_idle_4
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 4631
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036fae12821210745a1d2d458c896e72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_1
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 4631
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be22dee893ca9145adddc054f186488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_2
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 4631
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed2d29ddab19c4abf7bc77a7078d6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_3
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 4631
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f2c93a6c7d61346b86046733e59b2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_4
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 4631
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905bdc7e33c500e49b87e9c3feb2247e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_5
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 4631
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b729d2325843ea045a52834b8e1f7cfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_6
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 4631
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376c4030250936248a7a48235d338dc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_walking_7
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 4631
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164bdaddfd48cde428721cc8510f9a32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4591
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f2ca26920f88c44a99740b114cde2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_2
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 4591
+        width: 50
+        height: 27
+      alignment: 9
+      pivot: {x: 0.36, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cd1eeef84d5904ca218c92f576d2af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_3
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 4591
+        width: 51
+        height: 27
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44118ef1fe7e5b46bbd554679f4ff8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_4
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 4591
+        width: 52
+        height: 27
+      alignment: 9
+      pivot: {x: 0.36, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d70c8dadc8886409dc6ef0adf16b1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_5
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 4591
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156e2b2429fc4bd4db5eae33350bab78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_6
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 4591
+        width: 37
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81a0262644106b42a6de9cd06c8a721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_7
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 4591
+        width: 37
+        height: 29
+      alignment: 9
+      pivot: {x: 0.47, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e489378329dce640846b83941dae85c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouch_firing_8
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 4591
+        width: 37
+        height: 27
+      alignment: 9
+      pivot: {x: 0.47, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86613b54294e1b743a031b33cf244cc8
       vertices: []
       indices: 
       edges: []
