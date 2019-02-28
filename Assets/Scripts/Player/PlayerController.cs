@@ -10,10 +10,13 @@ public class PlayerController : MonoBehaviour
 
     //Sprite orientation
     private bool facingRight = true;
+    private bool wasCrounching = false;
+    private bool wasFiring = false;
 
     //Marco Controller
     public Animator topAnimator;
     public Animator bottomAnimator;
+    public GameObject Up;
 
     private Rigidbody2D rb;
 
@@ -21,6 +24,11 @@ public class PlayerController : MonoBehaviour
     private float shotTime = 0.0f;
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
+
+    //Time jump
+    private float jumpTime = 0.0f;
+    public float jumpDelta = 0.5f;
+    private float nextJump = 0.5f;
 
     //Bullet
     public GameObject projectile;
@@ -35,39 +43,64 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Fire();
+        MoveHorizontally();
+        MoveVertically();
+        Jump();
+        Crouch();
+
+        FlipShoot();   
+    }
+
+    void FixedUpdate()
+    {
+ 
+    }
+
+   void Fire()
+    {
         shotTime = shotTime + Time.deltaTime;
 
         if (Input.GetButton("Fire1"))
         {
-            topAnimator.SetBool("isFiring", true);
-
-            if (shotTime > nextFire)
+            if (!wasFiring)
             {
-                nextFire = shotTime + fireDelta;
+                topAnimator.SetBool("isFiring", true);
+                bottomAnimator.SetBool("isFiring", true);
 
-                Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
+                if (shotTime > nextFire)
+                {
+                    nextFire = shotTime + fireDelta;
 
-                nextFire = nextFire - shotTime;
-                shotTime = 0.0f;
+                    Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
+
+                    nextFire = nextFire - shotTime;
+                    shotTime = 0.0f;
+                }
+
+                wasFiring = true;
+            }
+            else
+            {
+                topAnimator.SetBool("isFiring", false);
+                bottomAnimator.SetBool("isFiring", false);
             }
         }
         else
         {
             topAnimator.SetBool("isFiring", false);
+            bottomAnimator.SetBool("isFiring", false);
+            wasFiring = false;
         }
     }
 
-    void FixedUpdate()
+    void MoveHorizontally()
     {
         float moveH = Input.GetAxis("Horizontal");
-        float moveV = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector2(moveH * maxSpeed, rb.velocity.y);
-
-        //The player is moving horizontally?
-        if (moveH != 0)
+        if (moveH != 0 && !(bottomAnimator.GetBool("isCrouched") && topAnimator.GetBool("isFiring")))
         {
-            //Yes
+            rb.velocity = new Vector2(moveH * maxSpeed, rb.velocity.y);
             topAnimator.SetBool("isWalking", true);
             bottomAnimator.SetBool("isWalking", true);
 
@@ -85,16 +118,19 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //No
             topAnimator.SetBool("isWalking", false);
             bottomAnimator.SetBool("isWalking", false);
         }
+    }
 
-        //The player is moving vertically?
+    void MoveVertically()
+    {
+        float moveV = Input.GetAxis("Vertical");
+
         if (moveV != 0)
         {
             //Yes
-            
+
             //bottomAnimator.SetBool("isWalking", true);
 
             //Flip sprite orientantion if the user is walking right or left
@@ -103,7 +139,7 @@ public class PlayerController : MonoBehaviour
                 //Moving UP
                 topAnimator.SetBool("isLookingUp", true);
             }
-            else if (moveH < 0)
+            else if (moveV < 0)
             {
                 //Moving down
             }
@@ -116,27 +152,66 @@ public class PlayerController : MonoBehaviour
                 topAnimator.SetBool("isLookingUp", false);
             }
         }
+    }
 
-        //Jump
-        if (Input.GetButton("Jump") && isGrounded)
+    void Jump()
+    {
+
+        jumpTime = jumpTime + Time.deltaTime;
+
+        if (Input.GetButton("Jump") && isGrounded && !bottomAnimator.GetBool("isCrouched"))
         {
-            rb.AddForce(new Vector3(0, maxJump, 0), ForceMode2D.Impulse);
-            topAnimator.SetBool("isJumping", true);
-            bottomAnimator.SetBool("isJumping", true);
-            isGrounded = false;
-        }
+            if (jumpTime > nextJump)
+            {
+                rb.AddForce(new Vector3(0, maxJump, 0), ForceMode2D.Impulse);
+                topAnimator.SetBool("isJumping", true);
+                bottomAnimator.SetBool("isJumping", true);
+                isGrounded = false;
 
-        //Crouch
-        if (Input.GetButton("Crouch"))
+                nextJump = jumpTime + jumpDelta;
+                nextJump = nextJump - jumpTime;
+                jumpTime = 0.0f;
+            }
+        }
+    }
+
+    void Crouch()
+    {
+        if (Input.GetButton("Crouch") && !Input.GetButton("Jump") && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")))
         {
             topAnimator.SetBool("isCrouched", true);
+            bottomAnimator.SetBool("isCrouched", true);
+
+            if (isGrounded)
+            {
+                Up.SetActive(false);
+            }
+
+            if (!wasCrounching)
+            {
+                maxSpeed -= 0.4f;
+                projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y - 0.14f, 0);
+            }
+
+            wasCrounching = true;
         }
         else
         {
             topAnimator.SetBool("isCrouched", false);
-        }
+            bottomAnimator.SetBool("isCrouched", false);
 
-        FlipShoot();
+            if (isGrounded)
+            {
+                Up.SetActive(true);
+            }
+
+            if (wasCrounching)
+            {
+                maxSpeed += 0.4f;
+                projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y + 0.14f, 0);
+            }
+            wasCrounching = false;
+        }
     }
 
     //Flip sprite
@@ -181,10 +256,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D()
+    void OnCollisionStay2D(Collision2D col)
     {
-        isGrounded = true;
-        topAnimator.SetBool("isJumping", false);
-        bottomAnimator.SetBool("isJumping", false);
+        if (col.gameObject.tag == "Walkable")
+        {
+            isGrounded = true;
+            topAnimator.SetBool("isJumping", false);
+            bottomAnimator.SetBool("isJumping", false);
+        }
     }
 }
