@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walkable
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

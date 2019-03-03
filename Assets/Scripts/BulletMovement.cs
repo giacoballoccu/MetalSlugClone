@@ -25,19 +25,18 @@ public class BulletMovement : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            //collision.gameObject.GetComponent<Health>().loseHealth(30f);
-        }
-
-        Destroy(this.gameObject);
-    }
-
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyControl>().hit();
+            Destroy(gameObject);
+        }
     }
 }
