@@ -37,6 +37,11 @@ public class EnemyControl : MonoBehaviour
 
         float playerDistance = transform.position.x - player.position.x;
 
+        if (health <= 0)
+        {
+            return;
+        }
+
 
         if (playerDistance < activationDistance)
         {
