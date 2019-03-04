@@ -12,6 +12,9 @@ TextureImporter:
     21300014: sea_waves_6
     21300016: sea_waves_7
     21300018: sea_waves_8
+    21300020: foreground_tower_1
+    21300022: foreground_1
+    21300024: foreground_dead_fish
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -300,6 +303,66 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: fe2c408743c529e4ca7134a9ce5b364c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_tower_1
+      rect:
+        serializedVersion: 2
+        x: 3597
+        y: 1474
+        width: 264
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52119e2660581e9418f489479480b418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_1
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 402
+        width: 1290
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5168b18f830f70842be5d45cb4fc4a91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_dead_fish
+      rect:
+        serializedVersion: 2
+        x: 2958
+        y: 1606
+        width: 84
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49c90ed8966fcf4c89cbc10de341b50
       vertices: []
       indices: 
       edges: []

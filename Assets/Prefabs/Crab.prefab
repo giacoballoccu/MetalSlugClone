@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 654322134894282684}
   - component: {fileID: 654322134894282685}
   - component: {fileID: 654322134894282683}
-  - component: {fileID: 654322134894282687}
   - component: {fileID: 8681834758731884857}
   - component: {fileID: 6387296261839050603}
-  m_Layer: 0
+  - component: {fileID: 7342766698625462667}
+  m_Layer: 9
   m_Name: Crab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -103,32 +103,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &654322134894282687
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654322134894282680}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.59, y: 0.43}
-    newSize: {x: 0.59, y: 0.43}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.56, y: 0.43}
-  m_EdgeRadius: 0
 --- !u!50 &8681834758731884857
 Rigidbody2D:
   serializedVersion: 4
@@ -167,6 +141,22 @@ MonoBehaviour:
   health: 100
   activationDistance: 2
   attackDistance: 0.5
+--- !u!70 &7342766698625462667
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654322134894282680}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 0.42}
+  m_Direction: 1
 --- !u!1 &4755548917921778887
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6571086147702400848}
   - component: {fileID: 364274056920643177}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
