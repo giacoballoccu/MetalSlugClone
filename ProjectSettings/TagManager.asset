@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Enemy
   - Building
+  - Boat door trigger
   layers:
   - Default
   - TransparentFX

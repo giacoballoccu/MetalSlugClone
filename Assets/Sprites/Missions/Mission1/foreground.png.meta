@@ -15,6 +15,21 @@ TextureImporter:
     21300020: foreground_tower_1
     21300022: foreground_1
     21300024: foreground_dead_fish
+    21300026: foreground_tower_2
+    21300028: foreground_door_1
+    21300030: foreground_door_2
+    21300032: foreground_door_3
+    21300034: foreground_door_4
+    21300036: foreground_door_5
+    21300038: foreground_door_6
+    21300040: foreground_door_7
+    21300042: foreground_boat_1
+    21300044: foreground_boat_2
+    21300046: foreground_boat_3
+    21300048: foreground_boat_4
+    21300050: foreground_boat_5
+    21300052: foreground_boat
+    21300054: foreground_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -73,7 +88,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 2
@@ -84,7 +99,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 2
@@ -95,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 2
@@ -356,13 +371,313 @@ TextureImporter:
         width: 84
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: c49c90ed8966fcf4c89cbc10de341b50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_tower_2
+      rect:
+        serializedVersion: 2
+        x: 4401
+        y: 1517
+        width: 304
+        height: 168
+      alignment: 9
+      pivot: {x: 0.58, y: 0.635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e352860d052ed4fae73f17b11061ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_1
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 812
+        width: 87
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cbdaf6b3c38f848bab15f129f921df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_2
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 812
+        width: 90
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbf61851010dfb4a95c6751e5fd2b84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 813
+        width: 101
+        height: 60
+      alignment: 9
+      pivot: {x: 0.6, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e9edf51c7112f4db8c87ba1083d3af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_4
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 812
+        width: 114
+        height: 47
+      alignment: 9
+      pivot: {x: 0.6, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62994d15a1688b847a07d05aaaed8772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_5
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 811
+        width: 132
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7, y: 1.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be56ffa677c2d5d48be2e9faf0587834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_6
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 812
+        width: 132
+        height: 40
+      alignment: 9
+      pivot: {x: 0.65, y: 1.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456f9c7728d323f43aee68c73e97261c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_door_7
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 812
+        width: 123
+        height: 40
+      alignment: 9
+      pivot: {x: 0.68, y: 1.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fe5e43148eb4d4c90b600e5442195d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_boat_1
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 577
+        width: 194
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de78738ee134a0c408cfd2b5c7e943d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_boat_2
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 577
+        width: 203
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e146ec1b9dcdc2c48a05b0daabfedec4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_boat_3
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 577
+        width: 203
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7d40df67c710f448cd3957d51330d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_boat_4
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 577
+        width: 203
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d1730a8abdade448a2eac6a67e61fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_boat_5
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 577
+        width: 203
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbcc377029170f44b1e6dab39d17a9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_boat
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 897
+        width: 279
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9db8b4f8a6c3fc4aa553038a63c81b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_2
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 599
+        width: 3411
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6eb9ef102f6d8c4faedb31a9aa65f38
       vertices: []
       indices: 
       edges: []
