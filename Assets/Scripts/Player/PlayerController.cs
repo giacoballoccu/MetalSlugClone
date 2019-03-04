@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
     //Bullet spawner
     public GameObject projSpawner;
 
+    //Health
+    public float health = 100;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        isDied();
         Fire();
         MoveHorizontally();
         MoveVertically();
@@ -55,6 +59,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
  
+    }
+
+    void isDied()
+    {
+        if (health <= 0)
+        {
+            //Die animation
+        }
     }
 
    void Fire()
@@ -258,7 +270,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Walkable")
+        if (col.gameObject.tag == "Walkable" || col.gameObject.tag == "Enemy")
         {
             isGrounded = true;
             topAnimator.SetBool("isJumping", false);
@@ -276,5 +288,10 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
+    }
+
+    public void Hit(float damage)
+    {
+        health -= damage;
     }
 }

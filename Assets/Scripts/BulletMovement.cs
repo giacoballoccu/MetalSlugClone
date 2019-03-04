@@ -40,7 +40,8 @@ public class BulletMovement : MonoBehaviour
         }
         else if (collision.tag == "Building")
         {
-
+            collision.gameObject.GetComponent<BuildingController>().Hit(100);
+            Destroy(gameObject);
         }
     }
 }

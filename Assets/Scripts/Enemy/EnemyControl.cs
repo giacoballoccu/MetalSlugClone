@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
+    //Enemy information
     public GameObject player;
     public float speed = 0.5f;
     public float health = 100f;
 
+    //Enemy activation
     public float activationDistance = 2;
     public float attackDistance = 0.5f;
     public const float CHANGE_SIGN = -1;
@@ -16,8 +18,14 @@ public class EnemyControl : MonoBehaviour
     private Animator ac;
     private bool facingRight = false;
 
+    //Enemy gravity
     private bool collidingDown = false;
     Vector2 velocity = Vector2.zero;
+
+    // Time shoot
+    private float shotTime = 0.0f;
+    public float fireDelta = 0.5f;
+    private float nextFire = 0.5f;
 
     private void Start()
     {
@@ -53,6 +61,20 @@ public class EnemyControl : MonoBehaviour
                 //Attack player
                 ac.SetBool("isAttacking", true);
                 rb.isKinematic = true;
+
+
+                shotTime = shotTime + Time.deltaTime;
+
+                if (shotTime > nextFire)
+                {
+                    nextFire = shotTime + fireDelta;
+
+
+                    player.GetComponent<PlayerController>().Hit(100f);
+
+                    nextFire = nextFire - shotTime;
+                    shotTime = 0.0f;
+                }
             }
             else
             {
