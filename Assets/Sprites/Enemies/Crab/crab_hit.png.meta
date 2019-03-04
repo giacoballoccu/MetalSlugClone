@@ -1,20 +1,16 @@
 fileFormatVersion: 2
-guid: 116df9806cc9d0b47bd08d084f964534
+guid: f97e5041bfd7f234cb5ee914d0f54cd1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: foreground_0
-    21300002: foreground_cloud_forest
-    21300004: sea_waves_1
-    21300006: sea_waves_2
-    21300008: sea_waves_3
-    21300010: sea_waves_4
-    21300012: sea_waves_5
-    21300014: sea_waves_6
-    21300016: sea_waves_7
-    21300018: sea_waves_8
-    21300020: foreground_tower_1
-    21300022: foreground_1
-    21300024: foreground_dead_fish
+    21300000: crab_hit_0
+    21300002: crab_hit_1
+    21300004: crab_hit_2
+    21300006: crab_hit_3
+    21300008: crab_hit_4
+    21300010: crab_hit_5
+    21300012: crab_hit_6
+    21300014: crab_hit_7
+    21300016: crab_hit_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -55,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -74,8 +70,8 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
-    textureFormat: 4
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -85,8 +81,8 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
-    textureFormat: 4
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -96,8 +92,8 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
-    textureFormat: 4
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -108,253 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: foreground_0
+      name: crab_hit_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 267
-        width: 1610
-        height: 221
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5b06465c5ae78d4b83eba3410097a67
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_cloud_forest
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1408
-        width: 2373
-        height: 277
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 3, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc2e019514dfb3e4cb04852aa8b7d1ad
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 951
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c41a9f6f3080d8b4f85dc5e92fab9cc8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 885
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 469259a84d3edac46b4aecdf0317699f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 819
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3120ebcdeb942b43bbdc98c54eb7b03
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_4
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 753
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c812e81044944f4683fc5329159ce91
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 687
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5604e8c0cf0ba8c418e4661cd118996a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_6
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 621
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28e074f834694b948b681820035340b0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_7
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 555
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d390fc6644a3e0e448dafcdf0b0b4dcf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_8
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 489
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe2c408743c529e4ca7134a9ce5b364c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_tower_1
-      rect:
-        serializedVersion: 2
-        x: 3597
-        y: 1474
-        width: 264
-        height: 211
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52119e2660581e9418f489479480b418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_1
-      rect:
-        serializedVersion: 2
-        x: 1613
-        y: 402
-        width: 1290
-        height: 131
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5168b18f830f70842be5d45cb4fc4a91
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_dead_fish
-      rect:
-        serializedVersion: 2
-        x: 2958
-        y: 1606
-        width: 84
-        height: 43
+        x: 5
+        y: 20
+        width: 20
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,7 +118,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c49c90ed8966fcf4c89cbc10de341b50
+      spriteID: 461b2c575100d6449b8bda61e3a39c11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 16
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b899a9d7dfe87743850009abe705d68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 9
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3383f00c2fdc62428e70fca7b927193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 7
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25321750b95723f42a2ee02969b06454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 5
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff6f28ee0caf894e848b888bfb6c0c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_5
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 7
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777d495f1db878d41854814e6f364217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 3
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45a00afea1a9634b815b56aff4fefdb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_7
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 13
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5060717a30fe06d4eadb57f59ab70947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab_hit_8
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 6
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca1066708d0da441967c62c30ba01a1
       vertices: []
       indices: 
       edges: []
@@ -370,7 +286,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 533ffb6919719384db2d7541cc73d6ef
+    spriteID: c863679c290b4834a9423f0b5854510a
     vertices: []
     indices: 
     edges: []

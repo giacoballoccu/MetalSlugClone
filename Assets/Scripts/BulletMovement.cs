@@ -38,5 +38,9 @@ public class BulletMovement : MonoBehaviour
             collision.gameObject.GetComponent<EnemyControl>().hit();
             Destroy(gameObject);
         }
+        else if (collision.tag == "Building")
+        {
+
+        }
     }
 }

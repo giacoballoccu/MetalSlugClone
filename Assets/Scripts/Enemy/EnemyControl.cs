@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
     public float speed = 0.5f;
     public float health = 100f;
 
@@ -15,6 +15,9 @@ public class EnemyControl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator ac;
     private bool facingRight = false;
+
+    private bool collidingDown = false;
+    Vector2 velocity = Vector2.zero;
 
     private void Start()
     {
@@ -35,7 +38,12 @@ public class EnemyControl : MonoBehaviour
     {
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
-        float playerDistance = transform.position.x - player.position.x;
+        float playerDistance = transform.position.x - player.transform.position.x;
+
+        if (health <= 0)
+        {
+            return;
+        }
 
 
         if (playerDistance < activationDistance)
@@ -50,7 +58,17 @@ public class EnemyControl : MonoBehaviour
             {
                 //Move to the player
                 rb.isKinematic = false;
-                rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, 0) * Time.deltaTime);
+
+                if (collidingDown)
+                {
+                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+                }
+                else
+                {
+                    //velocity.y -= 9.81f * Time.deltaTime;
+                    //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                }
 
                 ac.SetBool("isWalking", true);
                 ac.SetBool("isAttacking", false);
@@ -86,5 +104,21 @@ public class EnemyControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Walkable")
+        {
+            collidingDown = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Walkable")
+        {
+            collidingDown = false;
+        }
     }
 }

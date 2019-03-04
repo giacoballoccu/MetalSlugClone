@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
                 {
                     nextFire = shotTime + fireDelta;
 
-                    Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
+                    StartCoroutine(WaitFire());
 
                     nextFire = nextFire - shotTime;
                     shotTime = 0.0f;
@@ -184,7 +184,7 @@ public class PlayerController : MonoBehaviour
 
             if (isGrounded)
             {
-                Up.SetActive(false);
+                StartCoroutine(WaitCrouch());
             }
 
             if (!wasCrounching)
@@ -264,5 +264,17 @@ public class PlayerController : MonoBehaviour
             topAnimator.SetBool("isJumping", false);
             bottomAnimator.SetBool("isJumping", false);
         }
+    }
+
+    private IEnumerator WaitFire()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
+    }
+
+    private IEnumerator WaitCrouch()
+    {
+        yield return new WaitForSeconds(0.25f);
+        Up.SetActive(false);
     }
 }
