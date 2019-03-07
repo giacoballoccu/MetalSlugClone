@@ -15,6 +15,11 @@ public class PlayerHealth : MonoBehaviour
         healthBar.fillAmount = 1;
     }
 
+    public bool IsAlive()
+    {
+        return health > 0;
+    }
+
     public void Hit(float damage)
     {
         health -= damage;

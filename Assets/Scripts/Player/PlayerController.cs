@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,17 +46,19 @@ public class PlayerController : MonoBehaviour
     public int meleeDamage;
 
     //DeathUI
-    //GameObject DeathUI;
+    public Text DeathUI;
+    PlayerHealth playerHealth;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
         //Block the player from moving if it's death
-        if (!alive) // todo getcomponent PlayerHealth
+        if (!playerHealth.IsAlive()) // todo getcomponent PlayerHealth
             return;
         else
         {
@@ -93,9 +96,9 @@ public class PlayerController : MonoBehaviour
         {
             if (!wasFiring)
             {
-                Debug.Log("distanza nemico" + nearestEnemyDistance + "act" + activationDistance);
+                Debug.Log("enemy distance " + nearestEnemyDistance + " act" + activationDistance);
                 if (nearestEnemyDistance < activationDistance)
-                    
+
                 {
                     topAnimator.SetBool("isMeleeRange", true);
 
@@ -127,8 +130,6 @@ public class PlayerController : MonoBehaviour
 
                     wasFiring = true;
                 }
-
- 
             }
             else
             {
@@ -283,10 +284,13 @@ public class PlayerController : MonoBehaviour
         {
             //Fire up
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 90);
-        } else if (topAnimator.GetBool("isLookingUp") && !facingRight) {
+        }
+        else if (topAnimator.GetBool("isLookingUp") && !facingRight)
+        {
             //Fire up
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 270);
-        } else if (topAnimator.GetBool("isCrouched") && !isGrounded && facingRight)
+        }
+        else if (topAnimator.GetBool("isCrouched") && !isGrounded && facingRight)
         {
             //Fire down
             projSpawner.transform.localEulerAngles = new Vector3(0, 0, 270);
@@ -327,7 +331,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitMelee()
     {
         yield return new WaitForSeconds(0.2f);
-        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, whatIsEnemy);
+        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
         for (int i = 0; i < enemyToDamage.Length; i++)
         {
             enemyToDamage[i].GetComponent<EnemyControl>().meleeHit();
@@ -347,7 +351,7 @@ public class PlayerController : MonoBehaviour
         bottomAnimator.SetBool("isDying", true);
         yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
-        alive = false;
+        //alive = false;
         Destroy(gameObject, 3f);
         //DEATHUI SETACTIVE TRUE
     }
@@ -357,13 +361,13 @@ public class PlayerController : MonoBehaviour
         float distanceToClosestEnemy = Mathf.Infinity;
         EnemyControl[] allEnemies = GameObject.FindObjectsOfType<EnemyControl>();
 
-        foreach(EnemyControl currentEnemy in allEnemies)
+        foreach (EnemyControl currentEnemy in allEnemies)
         {
             float distanceToEnemy = (currentEnemy.transform.position - this.transform.position).sqrMagnitude;
-            if(distanceToEnemy < distanceToClosestEnemy)
+            if (distanceToEnemy < distanceToClosestEnemy)
             {
                 distanceToClosestEnemy = distanceToEnemy;
-               // Debug.Log(distanceToClosestEnemy);
+                // Debug.Log(distanceToClosestEnemy);
                 return distanceToClosestEnemy;
             }
         }
@@ -376,3 +380,4 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY));
     }
+}
