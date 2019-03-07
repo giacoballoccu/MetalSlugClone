@@ -35,6 +35,18 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
     public GameObject projSpawner;
 
+    //Melee attack
+    public float nearestEnemyDistance;
+    public Transform attackPos;
+    public float activationDistance = 20f;
+    public LayerMask whatIsEnemy;
+    public float attackRangeX;
+    public float attackRangeY;
+    public int meleeDamage;
+
+    //DeathUI
+    //GameObject DeathUI;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,21 +54,38 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Fire();
-        MoveHorizontally();
-        MoveVertically();
-        Jump();
-        Crouch();
+        //Block the player from moving if it's death
+        if (!alive) // todo getcomponent PlayerHealth
+            return;
+        else
+        {
+            isDied();
+            Fire();
+            MoveHorizontally();
+            MoveVertically();
+            Jump();
+            Crouch();
 
-        FlipShoot();   
+            FlipShoot();
+        }
     }
 
     void FixedUpdate()
     {
- 
+        nearestEnemyDistance = findDistanceClosestEnemy();
     }
 
-   void Fire()
+    void isDied()
+    {
+        //Die animation
+        /*if(health <= 0)
+        {
+            StartCoroutine(Die());
+           }
+           */
+    }
+
+    void Fire()
     {
         shotTime = shotTime + Time.deltaTime;
 
@@ -64,29 +93,53 @@ public class PlayerController : MonoBehaviour
         {
             if (!wasFiring)
             {
-                topAnimator.SetBool("isFiring", true);
-                bottomAnimator.SetBool("isFiring", true);
-
-                if (shotTime > nextFire)
+                Debug.Log("distanza nemico" + nearestEnemyDistance + "act" + activationDistance);
+                if (nearestEnemyDistance < activationDistance)
+                    
                 {
-                    nextFire = shotTime + fireDelta;
+                    topAnimator.SetBool("isMeleeRange", true);
 
-                    StartCoroutine(WaitFire());
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
 
-                    nextFire = nextFire - shotTime;
-                    shotTime = 0.0f;
+                        StartCoroutine(WaitMelee());
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
+
+                    wasFiring = true;
+                }
+                else
+                {
+                    topAnimator.SetBool("isFiring", true);
+                    bottomAnimator.SetBool("isFiring", true);
+
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
+
+                        StartCoroutine(WaitFire());
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
+
+                    wasFiring = true;
                 }
 
-                wasFiring = true;
+ 
             }
             else
             {
                 topAnimator.SetBool("isFiring", false);
+                topAnimator.SetBool("isMeleeRange", false);
                 bottomAnimator.SetBool("isFiring", false);
             }
         }
         else
         {
+            topAnimator.SetBool("isMeleeRange", false);
             topAnimator.SetBool("isFiring", false);
             bottomAnimator.SetBool("isFiring", false);
             wasFiring = false;
@@ -271,9 +324,55 @@ public class PlayerController : MonoBehaviour
         Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
     }
 
+    private IEnumerator WaitMelee()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, whatIsEnemy);
+        for (int i = 0; i < enemyToDamage.Length; i++)
+        {
+            enemyToDamage[i].GetComponent<EnemyControl>().meleeHit();
+            break;
+        }
+
+    }
+
     private IEnumerator WaitCrouch()
     {
         yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
     }
-}
+
+    private IEnumerator Die()
+    {
+        bottomAnimator.SetBool("isDying", true);
+        yield return new WaitForSeconds(0.25f);
+        Up.SetActive(false);
+        alive = false;
+        Destroy(gameObject, 3f);
+        //DEATHUI SETACTIVE TRUE
+    }
+
+    float findDistanceClosestEnemy()
+    {
+        float distanceToClosestEnemy = Mathf.Infinity;
+        EnemyControl[] allEnemies = GameObject.FindObjectsOfType<EnemyControl>();
+
+        foreach(EnemyControl currentEnemy in allEnemies)
+        {
+            float distanceToEnemy = (currentEnemy.transform.position - this.transform.position).sqrMagnitude;
+            if(distanceToEnemy < distanceToClosestEnemy)
+            {
+                distanceToClosestEnemy = distanceToEnemy;
+               // Debug.Log(distanceToClosestEnemy);
+                return distanceToClosestEnemy;
+            }
+        }
+        return Mathf.Infinity;
+
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY));
+    }
