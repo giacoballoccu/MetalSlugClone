@@ -70,7 +70,7 @@ public class EnemyControl : MonoBehaviour
                     nextFire = shotTime + fireDelta;
 
 
-                    player.GetComponent<PlayerController>().Hit(100f);
+                    player.GetComponent<PlayerHealth>().Hit(100f);
 
                     nextFire = nextFire - shotTime;
                     shotTime = 0.0f;

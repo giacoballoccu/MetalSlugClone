@@ -4,40 +4,36 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public float maxSpeed = 1f;
     public float maxJump = 1f;
     private bool isGrounded = false;
 
-    //Sprite orientation
+    [Header("Sprite orientation")]
     private bool facingRight = true;
     private bool wasCrounching = false;
     private bool wasFiring = false;
 
-    //Marco Controller
+    [Header("Marco Controller")]
     public Animator topAnimator;
     public Animator bottomAnimator;
     public GameObject Up;
 
     private Rigidbody2D rb;
 
-    // Time shoot
+    [Header("Time shoot")]
     private float shotTime = 0.0f;
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
 
-    //Time jump
+    [Header("Time jump")]
     private float jumpTime = 0.0f;
     public float jumpDelta = 0.5f;
     private float nextJump = 0.5f;
 
-    //Bullet
+    [Header("Bullet")]
     public GameObject projectile;
-
-    //Bullet spawner
     public GameObject projSpawner;
-
-    //Health
-    public float health = 100;
 
     void Start()
     {
@@ -46,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        isDied();
         Fire();
         MoveHorizontally();
         MoveVertically();
@@ -59,14 +54,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
  
-    }
-
-    void isDied()
-    {
-        if (health <= 0)
-        {
-            //Die animation
-        }
     }
 
    void Fire()
@@ -288,10 +275,5 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
-    }
-
-    public void Hit(float damage)
-    {
-        health -= damage;
     }
 }
