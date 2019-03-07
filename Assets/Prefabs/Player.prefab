@@ -59,6 +59,7 @@ MonoBehaviour:
   projectile: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
     type: 3}
   projSpawner: {fileID: 1765443407358117547}
+  health: 100
 --- !u!50 &1765443406479915050
 Rigidbody2D:
   serializedVersion: 4
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.049}
+  m_Offset: {x: -0.019580305, y: -0.06694859}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.386}
+  m_Size: {x: 0.21188843, y: 0.3468393}
   m_EdgeRadius: 0
 --- !u!1 &1765443406516593716
 GameObject:
@@ -174,7 +175,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300010, guid: dcbb48e878343b2438b39a02a451ee4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -273,7 +274,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: dcbb48e878343b2438b39a02a451ee4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -372,7 +373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300008, guid: 672a427529c12b54b903406de0542e4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
