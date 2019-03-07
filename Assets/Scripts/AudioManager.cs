@@ -12,8 +12,11 @@ public class AudioManager : MonoBehaviour
     //scripts access this one through its public static methods
     static AudioManager current;
 
-    [Header("Audio Clips")]
+    [Header("Music")]
     public AudioClip musicClip;         //The background music
+
+    [Header("Voice")]
+    public AudioClip levelStart;
 
     [Header("Mixer Groups")]
     public AudioMixerGroup musicGroup;  //The music mixer group
@@ -63,5 +66,17 @@ public class AudioManager : MonoBehaviour
         current.musicSource.clip = current.musicClip;
         current.musicSource.loop = true;
         current.musicSource.Play();
+        PlayLevelStartAudio();
+    }
+
+    private static void PlayLevelStartAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Play the initial level voice
+        current.voiceSource.clip = current.levelStart;
+        current.voiceSource.Play();
     }
 }
