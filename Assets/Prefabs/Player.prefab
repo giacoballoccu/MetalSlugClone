@@ -60,7 +60,16 @@ MonoBehaviour:
   projectile: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
     type: 3}
   projSpawner: {fileID: 1765443407358117547}
-  health: 100
+  nearestEnemyDistance: 0
+  attackPos: {fileID: 0}
+  activationDistance: 20
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRangeX: 0
+  attackRangeY: 0
+  meleeDamage: 0
+  DeathUI: {fileID: 0}
 --- !u!50 &1765443406479915050
 Rigidbody2D:
   serializedVersion: 4
@@ -120,6 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b300c6a6141b48e43bed9c34ed6e7f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  maxHealth: 100
 --- !u!1 &1765443406516593716
 GameObject:
   m_ObjectHideFlags: 0

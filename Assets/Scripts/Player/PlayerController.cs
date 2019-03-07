@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     public int meleeDamage;
 
     //DeathUI
-    public Text DeathUI;
+    public TextMeshProUGUI DeathUI;
     PlayerHealth playerHealth;
 
     void Start()
