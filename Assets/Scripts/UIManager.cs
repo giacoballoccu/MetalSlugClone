@@ -1,4 +1,4 @@
-﻿// This script is a Manager that controls the UI HUD (deaths, time, and orbs) for the 
+﻿// This script is a Manager that controls the UI HUD (deaths, health, and score) for the 
 // project. All HUD UI commands are issued through the static methods of this class
 
 using UnityEngine;
