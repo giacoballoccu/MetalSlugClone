@@ -4,36 +4,35 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public float maxSpeed = 1f;
     public float maxJump = 1f;
     private bool isGrounded = false;
 
-    //Sprite orientation
+    [Header("Sprite orientation")]
     private bool facingRight = true;
     private bool wasCrounching = false;
     private bool wasFiring = false;
-    private bool alive = true;
-    //Marco Controller
+
+    [Header("Marco Controller")]
     public Animator topAnimator;
     public Animator bottomAnimator;
     public GameObject Up;
 
     private Rigidbody2D rb;
 
-    // Time shoot
+    [Header("Time shoot")]
     private float shotTime = 0.0f;
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
 
-    //Time jump
+    [Header("Time jump")]
     private float jumpTime = 0.0f;
     public float jumpDelta = 0.5f;
     private float nextJump = 0.5f;
 
-    //Bullet
+    [Header("Bullet")]
     public GameObject projectile;
-
-    //Bullet spawner
     public GameObject projSpawner;
 
     //Melee attack
@@ -44,12 +43,10 @@ public class PlayerController : MonoBehaviour
     public float attackRangeX;
     public float attackRangeY;
     public int meleeDamage;
-    //Health
-    public float health = 100f;
 
     //DeathUI
-   //GameObject DeathUI;
-    
+    //GameObject DeathUI;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,9 +55,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Block the player from moving if it's death
-        if (!alive) {
+        if (!alive) // todo getcomponent PlayerHealth
             return;
-        }
         else
         {
             isDied();
@@ -72,7 +68,6 @@ public class PlayerController : MonoBehaviour
 
             FlipShoot();
         }
-
     }
 
     void FixedUpdate()
@@ -90,10 +85,7 @@ public class PlayerController : MonoBehaviour
            */
     }
 
- 
-
-
- void Fire()
+    void Fire()
     {
         shotTime = shotTime + Time.deltaTime;
 
@@ -153,43 +145,6 @@ public class PlayerController : MonoBehaviour
             wasFiring = false;
         }
     }
-
-    /*void Fire()
-    {
-        shotTime = shotTime + Time.deltaTime;
-
-        if (Input.GetButton("Fire1"))
-        {
-            if (!wasFiring)
-            {
-                topAnimator.SetBool("isFiring", true);
-                bottomAnimator.SetBool("isFiring", true);
-
-                if (shotTime > nextFire)
-                {
-                    nextFire = shotTime + fireDelta;
-
-                    StartCoroutine(WaitFire());
-
-                    nextFire = nextFire - shotTime;
-                    shotTime = 0.0f;
-                }
-
-                wasFiring = true;
-            }
-            else
-            {
-                topAnimator.SetBool("isFiring", false);
-                bottomAnimator.SetBool("isFiring", false);
-            }
-        }
-        else
-        {
-            topAnimator.SetBool("isFiring", false);
-            bottomAnimator.SetBool("isFiring", false);
-            wasFiring = false;
-        }
-    }*/
 
     void MoveHorizontally()
     {
@@ -397,11 +352,6 @@ public class PlayerController : MonoBehaviour
         //DEATHUI SETACTIVE TRUE
     }
 
-    public void Hit(float damage)
-    {
-        health -= damage;
-    }
-
     float findDistanceClosestEnemy()
     {
         float distanceToClosestEnemy = Mathf.Infinity;
@@ -426,4 +376,3 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY));
     }
-}
