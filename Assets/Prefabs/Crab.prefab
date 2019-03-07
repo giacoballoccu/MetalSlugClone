@@ -139,6 +139,7 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 0.5
   health: 100
+  attackDamage: 10
   activationDistance: 1.8
   attackDistance: 0.5
   fireDelta: 0.5
