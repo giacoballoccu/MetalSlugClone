@@ -122,6 +122,12 @@ public class EnemyControl : MonoBehaviour
         health -= 33.33f; 
     }
 
+    public void meleeHit()
+    {
+        ac.SetTrigger("isHitten");
+        health -= 100f;
+    }
+
     private IEnumerator Die()
     {
         yield return new WaitForSeconds(1f);
