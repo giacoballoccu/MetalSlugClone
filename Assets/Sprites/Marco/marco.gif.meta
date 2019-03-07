@@ -102,6 +102,31 @@ TextureImporter:
     21300194: crouch_firing_6
     21300196: crouch_firing_7
     21300198: crouch_firing_8
+    21300200: death_animation_1
+    21300202: death_animation_2
+    21300204: death_animation_3
+    21300206: death_animation_4
+    21300208: death_animation_5
+    21300210: death_animation_6
+    21300212: death_animation_7
+    21300214: death_animation_8
+    21300216: marco_0
+    21300218: death_animation_9
+    21300220: death_animation_10
+    21300222: death_animation_11
+    21300224: death_animation_12
+    21300226: death_animation_13
+    21300228: death_animation_14
+    21300230: death_animation_15
+    21300232: death_animation_16
+    21300234: death_animation_17
+    21300236: death_animation_18
+    21300238: meele_attack_1
+    21300240: meele_attack_2
+    21300242: meele_attack_3
+    21300244: meele_attack_4
+    21300246: meele_attack_5
+    21300248: meele_attack_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -2190,6 +2215,506 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 86613b54294e1b743a031b33cf244cc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1792
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7ee233e854c944196df3ddd48125d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1792
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ba7d1118547c747b3aba8c575acbbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1792
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c025fd515d01bae4ea3a77260a44bc2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1792
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4100a3d7801d0a74fa3ba5dfd5ded92a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1792
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bfb5861416e3145b6d9c7a52773f34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1792
+        width: 34
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a504af957e0a1704a985fd3f9225132b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_7
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1793
+        width: 34
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130df67955f94a048bef7e6729c47712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_8
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1793
+        width: 31
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715d582f60c9c2f438e5fe0c6b13d8a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_0
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1793
+        width: 30
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13312802ad0e3654ab977bbb4709e6a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_9
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1792
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745c852504076ce418e26b18f18afd54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_10
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1793
+        width: 27
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b07d07632f73641832bd0d9c6e7f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_11
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1793
+        width: 26
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645eb97cc1351e6468cd95a5db19500e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_12
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1793
+        width: 23
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efb3d739175aed49808fb5bfec1406a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_13
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1793
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a2c4694fd62844a93144e318549571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_14
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1793
+        width: 25
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9c23a62bc561d4fb2810196def6919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_15
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1793
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde8fdbe6aece1c47acac6c99f1648f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_16
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1793
+        width: 32
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c56642df0fc294599be26d324dfdb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_17
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1792
+        width: 36
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5064aad106be245b2c01e9edcca688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_18
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1792
+        width: 41
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca32d00ae80e77409d36fcf9d69af37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meele_attack_1
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 4814
+        width: 26
+        height: 35
+      alignment: 9
+      pivot: {x: 1, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e2a441ea60faf4b8aa55816b7d9de5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meele_attack_2
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 4814
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 1, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92946e798ad1deb44a76448a20181b9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meele_attack_3
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 4814
+        width: 28
+        height: 35
+      alignment: 9
+      pivot: {x: 1, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98e1244793daa6478d99e4378b7f038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meele_attack_4
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 4814
+        width: 42
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbac130243fa5345bb1728458fe2504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meele_attack_5
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 4813
+        width: 50
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa4698d1186e7a459f5e5256e98b48f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meele_attack_6
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 4814
+        width: 51
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3bfea90cbfdbd46a712e5d23096bca
       vertices: []
       indices: 
       edges: []
