@@ -6,10 +6,12 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100;
     private float health;
+    PlayerController playerController;
 
     void Start()
     {
         health = maxHealth;
+        playerController = GetComponent<PlayerController>();
     }
 
     public bool IsAlive()
@@ -24,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            playerController.Died();
             GameManager.PlayerDied();
             //AudioManager.PlayDeathAudio();
         }

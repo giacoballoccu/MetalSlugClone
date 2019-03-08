@@ -57,23 +57,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.IsGameOver())
-            return;
-
         //Block the player from moving if it's death
-        if (!playerHealth.IsAlive()) // todo getcomponent PlayerHealth
+        if (GameManager.IsGameOver() || !playerHealth.IsAlive())
             return;
-        else
-        {
-            isDied();
-            Fire();
-            MoveHorizontally();
-            MoveVertically();
-            Jump();
-            Crouch();
 
-            FlipShoot();
-        }
+        Fire();
+        MoveHorizontally();
+        MoveVertically();
+        Jump();
+        Crouch();
+
+        FlipShoot();
     }
 
     void FixedUpdate()
@@ -84,14 +78,10 @@ public class PlayerController : MonoBehaviour
         nearestEnemyDistance = findDistanceClosestEnemy();
     }
 
-    void isDied()
+    public void Died()
     {
-        //Die animation
-        /*if(health <= 0)
-        {
-            StartCoroutine(Die());
-           }
-           */
+        bottomAnimator.SetBool("isDying", true);
+        Up.SetActive(false);
     }
 
     void Fire()
@@ -350,12 +340,6 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
-    }
-
-    private IEnumerator Die()
-    {
-        bottomAnimator.SetBool("isDying", true);
-        yield return new WaitForSeconds(0.25f);
     }
 
     float findDistanceClosestEnemy()
