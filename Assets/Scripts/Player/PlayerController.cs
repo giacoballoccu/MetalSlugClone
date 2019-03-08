@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
                 if (nearestEnemyDistance < activationDistance)
 
                 {
+                    AudioManager.PlayMeeleeHitAudio();
                     topAnimator.SetBool("isMeleeRange", true);
 
                     if (shotTime > nextFire)
@@ -111,6 +112,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    AudioManager.PlayNormalShotAudio();
                     topAnimator.SetBool("isFiring", true);
                     bottomAnimator.SetBool("isFiring", true);
 

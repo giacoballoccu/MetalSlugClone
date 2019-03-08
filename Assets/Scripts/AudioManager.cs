@@ -95,7 +95,7 @@ public class AudioManager : MonoBehaviour
         if (current == null)
             return;
 
-        //Set the clip for music audio, tell it to loop, and then tell it to play
+        //Set the clip for music audio, tell it not to loop, and then tell it to play
         current.musicSource.clip = current.gameOverClip;
         current.musicSource.loop = false;
         current.musicSource.Play();
@@ -107,8 +107,30 @@ public class AudioManager : MonoBehaviour
         if (current == null)
             return;
 
-        //Set the clip for music audio, tell it to loop, and then tell it to play
+        //Set the clip for music audio, and then tell it to play
         current.playerSource.clip = current.marcoDeathClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayNormalShotAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.playerSource.clip = current.normalShotClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayMeeleeHitAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.playerSource.clip = current.meeleeHitClip;
         current.playerSource.Play();
     }
 }
