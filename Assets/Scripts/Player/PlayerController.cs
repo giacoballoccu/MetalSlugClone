@@ -327,7 +327,7 @@ public class PlayerController : MonoBehaviour
             bottomAnimator.SetBool("isJumping", false);
         }
     }
-
+    
     private IEnumerator WaitFire()
     {
         yield return new WaitForSeconds(0.2f);
@@ -338,9 +338,9 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
-        for (int i = 0; i < enemyToDamage.Length; i++)
+        foreach (Collider2D enemy in enemyToDamage)
         {
-            enemyToDamage[i].GetComponent<EnemyControl>().meleeHit();
+            enemy.GetComponent<EnemyControl>().meleeHit();
             break;
         }
 
@@ -356,10 +356,6 @@ public class PlayerController : MonoBehaviour
     {
         bottomAnimator.SetBool("isDying", true);
         yield return new WaitForSeconds(0.25f);
-        Up.SetActive(false);
-        //alive = false;
-        Destroy(gameObject, 3f);
-        //DEATHUI SETACTIVE TRUE
     }
 
     float findDistanceClosestEnemy()
