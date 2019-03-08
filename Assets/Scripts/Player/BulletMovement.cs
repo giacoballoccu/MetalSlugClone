@@ -8,6 +8,7 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float bulletForce = 3;
     public float lifeTime = 5;
+    public float damageShot = 100;
 
     void Start()
     {
@@ -35,13 +36,13 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyControl>().hit();
+            collision.gameObject.GetComponent<EnemyControl>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }
         else if (collision.tag == "Building")
         {
-            collision.gameObject.GetComponent<BuildingController>().Hit(100);
+            collision.gameObject.GetComponent<BuildingController>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }

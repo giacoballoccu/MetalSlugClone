@@ -123,10 +123,10 @@ public class EnemyControl : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void hit()
+    public void Hit(float damage)
     {
         ac.SetTrigger("isHitten");
-        health -= 33.33f; 
+        health -= damage; 
     }
 
     public void meleeHit()
