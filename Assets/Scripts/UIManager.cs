@@ -2,6 +2,7 @@
 // project. All HUD UI commands are issued through the static methods of this class
 
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class UIManager : MonoBehaviour
     //scripts access this one through its public static methods
     static UIManager current;
     public TextMeshProUGUI gameOverText;    //Text element showing the Game Over message
+    public Image healthBar;
 
     void Awake()
     {
@@ -25,6 +27,8 @@ public class UIManager : MonoBehaviour
         //This is the current UIManager and it should persist between scene loads
         current = this;
         DontDestroyOnLoad(gameObject);
+
+        current.gameOverText.gameObject.SetActive(false);
     }
 
     public static void DisplayGameOverText()
@@ -34,6 +38,16 @@ public class UIManager : MonoBehaviour
             return;
 
         //Show the game over text
-        current.gameOverText.enabled = true;
+        current.gameOverText.gameObject.SetActive(true);
+    }
+
+    public static void UpdateHealthUI(float health, float maxHealth)
+    {
+        //If there is no current UIManager, exit
+        if (current == null)
+            return;
+
+        //update the player death count element
+        current.healthBar.fillAmount = health / maxHealth;
     }
 }

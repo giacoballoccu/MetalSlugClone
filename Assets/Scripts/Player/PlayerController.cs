@@ -57,6 +57,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.IsGameOver())
+            return;
+
         //Block the player from moving if it's death
         if (!playerHealth.IsAlive()) // todo getcomponent PlayerHealth
             return;
@@ -75,6 +78,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GameManager.IsGameOver())
+            return;
+
         nearestEnemyDistance = findDistanceClosestEnemy();
     }
 

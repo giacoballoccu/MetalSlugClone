@@ -36,6 +36,9 @@ public class EnemyControl : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.IsGameOver())
+            return;
+
         if (health <= 0)
         {
             ac.SetBool("isDying", true);
@@ -45,6 +48,9 @@ public class EnemyControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GameManager.IsGameOver())
+            return;
+
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
         float playerDistance = transform.position.x - player.transform.position.x;

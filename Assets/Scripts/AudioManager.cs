@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Music")]
     public AudioClip musicClip;         //The background music
+    public AudioClip gameOverClip;
 
     [Header("Voice")]
     public AudioClip levelStart;
@@ -69,7 +70,7 @@ public class AudioManager : MonoBehaviour
         PlayLevelStartAudio();
     }
 
-    private static void PlayLevelStartAudio()
+    public static void PlayLevelStartAudio()
     {
         //If there is no current AudioManager, exit
         if (current == null)
@@ -78,5 +79,17 @@ public class AudioManager : MonoBehaviour
         //Play the initial level voice
         current.voiceSource.clip = current.levelStart;
         current.voiceSource.Play();
+    }
+
+    public static void PlayGameOverAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, tell it to loop, and then tell it to play
+        current.musicSource.clip = current.gameOverClip;
+        current.musicSource.loop = true;
+        current.musicSource.Play();
     }
 }
