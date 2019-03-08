@@ -96,7 +96,6 @@ public class PlayerController : MonoBehaviour
                 if (nearestEnemyDistance < activationDistance)
 
                 {
-                    AudioManager.PlayMeeleeHitAudio();
                     topAnimator.SetBool("isMeleeRange", true);
 
                     if (shotTime > nextFire)
@@ -333,6 +332,7 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in enemyToDamage)
         {
             enemy.GetComponent<EnemyControl>().meleeHit();
+            AudioManager.PlayMeeleeHitAudio();
             break;
         }
 
