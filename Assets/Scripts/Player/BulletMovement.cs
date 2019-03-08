@@ -36,11 +36,13 @@ public class BulletMovement : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyControl>().hit();
+            AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }
         else if (collision.tag == "Building")
         {
             collision.gameObject.GetComponent<BuildingController>().Hit(100);
+            AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }
     }

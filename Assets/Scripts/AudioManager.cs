@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Effects")]
     public AudioClip normalShotClip;
+    public AudioClip shotHitClip;
     public AudioClip meeleeHitClip;
     public AudioClip meeleeTakeClip;
     public AudioClip collectibleGrabClip;
@@ -121,6 +122,17 @@ public class AudioManager : MonoBehaviour
 
         //Set the clip for music audio, and then tell it to play
         current.playerSource.clip = current.normalShotClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayShotHitAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.playerSource.clip = current.shotHitClip;
         current.playerSource.Play();
     }
 
