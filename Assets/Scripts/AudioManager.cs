@@ -120,6 +120,10 @@ public class AudioManager : MonoBehaviour
         if (current == null)
             return;
 
+        //Don't overshadow the other sounds
+        if (current.playerSource.clip != current.normalShotClip && current.playerSource.isPlaying)
+            return;
+
         //Set the clip for music audio, and then tell it to play
         current.playerSource.clip = current.normalShotClip;
         current.playerSource.Play();
