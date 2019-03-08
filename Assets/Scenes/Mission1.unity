@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0485e01c1b1bf46938158be446a524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1500
   destroyedSprite: {fileID: 21300026, guid: 116df9806cc9d0b47bd08d084f964534, type: 3}
 --- !u!1 &1824103423
 GameObject:
@@ -2584,11 +2584,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4382323897508916338, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 52531311}
     - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
         type: 3}
       propertyPath: DeathUI
