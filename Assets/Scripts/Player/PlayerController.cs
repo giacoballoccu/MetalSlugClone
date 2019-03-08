@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsEnemy;
     public float attackRangeX;
     public float attackRangeY;
-    public int meleeDamage;
+    public int damageMeelee = 100;
 
     //DeathUI
     public TextMeshProUGUI DeathUI;
@@ -331,7 +331,8 @@ public class PlayerController : MonoBehaviour
         Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
         foreach (Collider2D enemy in enemyToDamage)
         {
-            enemy.GetComponent<EnemyControl>().meleeHit();
+            enemy.GetComponent<EnemyControl>().meleeHit(damageMeelee);
+            GameManager.AddScore(damageMeelee);
             AudioManager.PlayMeeleeHitAudio();
             break;
         }

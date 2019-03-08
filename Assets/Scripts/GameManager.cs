@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
+    int score = 0;
 
     void Awake()
     {
@@ -42,6 +43,31 @@ public class GameManager : MonoBehaviour
         //Update the total game time and tell the UI Manager to update
         totalGameTime += Time.deltaTime;
         // UIManager.UpdateTimeUI(totalGameTime); // todo implement or delete
+    }
+
+    public static void AddScore(float amount)
+    {
+        AddScore((int)amount);
+    }
+
+    public static void AddScore(int amount)
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.score += amount;
+        UIManager.UpdateScoreUI();
+    }
+
+    public static int GetScore()
+    {
+        //If there is no current Game Manager, return 0
+        if (current == null)
+            return 0;
+
+        //Return the state of the game
+        return current.score;
     }
 
     public static bool IsGameOver()

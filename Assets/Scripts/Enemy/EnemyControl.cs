@@ -129,10 +129,10 @@ public class EnemyControl : MonoBehaviour
         health -= damage; 
     }
 
-    public void meleeHit()
+    public void meleeHit(float damage)
     {
         ac.SetTrigger("isHitten");
-        health -= 100f;
+        health -= damage;
     }
 
     private IEnumerator Die()
