@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
 
         //Set the clip for music audio, tell it to loop, and then tell it to play
         current.musicSource.clip = current.gameOverClip;
-        current.musicSource.loop = true;
+        current.musicSource.loop = false;
         current.musicSource.Play();
     }
 }
