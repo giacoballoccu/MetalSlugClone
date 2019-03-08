@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         {
             playerController.Died();
             GameManager.PlayerDied();
-            //AudioManager.PlayDeathAudio();
+            AudioManager.PlayDeathAudio();
         }
     }
 }

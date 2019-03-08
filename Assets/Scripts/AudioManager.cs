@@ -14,7 +14,10 @@ public class AudioManager : MonoBehaviour
 
     [Header("Music")]
     public AudioClip musicClip;         //The background music
-    public AudioClip gameOverClip;
+    public AudioClip gameOverClip;      //Played once on game over
+
+    [Header("Player")]
+    public AudioClip marcoDeathClip;    //Marco Death Sound
 
     [Header("Voice")]
     public AudioClip levelStart;
@@ -91,5 +94,16 @@ public class AudioManager : MonoBehaviour
         current.musicSource.clip = current.gameOverClip;
         current.musicSource.loop = false;
         current.musicSource.Play();
+    }
+
+    public static void PlayDeathAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, tell it to loop, and then tell it to play
+        current.playerSource.clip = current.marcoDeathClip;
+        current.playerSource.Play();
     }
 }
