@@ -19,6 +19,11 @@ public class AudioManager : MonoBehaviour
     [Header("Player")]
     public AudioClip marcoDeathClip;    //Marco Death Sound
 
+    [Header("Effects")]
+    public AudioClip normalShotClip;
+    public AudioClip meeleeHitClip;
+    public AudioClip collectibleGrabClip;
+
     [Header("Voice")]
     public AudioClip levelStart;
 

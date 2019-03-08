@@ -1252,6 +1252,9 @@ MonoBehaviour:
   musicClip: {fileID: 8300000, guid: 717e6923c01805349b724ffb22e02f0d, type: 3}
   gameOverClip: {fileID: 8300000, guid: 10a18411f6e29a849bf6b15ae1a2f547, type: 3}
   marcoDeathClip: {fileID: 8300000, guid: 908569ab6a36d114abf53d1e78f9b8b1, type: 3}
+  normalShotClip: {fileID: 8300000, guid: 8946b764f8047d642b5a7bdb582fef11, type: 3}
+  meeleeHitClip: {fileID: 8300000, guid: fadb1572312022744812cc6ad39991ca, type: 3}
+  collectibleGrabClip: {fileID: 8300000, guid: 8059f21498c55404fab41460468c5f37, type: 3}
   levelStart: {fileID: 8300000, guid: 730989ad5611e9d48b1a770a7579587c, type: 3}
   musicGroup: {fileID: 243248386772865564, guid: e890f615dbd1d714eb257944c4ba3fe6,
     type: 2}
