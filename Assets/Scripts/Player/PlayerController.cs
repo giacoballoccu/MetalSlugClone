@@ -37,13 +37,14 @@ public class PlayerController : MonoBehaviour
     public GameObject projSpawner;
 
     //Melee attack
-    public float nearestEnemyDistance;
+    public EnemyControl closestEnemy;
+    public float distanceToClosestEnemy;
     public Transform attackPos;
-    public float activationDistance = 20f;
+    public float activationDistance = 18f;
     public LayerMask whatIsEnemy;
     public float attackRangeX;
     public float attackRangeY;
-    public int damageMeelee = 100;
+    public float damageMeelee = 100f;
 
     //DeathUI
     public TextMeshProUGUI DeathUI;
@@ -75,13 +76,14 @@ public class PlayerController : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        nearestEnemyDistance = findDistanceClosestEnemy();
+            findClosestEnemy();
+       
     }
 
     public void Died()
     {
         bottomAnimator.SetBool("isDying", true);
-        Up.SetActive(false);
+        StartCoroutine(WaitCrouch());
     }
 
     void Fire()
@@ -92,10 +94,9 @@ public class PlayerController : MonoBehaviour
         {
             if (!wasFiring)
             {
-                Debug.Log("enemy distance " + nearestEnemyDistance + " act" + activationDistance);
-                if (nearestEnemyDistance < activationDistance)
-
-                {
+               
+                if (distanceToClosestEnemy < activationDistance) 
+                  {
                     topAnimator.SetBool("isMeleeRange", true);
 
                     if (shotTime > nextFire)
@@ -345,9 +346,10 @@ public class PlayerController : MonoBehaviour
         Up.SetActive(false);
     }
 
-    float findDistanceClosestEnemy()
+    void findClosestEnemy()
     {
-        float distanceToClosestEnemy = Mathf.Infinity;
+        distanceToClosestEnemy = Mathf.Infinity;
+        closestEnemy = null;
         EnemyControl[] allEnemies = GameObject.FindObjectsOfType<EnemyControl>();
 
         foreach (EnemyControl currentEnemy in allEnemies)
@@ -356,11 +358,10 @@ public class PlayerController : MonoBehaviour
             if (distanceToEnemy < distanceToClosestEnemy)
             {
                 distanceToClosestEnemy = distanceToEnemy;
-                // Debug.Log(distanceToClosestEnemy);
-                return distanceToClosestEnemy;
+                closestEnemy = currentEnemy;
             }
         }
-        return Mathf.Infinity;
+        //Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
 
     }
 
