@@ -11,7 +11,7 @@ public class EnemyControl : MonoBehaviour
     public float attackDamage = 10f;
 
     [Header("Enemy activation")]
-    public float activationDistance = 2;
+    public float activationDistance = 1.8f;
     public float attackDistance = 0.5f;
     public const float CHANGE_SIGN = -1;
 
@@ -39,11 +39,7 @@ public class EnemyControl : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        if (health <= 0)
-        {
-            ac.SetBool("isDying", true);
-            StartCoroutine(Die());
-        }
+
     }
 
     void FixedUpdate()
@@ -57,7 +53,8 @@ public class EnemyControl : MonoBehaviour
 
         if (health <= 0)
         {
-            return;
+            ac.SetBool("isDying", true);
+            StartCoroutine(Die());
         }
 
 
