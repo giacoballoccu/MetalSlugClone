@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;    //Text element showing the Game Over message
     public Image healthBar;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI bombs;
 
     void Awake()
     {
@@ -44,6 +45,16 @@ public class UIManager : MonoBehaviour
 
         //Refresh the score
         current.scoreText.SetText(GameManager.GetScore().ToString());
+    }
+
+   public static void UpdateBombsUI()
+    {
+        //If there is no current UIManager, exit
+        if (current == null)
+            return;
+
+        //Refresh the score
+        current.bombs.SetText(GameManager.GetBombs().ToString());
     }
 
     public static void DisplayGameOverText()

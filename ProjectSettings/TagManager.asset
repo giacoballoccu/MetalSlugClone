@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Building
   - Boat door trigger
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - Sky & Forest
   - Enemy
-  - 
-  - 
+  - Walkable
+  - Building
   - 
   - 
   - 

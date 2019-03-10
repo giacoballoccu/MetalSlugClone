@@ -7,7 +7,7 @@ public class EnemyControl : MonoBehaviour
     [Header("Enemy information")]
     public GameObject player;
     public float speed = 0.5f;
-    public float health = 100f;
+    private float health = 300f;
     public float attackDamage = 10f;
 
     [Header("Enemy activation")]
@@ -126,14 +126,10 @@ public class EnemyControl : MonoBehaviour
         health -= damage; 
     }
 
-    public void meleeHit(float damage)
-    {
-        ac.SetTrigger("isHitten");
-        health -= damage;
-    }
 
     private IEnumerator Die()
     {
+        rb.isKinematic = false;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }

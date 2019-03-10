@@ -36,15 +36,18 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
     public GameObject projSpawner;
 
+    [Header("Granate")]
+    public GameObject granate;
+
     //Melee attack
-    public EnemyControl closestEnemy;
-    public float distanceToClosestEnemy;
+    private EnemyControl closestEnemy;
+    private float distanceToClosestEnemy;
     public Transform attackPos;
-    public float activationDistance = 18f;
+    private float activationDistance = 0.65f;
     public LayerMask whatIsEnemy;
-    public float attackRangeX;
-    public float attackRangeY;
-    public float damageMeelee = 100f;
+    private float attackRangeX = 0.6f;
+    private float attackRangeY = 0.6f;
+    private float damageMeelee = 1000f;
 
     //DeathUI
     public TextMeshProUGUI DeathUI;
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         Fire();
+        ThrowGranate();
         MoveHorizontally();
         MoveVertically();
         Jump();
@@ -142,6 +146,50 @@ public class PlayerController : MonoBehaviour
             topAnimator.SetBool("isFiring", false);
             bottomAnimator.SetBool("isFiring", false);
             wasFiring = false;
+        }
+    }
+
+    void ThrowGranate()
+    {
+        if (GameManager.GetBombs() > 0)
+        {
+            
+            shotTime = shotTime + Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+
+                GameManager.RemoveBomb();
+                if (!wasFiring)
+                {
+                    topAnimator.SetBool("isThrowingGranate", true);
+
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
+
+                        StartCoroutine(WaitGranate());
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
+
+                    wasFiring = true;
+                }
+                else
+                {
+                    topAnimator.SetBool("isThrowingGranate", false);
+                }
+            }
+            else
+            {
+                topAnimator.SetBool("isThrowingGranate", false);
+                wasFiring = false;
+            }
+        }
+        else
+        {
+            topAnimator.SetBool("isThrowingGranate", false);
+            return;
         }
     }
 
@@ -326,13 +374,19 @@ public class PlayerController : MonoBehaviour
         Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
     }
 
+    private IEnumerator WaitGranate()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(granate, projSpawner.transform.position, projSpawner.transform.rotation);
+    }
+
     private IEnumerator WaitMelee()
     {
         yield return new WaitForSeconds(0.2f);
         Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
         foreach (Collider2D enemy in enemyToDamage)
         {
-            enemy.GetComponent<EnemyControl>().meleeHit(damageMeelee);
+            enemy.GetComponent<EnemyControl>().Hit(damageMeelee);
             GameManager.AddScore(damageMeelee);
             AudioManager.PlayMeeleeHitAudio();
             break;
@@ -361,7 +415,7 @@ public class PlayerController : MonoBehaviour
                 closestEnemy = currentEnemy;
             }
         }
-        //Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
+       
 
     }
 
