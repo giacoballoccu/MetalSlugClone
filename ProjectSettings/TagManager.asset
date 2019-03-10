@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Building
   - Boat door trigger
+  - Boat
   layers:
   - Default
   - TransparentFX

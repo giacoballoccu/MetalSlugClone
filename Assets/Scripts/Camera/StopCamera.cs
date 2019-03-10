@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class StopCamera : MonoBehaviour
 {
-
-    //public Animator doorAnimator;
-
-    public Animator doorAnimator;
+    public new Camera camera;
 
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -22,9 +20,10 @@ public class OpenDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if(collision.tag == "Player")
         {
-            doorAnimator.SetTrigger("open");
+            camera.GetComponent<CameraController>().setIsBlocked(true);
+            this.gameObject.SetActive(false);
         }
     }
 }
