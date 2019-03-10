@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
+    int bombs = 200;
 
     void Awake()
     {
@@ -68,6 +69,26 @@ public class GameManager : MonoBehaviour
 
         //Return the state of the game
         return current.score;
+    }
+
+    public static int GetBombs()
+    {
+        //If there is no current Game Manager, return 0
+        if (current == null)
+            return 2;
+
+        //Return the state of the game
+        return current.bombs;
+    }
+
+    public static void RemoveBomb()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.bombs--;
+        UIManager.UpdateBombsUI();
     }
 
     public static bool IsGameOver()
