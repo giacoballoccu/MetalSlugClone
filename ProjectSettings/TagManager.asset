@@ -10,6 +10,7 @@ TagManager:
   - Building
   - Boat door trigger
   - Terrain
+  - Boat
   layers:
   - Default
   - TransparentFX

@@ -3,15 +3,13 @@
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player;
-
     private new Camera camera;
 
-    //Player vievport position
+    public Transform player;
     private Vector2 playerVPPos;
-
     private Vector2 oldPosition;
 
+    private bool isBlocked = false;
 
     void Start()
     {
@@ -24,10 +22,16 @@ public class CameraController : MonoBehaviour
         playerVPPos = camera.WorldToViewportPoint(player.position);
 
         //If the player is in the right part of the screen
-        if (playerVPPos.x > 0.5F)
+        if (playerVPPos.x > 0.5f && !isBlocked)
         {
             //Get the new camera position by interpolating the current position and the position of the player + 0.25
-            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x + 0.25f, transform.position.y, transform.position.z), 3f * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x + 0.25f, transform.position.y, 0), 3f * Time.deltaTime);
+        }
+
+        //Move the camera to the player height
+        if (playerVPPos.y < 0.2f && !isBlocked)
+        {
+            transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, transform.position.y-0.1f, 0), 3f * Time.deltaTime);
         }
 
 
@@ -41,5 +45,10 @@ public class CameraController : MonoBehaviour
         }
 
         oldPosition = player.transform.position;
+    }
+
+    public void setIsBlocked(bool isBlocked)
+    {
+        this.isBlocked = isBlocked;
     }
 }
