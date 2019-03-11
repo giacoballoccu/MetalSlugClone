@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     private float distanceToClosestEnemy;
     public Transform attackPos;
     private float activationDistance = 0.65f;
-    public LayerMask whatIsEnemy;
+    private LayerMask enemyLayer;
     private float attackRangeX = 0.6f;
     private float attackRangeY = 0.6f;
     private float damageMelee = 1000f;
@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerHealth = GetComponent<PlayerHealth>();
+        enemyLayer = LayerMask.NameToLayer("Enemy");
     }
 
     void Update()
@@ -444,7 +445,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitMelee()
     {
         yield return new WaitForSeconds(0.1f);
-        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
+        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayer);
         foreach (Collider2D enemy in enemyToDamage)
         {
             enemy.GetComponent<EnemyControl>().Hit(damageMelee);
