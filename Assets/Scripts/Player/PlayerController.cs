@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
     public GameObject granate;
 
     [Header("Melee")]
-    private float meleeDistance = 0.40f;
-    private float damageMelee = 1000f;
+    public float meleeDistance = 0.35f;
+    public float damageMelee = 1000f;
 
     PlayerHealth playerHealth;
 
