@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &463533750
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 463533751}
-  m_Layer: 0
-  m_Name: AttackPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &463533751
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463533750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -0.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1765443406479915049}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765443406479915045
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +35,6 @@ Transform:
   - {fileID: 1765443406516593717}
   - {fileID: 1765443407358117544}
   - {fileID: 1765443407276444450}
-  - {fileID: 463533751}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -93,10 +62,6 @@ MonoBehaviour:
     type: 3}
   projSpawner: {fileID: 1765443407358117547}
   granate: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
-  attackPos: {fileID: 463533751}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!50 &1765443406479915050
 Rigidbody2D:
   serializedVersion: 4

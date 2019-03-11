@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
     public GameObject granate;
 
     [Header("Melee")]
-    public Transform attackPos;
     private float meleeDistance = 0.40f;
     private float damageMelee = 1000f;
 
@@ -461,11 +460,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
         yield return new WaitForSeconds(0.25f);
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        //Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY));
     }
 }
