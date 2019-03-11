@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
 
+    [Header("Time Crouch")]
+    private float crouchTime = 0.0f;
+    public float crouchDelta = 0.5f;
+    private float nextCrouch = 0.5f;
+
     [Header("Time jump")]
     private float jumpTime = 0.0f;
     public float jumpDelta = 0.5f;
@@ -101,7 +106,16 @@ public class PlayerController : MonoBehaviour
                
                 if (distanceToClosestEnemy < activationDistance) 
                   {
-                    topAnimator.SetBool("isMeleeRange", true);
+                    /*Animazione in base a se è in piedi o meno*/
+                    if (bottomAnimator.GetBool("isCrouched"))
+                    {
+                        bottomAnimator.SetBool("isMeleeRange", true);
+                    }
+                    else
+                    {
+                        topAnimator.SetBool("isMeleeRange", true);
+                    }
+                    /*fine*/
 
                     if (shotTime > nextFire)
                     {
@@ -135,13 +149,16 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+
+                bottomAnimator.SetBool("isMeleeRange", false);
+                topAnimator.SetBool("isMeleeRange",false);
                 topAnimator.SetBool("isFiring", false);
-                topAnimator.SetBool("isMeleeRange", false);
                 bottomAnimator.SetBool("isFiring", false);
             }
         }
         else
         {
+            bottomAnimator.SetBool("isMeleeRange", false);
             topAnimator.SetBool("isMeleeRange", false);
             topAnimator.SetBool("isFiring", false);
             bottomAnimator.SetBool("isFiring", false);
@@ -161,7 +178,16 @@ public class PlayerController : MonoBehaviour
                 GameManager.RemoveBomb();
                 if (!wasFiring)
                 {
-                    topAnimator.SetBool("isThrowingGranate", true);
+                    /*Animazione in base a se è in piedi o meno*/
+                    if (bottomAnimator.GetBool("isCrouched"))
+                    {
+                        bottomAnimator.SetBool("isThrowingGranate", true);
+                    }
+                    else
+                    {
+                        topAnimator.SetBool("isThrowingGranate", true);
+                    }
+                   /*fine*/
 
                     if (shotTime > nextFire)
                     {
@@ -177,18 +203,45 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    topAnimator.SetBool("isThrowingGranate", false);
+                    /*Animazione in base a se è in piedi o meno*/
+                    if (bottomAnimator.GetBool("isCrouched"))
+                    {
+                        bottomAnimator.SetBool("isThrowingGranate", false);
+                    }
+                    else
+                    {
+                        topAnimator.SetBool("isThrowingGranate", false);
+                    }
+                    /*fine*/
                 }
             }
             else
             {
-                topAnimator.SetBool("isThrowingGranate", false);
+                /*Animazione in base a se è in piedi o meno*/
+                if (bottomAnimator.GetBool("isCrouched"))
+                {
+                    bottomAnimator.SetBool("isThrowingGranate", false);
+                }
+                else
+                {
+                    topAnimator.SetBool("isThrowingGranate", false);
+                }
+                /*fine*/
                 wasFiring = false;
             }
         }
         else
         {
-            topAnimator.SetBool("isThrowingGranate", false);
+            /*Animazione in base a se è in piedi o meno*/
+            if (bottomAnimator.GetBool("isCrouched"))
+            {
+                bottomAnimator.SetBool("isThrowingGranate", false);
+            }
+            else
+            {
+                topAnimator.SetBool("isThrowingGranate", false);
+            }
+            /*fine*/
             return;
         }
     }
@@ -276,23 +329,31 @@ public class PlayerController : MonoBehaviour
 
     void Crouch()
     {
+        crouchTime = crouchTime + Time.deltaTime;
+
         if (Input.GetButton("Crouch") && !Input.GetButton("Jump") && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")))
         {
-            topAnimator.SetBool("isCrouched", true);
-            bottomAnimator.SetBool("isCrouched", true);
-
-            if (isGrounded)
+            if (crouchTime > nextCrouch)
             {
-                StartCoroutine(WaitCrouch());
+                topAnimator.SetBool("isCrouched", true);
+                bottomAnimator.SetBool("isCrouched", true);
+
+                if (isGrounded)
+                {
+                    StartCoroutine(WaitCrouch());
+                }
+
+                if (!wasCrounching)
+                {
+                    maxSpeed -= 0.4f;
+                    projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y - 0.14f, 0);
+                }
+                nextCrouch = crouchTime + crouchDelta;
+                nextCrouch = nextCrouch - crouchTime;
+                crouchTime = 0.0f;
+                wasCrounching = true;
             }
 
-            if (!wasCrounching)
-            {
-                maxSpeed -= 0.4f;
-                projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y - 0.14f, 0);
-            }
-
-            wasCrounching = true;
         }
         else
         {
@@ -370,34 +431,36 @@ public class PlayerController : MonoBehaviour
     
     private IEnumerator WaitFire()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f); //Da il tempo all'animazione di fare il primo frame
         Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
+        yield return new WaitForSeconds(0.2f); //Impedisce che si possa spammare il tasto
     }
 
     private IEnumerator WaitGranate()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Instantiate(granate, projSpawner.transform.position, projSpawner.transform.rotation);
+        yield return new WaitForSeconds(0.15f);
     }
 
     private IEnumerator WaitMelee()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
         foreach (Collider2D enemy in enemyToDamage)
         {
             enemy.GetComponent<EnemyControl>().Hit(damageMeelee);
-            GameManager.AddScore(damageMeelee);
             AudioManager.PlayMeeleeHitAudio();
             break;
         }
-
+        yield return new WaitForSeconds(0.2f);
     }
 
     private IEnumerator WaitCrouch()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.10f);
         Up.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
     }
 
     void findClosestEnemy()

@@ -33,11 +33,11 @@ public class Granate_movement : MonoBehaviour
             case 180:
                 granateDirection = Quaternion.AngleAxis(-45, Vector3.forward) * Vector3.left;
                 break;
-            case 90:
-                granateDirection = Quaternion.AngleAxis(60, Vector3.forward) * Vector3.right;
-                break;
             case -90:
-                granateDirection = Quaternion.AngleAxis(120, Vector3.forward) * Vector3.left;
+                granateDirection = Quaternion.AngleAxis(-45, Vector3.forward) * Vector3.left;
+                break;
+            case 90:
+                granateDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
                 break;
         }
         rb.rotation = 0;
@@ -68,8 +68,15 @@ public class Granate_movement : MonoBehaviour
                 Collider2D[] thingsToDamage = Physics2D.OverlapBoxAll(rb.position, new Vector2(aoeRangeX, aoeRangeY), 0, whatIsEnemy);
                 foreach (Collider2D thing in thingsToDamage)
                 {
-                    thing.GetComponent<EnemyControl>().Hit(damageGranate);
-                    GameManager.AddScore(damageGranate);
+                    if(thing.tag == "Enemy")
+                    {
+                        thing.GetComponent<EnemyControl>().Hit(damageGranate);
+                    }
+                    else if(thing.tag == "Building")
+                    {
+                        thing.GetComponent<BuildingController>().Hit(damageGranate);
+                    }
+
                 }
 
                 this.rb.rotation = 0;

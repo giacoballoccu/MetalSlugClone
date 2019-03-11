@@ -29,6 +29,10 @@ public class BuildingController : MonoBehaviour
 
     public void Hit(float damage)
     {
+        if (health > 0)
+        {
+            GameManager.AddScore(damage);
+        }
         health -= damage;
-    }
+          }
 }

@@ -38,21 +38,18 @@ public class BulletMovement : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyControl>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
-            GameManager.AddScore(damageShot);
             Destroy(gameObject);
         }
         else if (collision.tag == "Building")
         {
             collision.gameObject.GetComponent<BuildingController>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
-            GameManager.AddScore(damageShot);
             Destroy(gameObject);
         }
         else if (collision.tag == "Boat")
         {
             collision.gameObject.GetComponent<BoatController>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
-            GameManager.AddScore(damageShot);
             Destroy(gameObject);
         }
     }

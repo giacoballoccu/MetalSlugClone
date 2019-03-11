@@ -123,7 +123,12 @@ public class EnemyControl : MonoBehaviour
     public void Hit(float damage)
     {
         ac.SetTrigger("isHitten");
-        health -= damage; 
+        if(health > 0)
+        {
+            GameManager.AddScore(damage);
+        }
+        health -= damage;
+ 
     }
 
 

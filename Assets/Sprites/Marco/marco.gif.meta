@@ -127,6 +127,23 @@ TextureImporter:
     21300244: meele_attack_4
     21300246: meele_attack_5
     21300248: meele_attack_6
+    21300250: throwing_granate_crouch_1
+    21300252: throwing_granate_crouch_2
+    21300254: throwing_granate_crouch_3
+    21300256: throwing_granate_crouch_4
+    21300258: throwing_granate_crouch_5
+    21300260: throwing_granate_crouch_6
+    21300262: throwing_granate_crouch_7
+    21300264: melee_attack_crouch_1
+    21300266: melee_attack_crouch_2
+    21300268: melee_attack_crouch_3
+    21300270: melee_attack_crouch_4
+    21300272: melee_attack_crouch_5
+    21300274: throwing_granate_1
+    21300276: throwing_granate_2
+    21300278: throwing_granate_3
+    21300280: throwing_graante_5
+    21300282: throwing_granate_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -2715,6 +2732,346 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2b3bfea90cbfdbd46a712e5d23096bca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 4541
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bb211820250224eb7317a4c4c0d3b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_2
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 4541
+        width: 36
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbe63207f399024cbf750534e5bbb37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 4543
+        width: 31
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb08714134339a4eba03076c0d5d939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 4543
+        width: 33
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f681c565efdf040908447f8edce5b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 4541
+        width: 44
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60956657a4ff3414f95a7e8e0d2ae6b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_6
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 4543
+        width: 41
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa2be7b475ee7b47bcc3ada5ab367e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_crouch_7
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 4543
+        width: 36
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094a55355eb0ddc4a9b9d2f90ad9bea8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_attack_crouch_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 4587
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45b69ae4258a5f4facfb0fdd6f8be03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_attack_crouch_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 4587
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8579fb46c5c5cfb448560a263cae7bd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_attack_crouch_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 4587
+        width: 50
+        height: 38
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59908492512d484e995bbcab9d3da15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_attack_crouch_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4587
+        width: 58
+        height: 38
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24eca83f3d819746b77403e58e4999a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_attack_crouch_5
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 4587
+        width: 59
+        height: 38
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6220859a5bbce046a20b2b4f9bfaca9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_1
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 4814
+        width: 35
+        height: 36
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aa22dcdb54c444884f557d693966e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_2
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 4814
+        width: 36
+        height: 36
+      alignment: 9
+      pivot: {x: 0.75, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6f2bacfe8ed474692e4b8af223d2a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_3
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 4814
+        width: 34
+        height: 36
+      alignment: 9
+      pivot: {x: 0.75, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3970b7642a4be49afe677135389a0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_graante_5
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 4814
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.75, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23ddb45be236c34db5c3fcb2eade522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throwing_granate_6
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 4813
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.75, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb0bf5cbd41eef46b4df11ff843efff
       vertices: []
       indices: 
       edges: []
