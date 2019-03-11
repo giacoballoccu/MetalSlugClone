@@ -44,14 +44,9 @@ public class PlayerController : MonoBehaviour
     [Header("Granate")]
     public GameObject granate;
 
-    //Melee attack
-    private EnemyControl closestEnemy;
-    private float distanceToClosestEnemy;
+    [Header("Melee")]
     public Transform attackPos;
-    private float activationDistance = 0.65f;
-    private LayerMask enemyLayer;
-    private float attackRangeX = 0.6f;
-    private float attackRangeY = 0.6f;
+    private float meleeDistance = 0.40f;
     private float damageMelee = 1000f;
 
     PlayerHealth playerHealth;
@@ -78,15 +73,6 @@ public class PlayerController : MonoBehaviour
         FlipShoot();
     }
 
-    void FixedUpdate()
-    {
-        if (GameManager.IsGameOver())
-            return;
-
-            findClosestEnemy();
-       
-    }
-
     public void Died()
     {
         bottomAnimator.SetBool("isDying", true);
@@ -102,8 +88,8 @@ public class PlayerController : MonoBehaviour
             if (!wasFiring)
             {
                
-                if (distanceToClosestEnemy < activationDistance) 
-                  {
+                if (CanMelee())
+                {
                     /*Animazione in base a se è in piedi o meno*/
                     if (bottomAnimator.GetBool("isCrouched"))
                     {
@@ -441,15 +427,31 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
     }
 
+    private RaycastHit2D MeleeRay()
+    {
+        Vector2 startPos = transform.position;
+        float distance = meleeDistance;
+        LayerMask layerMask = GameManager.GetEnemyLayer();
+        Vector2 direction = (facingRight) ? transform.right : -transform.right;
+        Vector2 endPos = startPos + (distance * direction);
+        Debug.DrawLine(startPos, endPos, Color.red, 5f);
+        return Physics2D.Raycast(startPos, direction, distance, layerMask);
+    }
+
+    private bool CanMelee()
+    {
+        RaycastHit2D hit = MeleeRay();
+        return (hit && hit.collider != null);
+    }
+
     private IEnumerator WaitMelee()
     {
         yield return new WaitForSeconds(0.1f);
-        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, GameManager.GetEnemyLayer());
-        foreach (Collider2D enemy in enemyToDamage)
+        RaycastHit2D hit = MeleeRay();
+        if (hit && hit.collider != null)
         {
-            enemy.GetComponent<EnemyControl>().Hit(damageMelee);
+            hit.collider.GetComponent<EnemyControl>().Hit(damageMelee);
             AudioManager.PlayMeleeHitAudio();
-            break;
         }
         yield return new WaitForSeconds(0.2f);
     }
@@ -461,28 +463,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
     }
 
-    void findClosestEnemy()
-    {
-        distanceToClosestEnemy = Mathf.Infinity;
-        closestEnemy = null;
-        EnemyControl[] allEnemies = GameObject.FindObjectsOfType<EnemyControl>();
-
-        foreach (EnemyControl currentEnemy in allEnemies)
-        {
-            float distanceToEnemy = (currentEnemy.transform.position - this.transform.position).sqrMagnitude;
-            if (distanceToEnemy < distanceToClosestEnemy)
-            {
-                distanceToClosestEnemy = distanceToEnemy;
-                closestEnemy = currentEnemy;
-            }
-        }
-       
-
-    }
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY));
+        //Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY));
     }
 }
