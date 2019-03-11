@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     int score = 0;
     int bombs = 200;
 
+    [Header("Layers")]
+    public LayerMask enemyLayer;
+
     void Awake()
     {
         //If a Game Manager exists and this isn't it...
@@ -114,5 +117,14 @@ public class GameManager : MonoBehaviour
         //game over audio
         UIManager.DisplayGameOverText();
         AudioManager.PlayGameOverAudio();
+    }
+
+    public static LayerMask GetEnemyLayer()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return 0;
+
+        return current.enemyLayer;
     }
 }

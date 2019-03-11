@@ -60,7 +60,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerHealth = GetComponent<PlayerHealth>();
-        enemyLayer = LayerMask.NameToLayer("Enemy");
     }
 
     void Update()
@@ -445,7 +444,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitMelee()
     {
         yield return new WaitForSeconds(0.1f);
-        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, enemyLayer);
+        Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, GameManager.GetEnemyLayer());
         foreach (Collider2D enemy in enemyToDamage)
         {
             enemy.GetComponent<EnemyControl>().Hit(damageMelee);
