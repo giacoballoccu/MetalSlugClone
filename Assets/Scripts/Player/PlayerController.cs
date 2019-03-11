@@ -54,8 +54,6 @@ public class PlayerController : MonoBehaviour
     private float attackRangeY = 0.6f;
     private float damageMeelee = 1000f;
 
-    //DeathUI
-    public TextMeshProUGUI DeathUI;
     PlayerHealth playerHealth;
 
     void Start()
