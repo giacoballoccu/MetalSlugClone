@@ -17,6 +17,7 @@ public class EnemyControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator ac;
+    private SpriteRenderer sr;
     private bool facingRight = false;
 
     //Enemy gravity
@@ -32,6 +33,7 @@ public class EnemyControl : MonoBehaviour
     {
         ac = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -56,59 +58,64 @@ public class EnemyControl : MonoBehaviour
             ac.SetBool("isDying", true);
             StartCoroutine(Die());
         }
-
-
-        if (playerDistance < activationDistance)
+        else
         {
-            if (Mathf.Abs(playerDistance) <= attackDistance)
+            if (playerDistance < activationDistance)
             {
-                //Attack player
-                ac.SetBool("isAttacking", true);
-                rb.isKinematic = true;
-
-
-                shotTime = shotTime + Time.deltaTime;
-
-                if (shotTime > nextFire)
+                if (Mathf.Abs(playerDistance) <= attackDistance)
                 {
-                    nextFire = shotTime + fireDelta;
+                    //Attack player
+                    ac.SetBool("isAttacking", true);
+                    rb.isKinematic = true;
 
 
-                    player.GetComponent<PlayerHealth>().Hit(attackDamage);
+                    shotTime = shotTime + Time.deltaTime;
 
-                    nextFire = nextFire - shotTime;
-                    shotTime = 0.0f;
-                }
-            }
-            else
-            {
-                //Move to the player
-                rb.isKinematic = false;
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
 
-                if (collidingDown)
-                {
-                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+
+                        player.GetComponent<PlayerHealth>().Hit(attackDamage);
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
                 }
                 else
                 {
-                    //velocity.y -= 9.81f * Time.deltaTime;
-                    //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
-                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
-                }
+                    //Move to the player
+                    rb.isKinematic = false;
 
-                ac.SetBool("isWalking", true);
-                ac.SetBool("isAttacking", false);
+                    if (collidingDown)
+                    {
+                        rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+                    }
+                    else
+                    {
+                        //velocity.y -= 9.81f * Time.deltaTime;
+                        //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                        rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                    }
+
+                    ac.SetBool("isWalking", true);
+                    ac.SetBool("isAttacking", false);
+                }
+            }
+
+            //Flip enemy
+            if (playerDistance < 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (playerDistance > 0 && facingRight)
+            {
+                Flip();
             }
         }
 
-        //Flip enemy
-        if (playerDistance < 0 && !facingRight)
-        {
-            Flip();
-        } else if (playerDistance > 0 && facingRight)
-        {
-            Flip();
-        }
+
+       
     }
 
     void Flip()
@@ -126,11 +133,18 @@ public class EnemyControl : MonoBehaviour
         if(health > 0)
         {
             GameManager.AddScore(damage);
+            sr.color = Color.red;
+            StartCoroutine(whitecolor());
         }
         health -= damage;
  
     }
 
+    IEnumerator whitecolor()
+    {
+        yield return new WaitForSeconds(0.25f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
 
     private IEnumerator Die()
     {

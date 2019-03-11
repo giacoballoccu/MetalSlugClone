@@ -458,9 +458,9 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator WaitCrouch()
     {
-        yield return new WaitForSeconds(0.10f);
+        yield return new WaitForSeconds(0.25f);
         Up.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.25f);
     }
 
     void findClosestEnemy()

@@ -76,6 +76,10 @@ public class Granate_movement : MonoBehaviour
                     {
                         thing.GetComponent<BuildingController>().Hit(damageGranate);
                     }
+                    else if(thing.tag == "Boat")
+                    {
+                        thing.GetComponent<BoatController>().Hit(damageGranate);
+                    }
 
                 }
 
