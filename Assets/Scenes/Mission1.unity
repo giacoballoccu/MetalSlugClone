@@ -2100,8 +2100,8 @@ MonoBehaviour:
   marcoDeathClip: {fileID: 8300000, guid: 908569ab6a36d114abf53d1e78f9b8b1, type: 3}
   normalShotClip: {fileID: 8300000, guid: 8946b764f8047d642b5a7bdb582fef11, type: 3}
   shotHitClip: {fileID: 8300000, guid: 51577d5da4d4c6b4e846b6fefd7b5e06, type: 3}
-  meleeHitClip: {fileID: 0}
-  meleeTakeClip: {fileID: 0}
+  meleeHitClip: {fileID: 8300000, guid: fadb1572312022744812cc6ad39991ca, type: 3}
+  meleeTakeClip: {fileID: 8300000, guid: eab3630d1af2af54cb35b5f5a15c1471, type: 3}
   collectibleGrabClip: {fileID: 8300000, guid: 8059f21498c55404fab41460468c5f37, type: 3}
   levelStart: {fileID: 8300000, guid: 730989ad5611e9d48b1a770a7579587c, type: 3}
   musicGroup: {fileID: 243248386772865564, guid: e890f615dbd1d714eb257944c4ba3fe6,
