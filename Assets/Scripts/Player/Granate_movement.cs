@@ -62,7 +62,7 @@ public class Granate_movement : MonoBehaviour
     {
         if(rb != null)
         {
-            if (collision.tag == "Enemy" || collision.tag == "Building" || collision.tag == "Terrain" || collision.tag == "Walkable")
+            if (collision.tag == "Enemy" || collision.tag == "Building" || collision.tag == "Boat" || collision.tag == "Terrain" || collision.tag == "Walkable")
             {
                 granateAnimator.SetBool("hasHittenSth", true);
                 Collider2D[] thingsToDamage = Physics2D.OverlapBoxAll(rb.position, new Vector2(aoeRangeX, aoeRangeY), 0, whatIsEnemy);
@@ -80,7 +80,6 @@ public class Granate_movement : MonoBehaviour
                     {
                         thing.GetComponent<BoatController>().Hit(damageGranate);
                     }
-
                 }
 
                 this.rb.rotation = 0;

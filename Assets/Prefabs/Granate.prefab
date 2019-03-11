@@ -149,7 +149,7 @@ MonoBehaviour:
   aoeRangeY: 0.8
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 2560
+    m_Bits: 6656
 --- !u!95 &5858975334122688018
 Animator:
   serializedVersion: 3
