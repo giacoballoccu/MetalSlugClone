@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 494655618}
   - component: {fileID: 494655617}
   - component: {fileID: 494655616}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Boat
   m_TagString: Boat
   m_Icon: {fileID: 0}
@@ -1209,7 +1209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674948891}
   - component: {fileID: 674948892}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2400,7 +2400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251382338}
   - component: {fileID: 1251382339}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2962,7 +2962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490382729}
   - component: {fileID: 1490382730}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Boat entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
