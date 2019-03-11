@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         UIManager.UpdateHealthUI(health, maxHealth);
-        AudioManager.PlayMeeleeTakeAudio();
+        AudioManager.PlayMeleeTakeAudio();
 
         if (health <= 0)
         {

@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsEnemy;
     private float attackRangeX = 0.6f;
     private float attackRangeY = 0.6f;
-    private float damageMeelee = 1000f;
+    private float damageMelee = 1000f;
 
     PlayerHealth playerHealth;
 
@@ -447,8 +447,8 @@ public class PlayerController : MonoBehaviour
         Collider2D[] enemyToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemy);
         foreach (Collider2D enemy in enemyToDamage)
         {
-            enemy.GetComponent<EnemyControl>().Hit(damageMeelee);
-            AudioManager.PlayMeeleeHitAudio();
+            enemy.GetComponent<EnemyControl>().Hit(damageMelee);
+            AudioManager.PlayMeleeHitAudio();
             break;
         }
         yield return new WaitForSeconds(0.2f);

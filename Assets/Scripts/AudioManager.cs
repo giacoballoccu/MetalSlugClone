@@ -22,8 +22,8 @@ public class AudioManager : MonoBehaviour
     [Header("Effects")]
     public AudioClip normalShotClip;
     public AudioClip shotHitClip;
-    public AudioClip meeleeHitClip;
-    public AudioClip meeleeTakeClip;
+    public AudioClip meleeHitClip;
+    public AudioClip meleeTakeClip;
     public AudioClip collectibleGrabClip;
 
     [Header("Voice")]
@@ -140,25 +140,25 @@ public class AudioManager : MonoBehaviour
         current.playerSource.Play();
     }
 
-    public static void PlayMeeleeHitAudio()
+    public static void PlayMeleeHitAudio()
     {
         //If there is no current AudioManager, exit
         if (current == null)
             return;
 
         //Set the clip for music audio, and then tell it to play
-        current.playerSource.clip = current.meeleeHitClip;
+        current.playerSource.clip = current.meleeHitClip;
         current.playerSource.Play();
     }
 
-    public static void PlayMeeleeTakeAudio()
+    public static void PlayMeleeTakeAudio()
     {
         //If there is no current AudioManager, exit
         if (current == null)
             return;
 
         //Set the clip for music audio, and then tell it to play
-        current.playerSource.clip = current.meeleeTakeClip;
+        current.playerSource.clip = current.meleeTakeClip;
         current.playerSource.Play();
     }
 }
