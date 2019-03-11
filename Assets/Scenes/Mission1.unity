@@ -3621,12 +3621,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1500
   destroyedSprite: {fileID: 21300026, guid: 116df9806cc9d0b47bd08d084f964534, type: 3}
---- !u!1 &1808201928 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1765443407358117547, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-    type: 3}
-  m_PrefabInstance: {fileID: 1765443407533320850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1824103423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,70 +4265,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: DeathUI
-      value: 
-      objectReference: {fileID: 43282172}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: attackRangeX
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: attackRangeY
-      value: 0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: activationDistance
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: whatIsEnemy.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: granate
-      value: 
-      objectReference: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
-        type: 3}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: granateSpawner
-      value: 
-      objectReference: {fileID: 1808201928}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: granateCounter
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: damageMeelee
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406479915054, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: fireDelta
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 463533751, guid: 10d84f9cfeae4f54d9078ef51e03d394, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 463533751, guid: 10d84f9cfeae4f54d9078ef51e03d394, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765443406731774336, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d84f9cfeae4f54d9078ef51e03d394, type: 3}

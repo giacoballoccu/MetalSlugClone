@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463533750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.336, y: -0.051, z: 0}
+  m_LocalPosition: {x: 0.2, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1765443406479915049}
@@ -86,21 +86,17 @@ MonoBehaviour:
   topAnimator: {fileID: 1765443406731774337}
   bottomAnimator: {fileID: 1765443406516593723}
   Up: {fileID: 1765443406731774338}
-  fireDelta: 0.2
+  fireDelta: 0.6
+  crouchDelta: 0.5
   jumpDelta: 0.8
   projectile: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
     type: 3}
   projSpawner: {fileID: 1765443407358117547}
-  nearestEnemyDistance: 0
+  granate: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
   attackPos: {fileID: 463533751}
-  activationDistance: 20
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
-  attackRangeX: 0
-  attackRangeY: 0
-  meleeDamage: 0
-  DeathUI: {fileID: 0}
+    m_Bits: 512
 --- !u!50 &1765443406479915050
 Rigidbody2D:
   serializedVersion: 4
@@ -328,7 +324,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: dcbb48e878343b2438b39a02a451ee4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
