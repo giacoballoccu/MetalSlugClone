@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 494655616}
   - component: {fileID: 494655619}
   m_Layer: 12
-  m_Name: Boat
+  m_Name: Sunk Boat
   m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
