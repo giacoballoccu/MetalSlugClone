@@ -4532,6 +4532,7 @@ GameObject:
   - component: {fileID: 1769398007}
   - component: {fileID: 1769398008}
   - component: {fileID: 1769398009}
+  - component: {fileID: 1769398010}
   m_Layer: 11
   m_Name: Tower Crab House
   m_TagString: Building
@@ -4655,6 +4656,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1500
+--- !u!114 &1769398010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769398004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca35da8278e96fb4d8bc452546ab94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.15
 --- !u!1 &1824103423
 GameObject:
   m_ObjectHideFlags: 0

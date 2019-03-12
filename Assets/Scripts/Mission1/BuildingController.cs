@@ -9,9 +9,11 @@ public class BuildingController : MonoBehaviour
 
     private SpriteRenderer sr;
     private Collider2D cl;
+    private BlinkingSprite blinkingSprite;
 
     private void Start()
     {
+        blinkingSprite = GetComponent<BlinkingSprite>();
         sr = GetComponent<SpriteRenderer>();
         cl = GetComponent<Collider2D>();
         registerHealth();
@@ -34,6 +36,7 @@ public class BuildingController : MonoBehaviour
     public void OnHit(float damage)
     {
         GameManager.AddScore(damage);
+        blinkingSprite.Play();
     }
 
 }
