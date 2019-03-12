@@ -76,7 +76,7 @@ public class EnemyControl : MonoBehaviour
                         nextFire = shotTime + fireDelta;
 
 
-                        player.GetComponent<PlayerHealth>().Hit(attackDamage);
+                        player.GetComponent<Health>().Hit(attackDamage);
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;

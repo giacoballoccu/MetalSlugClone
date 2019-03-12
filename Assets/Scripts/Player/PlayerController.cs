@@ -48,18 +48,21 @@ public class PlayerController : MonoBehaviour
     public float meleeDistance = 0.4f;
     public float damageMelee = 1000f;
 
-    PlayerHealth playerHealth;
+    private Health health;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerHealth = GetComponent<PlayerHealth>();
+        health = GetComponent<Health>();
+        // register health delegate
+        health.onDead += OnDead;
+        health.onHit += OnHit;
     }
 
     void Update()
     {
         //Block the player from moving if it's death
-        if (GameManager.IsGameOver() || !playerHealth.IsAlive())
+        if (GameManager.IsGameOver() || !health.IsAlive())
             return;
 
         Fire();
@@ -72,7 +75,20 @@ public class PlayerController : MonoBehaviour
         FlipShoot();
     }
 
-    public void Died()
+    private void OnDead() // health delegate onDead
+    {
+        Died();
+        GameManager.PlayerDied();
+        AudioManager.PlayDeathAudio();
+    }
+
+    private void OnHit() // health delegate onHit
+    {
+        UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
+        AudioManager.PlayMeleeTakeAudio();
+    }
+
+    void Died()
     {
         bottomAnimator.SetBool("isDying", true);
         StartCoroutine(WaitCrouch());
