@@ -16,7 +16,7 @@ public class SpawnObject : MonoBehaviour
         {
             if (follow != null)
             {
-                objectToSpawn.GetComponent<EnemyControl>().player = follow;
+                objectToSpawn.GetComponent<EnemyControl>().setFollow(follow);
             }
             Instantiate(objectToSpawn, new Vector2(transform.position.x-(quantity/8f), transform.position.y), transform.rotation);
         } 

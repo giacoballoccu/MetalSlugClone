@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6387296261839050603}
   - component: {fileID: 248927552}
   - component: {fileID: 1301625862922320279}
+  - component: {fileID: 4917731817273997411}
   m_Layer: 9
   m_Name: Crab
   m_TagString: Enemy
@@ -137,11 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fda677e83efc34abfaf1b74f3144b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 0.5
   attackDamage: 10
   deathClip: {fileID: 8300000, guid: 7472b6a26fc9bac448a62bb61cc2fd21, type: 3}
-  health: {fileID: 0}
   activationDistance: 1.8
   attackDistance: 0.5
   fireDelta: 0.5
@@ -184,6 +183,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
+--- !u!114 &4917731817273997411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654322134894282680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca35da8278e96fb4d8bc452546ab94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.15
 --- !u!1 &4755548917921778887
 GameObject:
   m_ObjectHideFlags: 0

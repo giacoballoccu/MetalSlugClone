@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyControl : MonoBehaviour
 {
     [Header("Enemy information")]
-    public GameObject player;
+    GameObject followPlayer;
     public float speed = 0.5f;
     public float attackDamage = 10f;
     public AudioClip deathClip;
     private Health health;
+    private BlinkingSprite blinkingSprite;
 
     [Header("Enemy activation")]
     public float activationDistance = 1.8f;
@@ -18,7 +19,6 @@ public class EnemyControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
     private bool facingRight = false;
 
     //Enemy gravity
@@ -32,10 +32,16 @@ public class EnemyControl : MonoBehaviour
 
     private void Start()
     {
+        followPlayer = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        blinkingSprite = GetComponent<BlinkingSprite>();
         registerHealth();
+    }
+
+    public void setFollow(GameObject follow)
+    {
+        followPlayer = follow;
     }
 
     private void registerHealth()
@@ -61,7 +67,7 @@ public class EnemyControl : MonoBehaviour
 
         if (health.IsAlive())
         {
-            float playerDistance = transform.position.x - player.transform.position.x;
+            float playerDistance = transform.position.x - followPlayer.transform.position.x;
             if (playerDistance < activationDistance)
             {
                 if (Mathf.Abs(playerDistance) <= attackDistance)
@@ -78,7 +84,7 @@ public class EnemyControl : MonoBehaviour
                         nextFire = shotTime + fireDelta;
 
 
-                        player.GetComponent<Health>().Hit(attackDamage);
+                        followPlayer.GetComponent<Health>().Hit(attackDamage);
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
@@ -139,14 +145,7 @@ public class EnemyControl : MonoBehaviour
         animator.SetTrigger("isHitten");
 
         GameManager.AddScore(damage);
-        spriteRenderer.color = Color.red;
-        StartCoroutine(whitecolor());
-    }
-
-    IEnumerator whitecolor()
-    {
-        yield return new WaitForSeconds(0.25f);
-        GetComponent<SpriteRenderer>().color = Color.white;
+        blinkingSprite.Play();
     }
 
     private IEnumerator Die()
