@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5665392374265219016}
   - component: {fileID: 5858975334122688018}
   m_Layer: 0
-  m_Name: Granate
+  m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,14 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77a56f16df983e4fb255f08182de1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  granateForce: 3
-  granateAnimator: {fileID: 5858975334122688018}
-  granateSpawn: {fileID: 0}
+  grenadeForce: 0
+  grenadeAnimator: {fileID: 5858975334122688018}
+  grenadeSpawn: {fileID: 5665392374265219023}
   aoeRangeX: 0.95
   aoeRangeY: 0.8
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 6656
 --- !u!95 &5858975334122688018
 Animator:
   serializedVersion: 3
