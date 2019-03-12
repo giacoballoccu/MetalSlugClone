@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask enemyLayer;
+    public LayerMask walkableLayer;
 
     void Awake()
     {
@@ -126,5 +127,14 @@ public class GameManager : MonoBehaviour
             return 0;
 
         return current.enemyLayer;
+    }
+
+    public static LayerMask GetWalkableLayer()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return 0;
+
+        return current.walkableLayer;
     }
 }
