@@ -531,6 +531,12 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  boatLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  buildingLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   walkableLayer:
     serializedVersion: 2
     m_Bits: 1024
