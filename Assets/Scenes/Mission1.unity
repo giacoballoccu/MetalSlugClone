@@ -531,6 +531,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  walkableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!4 &246608009
 Transform:
   m_ObjectHideFlags: 0
@@ -646,12 +649,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1130255035}
   - {fileID: 1769398006}
   - {fileID: 1351770796}
   - {fileID: 1723250120}
   m_Father: {fileID: 1062245213}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365622468
 GameObject:
@@ -2063,6 +2065,7 @@ Transform:
   m_LocalPosition: {x: 27.192207, y: -1.0363287, z: 0.0018587117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1130255035}
   - {fileID: 329866566}
   - {fileID: 1285977246}
   - {fileID: 1365498234}
@@ -2502,7 +2505,7 @@ Transform:
   - {fileID: 1853709783}
   - {fileID: 1930952384}
   m_Father: {fileID: 1062245213}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1336660289 stripped
 Transform:
@@ -2539,7 +2542,7 @@ Transform:
   m_Children:
   - {fileID: 365622469}
   m_Father: {fileID: 329866566}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365498233
 GameObject:
@@ -2570,7 +2573,7 @@ Transform:
   m_Children:
   - {fileID: 1196947420}
   m_Father: {fileID: 1062245213}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376521637
 GameObject:
@@ -3134,7 +3137,7 @@ Transform:
   - {fileID: 702669948}
   - {fileID: 733059467}
   m_Father: {fileID: 329866566}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1744704250
 GameObject:
@@ -3582,7 +3585,7 @@ Transform:
   m_Children:
   - {fileID: 1376521638}
   m_Father: {fileID: 329866566}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1769398007
 BoxCollider2D:
@@ -4207,7 +4210,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 329866566}
+    m_TransformParent: {fileID: 1062245213}
     m_Modifications:
     - target: {fileID: 1765443406479915045, guid: 10d84f9cfeae4f54d9078ef51e03d394,
         type: 3}
