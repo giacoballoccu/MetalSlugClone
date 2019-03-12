@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class BoatController : MonoBehaviour
 {
-    public float health = 100;
     private Collider2D cl;
     public new Camera camera;
 
     public GameObject secondPart;
+    private Health health;
 
     private void Start()
     {
         cl = GetComponent<Collider2D>();
+        registerHealth();
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void registerHealth()
     {
-        if (health <= 0)
-        {
-            secondPart.SetActive(true);
-            camera.GetComponent<CameraController>().setIsBlocked(false);
-            this.gameObject.SetActive(false);
-        }
+        health = GetComponent<Health>();
+        // register health delegate
+        health.onDead += OnDead;
     }
 
-    public void Hit(float damage)
+    void OnDead(float damage)
     {
-        health -= damage;
+        secondPart.SetActive(true);
+        camera.GetComponent<CameraController>().setIsBlocked(false);
+        this.gameObject.SetActive(false);
     }
 }

@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 494655618}
   - component: {fileID: 494655617}
   - component: {fileID: 494655616}
+  - component: {fileID: 494655619}
   m_Layer: 12
   m_Name: Boat
   m_TagString: Boat
@@ -823,7 +824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b530a82a248864398f062cac90dd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   camera: {fileID: 519420031}
   secondPart: {fileID: 1978565567}
 --- !u!61 &494655617
@@ -871,6 +871,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &494655619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494655614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

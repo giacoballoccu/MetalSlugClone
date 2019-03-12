@@ -48,7 +48,7 @@ public class BulletMovement : MonoBehaviour
         }
         else if (collision.tag == "Boat")
         {
-            collision.gameObject.GetComponent<BoatController>().Hit(damageShot);
+            collision.gameObject.GetComponent<Health>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }
