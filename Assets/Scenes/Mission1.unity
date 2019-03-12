@@ -2046,7 +2046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1062245213}
   m_Layer: 0
-  m_Name: Scene
+  m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
