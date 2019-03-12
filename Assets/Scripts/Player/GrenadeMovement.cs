@@ -54,6 +54,7 @@ public class GrenadeMovement : MonoBehaviour
         {
             if (GameManager.CanTriggerGrenade(collision.tag))
             {
+                AudioManager.PlayGrenadeHitAudio();
                 grenadeAnimator.SetBool("hasHittenSth", true);
                 Collider2D[] thingsToDamage = Physics2D.OverlapBoxAll(rb.position, new Vector2(aoeRangeX, aoeRangeY), 0, GameManager.GetDestructibleLayer());
                 foreach (Collider2D thing in thingsToDamage)

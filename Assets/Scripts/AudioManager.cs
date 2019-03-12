@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
     [Header("Effects")]
     public AudioClip normalShotClip;
     public AudioClip shotHitClip;
+    public AudioClip grenadeHitClip;
     public AudioClip meleeHitClip;
     public AudioClip meleeTakeClip;
     public AudioClip collectibleGrabClip;
@@ -152,6 +153,17 @@ public class AudioManager : MonoBehaviour
 
         //Set the clip for music audio, and then tell it to play
         current.playerSource.clip = current.shotHitClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayGrenadeHitAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.playerSource.clip = current.grenadeHitClip;
         current.playerSource.Play();
     }
 
