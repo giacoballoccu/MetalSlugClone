@@ -16,9 +16,6 @@ public class GrenadeMovement : MonoBehaviour
     private Vector2 controlPoint;
     private Vector2 endingPoint;
 
-    public float aoeRangeX = 0.95f;
-    public float aoeRangeY = 0.8f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -78,11 +75,5 @@ public class GrenadeMovement : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(rb.position, new Vector3(aoeRangeX, aoeRangeY));
     }
 }
