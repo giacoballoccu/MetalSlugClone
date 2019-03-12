@@ -18,7 +18,6 @@ public class EnemyControl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D collider;
     private bool facingRight = false;
 
     //Enemy gravity
@@ -35,7 +34,6 @@ public class EnemyControl : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -154,7 +152,7 @@ public class EnemyControl : MonoBehaviour
     {
         animator.SetBool("isDying", true);
         rb.isKinematic = true;
-        collider.isTrigger = true;
+        GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
