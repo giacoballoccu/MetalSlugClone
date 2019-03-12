@@ -32,11 +32,13 @@ public class AudioManager : MonoBehaviour
     [Header("Mixer Groups")]
     public AudioMixerGroup musicGroup;  //The music mixer group
     public AudioMixerGroup effectGroup;  //The sting mixer group
+    public AudioMixerGroup enemyGroup; //The enemy mixer group
     public AudioMixerGroup playerGroup; //The player mixer group
     public AudioMixerGroup voiceGroup;  //The voice mixer group
 
     AudioSource musicSource;            //Reference to the generated music Audio Source
     AudioSource effectSource;            //Reference to the generated effect Audio Source
+    AudioSource enemySource;            //Reference to the generated enemy Audio Source
     AudioSource playerSource;           //Reference to the generated player Audio Source
     AudioSource voiceSource;            //Reference to the generated voice Audio Source
 
@@ -57,6 +59,7 @@ public class AudioManager : MonoBehaviour
         //Generate the Audio Source "channels" for our game's audio
         musicSource = gameObject.AddComponent<AudioSource>();
         effectSource = gameObject.AddComponent<AudioSource>();
+        enemySource = gameObject.AddComponent<AudioSource>();
         playerSource = gameObject.AddComponent<AudioSource>();
         voiceSource = gameObject.AddComponent<AudioSource>();
 
@@ -64,6 +67,7 @@ public class AudioManager : MonoBehaviour
         //routed and controlled by the audio mixer
         musicSource.outputAudioMixerGroup = musicGroup;
         effectSource.outputAudioMixerGroup = effectGroup;
+        enemySource.outputAudioMixerGroup = enemyGroup;
         playerSource.outputAudioMixerGroup = playerGroup;
         voiceSource.outputAudioMixerGroup = voiceGroup;
 
@@ -127,6 +131,17 @@ public class AudioManager : MonoBehaviour
         //Set the clip for music audio, and then tell it to play
         current.playerSource.clip = current.normalShotClip;
         current.playerSource.Play();
+    }
+
+    public static void PlayEnemyDeathAudio(AudioClip deathClip)
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.enemySource.clip = deathClip;
+        current.enemySource.Play();
     }
 
     public static void PlayShotHitAudio()

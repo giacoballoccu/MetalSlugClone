@@ -2114,6 +2114,8 @@ MonoBehaviour:
     type: 2}
   effectGroup: {fileID: 243798907181180866, guid: e890f615dbd1d714eb257944c4ba3fe6,
     type: 2}
+  enemyGroup: {fileID: 243000552685421218, guid: e890f615dbd1d714eb257944c4ba3fe6,
+    type: 2}
   playerGroup: {fileID: 243097448865197354, guid: e890f615dbd1d714eb257944c4ba3fe6,
     type: 2}
   voiceGroup: {fileID: 243428904522450454, guid: e890f615dbd1d714eb257944c4ba3fe6,

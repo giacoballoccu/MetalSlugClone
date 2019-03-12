@@ -9,6 +9,7 @@ public class EnemyControl : MonoBehaviour
     public float speed = 0.5f;
     public float health = 300f;
     public float attackDamage = 10f;
+    public AudioClip deathClip;
 
     [Header("Enemy activation")]
     public float activationDistance = 1.8f;
@@ -150,11 +151,19 @@ public class EnemyControl : MonoBehaviour
 
     private IEnumerator Die()
     {
+        PlayDeathAudio();
         animator.SetBool("isDying", true);
         rb.isKinematic = true;
         GetComponent<BoxCollider2D>().enabled = false;
+
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    private void PlayDeathAudio()
+    {
+        if (deathClip)
+            AudioManager.PlayEnemyDeathAudio(deathClip);
     }
 
     private void OnCollisionEnter(Collision collision)

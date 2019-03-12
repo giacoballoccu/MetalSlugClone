@@ -140,6 +140,7 @@ MonoBehaviour:
   speed: 0.5
   health: 300
   attackDamage: 10
+  deathClip: {fileID: 8300000, guid: 7472b6a26fc9bac448a62bb61cc2fd21, type: 3}
   activationDistance: 1.8
   attackDistance: 0.5
   fireDelta: 0.5
