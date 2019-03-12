@@ -42,7 +42,7 @@ public class BulletMovement : MonoBehaviour
         }
         else if (collision.tag == "Building")
         {
-            collision.gameObject.GetComponent<BuildingController>().Hit(damageShot);
+            collision.gameObject.GetComponent<Health>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }

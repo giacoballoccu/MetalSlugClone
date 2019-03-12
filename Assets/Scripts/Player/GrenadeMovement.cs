@@ -60,7 +60,7 @@ public class GrenadeMovement : MonoBehaviour
                     }
                     else if(collision.tag == "Building")
                     {
-                        collision.GetComponent<BuildingController>().Hit(damageGrenade);
+                        collision.GetComponent<Health>().Hit(damageGrenade);
                     }
                     else if(collision.tag == "Boat")
                     {

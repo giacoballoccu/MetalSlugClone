@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingController : MonoBehaviour
 {
-    public float health = 100;
+    public Health health;
     public Sprite destroyedSprite;
 
     private SpriteRenderer sr;
@@ -14,25 +14,26 @@ public class BuildingController : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         cl = GetComponent<Collider2D>();
+        registerHealth();
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void registerHealth()
     {
-        if (health <= 0)
-        {
-            sr.sprite = destroyedSprite;
-            cl.enabled = false;
-        }
+        health = GetComponent<Health>();
+        // register health delegate
+        health.onDead += OnDead;
+        health.onHit += OnHit;
     }
 
-    public void Hit(float damage)
+    void OnDead(float damage)
     {
-        if (health > 0)
-        {
-            GameManager.AddScore(damage);
-        }
-        health -= damage;
-          }
+        sr.sprite = destroyedSprite;
+        cl.enabled = false;
+    }
+
+    public void OnHit(float damage)
+    {
+        GameManager.AddScore(damage);
+    }
+
 }
