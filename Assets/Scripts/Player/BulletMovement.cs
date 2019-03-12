@@ -36,7 +36,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyControl>().Hit(damageShot);
+            collision.gameObject.GetComponent<Health>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
             Destroy(gameObject);
         }

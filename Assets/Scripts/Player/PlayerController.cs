@@ -53,6 +53,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        registerHealth();
+    }
+
+    private void registerHealth()
+    {
         health = GetComponent<Health>();
         // register health delegate
         health.onDead += OnDead;
@@ -75,14 +80,14 @@ public class PlayerController : MonoBehaviour
         FlipShoot();
     }
 
-    private void OnDead() // health delegate onDead
+    private void OnDead(float damage) // health delegate onDead
     {
         Died();
         GameManager.PlayerDied();
         AudioManager.PlayDeathAudio();
     }
 
-    private void OnHit() // health delegate onHit
+    private void OnHit(float damage) // health delegate onHit
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
@@ -465,7 +470,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = MeleeRay();
         if (hit && hit.collider != null)
         {
-            hit.collider.GetComponent<EnemyControl>().Hit(damageMelee);
+            hit.collider.GetComponent<Health>().Hit(damageMelee);
             AudioManager.PlayMeleeHitAudio();
         }
         yield return new WaitForSeconds(0.2f);

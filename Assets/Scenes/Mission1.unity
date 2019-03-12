@@ -621,11 +621,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6387296261839050603, guid: dbdec53586b0c3740b7025c04630e45d,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 389572639}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
 --- !u!1 &329866565
@@ -1570,13 +1565,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6387296261839050603, guid: dbdec53586b0c3740b7025c04630e45d,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 389572639}
-    m_RemovedComponents:
-    - {fileID: 5969963837956604129, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
 --- !u!1 &798097195
 GameObject:
@@ -2220,13 +2209,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6387296261839050603, guid: dbdec53586b0c3740b7025c04630e45d,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 389572639}
-    m_RemovedComponents:
-    - {fileID: 5969963837956604129, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
 --- !u!1 &1196947419
 GameObject:
@@ -2747,13 +2730,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6387296261839050603, guid: dbdec53586b0c3740b7025c04630e45d,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 389572639}
-    m_RemovedComponents:
-    - {fileID: 5969963837956604129, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdec53586b0c3740b7025c04630e45d, type: 3}
 --- !u!1 &1436050389
 GameObject:

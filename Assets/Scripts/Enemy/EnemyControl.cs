@@ -7,9 +7,9 @@ public class EnemyControl : MonoBehaviour
     [Header("Enemy information")]
     public GameObject player;
     public float speed = 0.5f;
-    public float health = 300f;
     public float attackDamage = 10f;
     public AudioClip deathClip;
+    private Health health;
 
     [Header("Enemy activation")]
     public float activationDistance = 1.8f;
@@ -35,19 +35,21 @@ public class EnemyControl : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        registerHealth();
+    }
+
+    private void registerHealth()
+    {
+        health = GetComponent<Health>();
+        // register health delegate
+        health.onDead += OnDead;
+        health.onHit += OnHit;
     }
 
     private void Update()
     {
         if (GameManager.IsGameOver())
             return;
-
-
-    }
-
-    bool IsAlive()
-    {
-        return health > 0;
     }
 
     void FixedUpdate()
@@ -57,7 +59,7 @@ public class EnemyControl : MonoBehaviour
 
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
-        if (IsAlive())
+        if (health.IsAlive())
         {
             float playerDistance = transform.position.x - player.transform.position.x;
             if (playerDistance < activationDistance)
@@ -127,20 +129,18 @@ public class EnemyControl : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void Hit(float damage)
+    private void OnDead(float damage)
+    {
+        StartCoroutine(Die());
+    }
+
+    private void OnHit(float damage)
     {
         animator.SetTrigger("isHitten");
-        health -= damage;
-        if (IsAlive())
-        {
-            GameManager.AddScore(damage);
-            spriteRenderer.color = Color.red;
-            StartCoroutine(whitecolor());
-        }
-        else // died
-        {
-            StartCoroutine(Die());
-        }
+
+        GameManager.AddScore(damage);
+        spriteRenderer.color = Color.red;
+        StartCoroutine(whitecolor());
     }
 
     IEnumerator whitecolor()
