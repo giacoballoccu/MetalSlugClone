@@ -6,6 +6,7 @@ public class StartBoat : MonoBehaviour
 {
     public GameObject boat;
     public GameObject target;
+    public float offsetToTarget;
 
     public float speed = 0.35f;
 
@@ -17,7 +18,7 @@ public class StartBoat : MonoBehaviour
         {
             //Move boat
             float step = speed * Time.deltaTime;
-            boat.transform.position = new Vector2(Vector2.MoveTowards(boat.transform.position, new Vector2(target.transform.position.x-1.5f, target.transform.position.y), step).x, boat.transform.position.y);
+            boat.transform.position = new Vector2(Vector2.MoveTowards(boat.transform.position, new Vector2(target.transform.position.x-offsetToTarget, target.transform.position.y), step).x, boat.transform.position.y);
         }
     }
 
