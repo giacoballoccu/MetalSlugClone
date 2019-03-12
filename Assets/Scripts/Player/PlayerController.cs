@@ -6,8 +6,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float maxSpeed = 1f;
-    public float maxJump = 1f;
+    public float maxSpeed = 1.2f;
+    public float maxJump = 4f;
     private bool isGrounded = false;
 
     [Header("Sprite orientation")]
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
-    public float fireDelta = 0.5f;
+    public float fireDelta = 0.6f;
     private float nextFire = 0.5f;
 
     [Header("Time Crouch")]
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Time jump")]
     private float jumpTime = 0.0f;
-    public float jumpDelta = 0.5f;
+    public float jumpDelta = 0.8f;
     private float nextJump = 0.5f;
 
     [Header("Bullet")]
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public GameObject granate;
 
     [Header("Melee")]
-    public float meleeDistance = 0.35f;
+    public float meleeDistance = 0.4f;
     public float damageMelee = 1000f;
 
     PlayerHealth playerHealth;
