@@ -50,6 +50,9 @@ public class PlayerController : MonoBehaviour
 
     private Health health;
 
+    public GameObject foreground;
+    public new Camera camera;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -425,14 +428,19 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Walkable" || col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Walkable" || col.gameObject.tag == "Enemy" || col.gameObject.tag == "Marco Boat")
         {
             isGrounded = true;
             topAnimator.SetBool("isJumping", false);
             bottomAnimator.SetBool("isJumping", false);
+        } else if (col.gameObject.tag == "Water Dead")
+        {
+            health.Hit(100);
+            gameObject.transform.parent = foreground.transform;
+            camera.GetComponent<CameraController>().setIsBlocked(true);
         }
     }
-    
+
     private IEnumerator WaitFire()
     {
         yield return new WaitForSeconds(0.1f); //Da il tempo all'animazione di fare il primo frame
