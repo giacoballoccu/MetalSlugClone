@@ -32,7 +32,7 @@ public class EnemyControl : MonoBehaviour
 
     private void Start()
     {
-        followPlayer = GameObject.FindGameObjectWithTag("Player");
+        followPlayer = GameManager.GetPlayer();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         blinkingSprite = GetComponent<BlinkingSprite>();

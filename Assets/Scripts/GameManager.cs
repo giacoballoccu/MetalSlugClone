@@ -131,6 +131,15 @@ public class GameManager : MonoBehaviour
         return current.buildingLayer;
     }
 
+    public static GameObject GetPlayer() // not cached
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return null;
+
+        return GameObject.FindGameObjectWithTag("Player");
+    }
+
     public static LayerMask GetBoatLayer()
     {
         //If there is no current Game Manager, exit

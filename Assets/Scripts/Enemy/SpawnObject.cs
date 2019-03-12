@@ -12,6 +12,7 @@ public class SpawnObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /* todo annihilate this rubbish
         for (; quantity > 0; quantity--)
         {
             if (follow != null)
@@ -19,7 +20,8 @@ public class SpawnObject : MonoBehaviour
                 objectToSpawn.GetComponent<EnemyControl>().setFollow(follow);
             }
             Instantiate(objectToSpawn, new Vector2(transform.position.x-(quantity/8f), transform.position.y), transform.rotation);
-        } 
+        }
+        */
     }
 
     // Update is called once per frame
