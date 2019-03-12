@@ -7,9 +7,8 @@ public class GrenadeMovement : MonoBehaviour
 
     private Rigidbody2D rb;
    
-    //public float lifeTime = 5;
     private float damageGrenade = 300;
-    public float grenadeForce;
+    public float grenadeForce = 3;
     public Animator grenadeAnimator;
     public GameObject grenadeSpawn;
     Vector3 grenadeDirection;
@@ -17,8 +16,8 @@ public class GrenadeMovement : MonoBehaviour
     private Vector2 controlPoint;
     private Vector2 endingPoint;
 
-    public float aoeRangeX;
-    public float aoeRangeY;
+    public float aoeRangeX = 0.95f;
+    public float aoeRangeY = 0.8f;
 
     // Start is called before the first frame update
     void Start()
