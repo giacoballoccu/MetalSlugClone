@@ -137,4 +137,13 @@ public class GameManager : MonoBehaviour
 
         return current.walkableLayer;
     }
+
+    public static bool CanTriggerGrenade(string tag)
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return false;
+
+        return tag == "Enemy" || tag == "Building" || tag == "Boat" || tag == "Terrain" || tag == "Walkable"
+    }
 }

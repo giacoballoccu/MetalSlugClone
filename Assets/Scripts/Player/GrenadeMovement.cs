@@ -43,14 +43,6 @@ public class GrenadeMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-       
-    }
-
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
        StartCoroutine(Explosion(collision));
@@ -60,7 +52,7 @@ public class GrenadeMovement : MonoBehaviour
     {
         if(rb != null)
         {
-            if (collision.tag == "Enemy" || collision.tag == "Building" || collision.tag == "Boat" || collision.tag == "Terrain" || collision.tag == "Walkable")
+            if (GameManager.CanTriggerGrenade(collision.tag))
             {
                 grenadeAnimator.SetBool("hasHittenSth", true);
                 Collider2D[] thingsToDamage = Physics2D.OverlapBoxAll(rb.position, new Vector2(aoeRangeX, aoeRangeY), 0, GameManager.GetEnemyLayer());
@@ -87,8 +79,6 @@ public class GrenadeMovement : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        
     }
 
     void OnDrawGizmosSelected()
