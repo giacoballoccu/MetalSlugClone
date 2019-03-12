@@ -1,50 +1,44 @@
 fileFormatVersion: 2
-guid: 116df9806cc9d0b47bd08d084f964534
+guid: 13c327f11c14de14aa980fb10bf542f5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: foreground_0
-    21300002: foreground_cloud_forest
-    21300004: sea_waves_1
-    21300006: sea_waves_2
-    21300008: sea_waves_3
-    21300010: sea_waves_4
-    21300012: sea_waves_5
-    21300014: sea_waves_6
-    21300016: sea_waves_7
-    21300018: sea_waves_8
-    21300020: foreground_tower_1
-    21300022: foreground_1
-    21300024: foreground_dead_fish
-    21300026: foreground_tower_2
-    21300028: foreground_door_1
-    21300030: foreground_door_2
-    21300032: foreground_door_3
-    21300034: foreground_door_4
-    21300036: foreground_door_5
-    21300038: foreground_door_6
-    21300040: foreground_door_7
-    21300042: foreground_boat_1
-    21300044: foreground_boat_2
-    21300046: foreground_boat_3
-    21300048: foreground_boat_4
-    21300050: foreground_boat_5
-    21300052: foreground_boat
-    21300054: foreground_2
-    21300056: boat_1
-    21300058: boat_2
-    21300060: boat_3
-    21300062: boat_4
-    21300064: boat_5
-    21300066: boat_6
-    21300068: boat_7
-    21300070: boat_8
-    21300072: bridge_1
-    21300074: foreground_3
-    21300076: bridge
-    21300078: foreground_water_1
-    21300080: foreground_sea
-    21300082: foreground_sea_orange
-    21300084: bridge_broken_1
+    21300000: van_idle_1
+    21300002: van_idle_2
+    21300004: van_idle_3
+    21300006: van_idle_4
+    21300008: van_firing_1
+    21300010: van_firing_2
+    21300012: van_firing_3
+    21300014: van_firing_4
+    21300016: van_firing_5
+    21300018: van_firing_6
+    21300020: van_firing_7
+    21300022: van_firing_8
+    21300024: van_firing_9
+    21300026: van_firing_10
+    21300028: van_firing_11
+    21300030: van_firing_12
+    21300032: van_firing_13
+    21300034: van_firing_14
+    21300036: van_firing_15
+    21300038: van_firing_16
+    21300040: van_firing_17
+    21300042: van_firing_18
+    21300044: van_firing_19
+    21300046: van_firing_20
+    21300048: van_firing_21
+    21300050: van_firing_22
+    21300052: van_firing_23
+    21300054: van_firing_24
+    21300056: van_bomb_1
+    21300058: van_bomb_2
+    21300060: van_bomb_3
+    21300062: van_bomb_4
+    21300064: van_bomb_5
+    21300066: van_bomb_exp_1
+    21300068: van_bomb_exp_2
+    21300070: van_bomb_exp_3
+    21300072: van_bomb_exp_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -85,7 +79,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -103,9 +97,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
-    resizeAlgorithm: 1
-    textureFormat: 4
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -114,9 +108,9 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 8192
-    resizeAlgorithm: 1
-    textureFormat: 4
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -125,9 +119,9 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 8192
-    resizeAlgorithm: 1
-    textureFormat: 4
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -138,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: foreground_0
+      name: van_idle_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 267
-        width: 1610
-        height: 221
+        x: 26
+        y: 848
+        width: 128
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,39 +146,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5b06465c5ae78d4b83eba3410097a67
+      spriteID: f73e3d0e49de3d4488bea32d8f2d64fd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_cloud_forest
+      name: van_idle_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1408
-        width: 2375
-        height: 277
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 3, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc2e019514dfb3e4cb04852aa8b7d1ad
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 951
-        width: 565
-        height: 65
+        x: 172
+        y: 848
+        width: 128
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,178 +166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c41a9f6f3080d8b4f85dc5e92fab9cc8
+      spriteID: 6b45ba4e824e3aa42bf1b78c66e26187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sea_waves_2
+      name: van_idle_3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 885
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 469259a84d3edac46b4aecdf0317699f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 819
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3120ebcdeb942b43bbdc98c54eb7b03
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_4
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 753
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c812e81044944f4683fc5329159ce91
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 687
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5604e8c0cf0ba8c418e4661cd118996a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_6
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 621
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28e074f834694b948b681820035340b0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_7
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 555
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d390fc6644a3e0e448dafcdf0b0b4dcf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_waves_8
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 489
-        width: 565
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe2c408743c529e4ca7134a9ce5b364c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_tower_1
-      rect:
-        serializedVersion: 2
-        x: 3597
-        y: 1474
-        width: 264
-        height: 211
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52119e2660581e9418f489479480b418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_1
-      rect:
-        serializedVersion: 2
-        x: 1613
-        y: 402
-        width: 1290
+        x: 326
+        y: 848
+        width: 128
         height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -372,19 +186,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5168b18f830f70842be5d45cb4fc4a91
+      spriteID: 14732fa371df277428f629427c404ec1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_dead_fish
+      name: van_idle_4
       rect:
         serializedVersion: 2
-        x: 2958
-        y: 1606
-        width: 84
-        height: 43
+        x: 477
+        y: 848
+        width: 128
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,39 +206,299 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c49c90ed8966fcf4c89cbc10de341b50
+      spriteID: 57e1769652e54074e855f909e3dbb340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_tower_2
+      name: van_firing_1
       rect:
         serializedVersion: 2
-        x: 4401
-        y: 1517
-        width: 304
+        x: 24
+        y: 624
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6158bb6df01f90f4b8fff596430408f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 624
+        width: 129
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c299eb839b5f2304fa644de15b995e40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 624
+        width: 128
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7223b258d9916414a8195147374a4911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_4
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 624
+        width: 128
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786e66b33a85cb5499eb5421bcd6859c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_5
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 624
+        width: 128
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196b7a761cae31c459e2155d4f441654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 624
+        width: 128
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f997880e47a034db6da49f54dcb2f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_7
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 420
+        width: 128
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223f79745de01444dbbceea072183aab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_8
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 420
+        width: 128
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb24f1e58456dc40b8b3c65a28a10e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_9
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 420
+        width: 128
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4119aa9fa7143d4183f373f93866c00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_10
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 420
+        width: 128
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79876ab231460a42b7281babaa333ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_11
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 420
+        width: 128
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c62b1bfa8875194ead28a5430c7c870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_12
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 420
+        width: 128
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cccac439921a142be1e67bf6999db0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 211
+        width: 128
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df86110a78a390488dc49f2e7a66a53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 211
+        width: 138
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239526287a0d97440aed196626a496f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_15
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 211
+        width: 134
         height: 168
-      alignment: 9
-      pivot: {x: 0.58, y: 0.635}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4e352860d052ed4fae73f17b11061ba
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_door_1
-      rect:
-        serializedVersion: 2
-        x: 569
-        y: 812
-        width: 87
-        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,19 +506,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85cbdaf6b3c38f848bab15f129f921df
+      spriteID: 6971ddb608776694693bfa07c740f9a1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_door_2
+      name: van_firing_16
       rect:
         serializedVersion: 2
-        x: 658
-        y: 812
-        width: 90
-        height: 69
+        x: 493
+        y: 211
+        width: 128
+        height: 169
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,119 +526,279 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efbf61851010dfb4a95c6751e5fd2b84
+      spriteID: 728cc963a94747c4e8eefb5a51d6e35c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_door_3
+      name: van_firing_17
       rect:
         serializedVersion: 2
-        x: 750
-        y: 813
-        width: 101
-        height: 60
-      alignment: 9
-      pivot: {x: 0.6, y: 0.55}
+        x: 649
+        y: 211
+        width: 128
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23e9edf51c7112f4db8c87ba1083d3af
+      spriteID: 964a64dd46a1fda4a96ee8a0c923b9ce
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_door_4
+      name: van_firing_18
       rect:
         serializedVersion: 2
-        x: 851
-        y: 812
-        width: 114
+        x: 792
+        y: 211
+        width: 126
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f38909dd7a12e4ead6933fd5cdb857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_19
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 24
+        width: 131
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463a5f2f8244c044cb997ab3c0cb9a52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 132
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9e49a69de67a54a9548b8eae7cd298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_21
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 24
+        width: 128
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4199b35353871b438da49184c5ec69c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_22
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 24
+        width: 126
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9874c47249d59b2489ab2b7524be6eda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_23
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 24
+        width: 128
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a3e0cbc1b67714c81826dc7f2182a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_firing_24
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 24
+        width: 128
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1e01e2da4fee44398c5fad430e3b43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_bomb_1
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 920
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c31d897e054a7f4c82762b01c5b0df7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_bomb_2
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 920
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d6a7c62e6963b4283222ea5ea31e39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_bomb_3
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 920
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44796f0151bc62042990c355398024cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_bomb_4
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 920
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fe0355f316cd040a5f45428aac149d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_bomb_5
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 920
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf306fd87ba843d4a9573b129d0b72be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_bomb_exp_1
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 861
+        width: 18
         height: 47
-      alignment: 9
-      pivot: {x: 0.6, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62994d15a1688b847a07d05aaaed8772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_door_5
-      rect:
-        serializedVersion: 2
-        x: 968
-        y: 811
-        width: 132
-        height: 28
-      alignment: 9
-      pivot: {x: 0.7, y: 1.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be56ffa677c2d5d48be2e9faf0587834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_door_6
-      rect:
-        serializedVersion: 2
-        x: 1105
-        y: 812
-        width: 132
-        height: 40
-      alignment: 9
-      pivot: {x: 0.65, y: 1.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 456f9c7728d323f43aee68c73e97261c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_door_7
-      rect:
-        serializedVersion: 2
-        x: 1241
-        y: 812
-        width: 123
-        height: 40
-      alignment: 9
-      pivot: {x: 0.68, y: 1.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55fe5e43148eb4d4c90b600e5442195d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_boat_1
-      rect:
-        serializedVersion: 2
-        x: 569
-        y: 577
-        width: 194
-        height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,19 +806,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de78738ee134a0c408cfd2b5c7e943d7
+      spriteID: f41c2b56b5cf9874cb142f417505bec7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_boat_2
+      name: van_bomb_exp_2
       rect:
         serializedVersion: 2
-        x: 766
-        y: 577
-        width: 203
-        height: 224
+        x: 1077
+        y: 860
+        width: 16
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,19 +826,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e146ec1b9dcdc2c48a05b0daabfedec4
+      spriteID: b935ad4fadf8e7849984bc87ea8bc9a8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_boat_3
+      name: van_bomb_exp_3
       rect:
         serializedVersion: 2
-        x: 972
-        y: 577
-        width: 203
-        height: 224
+        x: 1113
+        y: 860
+        width: 12
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,19 +846,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c7d40df67c710f448cd3957d51330d9
+      spriteID: 4022609c6f6933049963c58a4bc2360d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_boat_4
+      name: van_bomb_exp_4
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 577
-        width: 203
-        height: 224
+        x: 1148
+        y: 864
+        width: 10
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -632,367 +866,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1d1730a8abdade448a2eac6a67e61fb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_boat_5
-      rect:
-        serializedVersion: 2
-        x: 1388
-        y: 577
-        width: 203
-        height: 224
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbbcc377029170f44b1e6dab39d17a9d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_boat
-      rect:
-        serializedVersion: 2
-        x: 2290
-        y: 897
-        width: 279
-        height: 181
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9db8b4f8a6c3fc4aa553038a63c81b8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_2
-      rect:
-        serializedVersion: 2
-        x: 1614
-        y: 599
-        width: 3411
-        height: 227
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6eb9ef102f6d8c4faedb31a9aa65f38
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_1
-      rect:
-        serializedVersion: 2
-        x: 709
-        y: 1296
-        width: 210
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c66038430078d144ba400e6aa1bf629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_2
-      rect:
-        serializedVersion: 2
-        x: 920
-        y: 1296
-        width: 209
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d2647c7c7203284694e90deb82df4c5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_3
-      rect:
-        serializedVersion: 2
-        x: 1130
-        y: 1296
-        width: 209
-        height: 99
-      alignment: 9
-      pivot: {x: 0.5, y: 0.51}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc07c5437c93fda49979d47c247e5c32
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_4
-      rect:
-        serializedVersion: 2
-        x: 1340
-        y: 1296
-        width: 210
-        height: 99
-      alignment: 9
-      pivot: {x: 0.5, y: 0.51}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1ed98ec3e13e3a489da386057eda663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_5
-      rect:
-        serializedVersion: 2
-        x: 1551
-        y: 1296
-        width: 209
-        height: 99
-      alignment: 9
-      pivot: {x: 0.5, y: 0.51}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f91d759ace6c1040b983ab65735ef3e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_6
-      rect:
-        serializedVersion: 2
-        x: 1761
-        y: 1297
-        width: 210
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8acda0ba5063c2241b1f694693c86e80
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_7
-      rect:
-        serializedVersion: 2
-        x: 1972
-        y: 1296
-        width: 211
-        height: 100
-      alignment: 9
-      pivot: {x: 0.5, y: 0.52}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a268ab7167655314e9d76f3fdec78bd4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boat_8
-      rect:
-        serializedVersion: 2
-        x: 2184
-        y: 1296
-        width: 210
-        height: 100
-      alignment: 9
-      pivot: {x: 0.5, y: 0.52}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a794e7de9c2b92f448d3b3a49a790160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bridge_1
-      rect:
-        serializedVersion: 2
-        x: 3424
-        y: 404
-        width: 64
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b2f3d4864e72894ea83291e5239d301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_3
-      rect:
-        serializedVersion: 2
-        x: 2377
-        y: 1411
-        width: 512
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e907376d432b7dd4880944058792d939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bridge
-      rect:
-        serializedVersion: 2
-        x: 2879
-        y: 518
-        width: 204
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8de82f94c79248240b16a6f77309b96d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_water_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 234
-        width: 2464
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b663453e7f913044b989146ca1e5738e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_sea
-      rect:
-        serializedVersion: 2
-        x: 3091
-        y: 234
-        width: 304
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d368347fbb43aa43afdb7cb284fd7b6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foreground_sea_orange
-      rect:
-        serializedVersion: 2
-        x: 3396
-        y: 250
-        width: 493
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 205e5d68e3c86a24095e980604e877cf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bridge_broken_1
-      rect:
-        serializedVersion: 2
-        x: 3751
-        y: 486
-        width: 47
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a55d13936325ae47b53ebd6aa4426ef
+      spriteID: 95e4a37baaa37f4459a71ce7977a0f7c
       vertices: []
       indices: 
       edges: []
@@ -1000,7 +874,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 533ffb6919719384db2d7541cc73d6ef
+    spriteID: 442ee7e6204914f43b9c33237f5ec5a3
     vertices: []
     indices: 
     edges: []
