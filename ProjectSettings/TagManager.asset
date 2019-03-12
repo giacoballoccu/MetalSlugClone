@@ -11,6 +11,8 @@ TagManager:
   - Boat door trigger
   - Terrain
   - Boat
+  - Marco Boat
+  - Water Dead
   layers:
   - Default
   - TransparentFX

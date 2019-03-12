@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
         }
 
         //Move the camera to the player height
-        if (playerVPPos.y < 0.2f && !isBlocked)
+        if (playerVPPos.y < 0.3f && !isBlocked)
         {
             transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, transform.position.y-0.1f, 0), 3f * Time.deltaTime);
         }
