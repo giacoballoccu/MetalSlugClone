@@ -56,20 +56,18 @@ public class GrenadeMovement : MonoBehaviour
             {
                 AudioManager.PlayGrenadeHitAudio();
                 grenadeAnimator.SetBool("hasHittenSth", true);
-                Collider2D[] thingsToDamage = Physics2D.OverlapBoxAll(rb.position, new Vector2(aoeRangeX, aoeRangeY), 0, GameManager.GetDestructibleLayer());
-                foreach (Collider2D thing in thingsToDamage)
                 {
-                    if(thing.tag == "Enemy")
+                    if(collision.tag == "Enemy")
                     {
-                        thing.GetComponent<EnemyControl>().Hit(damageGrenade);
+                        collision.GetComponent<EnemyControl>().Hit(damageGrenade);
                     }
-                    else if(thing.tag == "Building")
+                    else if(collision.tag == "Building")
                     {
-                        thing.GetComponent<BuildingController>().Hit(damageGrenade);
+                        collision.GetComponent<BuildingController>().Hit(damageGrenade);
                     }
-                    else if(thing.tag == "Boat")
+                    else if(collision.tag == "Boat")
                     {
-                        thing.GetComponent<BoatController>().Hit(damageGrenade);
+                        collision.GetComponent<BoatController>().Hit(damageGrenade);
                     }
                 }
 
