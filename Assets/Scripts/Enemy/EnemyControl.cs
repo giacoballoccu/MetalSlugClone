@@ -7,7 +7,7 @@ public class EnemyControl : MonoBehaviour
     [Header("Enemy information")]
     public GameObject player;
     public float speed = 0.5f;
-    private float health = 300f;
+    public float health = 300f;
     public float attackDamage = 10f;
 
     [Header("Enemy activation")]
@@ -16,8 +16,9 @@ public class EnemyControl : MonoBehaviour
     public const float CHANGE_SIGN = -1;
 
     private Rigidbody2D rb;
-    private Animator ac;
-    private SpriteRenderer sr;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private BoxCollider2D collider;
     private bool facingRight = false;
 
     //Enemy gravity
@@ -31,9 +32,10 @@ public class EnemyControl : MonoBehaviour
 
     private void Start()
     {
-        ac = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -44,6 +46,11 @@ public class EnemyControl : MonoBehaviour
 
     }
 
+    bool IsAlive()
+    {
+        return health > 0;
+    }
+
     void FixedUpdate()
     {
         if (GameManager.IsGameOver())
@@ -51,21 +58,15 @@ public class EnemyControl : MonoBehaviour
 
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
-        float playerDistance = transform.position.x - player.transform.position.x;
-
-        if (health <= 0)
+        if (IsAlive())
         {
-            ac.SetBool("isDying", true);
-            StartCoroutine(Die());
-        }
-        else
-        {
+            float playerDistance = transform.position.x - player.transform.position.x;
             if (playerDistance < activationDistance)
             {
                 if (Mathf.Abs(playerDistance) <= attackDistance)
                 {
                     //Attack player
-                    ac.SetBool("isAttacking", true);
+                    animator.SetBool("isAttacking", true);
                     rb.isKinematic = true;
 
 
@@ -98,8 +99,8 @@ public class EnemyControl : MonoBehaviour
                         rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
                     }
 
-                    ac.SetBool("isWalking", true);
-                    ac.SetBool("isAttacking", false);
+                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isAttacking", false);
                 }
             }
 
@@ -129,15 +130,18 @@ public class EnemyControl : MonoBehaviour
 
     public void Hit(float damage)
     {
-        ac.SetTrigger("isHitten");
-        if(health > 0)
+        animator.SetTrigger("isHitten");
+        health -= damage;
+        if (IsAlive())
         {
             GameManager.AddScore(damage);
-            sr.color = Color.red;
+            spriteRenderer.color = Color.red;
             StartCoroutine(whitecolor());
         }
-        health -= damage;
- 
+        else // died
+        {
+            StartCoroutine(Die());
+        }
     }
 
     IEnumerator whitecolor()
@@ -148,7 +152,9 @@ public class EnemyControl : MonoBehaviour
 
     private IEnumerator Die()
     {
-        rb.isKinematic = false;
+        animator.SetBool("isDying", true);
+        rb.isKinematic = true;
+        collider.isTrigger = true;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
