@@ -45,6 +45,7 @@ TextureImporter:
     21300080: foreground_sea
     21300082: foreground_sea_orange
     21300084: bridge_broken_1
+    21300086: foreground_tower_single
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -986,13 +987,33 @@ TextureImporter:
         width: 47
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 6a55d13936325ae47b53ebd6aa4426ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_tower_single
+      rect:
+        serializedVersion: 2
+        x: 3862
+        y: 1547
+        width: 118
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae7eed22480cdd4e9869fa8672ddb33
       vertices: []
       indices: 
       edges: []
