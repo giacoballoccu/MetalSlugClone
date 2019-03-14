@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     private bool wasCrounching = false;
     private bool wasFiring = false;
+    private bool wasFiring2 = false;
 
     [Header("Marco Controller")]
     public Animator topAnimator;
@@ -183,7 +184,7 @@ public class PlayerController : MonoBehaviour
             {
 
                 GameManager.RemoveBomb();
-                if (!wasFiring)
+                if (!wasFiring2)
                 {
                     /*Animazione in base a se è in piedi o meno*/
                     if (bottomAnimator.GetBool("isCrouched"))
@@ -206,7 +207,7 @@ public class PlayerController : MonoBehaviour
                         shotTime = 0.0f;
                     }
 
-                    wasFiring = true;
+                    wasFiring2 = true;
                 }
                 else
                 {
@@ -234,7 +235,7 @@ public class PlayerController : MonoBehaviour
                     topAnimator.SetBool("isThrowingGranate", false);
                 }
                 /*fine*/
-                wasFiring = false;
+                wasFiring2 = false;
             }
         }
         else
