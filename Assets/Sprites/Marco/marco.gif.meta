@@ -144,6 +144,17 @@ TextureImporter:
     21300278: throwing_granate_3
     21300280: throwing_graante_5
     21300282: throwing_granate_6
+    21300284: idle_heavymachine_1
+    21300286: idle_heavymachine_2
+    21300288: idle_heavymachine_3
+    21300290: idle_heavymachine_4
+    21300292: heavymachine_up_1
+    21300294: heavymachine_up_2
+    21300296: heavymachine_up_3
+    21300298: heavymachine_up_4
+    21300300: heavymachine_up_5
+    21300302: heavymachine_up_6
+    21300304: marco_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -3072,6 +3083,226 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9fb0bf5cbd41eef46b4df11ff843efff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_heavymachine_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4393
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77c868fd1ca3be49b804a2504f65108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_heavymachine_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 4393
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff4e1b7de4a5904699d57229cb6e687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_heavymachine_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 4393
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f095319856bd2146917e9fbe29999be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_heavymachine_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 4393
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489f11ebaf8c6c842803b0497079027f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heavymachine_up_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 4393
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32f2cc0238720145aa19880283d7a80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heavymachine_up_2
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 4394
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d162b9a2292a86469da9dfdc3a43817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heavymachine_up_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 4394
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6a5331b6353794ab17f01a9454b15f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heavymachine_up_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 4394
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c9c4dbf80656d4d9e0abc7f6b3413f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heavymachine_up_5
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 4394
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf32340e307c48c48a624fa653d42ebf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heavymachine_up_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 4394
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e75a11815427141a06a6b791e6eec6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_1
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 4395
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6e5e67d0585bc4486b1503f8561ffe
       vertices: []
       indices: 
       edges: []
