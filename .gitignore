@@ -37,4 +37,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# Downloaded Assets
 TextMesh Pro/
+CineMachine/
