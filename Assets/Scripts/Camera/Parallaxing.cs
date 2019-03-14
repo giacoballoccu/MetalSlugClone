@@ -1,16 +1,12 @@
-﻿/*
- * Script took from GitHub
- * https://github.com/irunthis/Parallax2D
- */
+﻿// Original script from: https://github.com/irunthis/Parallax2D
 
 using UnityEngine;
 using System.Collections;
 
 public class Parallaxing : MonoBehaviour
 {
-
-    public Transform[] backgrounds;     //array (list) of all back- and forgrounds to be parallaxed
-    public float[] parallaxScales;  //the proportion of the camera's movement to move the backgrounds by
+    private Transform background;     //array (list) of all back- and foregrounds to be parallaxed
+    public float parallaxScale = -20;  //the proportion of the camera's movement to move the backgrounds by
     public float smoothing = 1f;    //how smooth the parallax is going to be, Must be above 0 otherwize the parallax will not work
 
     private Transform cam;  //reference to the camera's transform
@@ -26,43 +22,27 @@ public class Parallaxing : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        background = GetComponent<Transform>();
         // store previous frame
         previousCamPos = cam.position;
-
-        //declares the length of the array
-        parallaxScales = new float[backgrounds.Length];
-
-        //assigning coresponding parallaxScales
-        for (int i = 0; i < backgrounds.Length; i++)
-        {
-            parallaxScales[i] = backgrounds[i].position.z * -1;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        //the parallax is the opposite of the camera movement because the previous frame multiplied by the scale
+        float parallax = (previousCamPos.x - cam.position.x) * parallaxScale;
 
-        //for each background
+        //set a target x position that is the current position plus the parallax
+        float backgroundTargetPosX = background.position.x + parallax;
 
-        for (int i = 0; i < backgrounds.Length; i++)
-        {
-            //the parallax is the opposite of the camera movement because the previous frame multiplied by the scale
-            float parallax = (previousCamPos.x - cam.position.x) * parallaxScales[i];
+        //create a target position which is the backgrounds current position with its target x position
+        Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, background.position.y, background.position.z);
 
-            //set a target x position that is the current position plus the parallax
-            float backgroundTargetPosX = backgrounds[i].position.x + parallax;
-
-            //create a target position which is the backgrounds current position with it's target x position
-            Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
-
-            //fade batween current position and the target position using lerp
-            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
-
-        }
+        //fade batween current position and the target position using lerp
+        background.position = Vector3.Lerp(background.position, backgroundTargetPos, smoothing * Time.deltaTime);
 
         //set the previousCamPos to the camera's position at the end of the frame
         previousCamPos = cam.position;
-
     }
 }
