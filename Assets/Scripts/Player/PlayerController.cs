@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
-    public float fireDelta = 0.6f;
-    private float nextFire = 0.5f;
+    public float fireDelta = 0.3f;
+    private float nextFire = 0.2f;
 
     [Header("Time Crouch")]
     private float crouchTime = 0.0f;
@@ -138,12 +138,12 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    AudioManager.PlayNormalShotAudio();
                     topAnimator.SetBool("isFiring", true);
                     bottomAnimator.SetBool("isFiring", true);
 
                     if (shotTime > nextFire)
                     {
+                        AudioManager.PlayNormalShotAudio();
                         nextFire = shotTime + fireDelta;
 
                         StartCoroutine(WaitFire());

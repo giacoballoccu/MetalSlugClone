@@ -55,7 +55,7 @@ MonoBehaviour:
   topAnimator: {fileID: 1765443406731774337}
   bottomAnimator: {fileID: 1765443406516593723}
   Up: {fileID: 1765443406731774338}
-  fireDelta: 0.6
+  fireDelta: 0.3
   crouchDelta: 0.5
   jumpDelta: 0.8
   projectile: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
@@ -64,6 +64,8 @@ MonoBehaviour:
   granate: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
   meleeDistance: 0.4
   damageMelee: 1000
+  foreground: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!50 &1765443406479915050
 Rigidbody2D:
   serializedVersion: 4
