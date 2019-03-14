@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartBoat : MonoBehaviour
+public class MarcoBoatStartMove : MonoBehaviour
 {
     public GameObject boat;
     public GameObject target;

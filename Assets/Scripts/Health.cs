@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float maxHealth = 100;
     private float health;
 
-    public delegate void OnEvent(float damage);    public OnEvent onHit;    public OnEvent onDead;
+    public delegate void OnDamageEvent(float damage);    public OnDamageEvent onHit;    public OnDamageEvent onDead;
 
     void Start()
     {
@@ -35,13 +35,9 @@ public class Health : MonoBehaviour
             return;
 
         health -= damage; // take the hit
-        if (onHit != null)
-           onHit(damage);
+        onHit?.Invoke(damage);
 
         if (!IsAlive()) // check if died
-        {
-            if (onDead != null)
-                onDead(damage);
-        }
+            onDead?.Invoke(damage);
     }
 }

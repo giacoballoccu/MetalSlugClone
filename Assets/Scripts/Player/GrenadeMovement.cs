@@ -62,10 +62,6 @@ public class GrenadeMovement : MonoBehaviour
                     {
                         collision.GetComponent<Health>().Hit(damageGrenade);
                     }
-                    else if(collision.tag == "Boat")
-                    {
-                        collision.GetComponent<Health>().Hit(damageGrenade);
-                    }
                 }
 
                 this.rb.rotation = 0;

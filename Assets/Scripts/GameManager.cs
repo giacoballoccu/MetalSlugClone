@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask enemyLayer;
-    public LayerMask boatLayer;
     public LayerMask buildingLayer;
     public LayerMask walkableLayer;
 
@@ -140,15 +139,6 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectWithTag("Player");
     }
 
-    public static LayerMask GetBoatLayer()
-    {
-        //If there is no current Game Manager, exit
-        if (current == null)
-            return 0;
-
-        return current.boatLayer;
-    }
-
     public static LayerMask GetEnemyLayer()
     {
         //If there is no current Game Manager, exit
@@ -173,7 +163,7 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return 0;
 
-        return GetBoatLayer() + GetEnemyLayer() + GetBuildingLayer();
+        return GetEnemyLayer() + GetBuildingLayer();
     }
 
     public static bool CanTriggerGrenade(string tag)

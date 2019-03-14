@@ -426,6 +426,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52531309}
   m_CullTransparentMesh: 0
+--- !u!1 &105975387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105975388}
+  m_Layer: 0
+  m_Name: Crab Point (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &105975388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105975387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.653, y: 0.583, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2089031680}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129108217
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +671,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &230208816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230208817}
+  m_Layer: 0
+  m_Name: Crab Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &230208817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230208816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.878, y: 0.556, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2089031680}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244845242
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1055,7 @@ Transform:
   - {fileID: 1769398006}
   - {fileID: 1351770796}
   - {fileID: 1723250120}
+  - {fileID: 2089031680}
   m_Father: {fileID: 1062245213}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1032,12 +1093,6 @@ Transform:
   m_Father: {fileID: 1351770796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &389572639 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1765443406479915045, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-    type: 3}
-  m_PrefabInstance: {fileID: 1765443407533320850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &427510510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 519420031}
   secondPart: {fileID: 1978565567}
+  doorAnimator: {fileID: 494655618}
 --- !u!61 &494655617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1301,10 +1357,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 494655614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
+  m_Script: {fileID: 11500000, guid: e25d5276e89c7674bb4ee79dc7362ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  enemyPrefab: {fileID: 654322134894282680, guid: dbdec53586b0c3740b7025c04630e45d,
+    type: 3}
+  spawnPoints: {fileID: 2089031680}
+  spawnDelay: 0.3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1932,7 @@ GameObject:
   - component: {fileID: 733059468}
   - component: {fileID: 733059469}
   m_Layer: 0
-  m_Name: Open boat door
+  m_Name: Open Sunk Boat Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1905,7 +1964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd5548b7bc4ddc4db6ee26fce6ae396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorAnimator: {fileID: 494655618}
+  sunkBoat: {fileID: 494655614}
 --- !u!61 &733059469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3389,7 +3448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351770796}
   m_Layer: 0
-  m_Name: Crabs
+  m_Name: Tower Crabs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3409,6 +3468,36 @@ Transform:
   - {fileID: 365622469}
   m_Father: {fileID: 329866566}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1358463687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358463688}
+  m_Layer: 0
+  m_Name: Crab Point (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1358463688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358463687}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.482, y: 0.529, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2089031680}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365498233
 GameObject:
@@ -3484,10 +3573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25d5276e89c7674bb4ee79dc7362ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 654322134894282680, guid: dbdec53586b0c3740b7025c04630e45d,
-    type: 3}
-  follow: {fileID: 389572639}
-  quantity: 5
+  enemyPrefab: {fileID: 0}
+  spawnPoints: {fileID: 0}
+  spawnDelay: 0
 --- !u!1 &1404904177
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,6 +5551,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2089031679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089031680}
+  m_Layer: 0
+  m_Name: SunkShip Crabs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2089031680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089031679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 230208817}
+  - {fileID: 105975388}
+  - {fileID: 1358463688}
+  m_Father: {fileID: 329866566}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1765443407533320850
 PrefabInstance:
   m_ObjectHideFlags: 0
