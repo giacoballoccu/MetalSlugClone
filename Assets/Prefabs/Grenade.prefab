@@ -142,11 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77a56f16df983e4fb255f08182de1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grenadeForce: 3
+  grenadeForce: 2.5
   grenadeAnimator: {fileID: 5858975334122688018}
   grenadeSpawn: {fileID: 0}
-  aoeRangeX: 0.95
-  aoeRangeY: 0.8
 --- !u!95 &5858975334122688018
 Animator:
   serializedVersion: 3

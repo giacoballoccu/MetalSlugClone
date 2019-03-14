@@ -8,7 +8,7 @@ public class GrenadeMovement : MonoBehaviour
     private Rigidbody2D rb;
    
     private float damageGrenade = 300;
-    public float grenadeForce = 3;
+    public float grenadeForce = 2.5f;
     public Animator grenadeAnimator;
     public GameObject grenadeSpawn;
     Vector3 grenadeDirection;
