@@ -5,8 +5,6 @@ using Cinemachine;
 
 public class SunkBoatController : MonoBehaviour
 {
-    //public new Camera camera;
-    //public GameObject secondPart;
     public Collider2D cam1p;
     public Collider2D cam2p;
     public GameObject vCam;
