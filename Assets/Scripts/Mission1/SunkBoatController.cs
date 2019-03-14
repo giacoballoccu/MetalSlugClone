@@ -19,7 +19,7 @@ public class SunkBoatController : MonoBehaviour
     public void OpenDoor()
     {
         doorAnimator.SetTrigger("open");
-        GetComponent<RegenSpawn>().onFinish += OnFinish;
-        GetComponent<RegenSpawn>().Trigger();
+        GetComponent<EventSpawn>().onFinish += OnFinish;
+        GetComponent<EventSpawn>().Trigger();
     }
 }

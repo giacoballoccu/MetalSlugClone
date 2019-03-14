@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RegenSpawn : MonoBehaviour
+public class EventSpawn : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Transform spawnPoints;
