@@ -12,6 +12,34 @@ TextureImporter:
     21300014: soldier_jumping_4
     21300016: soldier_jumping_5
     21300018: soldier_running_1
+    21300020: soldier_running_2
+    21300022: soldier_running_3
+    21300024: soldier_running_4
+    21300026: simpleSoldier_0
+    21300028: soldier_running_6
+    21300030: soldier_running_7
+    21300032: soldier_running_8
+    21300034: soldier_running_9
+    21300036: soldier_running_10
+    21300038: soldier_running_11
+    21300040: soldier_running_12
+    21300042: death_animation_1_1
+    21300044: death_animation_1_2
+    21300046: death_animation_1_3
+    21300048: death_animation_1_4
+    21300050: death_animation_1_5
+    21300052: death_animation_1_6
+    21300054: death_animation_1_7
+    21300056: death_animation_1_8
+    21300058: death_animation_1_9
+    21300060: death_animation_1_10
+    21300062: death_animation_1_11
+    21300064: death_animation_2_1
+    21300066: death_animation_2_2
+    21300068: death_animation_2_3
+    21300070: death_animation_2_4
+    21300072: death_animation_2_5
+    21300074: death_animation_2_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -113,7 +141,7 @@ TextureImporter:
         width: 30
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,7 +161,7 @@ TextureImporter:
         width: 32
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,7 +181,7 @@ TextureImporter:
         width: 30
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +201,7 @@ TextureImporter:
         width: 29
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,7 +221,7 @@ TextureImporter:
         width: 28
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,7 +241,7 @@ TextureImporter:
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +261,7 @@ TextureImporter:
         width: 31
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,7 +281,7 @@ TextureImporter:
         width: 31
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +301,7 @@ TextureImporter:
         width: 33
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,6 +319,46 @@ TextureImporter:
         x: 1
         y: 2250
         width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852ecae2ad52f114daaa2992e3039deb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2250
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76caf9a3ede257141996d77986803c13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2251
+        width: 28
         height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,7 +367,527 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 852ecae2ad52f114daaa2992e3039deb
+      spriteID: 41b0261b0115f424ba801c833be7d7c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 2251
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8882ab3adfeac4444823f65bbccd8e82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleSoldier_0
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2251
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f25fe9c7a42634082de71249b6d61e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 2251
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3077eb07269f6c94db3ed01d9423aa32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2251
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b422a4fa25ddd284e80c2efea3eece44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_8
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 2251
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddd35682ce3c524687500b8d4daee64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_9
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 2251
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdee9ff6d7a2a14d85b6c8e9d74cc77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_10
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2251
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697be54a91e0fff41b4c9cac3a8f7ffc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_11
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2251
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bde6552c1dc1342a69610bbe907811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_running_12
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 2251
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6290a6b7d3758d848a7177635614bc29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1190
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82381fdf2176e7543922aeb57efbb0fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1190
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4b2cc521550324692f369af3f2d644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_3
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1191
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae0d5f762e40fd46be7b2c7818fd65c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_4
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1191
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800de56d91534e6408683b793252c233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_5
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1191
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8703f6be7912e0e4b86afbc25d2d09fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_6
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1191
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d86e04efad8fb418ce80dc55b2ce67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_7
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1191
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871c54a782f683249b4a3d3dea3ef0c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_8
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1191
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95329d66ae7af534da59cb7d53c1de4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_9
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1191
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c0cbcd5a1911c4b8fa908766d1de91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_10
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1192
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a84d21f4f36d944bd5da88b3579f25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_1_11
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1192
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7ecacc09861754cbf3861660e63483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2_1
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1192
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a813facefe2ec4098fe4d3b48b107f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2_2
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 1192
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb53db980c384e04ba2f55421291515b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2_3
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1192
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1a597d78a7a544a83064b2a3f30068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2_4
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1192
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63460f3555189c14fa2f58f3a50aa2de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2_5
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1192
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622d7a4f42da6e043a1de82ce126d3f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_animation_2_6
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1192
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6244c29708234fe42a63b16587d1f02c
       vertices: []
       indices: 
       edges: []

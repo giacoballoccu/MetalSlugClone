@@ -10,7 +10,8 @@ public class EventSpawn : MonoBehaviour
     private int killCount;
     private int totalKillCount;
 
-    public delegate void OnVoidEvent();    public OnVoidEvent onFinish; // when all the mobs are dead (todo make as event)
+    public delegate void OnVoidEvent();
+    public OnVoidEvent onFinish; // when all the mobs are dead (todo make as event)
     private bool isFinished;
 
     void OnKill(float damage) // triggered by child.gameObject.health.onKill+=OnKill
