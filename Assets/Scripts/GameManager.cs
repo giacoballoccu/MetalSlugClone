@@ -172,6 +172,6 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return false;
 
-        return tag == "Enemy" || tag == "Building" || tag == "Boat" || tag == "Terrain" || tag == "Walkable";
+        return tag == "Enemy" || tag == "Building" || tag == "Walkable";
     }
 }

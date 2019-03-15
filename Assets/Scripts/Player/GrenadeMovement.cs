@@ -15,6 +15,7 @@ public class GrenadeMovement : MonoBehaviour
     private Vector2 startingPoint;
     private Vector2 controlPoint;
     private Vector2 endingPoint;
+    private bool hasHit;
 
     // Start is called before the first frame update
     void Start()
@@ -42,34 +43,26 @@ public class GrenadeMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       StartCoroutine(Explosion(collision));
+        if (hasHit)
+            return;
+
+        if (GameManager.CanTriggerGrenade(collision.tag))
+        {
+            hasHit = true;
+            StartCoroutine(Explosion(collision));
+        }
     }
 
     private IEnumerator Explosion(Collider2D collision)
     {
-        if(rb != null)
-        {
-            if (GameManager.CanTriggerGrenade(collision.tag))
-            {
-                AudioManager.PlayGrenadeHitAudio();
-                grenadeAnimator.SetBool("hasHittenSth", true);
-                {
-                    if(collision.tag == "Enemy")
-                    {
-                        collision.GetComponent<Health>().Hit(damageGrenade);
-                    }
-                    else if(collision.tag == "Building")
-                    {
-                        collision.GetComponent<Health>().Hit(damageGrenade);
-                    }
-                }
+        AudioManager.PlayGrenadeHitAudio();
+        grenadeAnimator.SetBool("hasHittenSth", true);
 
-                this.rb.rotation = 0;
-                Destroy(rb);
-                yield return new WaitForSeconds(1.7f);
-                grenadeAnimator.SetBool("hasHittenSth", false);
-                Destroy(gameObject);
-            }
-        }
+        collision.GetComponent<Health>()?.Hit(damageGrenade);
+
+        Destroy(rb);
+        yield return new WaitForSeconds(1.7f);
+        grenadeAnimator.SetBool("hasHittenSth", false);
+        Destroy(gameObject);
     }
 }
