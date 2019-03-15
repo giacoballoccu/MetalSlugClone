@@ -484,15 +484,15 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 23.53888, y: 0.53819793}
-      - {x: 14.158441, y: 0.5716331}
-      - {x: 14.049806, y: 0.6476779}
+      - {x: 14.5285845, y: 0.5825197}
       - {x: 13.527123, y: 0.9019663}
-      - {x: 9.625957, y: 0.9750105}
+      - {x: 9.746129, y: 1.135242}
       - {x: 7.1860914, y: 1.6157706}
       - {x: 5.022773, y: 1.622454}
       - {x: 3.0616157, y: 1.6094303}
-      - {x: -2.6190217, y: 1.1034852}
-      - {x: -2.5988486, y: -1.0690031}
+      - {x: -7.244171, y: 1.1344005}
+      - {x: -14.76059, y: 1.1153518}
+      - {x: -14.751591, y: -1.0178107}
       - {x: 9.891883, y: -1.1156135}
       - {x: 10.734744, y: -1.5675813}
       - {x: 23.9483, y: -1.4991701}
@@ -1152,7 +1152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319976610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.588734, y: 0.0682739, z: 3.650996}
+  m_LocalPosition: {x: -14.609238, y: 0.0682739, z: 3.650996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2127369299}
@@ -1660,9 +1660,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 54
+  field of view: 40
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1686,7 +1686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.588734, y: 0.0682739, z: 3.650996}
+  m_LocalPosition: {x: -14.96691, y: -0.25672603, z: -0.2290039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1482455311}
@@ -1984,7 +1984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &608397675
 Transform:
   m_ObjectHideFlags: 0
@@ -1993,7 +1993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608397674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.588734, y: 0.0682739, z: 3.650996}
+  m_LocalPosition: {x: -14.609238, y: 0.0682739, z: 3.650996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 352004593}

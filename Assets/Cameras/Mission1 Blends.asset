@@ -16,10 +16,10 @@ MonoBehaviour:
   - m_From: 1Za Cam
     m_To: 1Zb Cam
     m_Blend:
-      m_Style: 6
+      m_Style: 1
       m_Time: 2
   - m_From: 1Zb Cam
     m_To: 2Z Cam
     m_Blend:
-      m_Style: 6
+      m_Style: 1
       m_Time: 2
