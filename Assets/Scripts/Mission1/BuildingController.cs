@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BuildingController : MonoBehaviour
 {
-    public Health health;
+    private Health health;
     public Sprite destroyedSprite;
+    public GameObject vcamIn;
+    public GameObject vcamOut;
 
     private SpriteRenderer sr;
     private Collider2D cl;
@@ -31,6 +33,8 @@ public class BuildingController : MonoBehaviour
     {
         sr.sprite = destroyedSprite;
         cl.enabled = false;
+        vcamIn.SetActive(false);
+        vcamOut.SetActive(true);
     }
 
     public void OnHit(float damage)

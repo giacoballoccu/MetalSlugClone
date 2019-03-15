@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: Mission1 Blends
   m_EditorClassIdentifier: 
   m_CustomBlends:
-  - m_From: 1Z Cam
+  - m_From: 1Za Cam
+    m_To: 1Zb Cam
+    m_Blend:
+      m_Style: 6
+      m_Time: 2
+  - m_From: 1Zb Cam
     m_To: 2Z Cam
     m_Blend:
       m_Style: 6
