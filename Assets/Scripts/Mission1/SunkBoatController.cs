@@ -5,15 +5,14 @@ using Cinemachine;
 
 public class SunkBoatController : MonoBehaviour
 {
-    public Collider2D cam1p;
-    public Collider2D cam2p;
-    public GameObject vCam;
+    public GameObject vcamIn;
+    public GameObject vcamOut;
     public Animator doorAnimator;
 
     void OnFinish()
     {
-        vCam.GetComponent<CinemachineConfiner>().m_BoundingShape2D = cam2p;
-        vCam.GetComponent<CinemachineConfiner>().InvalidatePathCache();
+        vcamIn.SetActive(false);
+        vcamOut.SetActive(true);
 
         this.gameObject.SetActive(false);
     }
