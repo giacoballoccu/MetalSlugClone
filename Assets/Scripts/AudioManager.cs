@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Mixer Groups")]
     public AudioMixerGroup musicGroup;  //The music mixer group
-    public AudioMixerGroup effectGroup;  //The sting mixer group
+    public AudioMixerGroup effectGroup;  //The effect mixer group
     public AudioMixerGroup enemyGroup; //The enemy mixer group
     public AudioMixerGroup playerGroup; //The player mixer group
     public AudioMixerGroup voiceGroup;  //The voice mixer group
