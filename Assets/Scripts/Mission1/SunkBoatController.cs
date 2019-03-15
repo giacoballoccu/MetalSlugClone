@@ -5,15 +5,11 @@ using Cinemachine;
 
 public class SunkBoatController : MonoBehaviour
 {
-    public GameObject vcamIn;
-    public GameObject vcamOut;
     public Animator doorAnimator;
 
     void OnFinish()
     {
-        vcamIn.SetActive(false);
-        vcamOut.SetActive(true);
-
+        CameraManager.AfterSunkBoat();
         this.gameObject.SetActive(false);
     }
 

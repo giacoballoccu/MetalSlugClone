@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         //Set this as the current game manager
         current = this;
 
-        //Persis this object between scene reloads
+        //Persist this object between scene reloads
         DontDestroyOnLoad(gameObject);
     }
 

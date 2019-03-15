@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class TowerCrabHouse : MonoBehaviour
 {
-    public GameObject vcamIn;
-    public GameObject vcamOut;
     private Health health;
 
     private void Start()
     {
-        // register health delegate
-        health = GetComponent<Health>();
-        health.onDead += OnDead;
+        GetComponent<Health>().onDead += OnDead; // register health delegate
     }
 
     void OnDead(float damage)
     {
-        vcamIn.SetActive(false);
-        vcamOut.SetActive(true);
+        CameraManager.AfterCrabTower();
     }
 }
