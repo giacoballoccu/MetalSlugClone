@@ -5,6 +5,7 @@ using UnityEngine;
 public class TowerCrabHouse : MonoBehaviour
 {
     private Health health;
+    public SpriteRenderer bgBoat;
 
     private void Start()
     {
@@ -14,5 +15,6 @@ public class TowerCrabHouse : MonoBehaviour
     void OnDead(float damage)
     {
         CameraManager.AfterCrabTower();
+        bgBoat.sprite = null;
     }
 }

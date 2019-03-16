@@ -8,6 +8,7 @@ public class EnemyControl : MonoBehaviour
     GameObject followPlayer;
     public float speed = 0.5f;
     public float attackDamage = 10f;
+    public bool isMovable = true;
     public AudioClip deathClip;
     private Health health;
     private BlinkingSprite blinkingSprite;
@@ -65,65 +66,65 @@ public class EnemyControl : MonoBehaviour
 
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
-        if (health.IsAlive())
+        if (isMovable)
         {
-            float playerDistance = transform.position.x - followPlayer.transform.position.x;
-            if (playerDistance < activationDistance)
+            if (health.IsAlive())
             {
-                if (Mathf.Abs(playerDistance) <= attackDistance)
+                float playerDistance = transform.position.x - followPlayer.transform.position.x;
+                if (playerDistance < activationDistance)
                 {
-                    //Attack player
-                    animator.SetBool("isAttacking", true);
-                    rb.isKinematic = true;
-
-
-                    shotTime = shotTime + Time.deltaTime;
-
-                    if (shotTime > nextFire)
+                    if (Mathf.Abs(playerDistance) <= attackDistance)
                     {
-                        nextFire = shotTime + fireDelta;
+                        //Attack player
+                        animator.SetBool("isAttacking", true);
+                        rb.isKinematic = true;
 
 
-                        followPlayer.GetComponent<Health>().Hit(attackDamage);
+                        shotTime = shotTime + Time.deltaTime;
 
-                        nextFire = nextFire - shotTime;
-                        shotTime = 0.0f;
-                    }
-                }
-                else
-                {
-                    //Move to the player
-                    rb.isKinematic = false;
+                        if (shotTime > nextFire)
+                        {
+                            nextFire = shotTime + fireDelta;
 
-                    if (collidingDown)
-                    {
-                        rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+
+                            followPlayer.GetComponent<Health>().Hit(attackDamage);
+
+                            nextFire = nextFire - shotTime;
+                            shotTime = 0.0f;
+                        }
                     }
                     else
                     {
-                        //velocity.y -= 9.81f * Time.deltaTime;
-                        //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
-                        rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
-                    }
+                        //Move to the player
+                        rb.isKinematic = false;
 
-                    animator.SetBool("isWalking", true);
-                    animator.SetBool("isAttacking", false);
+                        if (collidingDown)
+                        {
+                            rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+                        }
+                        else
+                        {
+                            //velocity.y -= 9.81f * Time.deltaTime;
+                            //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                            rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                        }
+
+                        animator.SetBool("isWalking", true);
+                        animator.SetBool("isAttacking", false);
+                    }
+                }
+
+                //Flip enemy
+                if (playerDistance < 0 && !facingRight)
+                {
+                    Flip();
+                }
+                else if (playerDistance > 0 && facingRight)
+                {
+                    Flip();
                 }
             }
-
-            //Flip enemy
-            if (playerDistance < 0 && !facingRight)
-            {
-                Flip();
-            }
-            else if (playerDistance > 0 && facingRight)
-            {
-                Flip();
-            }
-        }
-
-
-       
+         }
     }
 
     void Flip()

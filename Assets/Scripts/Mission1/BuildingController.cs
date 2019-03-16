@@ -38,5 +38,4 @@ public class BuildingController : MonoBehaviour
         GameManager.AddScore(damage);
         blinkingSprite.Play();
     }
-
 }
