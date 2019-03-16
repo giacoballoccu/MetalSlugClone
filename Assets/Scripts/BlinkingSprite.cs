@@ -8,6 +8,7 @@ public class BlinkingSprite : MonoBehaviour
     public float delayTime = 0.15f;
     private float hitCount;
     private bool isRunning;
+    private bool canBlink = true;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class BlinkingSprite : MonoBehaviour
 
     public bool CanBlink()
     {
-        return hitCount > 0;
+        return hitCount > 0 && canBlink;
     }
 
     IEnumerator Blinking()
@@ -58,5 +59,10 @@ public class BlinkingSprite : MonoBehaviour
             hitCount--;
         }
         isRunning = false;
+    }
+
+    public void SetCanBlink(bool canBlink)
+    {
+        this.canBlink = canBlink;
     }
 }

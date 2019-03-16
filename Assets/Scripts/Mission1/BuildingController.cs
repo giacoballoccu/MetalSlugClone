@@ -31,12 +31,15 @@ public class BuildingController : MonoBehaviour
     {
         sr.sprite = destroyedSprite;
         cl.enabled = false;
+        blinkingSprite.SetCanBlink(false);
     }
 
     public void OnHit(float damage)
     {
-        GameManager.AddScore(damage);
-        blinkingSprite.Play();
+        if (health.IsAlive())
+        {
+            GameManager.AddScore(damage);
+            blinkingSprite.Play();
+        }
     }
-
-}
+}
