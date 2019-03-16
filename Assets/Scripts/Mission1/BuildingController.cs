@@ -31,7 +31,7 @@ public class BuildingController : MonoBehaviour
     {
         sr.sprite = destroyedSprite;
         cl.enabled = false;
-        blinkingSprite.SetCanBlink(false);
+        blinkingSprite.Stop();
     }
 
     public void OnHit(float damage)
