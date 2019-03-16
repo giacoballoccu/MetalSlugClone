@@ -61,7 +61,7 @@ public class BlinkingSprite : MonoBehaviour
         isRunning = false;
     }
 
-    public void setCanBlink(bool canBlink)
+    public void SetCanBlink(bool canBlink)
     {
         this.canBlink = canBlink;
 }

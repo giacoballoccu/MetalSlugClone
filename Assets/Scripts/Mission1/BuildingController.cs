@@ -31,6 +31,7 @@ public class BuildingController : MonoBehaviour
     {
         sr.sprite = destroyedSprite;
         cl.enabled = false;
+        blinkingSprite.setCanBlink(false);
     }
 
     public void OnHit(float damage)
@@ -39,3 +40,7 @@ public class BuildingController : MonoBehaviour
         blinkingSprite.Play();
     }
 }
+
+        blinkingSprite.SetCanBlink(false);
+    }
+

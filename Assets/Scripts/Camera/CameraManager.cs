@@ -13,6 +13,8 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera vcamZ1A;
     public CinemachineVirtualCamera vcamZ1B;
     public CinemachineVirtualCamera vcamZ2A;
+    public CinemachineVirtualCamera vcamZ2B;
+    public CinemachineVirtualCamera vcamZ2C;
 
     void Awake()
     {
@@ -50,5 +52,25 @@ public class CameraManager : MonoBehaviour
 
         current.vcamZ1B.gameObject.SetActive(false);
         current.vcamZ2A.gameObject.SetActive(true);
+    }
+
+    public static void AfterFirstVan()
+    {
+        //If there is no current Camera Manager, exit
+        if (current == null)
+            return;
+
+        current.vcamZ2A.gameObject.SetActive(false);
+        current.vcamZ2B.gameObject.SetActive(true);
+    }
+
+    public static void AfterSecondVan()
+    {
+        //If there is no current Camera Manager, exit
+        if (current == null)
+            return;
+
+        current.vcamZ2B.gameObject.SetActive(false);
+        current.vcamZ2C.gameObject.SetActive(true);
     }
 }

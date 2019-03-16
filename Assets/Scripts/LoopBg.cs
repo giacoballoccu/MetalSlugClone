@@ -7,6 +7,7 @@ public class LoopBg : MonoBehaviour
     public Transform bg1;
     public Transform bg2;
     public Transform cam;
+    public bool isActive = true;
 
     private float bgDim;
 
@@ -17,9 +18,17 @@ public class LoopBg : MonoBehaviour
 
     void Update()
     {
-        if (bg1.position.x < cam.position.x - bgDim)
-            bg1.localPosition = new Vector2(bg1.localPosition.x + bgDim * 2, bg1.localPosition.y);
-        else if (bg2.position.x < cam.position.x - bgDim)
-            bg2.localPosition = new Vector2(bg2.localPosition.x + bgDim * 2, bg2.localPosition.y);
+        if (isActive)
+        {
+            if (bg1.position.x < cam.position.x - bgDim)
+                bg1.localPosition = new Vector2(bg1.localPosition.x + bgDim * 2, bg1.localPosition.y);
+            else if (bg2.position.x < cam.position.x - bgDim)
+                bg2.localPosition = new Vector2(bg2.localPosition.x + bgDim * 2, bg2.localPosition.y);
+        }
+    }
+
+    public void SetActive(bool isActive)
+    {
+        this.isActive = isActive;
     }
 }
