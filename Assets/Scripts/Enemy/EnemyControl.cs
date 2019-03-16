@@ -77,7 +77,8 @@ public class EnemyControl : MonoBehaviour
                     {
                         //Attack player
                         animator.SetBool("isAttacking", true);
-                        rb.isKinematic = true;
+                        if (rb)
+                            rb.isKinematic = true;
 
 
                         shotTime = shotTime + Time.deltaTime;
@@ -96,17 +97,19 @@ public class EnemyControl : MonoBehaviour
                     else
                     {
                         //Move to the player
-                        rb.isKinematic = false;
-
-                        if (collidingDown)
+                        if (rb)
                         {
-                            rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
-                        }
-                        else
-                        {
-                            //velocity.y -= 9.81f * Time.deltaTime;
-                            //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
-                            rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                            rb.isKinematic = false;
+                            if (collidingDown)
+                            {
+                                rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+                            }
+                            else
+                            {
+                                //velocity.y -= 9.81f * Time.deltaTime;
+                                //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                                rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                            }
                         }
 
                         animator.SetBool("isWalking", true);
@@ -153,7 +156,8 @@ public class EnemyControl : MonoBehaviour
     {
         PlayDeathAudio();
         animator.SetBool("isDying", true);
-        rb.isKinematic = true;
+        if (rb)
+            rb.isKinematic = true;
         GetComponent<BoxCollider2D>().enabled = false;
 
         yield return new WaitForSeconds(1f);

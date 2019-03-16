@@ -367,7 +367,6 @@ GameObject:
   - component: {fileID: 168991587}
   - component: {fileID: 168991586}
   - component: {fileID: 168991585}
-  - component: {fileID: 168991584}
   m_Layer: 0
   m_Name: VanFire
   m_TagString: Untagged
@@ -375,18 +374,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &168991584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168991583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a624f4c1bdc454d43b70b74ac4be56d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &168991585
 Animator:
   serializedVersion: 3
@@ -872,7 +859,6 @@ GameObject:
   - component: {fileID: 280346652}
   - component: {fileID: 280346654}
   - component: {fileID: 280346653}
-  - component: {fileID: 280346655}
   m_Layer: 0
   m_Name: Van
   m_TagString: Enemy
@@ -1058,27 +1044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3000
---- !u!50 &280346655
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280346646}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &319976613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
@@ -1713,9 +1678,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 54
+  field of view: 40
   orthographic: 1
-  orthographic size: 1.1
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1739,7 +1704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.565006, y: -0.22572917, z: 3.650996}
+  m_LocalPosition: {x: -14.96691, y: -0.25672603, z: -0.2290039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1482455311}
@@ -1765,22 +1730,16 @@ MonoBehaviour:
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
   m_CustomBlends: {fileID: 11400000, guid: f622cd894d9c0324dae9286f737bf7df, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Cinemachine.CinemachineBrain+BrainEvent, Cinemachine, Version=0.0.0.0,
+    m_TypeName: Cinemachine.CinemachineBrain+BrainEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
+    m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &573006214
 GameObject:
@@ -1798,7 +1757,6 @@ GameObject:
   - component: {fileID: 573006219}
   - component: {fileID: 573006218}
   - component: {fileID: 573006217}
-  - component: {fileID: 573006216}
   m_Layer: 0
   m_Name: Van (1)
   m_TagString: Enemy
@@ -1820,27 +1778,6 @@ Transform:
   m_Father: {fileID: 129108218}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &573006216
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573006214}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &573006217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5977,7 +5914,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.66491
+      value: -14.480872
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
