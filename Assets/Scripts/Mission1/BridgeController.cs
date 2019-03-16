@@ -4,32 +4,21 @@ using UnityEngine;
 
 public class BridgeController : MonoBehaviour
 {
-
     public Health van;
     public int nBridge;
     public Sprite sprite;
 
-    private bool changedCamera = false;
-
-    void Update()
+    void Start()
     {
-        if (van == null)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        van.onDead += OnDead;
+    }
 
-            if (!changedCamera)
-            {
-                if (nBridge == 1)
-                {
-                    CameraManager.AfterFirstVan();
-                    changedCamera = true;
-                }
-                else if (nBridge == 2)
-                {
-                    CameraManager.AfterSecondVan();
-                    changedCamera = true;
-                }
-            }
-        }
+    void OnDead(float damage)
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        if (nBridge == 1)
+            CameraManager.AfterFirstVan();
+        else if (nBridge == 2)
+            CameraManager.AfterSecondVan();
     }
 }
