@@ -7,6 +7,12 @@ TextureImporter:
     21300004: foreground_2
     21300006: background_1
     21300008: background _2
+    21300010: foreground_3
+    21300012: foreground_4
+    21300014: lights_out_1
+    21300016: lights_out_2
+    21300018: lights_out_3
+    21300020: lights_out_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -168,7 +174,7 @@ TextureImporter:
         width: 418
         height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,13 +194,133 @@ TextureImporter:
         width: 1101
         height: 303
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: cf222e0af20a8624681f7274830d8993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 173
+        width: 229
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab546008872edd4e830a813fe7d7d03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_4
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 173
+        width: 306
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb275a55effe84439c8bfc30a9a805c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lights_out_1
+      rect:
+        serializedVersion: 2
+        x: 5182
+        y: 350
+        width: 304
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0439aa217d10941468836384bd0bbbc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lights_out_2
+      rect:
+        serializedVersion: 2
+        x: 5493
+        y: 349
+        width: 304
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d43d7559091164799258750c4f2d40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lights_out_3
+      rect:
+        serializedVersion: 2
+        x: 5803
+        y: 349
+        width: 304
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb599228fe75ed48b0c5797c023e821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lights_out_5
+      rect:
+        serializedVersion: 2
+        x: 6116
+        y: 350
+        width: 304
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a916dc4b068394cb442ec26fe0f645
       vertices: []
       indices: 
       edges: []
