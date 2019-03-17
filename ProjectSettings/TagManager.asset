@@ -47,6 +47,33 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Parallax
+    uniqueID: 4043820315
+    locked: 0
+  - name: Background (far)
+    uniqueID: 239733559
+    locked: 0
+  - name: Background (mid)
+    uniqueID: 3131056757
+    locked: 0
+  - name: Background (close)
+    uniqueID: 3493534317
+    locked: 0
+  - name: Boat
+    uniqueID: 1577918917
+    locked: 0
+  - name: Enemy
+    uniqueID: 3553370755
+    locked: 0
+  - name: Player
+    uniqueID: 1090199495
+    locked: 0
+  - name: Effect
+    uniqueID: 223644325
+    locked: 0
+  - name: Foreground
+    uniqueID: 562574345
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

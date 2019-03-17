@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 714535536221402855, guid: 95a990ec89874e94cb185eafe79d544d,
         type: 3}
       propertyPath: m_Name
-      value: VanBridge2 Variant
+      value: VanBridge2
       objectReference: {fileID: 0}
     - target: {fileID: 714535536221402852, guid: 95a990ec89874e94cb185eafe79d544d,
         type: 3}
@@ -30,17 +30,17 @@ PrefabInstance:
     - target: {fileID: 714535536221402852, guid: 95a990ec89874e94cb185eafe79d544d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 714535536221402852, guid: 95a990ec89874e94cb185eafe79d544d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 714535536221402852, guid: 95a990ec89874e94cb185eafe79d544d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 714535536221402852, guid: 95a990ec89874e94cb185eafe79d544d,
         type: 3}
