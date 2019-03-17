@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
 
         // set score text to 0
         UpdateScoreUI();
+        UpdateBombsUI();
     }
 
     public static void UpdateScoreUI()
