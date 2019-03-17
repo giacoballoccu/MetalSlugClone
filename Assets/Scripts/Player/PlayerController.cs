@@ -438,7 +438,6 @@ public class PlayerController : MonoBehaviour
         {
             health.Hit(100);
             gameObject.transform.parent = foreground.transform;
-            camera.GetComponent<CameraController>().setIsBlocked(true);
         }
     }
 

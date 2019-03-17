@@ -8,8 +8,6 @@ public class CameraController : MonoBehaviour
     private Vector2 playerVPPos;
     private Vector2 oldPosition;
 
-    private bool isBlocked = false;
-
     void Start()
     {
         player = GameManager.GetPlayer();
@@ -31,10 +29,5 @@ public class CameraController : MonoBehaviour
         }
 
         oldPosition = player.transform.position;
-    }
-
-    public void setIsBlocked(bool isBlocked)
-    {
-        this.isBlocked = isBlocked;
     }
 }

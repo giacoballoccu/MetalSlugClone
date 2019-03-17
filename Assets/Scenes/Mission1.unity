@@ -2806,7 +2806,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -801432979
   m_SortingLayer: -6
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300024, guid: 116df9806cc9d0b47bd08d084f964534, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5685,6 +5685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1Za Cam
       objectReference: {fileID: 0}
+    - target: {fileID: 2985110014585409888, guid: 3b2060beb87cd5247a555f4c8f50644e,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1130255035}
     - target: {fileID: 2985110014585409889, guid: 3b2060beb87cd5247a555f4c8f50644e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5740,11 +5745,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2985110014585409888, guid: 3b2060beb87cd5247a555f4c8f50644e,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 1130255035}
     - target: {fileID: 2985110014585409895, guid: 3b2060beb87cd5247a555f4c8f50644e,
         type: 3}
       propertyPath: m_BoundingShape2D
