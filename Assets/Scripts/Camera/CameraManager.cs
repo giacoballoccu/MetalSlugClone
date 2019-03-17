@@ -13,6 +13,7 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera vcamZ1A;
     public CinemachineVirtualCamera vcamZ1B;
     public CinemachineVirtualCamera vcamZ2A;
+    public CinemachineVirtualCamera vcamZ2A2;
     public CinemachineVirtualCamera vcamZ2B;
     public CinemachineVirtualCamera vcamZ2C;
 
@@ -40,7 +41,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ1A.gameObject.SetActive(false);
+        //current.vcamZ1A.gameObject.SetActive(false);
         current.vcamZ1B.gameObject.SetActive(true);
     }
 
@@ -50,8 +51,9 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ1B.gameObject.SetActive(false);
+        //current.vcamZ1B.gameObject.SetActive(false);
         current.vcamZ2A.gameObject.SetActive(true);
+        current.vcamZ2A2.gameObject.SetActive(true);
     }
 
     public static void AfterFirstVan()
@@ -60,7 +62,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ2A.gameObject.SetActive(false);
+        //current.vcamZ2A.gameObject.SetActive(false);
         current.vcamZ2B.gameObject.SetActive(true);
     }
 
@@ -70,7 +72,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ2B.gameObject.SetActive(false);
+        //current.vcamZ2B.gameObject.SetActive(false);
         current.vcamZ2C.gameObject.SetActive(true);
     }
 }
