@@ -12,6 +12,9 @@ public class CameraManager : MonoBehaviour
 
     public CinemachineVirtualCamera vcamZ1A;
     public CinemachineVirtualCamera vcamZ1B;
+    public CinemachineVirtualCamera vcamZ1C;
+    public CinemachineVirtualCamera vcamZ1D;
+    public CinemachineVirtualCamera vcamZ1E;
     public CinemachineVirtualCamera vcamZ2A;
     public CinemachineVirtualCamera vcamZ2B;
     public CinemachineVirtualCamera vcamZ2C;
@@ -33,6 +36,12 @@ public class CameraManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public static void SwitchCameras(CinemachineVirtualCamera cam1, CinemachineVirtualCamera cam2)
+    {
+        cam1.gameObject.SetActive(false);
+        cam2.gameObject.SetActive(true);
+    }
+
     // Start is called before the first frame update
     public static void AfterCrabTower()
     {
@@ -40,8 +49,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ1A.gameObject.SetActive(false);
-        current.vcamZ1B.gameObject.SetActive(true);
+        SwitchCameras(current.vcamZ1A, current.vcamZ1B);
     }
 
     public static void AfterSunkBoat()
@@ -50,8 +58,34 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ1B.gameObject.SetActive(false);
-        current.vcamZ2A.gameObject.SetActive(true);
+        SwitchCameras(current.vcamZ1B, current.vcamZ1C);
+    }
+
+    public static void AfterSunkCartel()
+    {
+        //If there is no current Camera Manager, exit
+        if (current == null)
+            return;
+
+        SwitchCameras(current.vcamZ1C, current.vcamZ1D);
+    }
+
+    public static void AfterMosquitos()
+    {
+        //If there is no current Camera Manager, exit
+        if (current == null)
+            return;
+
+        SwitchCameras(current.vcamZ1D, current.vcamZ1E);
+    }
+
+    public static void AfterMarcoBoatCartel()
+    {
+        //If there is no current Camera Manager, exit
+        if (current == null)
+            return;
+
+        SwitchCameras(current.vcamZ1E, current.vcamZ2A);
     }
 
     public static void AfterFirstVan()
@@ -60,8 +94,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.vcamZ2A.gameObject.SetActive(false);
-        current.vcamZ2B.gameObject.SetActive(true);
+        SwitchCameras(current.vcamZ2A, current.vcamZ2B);
     }
 
     public static void AfterSecondVan()
@@ -70,6 +103,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
+        SwitchCameras(current.vcamZ2B, current.vcamZ2C);
         current.vcamZ2B.gameObject.SetActive(false);
         current.vcamZ2C.gameObject.SetActive(true);
     }

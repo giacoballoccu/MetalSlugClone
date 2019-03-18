@@ -62,16 +62,16 @@ MonoBehaviour:
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
-  m_ScreenX: 0.2
+  m_ScreenX: 0.207
   m_ScreenY: 0.5
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.4
   m_DeadZoneHeight: 0.5
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 2
-  m_SoftZoneHeight: 1
-  m_BiasX: 0.0000004004687
+  m_SoftZoneWidth: 0.86
+  m_SoftZoneHeight: 0.88
+  m_BiasX: 0.5
   m_BiasY: 0
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 54
-    OrthographicSize: 1
+    OrthographicSize: 1.1
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ConfineMode: 0
+  m_ConfineMode: 1
   m_BoundingVolume: {fileID: 0}
   m_BoundingShape2D: {fileID: 0}
-  m_ConfineScreenEdges: 1
+  m_ConfineScreenEdges: 0
   m_Damping: 0
