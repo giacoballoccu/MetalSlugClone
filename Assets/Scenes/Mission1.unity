@@ -1247,11 +1247,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530201495}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4778595, y: 0.3443057, z: 1}
-  m_Center: {x: 0.03257084, y: -0.32784715, z: 0}
+  m_Size: {x: 1.971652, y: 0.13207859, z: 1}
+  m_Center: {x: -0.7874484, y: -0.4339607, z: 0}
 --- !u!4 &530201497
 Transform:
   m_ObjectHideFlags: 0
@@ -3257,8 +3257,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vcamZ1A: {fileID: 248796616}
   vcamZ1B: {fileID: 381212630}
+  vcamZ1C: {fileID: 1318979754}
+  vcamZ1D: {fileID: 0}
+  vcamZ1E: {fileID: 0}
   vcamZ2A: {fileID: 1947677659}
-  vcamZ2A2: {fileID: 1318979754}
   vcamZ2B: {fileID: 168239219}
   vcamZ2C: {fileID: 611056312}
 --- !u!1 &1490382728
