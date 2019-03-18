@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6565219500553693624}
   - component: {fileID: 6565219500553693626}
   - component: {fileID: 6565219500553693625}
+  - component: {fileID: 4543986602471598629}
   m_Layer: 0
   m_Name: Van
   m_TagString: Enemy
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -741596541
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 13c327f11c14de14aa980fb10bf542f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,3 +202,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 0.15
+--- !u!114 &4543986602471598629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565219500553693618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385b205bc7255184088a04618e7e37bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownBridge: {fileID: 0}

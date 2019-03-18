@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class BridgeController : MonoBehaviour
 {
-    public Health van;
     public int nBridge;
     public Sprite sprite;
 
-    void Start()
-    {
-        van.onDead += OnDead;
-    }
-
-    void OnDead(float damage)
+    public void OnDestroy()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
         if (nBridge == 1)
