@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -3141,8 +3141,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.429639, y: 0, z: 1}
-  m_Center: {x: 2.6971664, y: 0.19211885, z: 0}
+  m_Size: {x: 6.7578826, y: 0, z: 1}
+  m_Center: {x: 2.0330446, y: 0.19211885, z: 0}
 --- !u!4 &1436071237
 Transform:
   m_ObjectHideFlags: 0
