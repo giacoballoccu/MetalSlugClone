@@ -106,8 +106,6 @@ public class CameraManager : MonoBehaviour
             return;
 
         SwitchCameras(current.vcamZ2B, current.vcamZ2C);
-        current.vcamZ2B.gameObject.SetActive(false);
-        current.vcamZ2C.gameObject.SetActive(true);
     }
     #endregion
 
