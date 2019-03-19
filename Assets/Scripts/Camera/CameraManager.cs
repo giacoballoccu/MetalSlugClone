@@ -10,11 +10,13 @@ public class CameraManager : MonoBehaviour
     //scripts access this one through its public static methods
     static CameraManager current;
 
+    [Header("Zone 1")]
     public CinemachineVirtualCamera vcamZ1A;
     public CinemachineVirtualCamera vcamZ1B;
     public CinemachineVirtualCamera vcamZ1C;
     public CinemachineVirtualCamera vcamZ1D;
     public CinemachineVirtualCamera vcamZ1E;
+    [Header("Zone 2")]
     public CinemachineVirtualCamera vcamZ2A;
     public CinemachineVirtualCamera vcamZ2B;
     public CinemachineVirtualCamera vcamZ2C;
@@ -42,7 +44,7 @@ public class CameraManager : MonoBehaviour
         cam2.gameObject.SetActive(true);
     }
 
-    // Start is called before the first frame update
+    #region Mission 1 Switches
     public static void AfterCrabTower()
     {
         //If there is no current Camera Manager, exit
@@ -107,4 +109,21 @@ public class CameraManager : MonoBehaviour
         current.vcamZ2B.gameObject.SetActive(false);
         current.vcamZ2C.gameObject.SetActive(true);
     }
+    #endregion
+
+
+    #region Mission 2 Switches
+    #endregion
+
+
+
+
+
+
+
+
+
+
+
+
 }
