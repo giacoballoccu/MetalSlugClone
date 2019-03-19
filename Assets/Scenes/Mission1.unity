@@ -689,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38361228
+      value: 0.38494325
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -5126,19 +5126,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: -0.28}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.6204109, y: -0.009140104}
-  - {x: -0.27192688, y: -0.028555423}
-  - {x: 0.0884285, y: -0.02246955}
-  - {x: 0.33182716, y: -0.030593783}
-  - {x: 0.38529587, y: -0.029766142}
-  - {x: 0.41811562, y: -0.020408452}
-  - {x: 0.47491646, y: 0.010579526}
-  - {x: 0.6147766, y: 0.08466163}
-  - {x: 0.6700764, y: 0.11572936}
-  - {x: 0.74791145, y: 0.09546551}
-  - {x: 0.84041977, y: 0.100764066}
-  - {x: 0.91103745, y: 0.11319253}
-  - {x: 0.99744225, y: 0.15309802}
+  - {x: -0.6204109, y: -0.016617239}
+  - {x: 0.004234314, y: -0.031859815}
+  - {x: 0.48997688, y: -0.020419657}
+  - {x: 0.65699196, y: 0.11012149}
+  - {x: 1.0229607, y: 0.121198356}
 --- !u!212 &1930952387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6148,6 +6140,11 @@ PrefabInstance:
       propertyPath: vcamZ2C
       value: 
       objectReference: {fileID: 611056312}
+    - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.157585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f8e7b35f7be624e80727a89ad67fae, type: 3}
 --- !u!1001 &3691490739240966665

@@ -38,15 +38,43 @@ public class CameraManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    #region Editor Switches
     public void SwitchZ1AtoZ1B()
     {
         SwitchCameras(vcamZ1A, vcamZ1B);
     }
+    public void SwitchZ1BtoZ1C()
+    {
+        SwitchCameras(vcamZ1B, vcamZ1C);
+    }
+    public void SwitchZ1CtoZ1D()
+    {
+        SwitchCameras(vcamZ1C, vcamZ1D);
+    }
+    public void SwitchZ1DtoZ1E()
+    {
+        SwitchCameras(vcamZ1D, vcamZ1E);
+    }
+    public void SwitchZ1EtoZ2A()
+    {
+        SwitchCameras(vcamZ1E, vcamZ2A);
+    }
+    public void SwitchZ2AtoZ2B()
+    {
+        SwitchCameras(vcamZ2A, vcamZ2B);
+    }
+    public void SwitchZ2BtoZ2C()
+    {
+        SwitchCameras(vcamZ2B, vcamZ2C);
+    }
+    #endregion
 
     public static void SwitchCameras(CinemachineVirtualCamera cam1, CinemachineVirtualCamera cam2)
     {
-        cam1.gameObject.SetActive(false);
-        cam2.gameObject.SetActive(true);
+        if (cam1 != null)
+            cam1.gameObject.SetActive(false);
+        if (cam2 != null)
+            cam2.gameObject.SetActive(true);
     }
 
     #region Mission 1 Switches
@@ -56,7 +84,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ1A, current.vcamZ1B);
+        current.SwitchZ1AtoZ1B();
     }
 
     public static void AfterSunkBoat()
@@ -65,7 +93,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ1B, current.vcamZ1C);
+        current.SwitchZ1BtoZ1C();
     }
 
     public static void AfterSunkCartel()
@@ -74,7 +102,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ1C, current.vcamZ1D);
+        current.SwitchZ1CtoZ1D();
     }
 
     public static void AfterMosquitos()
@@ -83,7 +111,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ1D, current.vcamZ1E);
+        current.SwitchZ1DtoZ1E();
     }
 
     public static void AfterMarcoBoatCartel()
@@ -92,7 +120,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ1E, current.vcamZ2A);
+        current.SwitchZ1EtoZ2A();
     }
 
     public static void AfterFirstVan()
@@ -101,7 +129,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ2A, current.vcamZ2B);
+        current.SwitchZ2AtoZ2B();
     }
 
     public static void AfterSecondVan()
@@ -110,7 +138,7 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
 
-        SwitchCameras(current.vcamZ2B, current.vcamZ2C);
+        current.SwitchZ2BtoZ2C();
     }
     #endregion
 
