@@ -38,6 +38,11 @@ public class CameraManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void SwitchZ1AtoZ1B()
+    {
+        SwitchCameras(vcamZ1A, vcamZ1B);
+    }
+
     public static void SwitchCameras(CinemachineVirtualCamera cam1, CinemachineVirtualCamera cam2)
     {
         cam1.gameObject.SetActive(false);
