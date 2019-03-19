@@ -334,7 +334,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.1361485, y: 0, z: 1}
-  m_Center: {x: 4.895816, y: -0.5, z: 0}
+  m_Center: {x: 4.895816, y: -0.4, z: 0}
 --- !u!1 &129108217
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38494325
+      value: 0.20472449
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -2273,7 +2273,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8.46389, y: 0, z: 1}
-  m_Center: {x: 3.731945, y: -0.5, z: 0}
+  m_Center: {x: 3.731945, y: -0.4, z: 0}
 --- !u!4 &1084350714
 Transform:
   m_ObjectHideFlags: 0
@@ -2353,8 +2353,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -801432979
-  m_SortingLayer: -6
+  m_SortingLayerID: -1163910539
+  m_SortingLayer: -7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300082, guid: 116df9806cc9d0b47bd08d084f964534, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2664,7 +2664,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7.577862, y: 0, z: 1}
-  m_Center: {x: 3.288931, y: -0.5, z: 0}
+  m_Center: {x: 3.288931, y: -0.4, z: 0}
 --- !u!1 &1196947419
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,6 +5878,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 714535536221402853, guid: 95a990ec89874e94cb185eafe79d544d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 714535536221402853, guid: 95a990ec89874e94cb185eafe79d544d,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -801432979
+      objectReference: {fileID: 0}
+    - target: {fileID: 714535536221402853, guid: 95a990ec89874e94cb185eafe79d544d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95a990ec89874e94cb185eafe79d544d, type: 3}
 --- !u!1001 &1765443407533320850
@@ -6045,6 +6060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.337804
+      objectReference: {fileID: 0}
     - target: {fileID: 2431320818782163684, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6140,11 +6160,6 @@ PrefabInstance:
       propertyPath: vcamZ2C
       value: 
       objectReference: {fileID: 611056312}
-    - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.157585
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f8e7b35f7be624e80727a89ad67fae, type: 3}
 --- !u!1001 &3691490739240966665
@@ -6219,6 +6234,21 @@ PrefabInstance:
       propertyPath: van
       value: 
       objectReference: {fileID: 529018615}
+    - target: {fileID: 4237963167675674112, guid: f81c36d000152ae498d42c71317ccc1f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237963167675674112, guid: f81c36d000152ae498d42c71317ccc1f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -801432979
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237963167675674112, guid: f81c36d000152ae498d42c71317ccc1f,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81c36d000152ae498d42c71317ccc1f, type: 3}
 --- !u!1001 &4140604980231944845

@@ -12,7 +12,10 @@ public class MenuManager : MonoBehaviour
     public AudioClip preselect; // any button
     public AudioClip select; // press start
     public Image start;
-    public Image menu;
+    public Image choose;
+    public Image chooseMode;
+    public Image stats;
+    public GameObject missionMode;
 
     [Header("Mixer Groups")]
     public AudioMixerGroup musicGroup;  //The music mixer group
@@ -31,7 +34,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     public void PressStart()
     {
-        menu.gameObject.SetActive(true);
+        choose.gameObject.SetActive(true);
 
         //Set the clip for effect audio
         effectSource.clip = select;
@@ -41,5 +44,23 @@ public class MenuManager : MonoBehaviour
         musicSource.clip = menuSound;
         musicSource.loop = true;
         musicSource.Play();
+    }
+
+    public void PressMainMission()
+    {
+        chooseMode.gameObject.SetActive(true);
+
+        //Set the clip for effect audio
+        effectSource.clip = select;
+        effectSource.Play();
+    }
+
+    public void PressMissionMode()
+    {
+        missionMode.gameObject.SetActive(true);
+
+        //Set the clip for effect audio
+        effectSource.clip = select;
+        effectSource.Play();
     }
 }

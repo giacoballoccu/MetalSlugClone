@@ -47,6 +47,8 @@ TextureImporter:
     21300084: bridge_broken_1
     21300086: foreground_tower_single
     21300088: bridge_broken
+    21300090: bridge_2
+    21300092: bridge_broken_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1023,10 +1025,10 @@ TextureImporter:
       name: bridge_broken
       rect:
         serializedVersion: 2
-        x: 3221
-        y: 519
-        width: 169
-        height: 79
+        x: 3116
+        y: 498
+        width: 124
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1035,6 +1037,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e932c29f1e0b78e4b91e3a58ed289b68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_2
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 553
+        width: 132
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8fc08800d1ebc449d5aa1e60a74997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_broken_2
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 519
+        width: 113
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93534b3aa2984914c9bf64b760ae2b94
       vertices: []
       indices: 
       edges: []
