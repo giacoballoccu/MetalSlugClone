@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     int score = 0;
     int bombs = 200;
     int difficulty = (int) Df.Medium;
+    int bgAudio = 5;
+    int fsxAudio = 5;
 
     [Header("Layers")]
     public LayerMask enemyLayer;
@@ -186,5 +188,25 @@ public class GameManager : MonoBehaviour
     public int GetDifficultyMode()
     {
         return difficulty;
+    }
+
+    public void SetBgAudio(int bgAudio)
+    {
+        this.bgAudio = bgAudio;
+    }
+
+    public int GetBgAudio()
+    {
+        return bgAudio;
+    }
+
+    public void SetFsxAudio(int fsxAudio)
+    {
+        this.fsxAudio = fsxAudio;
+    }
+
+    public int GetFsxAudio()
+    {
+        return fsxAudio;
     }
 }
