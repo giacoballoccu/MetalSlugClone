@@ -15,13 +15,16 @@ public class MenuManager : MonoBehaviour
     public AudioClip preselect; // any button
     public AudioClip select; // press start
 
+    public GameManager gameManager;
+
     public TMPro.TextMeshProUGUI startText;
 
     [Header("Menu Groups")]
-    public Image start;
-    public Image choose;
-    public Image chooseMode;
-    public Image stats;
+    public GameObject start;
+    public GameObject choose;
+    public GameObject chooseMode;
+    public GameObject settings;
+    public GameObject stats;
     public GameObject missionMode;
 
     [Header("Mixer Groups")]
@@ -40,6 +43,18 @@ public class MenuManager : MonoBehaviour
     public Image missionViewer;
     public List<Sprite> missionSprites;
 
+    [Header("Settings")]
+    public TMPro.TextMeshProUGUI bgText;
+    public TMPro.TextMeshProUGUI fsxText;
+    public TMPro.TextMeshProUGUI bgTextCounter;
+    public TMPro.TextMeshProUGUI fsxTextCounter;
+
+    //Audio settings
+    private bool isBgCounterPressed = false;
+    private bool isFsxCounterPressed = false;
+
+    private GameObject currentMenu;
+
     void Start()
     {
         //Generate the Audio Source "channels" for our game's audio
@@ -49,10 +64,38 @@ public class MenuManager : MonoBehaviour
         StartCoroutine("blinkStart");
     }
 
+    private IEnumerator blinkStart()
+    {
+        while (true)
+        {
+            while (startText.alpha > 0f)
+            {
+                startText.alpha -= 0.1f;
+                yield return new WaitForSeconds(0.05f);
+            }
+            while (startText.alpha < 1f)
+            {
+                startText.alpha += 0.1f;
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
+    }
+
+    public void Back()
+    {
+        currentMenu.SetActive(false);
+
+        if(currentMenu == settings || currentMenu == stats)
+        {
+            choose.gameObject.SetActive(true);
+        }
+    }
+
     // Start is called before the first frame update
     public void PressStart()
     {
         choose.gameObject.SetActive(true);
+        start.gameObject.SetActive(false);
         StopCoroutine("blinkStart");
 
         //Set the clip for effect audio
@@ -77,6 +120,28 @@ public class MenuManager : MonoBehaviour
     public void PressMissionMode()
     {
         missionMode.gameObject.SetActive(true);
+
+        //Set the clip for effect audio
+        effectSource.clip = select;
+        effectSource.Play();
+    }
+
+    public void PressSettings()
+    {
+        settings.gameObject.SetActive(true);
+        choose.gameObject.SetActive(false);
+        currentMenu = settings;
+
+        //Set the clip for effect audio
+        effectSource.clip = select;
+        effectSource.Play();
+    }
+
+    public void PressStats()
+    {
+        stats.gameObject.SetActive(true);
+        choose.gameObject.SetActive(false);
+        currentMenu = stats;
 
         //Set the clip for effect audio
         effectSource.clip = select;
@@ -142,20 +207,77 @@ public class MenuManager : MonoBehaviour
     }
     /* End mission mode selection */
 
-    private IEnumerator blinkStart()
+    /* Start settings */
+
+    public void SetBgCounterPressed()
     {
-        while (true)
+        //Click color
+        bgText.color = new Color32(255, 255, 255, 255);
+        fsxText.color = new Color32(255, 141, 0, 255);
+        bgTextCounter.color = new Color32(255, 255, 255, 255);
+        fsxTextCounter.color = new Color32(255, 141, 0, 255);
+
+        isBgCounterPressed = true;
+        isFsxCounterPressed = false;
+
+        int bgCounter = gameManager.GetBgAudio();
+
+        if (isBgCounterPressed)
         {
-            while (startText.alpha > 0f)
+            bgCounter++;
+
+            if (bgCounter > 10)
             {
-                startText.alpha -= 0.1f;
-                yield return new WaitForSeconds(0.05f);
+                bgCounter = 0;
             }
-            while (startText.alpha < 1f)
+
+            if (bgCounter == 0)
             {
-                startText.alpha += 0.1f;
-                yield return new WaitForSeconds(0.05f);
+                bgTextCounter.SetText("OFF");
             }
+            else
+            {
+                bgTextCounter.SetText(bgCounter.ToString());
+            }
+
+            gameManager.SetBgAudio(bgCounter);
         }
     }
+
+    public void SetFsxCounterPressed()
+    {
+        //Click color
+        bgText.color = new Color32(255, 141, 0, 255);
+        fsxText.color = new Color32(255, 255, 255, 255);
+        bgTextCounter.color = new Color32(255, 141, 0, 255);
+        fsxTextCounter.color = new Color32(255, 255, 255, 255);
+
+        isBgCounterPressed = false;
+        isFsxCounterPressed = true;
+
+        int fsxCounter = gameManager.GetFsxAudio();
+
+        if (isFsxCounterPressed)
+        {
+            fsxCounter++;
+
+            if (fsxCounter > 10)
+            {
+                fsxCounter = 0;
+            }
+
+            if (fsxCounter == 0)
+            {
+                fsxTextCounter.SetText("OFF");
+            }
+            else
+            {
+                fsxTextCounter.SetText(fsxCounter.ToString());
+            }
+
+            gameManager.SetFsxAudio(fsxCounter);
+        }
+    }
+
+    /* End settings */
 }
