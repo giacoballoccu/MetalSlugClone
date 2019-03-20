@@ -13,10 +13,13 @@ public class GameManager : MonoBehaviour
     //scripts access this one through its public static methods
     static GameManager current;
 
+    enum Df {Easy = 1, Medium, Hard }
+
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
     int bombs = 200;
+    int difficulty = (int) Df.Medium;
 
     [Header("Layers")]
     public LayerMask enemyLayer;
@@ -173,5 +176,15 @@ public class GameManager : MonoBehaviour
             return false;
 
         return tag == "Enemy" || tag == "Building" || tag == "Walkable";
+    }
+
+    public void SetDifficultyMode(int difficulty)
+    {
+        this.difficulty = difficulty;
+    }
+
+    public int GetDifficultyMode()
+    {
+        return difficulty;
     }
 }
