@@ -726,8 +726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ff3477421226c4ca8ccc737ec52d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationDistance: 1.8
-  fireDelta: 0.5
+  activationDistance: 5
+  fireDelta: 5
   bomb: {fileID: 6000045305501160609, guid: d36aee83cddcbc740874fc53a8b0f444, type: 3}
   bombSpawner: {fileID: 2138996362}
 --- !u!114 &280346654 stripped
@@ -5819,7 +5819,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6565219500553693624, guid: 23a62deb9afc6e349b51583912d4ba6a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 23a62deb9afc6e349b51583912d4ba6a, type: 3}
 --- !u!1001 &7013612831551005803
 PrefabInstance:

@@ -1,7 +1,33 @@
 fileFormatVersion: 2
 guid: 089e68b7e9717854da9580a923d74051
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: vanbomb_explosion_1
+    21300002: vanbomb_explosion_2
+    21300004: vanbomb_explosion_3
+    21300006: vanbomb_explosion_4
+    21300008: vanbomb_explosion_5
+    21300010: vanbomb_explosion_6
+    21300012: vanbomb_explosion_7
+    21300014: vanbomb_explosion_8
+    21300016: vanbomb_explosion_9
+    21300018: vanbomb_explosion_10
+    21300020: vanbomb_explosion_11
+    21300022: vanbomb_explosion_12
+    21300024: vanbomb_explosion_13
+    21300026: vanbomb_explosion_14
+    21300028: vanbomb_explosion_15
+    21300030: vanbomb_explosion_16
+    21300032: vanbomb_explosion_17
+    21300034: vanbomb_explosion_18
+    21300036: vanbomb_explosion_19
+    21300038: vanbomb_explosion_20
+    21300040: vanbomb_explosion_21
+    21300042: vanbomb_explosion_22
+    21300044: vanbomb_explosion_23
+    21300046: vanbomb_explosion_24
+    21300048: vanbomb_explosion_25
+    21300050: vanbomb_explosion_26
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -31,7 +57,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +66,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -60,10 +86,32 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -71,7 +119,527 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: vanbomb_explosion_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 3003
+        width: 31
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69926ecb3e85ab4993e8f56470ab6e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 3003
+        width: 31
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcea770a56be6d4dbcf0a589df15ed1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 3003
+        width: 34
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2535c3f9dcecf8b4e9df6b65303c7143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_4
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 3003
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2e56442f4c26e41b71a679c9e23721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_5
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 3003
+        width: 34
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f9f3eba35e9fd449a7da030a163f07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_6
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3003
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa41d50faa29dbb4e93abe2f31ff680d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_7
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 3003
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670e7beae1a7b4743a028fe785d0c748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 3003
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a4043cb26af7f4196b9eb623ef9dbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_9
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 3003
+        width: 32
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d28ff5d500c524a9ba2f572512f4c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_10
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 3003
+        width: 33
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2b819039d70c94195bbaa656d1c983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_11
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 3003
+        width: 32
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487687d364080a5468b1402d05d3b1c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_12
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 3003
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94386ff221b1dc44aabc0f80e623b911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_13
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 3003
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62074ee4b7f8a0419ad0a9f74bf7971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_14
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3003
+        width: 31
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308c078e49e12b54f86d07d7a826d020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_15
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 3003
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c175e30f3997327459807f0cb37a1bc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_16
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 3004
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d68415be4e9644384f8737e7e987cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2961
+        width: 31
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16383027b62ce4a48bec668d92da4118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 2961
+        width: 27
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b078637d449746d4abdd683e15f64d89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_19
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2961
+        width: 24
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3bcf56ca29fbf4d958d84adb15a911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_20
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2961
+        width: 24
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21906c268b6189148b5db0c9c757e8fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_21
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2961
+        width: 24
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd93558b0b215e48a4882f6efb0fa82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 2961
+        width: 25
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794e6ab9ccb34a54abac0940d4a0f919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_23
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 2961
+        width: 22
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b6c018c43cb5e4bacf6646efbb47ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_24
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 2961
+        width: 21
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc51a39baffa8847b680167955da14d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2961
+        width: 17
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432c177d7922c4e44a421cf2ea49f509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanbomb_explosion_26
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2961
+        width: 16
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22dca9c71328711469a19ce3b8a3adae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

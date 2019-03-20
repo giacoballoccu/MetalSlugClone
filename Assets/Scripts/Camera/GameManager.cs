@@ -174,4 +174,13 @@ public class GameManager : MonoBehaviour
 
         return tag == "Enemy" || tag == "Building" || tag == "Walkable";
     }
+
+    public static bool CanTriggerEnemyBombs(string tag)
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return false;
+
+        return tag == "Player" || tag == "Walkable" || tag == "Marco Boat";
+    }
 }

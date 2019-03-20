@@ -39,6 +39,7 @@ TextureImporter:
     21300068: van_bomb_exp_2
     21300070: van_bomb_exp_3
     21300072: van_bomb_exp_4
+    21300074: van_0
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -799,8 +800,8 @@ TextureImporter:
         y: 861
         width: 18
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -819,8 +820,8 @@ TextureImporter:
         y: 860
         width: 16
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -839,8 +840,8 @@ TextureImporter:
         y: 860
         width: 12
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -859,14 +860,34 @@ TextureImporter:
         y: 864
         width: 10
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 95e4a37baaa37f4459a71ce7977a0f7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: van_0
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 634
+        width: 4
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af76a9ed2de383f45948dd3ce6b823c1
       vertices: []
       indices: 
       edges: []

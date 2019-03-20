@@ -15,8 +15,8 @@ public class VanController : MonoBehaviour
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
-    public float fireDelta = 1.5f;
-    private float nextFire = 1.5f;
+    public float fireDelta = 3f;
+    private float nextFire = 3f;
 
     [Header("Bomb")]
     public GameObject bomb;
@@ -50,6 +50,7 @@ public class VanController : MonoBehaviour
             float playerDistance = transform.position.x - followPlayer.transform.position.x;
             if (playerDistance < activationDistance)
             {
+                animator.SetBool("isFiring", true);
                 shotTime = shotTime + Time.deltaTime;
                 if (shotTime > nextFire)
                 {
@@ -60,8 +61,16 @@ public class VanController : MonoBehaviour
                     nextFire = nextFire - shotTime;
                     shotTime = 0.0f;
                 }
-                
-               
+                else
+                {
+                    animator.SetBool("isFiring", false);
+                }
+
+
+            }
+            else
+            {
+                animator.SetBool("isFiring", false);
             }
         }
     }
@@ -105,10 +114,9 @@ public class VanController : MonoBehaviour
         for (int i=0; i<4; i++)
         {
             newSpawn = bombSpawner.transform.position;
-            newSpawn = new Vector3(Random.Range(33.265f, 35f), 0.464f, 0.06542f);
+            newSpawn = new Vector3(Random.Range(33.265f, 35f), 0.835f, 0.06542f);
             Instantiate(bomb, newSpawn, bombSpawner.transform.rotation);
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.3f);
         }
-
     }
 }
