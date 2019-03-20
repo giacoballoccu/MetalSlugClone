@@ -10,6 +10,7 @@ public class VanBombMovement : MonoBehaviour
     private float damageBomb = 100;
     public Animator vanBombAnimator;
 
+
     // Start is called before the first frame update
     void Start()
     {

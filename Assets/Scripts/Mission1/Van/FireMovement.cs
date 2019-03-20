@@ -6,8 +6,8 @@ public class FireMovement : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    public float bulletForce = 3;
-    public float lifeTime = 5;
+    public float bulletForce = 1;
+    public float lifeTime = 1;
 
     // Start is called before the first frame update
     void Start()
