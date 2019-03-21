@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,12 +21,7 @@ public class SaveManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
-        LoadSettings();
-    }
-
-    private void LoadSettings()
+    public void LoadSettings()
     {
         if (settings != null) // prevent double loading
             return;
