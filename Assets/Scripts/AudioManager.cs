@@ -52,17 +52,17 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        //If an AudioManager exists and it is not this...
+        /*//If an AudioManager exists and it is not this...
         if (current != null && current != this)
         {
             //...destroy this. There can be only one AudioManager
             Destroy(gameObject);
             return;
-        }
+        }*/
 
         //This is the current AudioManager and it should persist between scene loads
         current = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         //Generate the Audio Source "channels" for our game's audio
         musicSource = gameObject.AddComponent<AudioSource>();
@@ -80,6 +80,7 @@ public class AudioManager : MonoBehaviour
         voiceSource.outputAudioMixerGroup = voiceGroup;
 
         //Being playing the game audio
+        RefreshAudioVolume();
         StartLevelAudio();
     }
 
