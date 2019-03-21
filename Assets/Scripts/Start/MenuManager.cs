@@ -9,12 +9,6 @@ using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
-    public AudioClip charSelect; // char selection
-    public AudioClip marco; // marco chosen
-    public AudioClip menuSound; // menu sound
-    public AudioClip preselect; // any button
-    public AudioClip select; // press start
-
     public TextMeshProUGUI startText;
 
     [Header("Menu Groups")]
@@ -24,13 +18,6 @@ public class MenuManager : MonoBehaviour
     public GameObject settings;
     public GameObject stats;
     public GameObject missionMode;
-
-    [Header("Mixer Groups")]
-    public AudioMixerGroup musicGroup;  //The music mixer group
-    public AudioMixerGroup effectGroup;  //The effect mixer group
-
-    AudioSource musicSource;            //Reference to the generated music Audio Source
-    AudioSource effectSource;            //Reference to the generated effect Audio Source
 
     [Header("Difficulty Texts")]
     public TextMeshProUGUI easy;
@@ -51,10 +38,6 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-        //Generate the Audio Source "channels" for our game's audio
-        musicSource = gameObject.AddComponent<AudioSource>();
-        effectSource = gameObject.AddComponent<AudioSource>();
-
         RefreshAudioText();
         StartCoroutine("blinkStart");
     }
@@ -94,13 +77,10 @@ public class MenuManager : MonoBehaviour
         StopCoroutine("blinkStart");
 
         //Set the clip for effect audio
-        effectSource.clip = select;
-        effectSource.Play();
+        AudioManager.PlayMenuSelect();
 
         //Set the clip for music audio, tell it to loop, and then tell it to play
-        musicSource.clip = menuSound;
-        musicSource.loop = true;
-        musicSource.Play();
+        AudioManager.PlayMenuBGM();
     }
 
     public void PressMainMission()
@@ -108,8 +88,7 @@ public class MenuManager : MonoBehaviour
         chooseMode.gameObject.SetActive(true);
 
         //Set the clip for effect audio
-        effectSource.clip = select;
-        effectSource.Play();
+        AudioManager.PlayMenuSelect();
     }
 
     public void PressMissionMode()
@@ -117,8 +96,7 @@ public class MenuManager : MonoBehaviour
         missionMode.gameObject.SetActive(true);
 
         //Set the clip for effect audio
-        effectSource.clip = select;
-        effectSource.Play();
+        AudioManager.PlayMenuSelect();
     }
 
     public void PressSettings()
@@ -128,8 +106,7 @@ public class MenuManager : MonoBehaviour
         currentMenu = settings;
 
         //Set the clip for effect audio
-        effectSource.clip = select;
-        effectSource.Play();
+        AudioManager.PlayMenuSelect();
     }
 
     public void PressStats()
@@ -139,8 +116,7 @@ public class MenuManager : MonoBehaviour
         currentMenu = stats;
 
         //Set the clip for effect audio
-        effectSource.clip = select;
-        effectSource.Play();
+        AudioManager.PlayMenuSelect();
     }
 
     public void SetSelectedDifficulty(int difficulty)
@@ -217,7 +193,7 @@ public class MenuManager : MonoBehaviour
             cnt = 0f;
         GameManager.SetBgmAudio(cnt, true);
 
-        RefreshAudioVolume();
+        AudioManager.RefreshAudioVolume();
         RefreshAudioText();
     }
 
@@ -235,7 +211,7 @@ public class MenuManager : MonoBehaviour
             cnt = 0f;
         GameManager.SetSfxAudio(cnt, true);
 
-        RefreshAudioVolume();
+        AudioManager.RefreshAudioVolume();
         RefreshAudioText();
     }
 
@@ -253,12 +229,5 @@ public class MenuManager : MonoBehaviour
         else
             sfxTextCounter.SetText(Math.Round(sfxCnt * 10).ToString());
     }
-
-    void RefreshAudioVolume()
-    {
-        musicSource.volume = GameManager.GetBgmAudio();
-        effectSource.volume = GameManager.GetSfxAudio();
-    }
-
     /* End settings */
 }

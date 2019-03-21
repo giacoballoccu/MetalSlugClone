@@ -30,6 +30,13 @@ public class AudioManager : MonoBehaviour
     [Header("Voice")]
     public AudioClip levelStart;
 
+    [Header("Menu")]
+    public AudioClip charSelect; // char selection
+    public AudioClip marco; // marco chosen
+    public AudioClip menuSound; // menu sound
+    public AudioClip preselect; // any button
+    public AudioClip select; // press start
+
     [Header("Mixer Groups")]
     public AudioMixerGroup musicGroup;  //The music mixer group
     public AudioMixerGroup effectGroup;  //The effect mixer group
@@ -208,5 +215,22 @@ public class AudioManager : MonoBehaviour
         //Set the clip for music audio, and then tell it to play
         current.playerSource.clip = current.meleeTakeClip;
         current.playerSource.Play();
+    }
+
+    public static void PlayMenuSelect()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.select;
+        current.effectSource.Play();
+    }
+
+    public static void PlayMenuBGM()
+    {
+        if (current == null)
+            return;
+        current.musicSource.clip = current.menuSound;
+        current.musicSource.loop = true;
+        current.musicSource.Play();
     }
 }
