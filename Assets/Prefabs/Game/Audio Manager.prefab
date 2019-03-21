@@ -53,6 +53,11 @@ MonoBehaviour:
   meleeTakeClip: {fileID: 8300000, guid: eab3630d1af2af54cb35b5f5a15c1471, type: 3}
   collectibleGrabClip: {fileID: 8300000, guid: 8059f21498c55404fab41460468c5f37, type: 3}
   levelStart: {fileID: 8300000, guid: 730989ad5611e9d48b1a770a7579587c, type: 3}
+  charSelect: {fileID: 8300000, guid: 62879fd334b8ed74faf99edbb5364a15, type: 3}
+  marco: {fileID: 8300000, guid: 523d2eb004435604d935649b279f9dc7, type: 3}
+  menuSound: {fileID: 8300000, guid: ed9ebcf8b8161c5468dcb2d690107b0e, type: 3}
+  preselect: {fileID: 8300000, guid: c25b080bf029cc44183c425417455dae, type: 3}
+  select: {fileID: 8300000, guid: 587f56e4b924e16408c0ede33ab5ed2a, type: 3}
   musicGroup: {fileID: 243248386772865564, guid: e890f615dbd1d714eb257944c4ba3fe6,
     type: 2}
   effectGroup: {fileID: 243798907181180866, guid: e890f615dbd1d714eb257944c4ba3fe6,
