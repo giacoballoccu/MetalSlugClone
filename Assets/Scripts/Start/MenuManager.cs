@@ -59,6 +59,7 @@ public class MenuManager : MonoBehaviour
         musicSource = gameObject.AddComponent<AudioSource>();
         effectSource = gameObject.AddComponent<AudioSource>();
 
+        RefreshAudioText();
         StartCoroutine("blinkStart");
     }
 
@@ -215,20 +216,13 @@ public class MenuManager : MonoBehaviour
         sfxTextCounter.color = new Color32(255, 141, 0, 255);
 
         float cnt = GameManager.GetBgmAudio();
-        {
-            cnt += .1f;
+        cnt += .1f;
+        if (cnt >= 1.1f)
+            cnt = 0f;
+        GameManager.SetBgmAudio(cnt);
 
-            if (cnt >= 1.1f)
-                cnt = 0f;
-
-            if (cnt < 0.1f)
-                bgmTextCounter.SetText("OFF");
-            else
-                bgmTextCounter.SetText(Math.Round(cnt * 10).ToString());
-
-            GameManager.SetBgmAudio(cnt);
-            RefreshAudioVolume();
-        }
+        RefreshAudioVolume();
+        RefreshAudioText();
     }
 
     public void SetSfxCounterPressed()
@@ -240,20 +234,28 @@ public class MenuManager : MonoBehaviour
         sfxTextCounter.color = new Color32(255, 255, 255, 255);
 
         float cnt = GameManager.GetSfxAudio();
-        {
-            cnt += .1f;
+        cnt += .1f;
+        if (cnt >= 1.1f)
+            cnt = 0f;
+        GameManager.SetSfxAudio(cnt);
 
-            if (cnt >= 1.1f)
-                cnt = 0f;
+        RefreshAudioVolume();
+        RefreshAudioText();
+    }
 
-            if (cnt < 0.1f)
-                sfxTextCounter.SetText("OFF");
-            else
-                sfxTextCounter.SetText(Math.Round(cnt * 10).ToString());
+    void RefreshAudioText()
+    {
+        float bgmCnt = GameManager.GetBgmAudio();
+        if (bgmCnt < 0.1f)
+            bgmTextCounter.SetText("OFF");
+        else
+            bgmTextCounter.SetText(Math.Round(bgmCnt * 10).ToString());
 
-            GameManager.SetSfxAudio(cnt);
-            RefreshAudioVolume();
-        }
+        float sfxCnt = GameManager.GetSfxAudio();
+        if (sfxCnt < 0.1f)
+            sfxTextCounter.SetText("OFF");
+        else
+            sfxTextCounter.SetText(Math.Round(sfxCnt * 10).ToString());
     }
 
     void RefreshAudioVolume()
