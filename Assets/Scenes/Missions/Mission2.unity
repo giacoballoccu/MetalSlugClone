@@ -472,6 +472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
         type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
       propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523626780}
@@ -479,6 +484,31 @@ PrefabInstance:
         type: 3}
       propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchZ1BtoZ1C
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1523626780}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchZ1BtoZ1C
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04048e468706b6041bc18b60aa52eb55, type: 3}
@@ -1536,7 +1566,7 @@ PrefabInstance:
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.435791
+      value: -22.436954
       objectReference: {fileID: 0}
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
@@ -1640,7 +1670,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.358881
+      value: -14.3600445
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -2433,6 +2463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
         type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
       propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523626780}
@@ -2440,6 +2475,31 @@ PrefabInstance:
         type: 3}
       propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchZ1CtoZ1D
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1523626780}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchZ1CtoZ1D
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04048e468706b6041bc18b60aa52eb55, type: 3}
@@ -2587,8 +2647,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
         type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: t.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
       propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 1523626780}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchZ1AtoZ1B
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
+        type: 3}
+      propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04048e468706b6041bc18b60aa52eb55, type: 3}
