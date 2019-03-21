@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     int score = 0;
     int bombs = 200;
     int difficulty = (int) Df.Medium;
-    int bgAudio = 5;
-    int fsxAudio = 5;
+    float bgmAudio = 1f;
+    float sfxAudio = 1f;
 
     [Header("Layers")]
     public LayerMask enemyLayer;
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
     {
         //If there is no current Game Manager, return 0
         if (current == null)
-            return 2;
+            return 10;
 
         //Return the state of the game
         return current.bombs;
@@ -180,33 +180,45 @@ public class GameManager : MonoBehaviour
         return tag == "Enemy" || tag == "Building" || tag == "Walkable";
     }
 
-    public void SetDifficultyMode(int difficulty)
+    public static void SetDifficultyMode(int difficulty)
     {
-        this.difficulty = difficulty;
+        if (current == null)
+            return;
+        current.difficulty = difficulty;
     }
 
-    public int GetDifficultyMode()
+    public static int GetDifficultyMode()
     {
-        return difficulty;
+        if (current == null)
+            return 0;
+        return current.difficulty;
     }
 
-    public void SetBgAudio(int bgAudio)
+    public static void SetBgmAudio(float bgmAudio)
     {
-        this.bgAudio = bgAudio;
+        if (current == null)
+            return;
+        current.bgmAudio = bgmAudio;
     }
 
-    public int GetBgAudio()
+    public static float GetBgmAudio()
     {
-        return bgAudio;
+        if (current == null)
+            return 0f;
+        return current.bgmAudio;
     }
 
-    public void SetFsxAudio(int fsxAudio)
+    public static void SetSfxAudio(float sfxAudio)
     {
-        this.fsxAudio = fsxAudio;
+        if (current == null)
+            return;
+        current.sfxAudio = sfxAudio;
     }
 
-    public int GetFsxAudio()
+    public static float GetSfxAudio()
     {
-        return fsxAudio;
+        if (current == null)
+            return 0f;
+        return current.sfxAudio;
     }
 }

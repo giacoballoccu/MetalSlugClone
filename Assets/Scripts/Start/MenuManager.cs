@@ -15,9 +15,7 @@ public class MenuManager : MonoBehaviour
     public AudioClip preselect; // any button
     public AudioClip select; // press start
 
-    public GameManager gameManager;
-
-    public TMPro.TextMeshProUGUI startText;
+    public TextMeshProUGUI startText;
 
     [Header("Menu Groups")]
     public GameObject start;
@@ -35,23 +33,23 @@ public class MenuManager : MonoBehaviour
     AudioSource effectSource;            //Reference to the generated effect Audio Source
 
     [Header("Difficulty Texts")]
-    public TMPro.TextMeshProUGUI easy;
-    public TMPro.TextMeshProUGUI medium;
-    public TMPro.TextMeshProUGUI hard;
+    public TextMeshProUGUI easy;
+    public TextMeshProUGUI medium;
+    public TextMeshProUGUI hard;
 
     [Header("Missions viewer")]
     public Image missionViewer;
     public List<Sprite> missionSprites;
 
     [Header("Settings")]
-    public TMPro.TextMeshProUGUI bgText;
-    public TMPro.TextMeshProUGUI fsxText;
-    public TMPro.TextMeshProUGUI bgTextCounter;
-    public TMPro.TextMeshProUGUI fsxTextCounter;
+    public TextMeshProUGUI bgmText;
+    public TextMeshProUGUI sfxText;
+    public TextMeshProUGUI bgmTextCounter;
+    public TextMeshProUGUI sfxTextCounter;
 
     //Audio settings
-    private bool isBgCounterPressed = false;
-    private bool isFsxCounterPressed = false;
+    private bool isBgmCounterPressed = false;
+    private bool isSfxCounterPressed = false;
 
     private GameObject currentMenu;
 
@@ -203,80 +201,65 @@ public class MenuManager : MonoBehaviour
 
     public void startMission()
     {
-        SceneManager.LoadScene(GetMissionIndex());
+        SceneManager.LoadScene(GetMissionIndex() + 1);
     }
     /* End mission mode selection */
 
     /* Start settings */
-
-    public void SetBgCounterPressed()
+    public void SetBgmCounterPressed()
     {
         //Click color
-        bgText.color = new Color32(255, 255, 255, 255);
-        fsxText.color = new Color32(255, 141, 0, 255);
-        bgTextCounter.color = new Color32(255, 255, 255, 255);
-        fsxTextCounter.color = new Color32(255, 141, 0, 255);
+        bgmText.color = new Color32(255, 255, 255, 255);
+        sfxText.color = new Color32(255, 141, 0, 255);
+        bgmTextCounter.color = new Color32(255, 255, 255, 255);
+        sfxTextCounter.color = new Color32(255, 141, 0, 255);
 
-        isBgCounterPressed = true;
-        isFsxCounterPressed = false;
-
-        int bgCounter = gameManager.GetBgAudio();
-
-        if (isBgCounterPressed)
+        float cnt = GameManager.GetBgmAudio();
         {
-            bgCounter++;
+            cnt += .1f;
 
-            if (bgCounter > 10)
-            {
-                bgCounter = 0;
-            }
+            if (cnt >= 1.1f)
+                cnt = 0f;
 
-            if (bgCounter == 0)
-            {
-                bgTextCounter.SetText("OFF");
-            }
+            if (cnt < 0.1f)
+                bgmTextCounter.SetText("OFF");
             else
-            {
-                bgTextCounter.SetText(bgCounter.ToString());
-            }
+                bgmTextCounter.SetText(Math.Round(cnt * 10).ToString());
 
-            gameManager.SetBgAudio(bgCounter);
+            GameManager.SetBgmAudio(cnt);
+            RefreshAudioVolume();
         }
     }
 
-    public void SetFsxCounterPressed()
+    public void SetSfxCounterPressed()
     {
         //Click color
-        bgText.color = new Color32(255, 141, 0, 255);
-        fsxText.color = new Color32(255, 255, 255, 255);
-        bgTextCounter.color = new Color32(255, 141, 0, 255);
-        fsxTextCounter.color = new Color32(255, 255, 255, 255);
+        bgmText.color = new Color32(255, 141, 0, 255);
+        sfxText.color = new Color32(255, 255, 255, 255);
+        bgmTextCounter.color = new Color32(255, 141, 0, 255);
+        sfxTextCounter.color = new Color32(255, 255, 255, 255);
 
-        isBgCounterPressed = false;
-        isFsxCounterPressed = true;
-
-        int fsxCounter = gameManager.GetFsxAudio();
-
-        if (isFsxCounterPressed)
+        float cnt = GameManager.GetSfxAudio();
         {
-            fsxCounter++;
+            cnt += .1f;
 
-            if (fsxCounter > 10)
-            {
-                fsxCounter = 0;
-            }
+            if (cnt >= 1.1f)
+                cnt = 0f;
 
-            if (fsxCounter == 0)
-            {
-                fsxTextCounter.SetText("OFF");
-            }
+            if (cnt < 0.1f)
+                sfxTextCounter.SetText("OFF");
             else
-            {
-                fsxTextCounter.SetText(fsxCounter.ToString());
-            }
+                sfxTextCounter.SetText(Math.Round(cnt * 10).ToString());
 
-            gameManager.SetFsxAudio(fsxCounter);
+            GameManager.SetSfxAudio(cnt);
+            RefreshAudioVolume();
         }
+    }
+
+    void RefreshAudioVolume()
+    {
+        musicSource.volume = GameManager.GetBgmAudio();
+        effectSource.volume = GameManager.GetSfxAudio();
     }
 
     /* End settings */

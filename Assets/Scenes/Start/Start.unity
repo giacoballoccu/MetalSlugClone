@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 44135387}
   - component: {fileID: 44135386}
   m_Layer: 0
-  m_Name: v fsx counter
+  m_Name: v sfx counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,11 +247,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3482,11 +3482,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4313,11 +4313,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4532,7 +4532,7 @@ GameObject:
   - component: {fileID: 1496950681}
   - component: {fileID: 1496950680}
   m_Layer: 0
-  m_Name: volume fsx
+  m_Name: volume sfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4576,7 +4576,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1934271745}
-          m_MethodName: SetFsxCounterPressed
+          m_MethodName: SetSfxCounterPressed
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4609,7 +4609,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: VOLUME FSX
+  m_text: VOLUME SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7bf3942aebb79341addf26612c8ea3b, type: 2}
   m_sharedMaterial: {fileID: 21947761065530480, guid: a7bf3942aebb79341addf26612c8ea3b,
@@ -4687,11 +4687,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5050,7 +5050,7 @@ GameObject:
   - component: {fileID: 1585224642}
   - component: {fileID: 1585224641}
   m_Layer: 0
-  m_Name: v bg counter
+  m_Name: v bgm counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5173,11 +5173,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -6458,7 +6458,6 @@ MonoBehaviour:
   menuSound: {fileID: 8300000, guid: ed9ebcf8b8161c5468dcb2d690107b0e, type: 3}
   preselect: {fileID: 8300000, guid: c25b080bf029cc44183c425417455dae, type: 3}
   select: {fileID: 8300000, guid: 587f56e4b924e16408c0ede33ab5ed2a, type: 3}
-  gameManager: {fileID: 1422134298}
   startText: {fileID: 587295712}
   start: {fileID: 1583848949}
   choose: {fileID: 414169200}
@@ -6478,10 +6477,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3b46e036982249144b5ad51e928a5a38, type: 3}
   - {fileID: 21300000, guid: c2a55968d92816340a50367d3890be84, type: 3}
   - {fileID: 21300000, guid: 59d9de8aaed7c2349b6883491f8f1e88, type: 3}
-  bgText: {fileID: 1988843661}
-  fsxText: {fileID: 1496950681}
-  bgTextCounter: {fileID: 1585224641}
-  fsxTextCounter: {fileID: 44135386}
+  bgmText: {fileID: 1988843661}
+  sfxText: {fileID: 1496950681}
+  bgmTextCounter: {fileID: 1585224641}
+  sfxTextCounter: {fileID: 44135386}
 --- !u!4 &1934271746
 Transform:
   m_ObjectHideFlags: 0
@@ -6777,7 +6776,7 @@ GameObject:
   - component: {fileID: 1988843661}
   - component: {fileID: 1988843660}
   m_Layer: 0
-  m_Name: volume bg
+  m_Name: volume bgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6821,7 +6820,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1934271745}
-          m_MethodName: SetBgCounterPressed
+          m_MethodName: SetBgmCounterPressed
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6854,7 +6853,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: VOLUME BG
+  m_text: VOLUME BGM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7bf3942aebb79341addf26612c8ea3b, type: 2}
   m_sharedMaterial: {fileID: 21947761065530480, guid: a7bf3942aebb79341addf26612c8ea3b,
@@ -6924,7 +6923,7 @@ MonoBehaviour:
   m_margin: {x: -45.005203, y: 3.4973145, z: -79.362305, w: 3.3202705}
   m_textInfo:
     textComponent: {fileID: 1988843661}
-    characterCount: 9
+    characterCount: 10
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -6932,11 +6931,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
