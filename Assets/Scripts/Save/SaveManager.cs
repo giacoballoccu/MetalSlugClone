@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class SaveManager : MonoBehaviour
 {
     static SaveManager current;
+
+    private string settingsFilename = "settings.json";
+    private string recordsFilename = "records.json";
+    private Settings settings;
+
     void Awake()
     {
         if (current != null && current != this)
@@ -15,5 +20,32 @@ public class SaveManager : MonoBehaviour
         }
         current = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    void Start()
+    {
+        LoadSettings();
+    }
+
+    private void LoadSettings()
+    {
+        // Path.Combine combines strings into a file path
+        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
+        string filePath = Path.Combine(Application.streamingAssetsPath, settingsFilename);
+
+        if(File.Exists(filePath))
+        {
+            // Read the json from the file into a string
+            string dataAsJson = File.ReadAllText(filePath); 
+            // Pass the json to JsonUtility, and tell it to create a GameData object from it
+            Settings loadedData = JsonUtility.FromJson<Settings>(dataAsJson);
+
+            // Retrieve the allRoundData property of loadedData
+            allRoundData = loadedData.allRoundData;
+        }
+        else
+        {
+            // Debug.LogError("Cannot load settings data!");
+        }
     }
 }
