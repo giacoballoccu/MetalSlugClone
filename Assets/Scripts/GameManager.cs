@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         {
             SetBgmAudio(settings.bgmVolume);
             SetSfxAudio(settings.sfxVolume);
+            AudioManager.RefreshAudioVolume();
         }
     }
 
