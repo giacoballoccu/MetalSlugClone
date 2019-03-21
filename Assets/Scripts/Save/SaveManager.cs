@@ -20,8 +20,18 @@ public class SaveManager : MonoBehaviour
         current = this;
         DontDestroyOnLoad(gameObject);
     }
+    
+    public static Settings GetSettings()
+    {
+        if (current == null)
+            return null;
 
-    public void LoadSettings()
+        if (current.settings == null)
+            current.LoadSettings();
+        return current.settings;
+    }
+
+    void LoadSettings()
     {
         if (settings != null) // prevent double loading
             return;
@@ -37,5 +47,7 @@ public class SaveManager : MonoBehaviour
             // Pass the json to JsonUtility, and tell it to create a GameData object from it
             settings = JsonUtility.FromJson<Settings>(dataAsJson);
         }
+        else
+            settings = new Settings();
     }
 }
