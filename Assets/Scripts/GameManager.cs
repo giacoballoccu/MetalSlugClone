@@ -61,15 +61,23 @@ public class GameManager : MonoBehaviour
         // UIManager.UpdateTimeUI(totalGameTime); // todo implement or delete
     }
 
+    private void SaveSettings()
+    {
+        Settings settings = SaveManager.GetSettings();
+        if (settings == null)
+            settings = new Settings();
+        settings.bgmAudio = GetBgmAudio();
+        settings.sfxAudio = SetSfxAudio();
+        //SaveManager.SetSettings(settings);
+    }
+
     private void LoadSettings()
     {
-        if (current == null)
-            return;
         Settings settings = SaveManager.GetSettings();
         if (settings)
         {
-            current.SetBgmAudio(settings.bgmAudio);
-            current.SetSfxAudio(settings.sfxAudio);
+            SetBgmAudio(settings.bgmAudio);
+            SetSfxAudio(settings.sfxAudio);
         }
     }
 
