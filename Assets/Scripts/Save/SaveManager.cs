@@ -20,7 +20,15 @@ public class SaveManager : MonoBehaviour
         current = this;
         DontDestroyOnLoad(gameObject);
     }
-    
+
+    public static void SetSettings(Settings settings)
+    {
+        if (current == null || settings == null)
+            return;
+        current.settings = settings;
+        //current.SaveSettings();
+    }
+
     public static Settings GetSettings()
     {
         if (current == null)
