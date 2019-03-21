@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             settings = new Settings();
         settings.bgmAudio = GetBgmAudio();
         settings.sfxAudio = SetSfxAudio();
-        //SaveManager.SetSettings(settings);
+        SaveManager.SetSettings(settings);
     }
 
     private void LoadSettings()
