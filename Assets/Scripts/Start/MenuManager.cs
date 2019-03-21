@@ -47,10 +47,6 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI bgmTextCounter;
     public TextMeshProUGUI sfxTextCounter;
 
-    //Audio settings
-    private bool isBgmCounterPressed = false;
-    private bool isSfxCounterPressed = false;
-
     private GameObject currentMenu;
 
     void Start()

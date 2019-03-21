@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +8,7 @@ public class SaveManager : MonoBehaviour
     static SaveManager current;
 
     private string settingsFilename = "settings.json";
-    private string recordsFilename = "records.json";
+    //private string recordsFilename = "records.json";
     private Settings settings;
 
     void Awake()

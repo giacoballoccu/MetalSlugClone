@@ -66,18 +66,18 @@ public class GameManager : MonoBehaviour
         Settings settings = SaveManager.GetSettings();
         if (settings == null)
             settings = new Settings();
-        settings.bgmAudio = GetBgmAudio();
-        settings.sfxAudio = SetSfxAudio();
+        settings.bgmVolume = GetBgmAudio();
+        settings.sfxVolume = GetSfxAudio();
         SaveManager.SetSettings(settings);
     }
 
     private void LoadSettings()
     {
         Settings settings = SaveManager.GetSettings();
-        if (settings)
+        if (settings != null)
         {
-            SetBgmAudio(settings.bgmAudio);
-            SetSfxAudio(settings.sfxAudio);
+            SetBgmAudio(settings.bgmVolume);
+            SetSfxAudio(settings.sfxVolume);
         }
     }
 
