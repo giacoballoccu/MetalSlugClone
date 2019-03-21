@@ -65,9 +65,12 @@ public class GameManager : MonoBehaviour
     {
         if (current == null)
             return;
-        /*Settings settings = SaveManager.GetSettings();
-        current.SetBgmAudio(settings.bgmAudio);
-        current.SetSfxAudio(settings.sfxAudio);*/
+        Settings settings = SaveManager.GetSettings();
+        if (settings)
+        {
+            current.SetBgmAudio(settings.bgmAudio);
+            current.SetSfxAudio(settings.sfxAudio);
+        }
     }
 
     public static void AddScore(float amount)
