@@ -219,11 +219,13 @@ public class GameManager : MonoBehaviour
         return current.difficulty;
     }
 
-    public static void SetBgmAudio(float bgmAudio)
+    public static void SetBgmAudio(float bgmAudio, bool save = false)
     {
         if (current == null)
             return;
         current.bgmAudio = bgmAudio;
+        if (save)
+            current.SaveSettings();
     }
 
     public static float GetBgmAudio()
@@ -233,11 +235,13 @@ public class GameManager : MonoBehaviour
         return current.bgmAudio;
     }
 
-    public static void SetSfxAudio(float sfxAudio)
+    public static void SetSfxAudio(float sfxAudio, bool save = false)
     {
         if (current == null)
             return;
         current.sfxAudio = sfxAudio;
+        if (save)
+            current.SaveSettings();
     }
 
     public static float GetSfxAudio()

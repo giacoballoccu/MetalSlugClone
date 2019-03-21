@@ -27,7 +27,7 @@ public class SaveManager : MonoBehaviour
         if (current == null || settings == null)
             return;
         current.settings = settings;
-        //current.SaveSettings();
+        current.SaveSettings();
     }
 
     public static Settings GetSettings()
@@ -45,7 +45,7 @@ public class SaveManager : MonoBehaviour
         if (settings == null)
             LoadSettings();
         string jsonData = JsonUtility.ToJson(settings);
-        string filePath = Path.Combine(Application.streamingAssetsPath, settingsFilename);
+        string filePath = Path.Combine(Application.persistentDataPath, settingsFilename);
         File.WriteAllText(filePath, jsonData);
     }
 
@@ -58,9 +58,7 @@ public class SaveManager : MonoBehaviour
         }
 
         // Path.Combine combines strings into a file path
-        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
-        string filePath = Path.Combine(Application.streamingAssetsPath, settingsFilename);
-
+        string filePath = Path.Combine(Application.persistentDataPath, settingsFilename);
         if (File.Exists(filePath))
         {
             // Read the json from the file into a string

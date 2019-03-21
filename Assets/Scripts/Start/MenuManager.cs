@@ -215,7 +215,7 @@ public class MenuManager : MonoBehaviour
         cnt += .1f;
         if (cnt >= 1.1f)
             cnt = 0f;
-        GameManager.SetBgmAudio(cnt);
+        GameManager.SetBgmAudio(cnt, true);
 
         RefreshAudioVolume();
         RefreshAudioText();
@@ -233,7 +233,7 @@ public class MenuManager : MonoBehaviour
         cnt += .1f;
         if (cnt >= 1.1f)
             cnt = 0f;
-        GameManager.SetSfxAudio(cnt);
+        GameManager.SetSfxAudio(cnt, true);
 
         RefreshAudioVolume();
         RefreshAudioText();
