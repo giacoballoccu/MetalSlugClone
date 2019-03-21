@@ -45,6 +45,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    void Start()
+    {
+        LoadSettings();
+    }
+
     void Update()
     {
         //If the game is over, exit
@@ -54,6 +59,15 @@ public class GameManager : MonoBehaviour
         //Update the total game time and tell the UI Manager to update
         totalGameTime += Time.deltaTime;
         // UIManager.UpdateTimeUI(totalGameTime); // todo implement or delete
+    }
+
+    private void LoadSettings()
+    {
+        if (current == null)
+            return;
+        /*Settings settings = SaveManager.GetSettings();
+        current.SetBgmAudio(settings.bgmAudio);
+        current.SetSfxAudio(settings.sfxAudio);*/
     }
 
     public static void AddScore(float amount)
