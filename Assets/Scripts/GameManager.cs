@@ -1,4 +1,4 @@
-﻿// This script is a Manager that controls the the flow and control of the game. It keeps
+// This script is a Manager that controls the the flow and control of the game. It keeps
 // track of player data (score, total game time) and interfaces with
 // the UI Manager. All game commands are issued through the static methods of this class
 
