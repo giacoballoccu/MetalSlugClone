@@ -39,10 +39,22 @@ public class SaveManager : MonoBehaviour
         return current.settings;
     }
 
+    void SaveSettings()
+    {
+        if (settings == null)
+            LoadSettings();
+        string jsonData = JsonUtility.ToJson(settings);
+        string filePath = Path.Combine(Application.streamingAssetsPath, settingsFilename);
+        File.WriteAllText(filePath, jsonData);
+    }
+
     void LoadSettings()
     {
         if (settings != null) // prevent double loading
+        {
+            settings = new Settings();
             return;
+        }
 
         // Path.Combine combines strings into a file path
         // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
