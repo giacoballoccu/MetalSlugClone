@@ -73,7 +73,17 @@ public class AudioManager : MonoBehaviour
         voiceSource.outputAudioMixerGroup = voiceGroup;
 
         //Being playing the game audio
+        RefreshAudioVolume();
         StartLevelAudio();
+    }
+
+    void RefreshAudioVolume()
+    {
+        musicSource.volume = GameManager.GetBgmAudio();
+        effectSource.volume = GameManager.GetSfxAudio();
+        enemySource.volume = GameManager.GetSfxAudio();
+        playerSource.volume = GameManager.GetSfxAudio();
+        voiceSource.volume = GameManager.GetSfxAudio();
     }
 
     void StartLevelAudio()
