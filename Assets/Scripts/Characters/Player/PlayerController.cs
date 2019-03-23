@@ -450,7 +450,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitGranate()
     {
         yield return new WaitForSeconds(0.1f);
-        Instantiate(granate, projSpawner.transform.position, projSpawner.transform.rotation);
+        GrenadeManager.GetPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
         yield return new WaitForSeconds(0.15f);
     }
 

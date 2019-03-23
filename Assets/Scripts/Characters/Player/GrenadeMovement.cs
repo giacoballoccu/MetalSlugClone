@@ -16,9 +16,14 @@ public class GrenadeMovement : MonoBehaviour
     private Vector2 controlPoint;
     private Vector2 endingPoint;
     private bool hasHit;
+    private bool isSpawned;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
+    {
+        Init();
+    }
+
+    void Init()
     {
         rb = GetComponent<Rigidbody2D>();
         switch (rb.rotation)
@@ -36,15 +41,25 @@ public class GrenadeMovement : MonoBehaviour
                 grenadeDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
                 break;
         }
+        rb.gravityScale = .5f;
         rb.rotation = 0;
         rb.AddForce(grenadeDirection * grenadeForce, ForceMode2D.Impulse);
+        hasHit = false;
+        isSpawned = true;
+    }
 
+    private void Despawn()
+    {
+        if (!isSpawned)
+            return;
+        isSpawned = false;
+        GrenadeManager.GetPool().Despawn(this.gameObject);
     }
 
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        Despawn();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,9 +81,11 @@ public class GrenadeMovement : MonoBehaviour
 
         collision.GetComponent<Health>()?.Hit(damageGrenade);
 
-        Destroy(rb);
+        rb.angularVelocity = 0;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(1.7f);
         grenadeAnimator.SetBool("hasHittenSth", false);
-        Destroy(gameObject);
+        Despawn();
     }
 }
