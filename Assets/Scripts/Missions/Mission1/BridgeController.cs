@@ -7,7 +7,7 @@ public class BridgeController : MonoBehaviour
     public int nBridge;
     public GameObject bridgeDestroyed;
 
-    public void OnDestroy()
+    public void SetBridgeDestroyed()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         bridgeDestroyed.SetActive(true);

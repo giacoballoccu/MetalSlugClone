@@ -6,8 +6,8 @@ public class VanController : MonoBehaviour
 {
     public BridgeController ownBridge;
 
-    void Start()
+    void OnDestroy()
     {
-        GetComponent<EnemyControl>().onDestroy += ownBridge.OnDestroy;
+        ownBridge.SetBridgeDestroyed();
     }
 }

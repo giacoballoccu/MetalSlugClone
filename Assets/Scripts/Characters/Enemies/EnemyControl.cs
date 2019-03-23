@@ -31,8 +31,6 @@ public class EnemyControl : MonoBehaviour
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
 
-    public delegate void OnVoidEvent();    public OnVoidEvent onDestroy;
-
     private void Start()
     {
         followPlayer = GameManager.GetPlayer();
@@ -163,7 +161,6 @@ public class EnemyControl : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
 
         yield return new WaitForSeconds(1f);
-        onDestroy?.Invoke();
         Destroy(gameObject);
     }
 
