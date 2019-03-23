@@ -18,17 +18,9 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        //If an UIManager exists and it is not this...
-        if (current != null && current != this)
-        {
-            //...destroy this and exit. There can be only one UIManager
-            Destroy(gameObject);
-            return;
-        }
-
-        //This is the current UIManager and it should persist between scene loads
+        if (current)
+            Destroy(current);
         current = this;
-        DontDestroyOnLoad(gameObject);
 
         // disable game over text
         current.gameOverText.gameObject.SetActive(false);

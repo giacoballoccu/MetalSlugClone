@@ -23,19 +23,9 @@ public class CameraManager : MonoBehaviour
 
     void Awake()
     {
-        //If a Camera Manager exists and this isn't it...
-        if (current != null && current != this)
-        {
-            //...destroy this and exit. There can only be one Camera Manager
-            Destroy(gameObject);
-            return;
-        }
-
-        //Set this as the current game manager
+        if (current)
+            Destroy(current);
         current = this;
-
-        //Persist this object between scene reloads
-        DontDestroyOnLoad(gameObject);
     }
 
     #region Editor Switches

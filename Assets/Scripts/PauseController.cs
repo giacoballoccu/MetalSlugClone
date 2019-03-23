@@ -35,7 +35,7 @@ public class PauseController : MonoBehaviour
 
     public void Exit()
     {
-        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
     public void Back()
