@@ -6,7 +6,7 @@ public class VanController : MonoBehaviour
 {
     public BridgeController ownBridge;
 
-    void OnDestroy()
+    void OnDisable()
     {
         ownBridge.SetBridgeDestroyed();
     }
