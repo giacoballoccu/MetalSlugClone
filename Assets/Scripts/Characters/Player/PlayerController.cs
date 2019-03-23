@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
     private float nextJump = 0.5f;
 
     [Header("Bullet")]
-    public GameObject projectile;
     public GameObject projSpawner;
 
     [Header("Granate")]
@@ -444,7 +443,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitFire()
     {
         yield return new WaitForSeconds(0.1f); //Da il tempo all'animazione di fare il primo frame
-        Instantiate(projectile, projSpawner.transform.position, projSpawner.transform.rotation);
+        BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
         yield return new WaitForSeconds(0.2f); //Impedisce che si possa spammare il tasto
     }
 
