@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7eca4bf76b887647be3a2a3e1338025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxScaleX: -33
+  parallaxScaleX: -28
   parallaxScaleY: 0
   smoothing: 1
   isActive: 1
