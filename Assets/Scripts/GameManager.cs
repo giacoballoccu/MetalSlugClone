@@ -251,4 +251,22 @@ public class GameManager : MonoBehaviour
             return 0f;
         return current.sfxAudio;
     }
+
+    public static void GameReset()
+    {
+        if (!current)
+            return;
+        Time.timeScale = 1;
+        current.isGameOver = false;
+        current.score = 0;
+        current.totalGameTime = 0;
+    }
+
+    public static void PauseExit()
+    {
+        if (!current)
+            return;
+        SceneManager.LoadScene(0);
+        GameReset();
+    }
 }
