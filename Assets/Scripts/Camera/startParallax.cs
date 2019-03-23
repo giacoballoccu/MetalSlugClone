@@ -8,7 +8,7 @@ public class startParallax : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D c)
     {
-        if(c.tag == "Player")
+        if (c.CompareTag("Player"))
         {
             parallax.setActive(true);
         }

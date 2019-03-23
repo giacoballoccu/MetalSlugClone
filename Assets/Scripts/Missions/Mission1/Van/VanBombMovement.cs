@@ -35,7 +35,7 @@ public class VanBombMovement : MonoBehaviour
             {
                 vanBombAnimator.SetBool("hasHittenSth", true);
                 {
-                    if (collision.tag == "Player")
+                    if (collision.CompareTag("Player"))
                     {
                         collision.GetComponent<Health>().Hit(damageBomb);
                     }

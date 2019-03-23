@@ -175,7 +175,7 @@ public class EnemyControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Walkable")
+        if (collision.collider.CompareTag("Walkable"))
         {
             collidingDown = true;
         }
@@ -183,7 +183,7 @@ public class EnemyControl : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.collider.tag == "Walkable")
+        if (collision.collider.CompareTag("Walkable"))
         {
             collidingDown = false;
         }

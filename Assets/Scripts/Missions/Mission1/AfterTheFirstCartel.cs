@@ -6,7 +6,7 @@ public class AfterTheFirstCartel : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
+        if (collider.CompareTag("Player"))
         {
             CameraManager.AfterSunkCartel();
             Destroy(gameObject);

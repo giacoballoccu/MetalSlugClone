@@ -429,12 +429,12 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Walkable" || col.gameObject.tag == "Enemy" || col.gameObject.tag == "Marco Boat")
+        if (col.gameObject.CompareTag("Walkable") || col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Marco Boat"))
         {
             isGrounded = true;
             topAnimator.SetBool("isJumping", false);
             bottomAnimator.SetBool("isJumping", false);
-        } else if (col.gameObject.tag == "Water Dead")
+        } else if (col.gameObject.CompareTag("Water Dead"))
         {
             health.Hit(100);
             gameObject.transform.parent = foreground.transform;

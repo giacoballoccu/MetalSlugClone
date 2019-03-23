@@ -12,7 +12,7 @@ public class SunkBoatOpenDoor : MonoBehaviour
         if (isDone)
             return;
 
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             isDone = true;
             sunkBoat.GetComponent<SunkBoatController>().OpenDoor();
