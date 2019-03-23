@@ -33,16 +33,21 @@ public class BulletMovement : MonoBehaviour
 
         expireTime -= Time.deltaTime;
         if (expireTime <= 0)
-        {
-            isSpawned = false;
-            BulletManager.GetNormalBulletPool().Despawn(this.gameObject);
-        }
+            Despawn();
+    }
+
+    private void Despawn()
+    {
+        if (!isSpawned)
+            return;
+        isSpawned = false;
+        BulletManager.GetNormalBulletPool().Despawn(this.gameObject);
     }
 
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
-        BulletManager.GetNormalBulletPool().Despawn(this.gameObject);
+        Despawn();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,13 +56,13 @@ public class BulletMovement : MonoBehaviour
         {
             collision.gameObject.GetComponent<Health>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
-            BulletManager.GetNormalBulletPool().Despawn(this.gameObject);
+            Despawn();
         }
         else if (collision.CompareTag("Building"))
         {
             collision.gameObject.GetComponent<Health>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();
-            BulletManager.GetNormalBulletPool().Despawn(this.gameObject);
+            Despawn();
         }
     }
 }

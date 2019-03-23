@@ -91,7 +91,6 @@ public class BulletManager : MonoBehaviour
         {
             BulletReset(bullet);
             int id = _actives.IndexOf(bullet);
-            Debug.Log(id);
             if (id == -1)
                 return;
             _inactives.Add(_actives[id]);
@@ -100,7 +99,9 @@ public class BulletManager : MonoBehaviour
 
         private GameObject BulletNew()
         {
-            return Instantiate(_prefab, _instance.transform);
+            GameObject bullet = Instantiate(_prefab, _instance.transform);
+            BulletReset(bullet);
+            return bullet;
         }
 
         private void BulletSetVisible(GameObject bullet, Vector2 position, Quaternion rotation)
