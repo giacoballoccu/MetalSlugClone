@@ -53,7 +53,7 @@ public class GrenadeMovement : MonoBehaviour
         if (!isSpawned)
             return;
         isSpawned = false;
-        GrenadeManager.GetPool().Despawn(this.gameObject);
+        BulletManager.GetGrenadePool().Despawn(this.gameObject);
     }
 
     //Destroy the bulled when out of camera
