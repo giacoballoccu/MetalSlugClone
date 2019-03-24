@@ -66,21 +66,69 @@ public class EnemyControl : MonoBehaviour
 
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
-        if (isMovable)
+
+        if (health.IsAlive())
         {
-            if (health.IsAlive())
+            animator.SetBool("isFalling", !collidingDown);
+
+            float playerDistance = transform.position.x - followPlayer.transform.position.x;
+            if (playerDistance < activationDistance)
             {
-                float playerDistance = transform.position.x - followPlayer.transform.position.x;
-                if (playerDistance < activationDistance)
+                if (Mathf.Abs(playerDistance) <= attackDistance)
                 {
-                    if (Mathf.Abs(playerDistance) <= attackDistance)
+                    //Attack player - Primary attack (near)
+                    animator.SetBool("isAttacking", true);
+                    animator.SetBool("isAttacking_2", false);
+
+                    if (rb)
+                        rb.isKinematic = true;
+
+
+                    shotTime = shotTime + Time.deltaTime;
+
+                    if (shotTime > nextFire)
                     {
-                        //Attack player
-                        animator.SetBool("isAttacking", true);
-                        if (rb)
-                            rb.isKinematic = true;
+                        nextFire = shotTime + fireDelta;
 
 
+                        followPlayer.GetComponent<Health>().Hit(attackDamage);
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
+                }
+                else
+                {
+                    //Move to the player
+                    if (rb && isMovable)
+                    {
+                        rb.isKinematic = false;
+                        if (collidingDown)
+                        {
+                            rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+                        }
+                        else
+                        {
+                            //velocity.y -= 9.81f * Time.deltaTime;
+                            //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                            rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                        }
+
+                        animator.SetBool("isWalking", true);
+                        animator.SetBool("isAttacking", false);
+                        animator.SetBool("isAttacking_2", false);
+                    }
+                    else
+                    {
+                        //Attack player - secondary attack (far)
+                        animator.SetBool("isAttacking_2", true);
+                        animator.SetBool("isAttacking", false);
+
+                        /*if (rb)
+                            rb.isKinematic = true;*/
+
+                        rb.isKinematic = false;
+                        
                         shotTime = shotTime + Time.deltaTime;
 
                         if (shotTime > nextFire)
@@ -88,46 +136,29 @@ public class EnemyControl : MonoBehaviour
                             nextFire = shotTime + fireDelta;
 
 
-                            followPlayer.GetComponent<Health>().Hit(attackDamage);
+                            //followPlayer.GetComponent<Health>().Hit(attackDamage);
+                            //Throw object
 
                             nextFire = nextFire - shotTime;
                             shotTime = 0.0f;
                         }
                     }
-                    else
-                    {
-                        //Move to the player
-                        if (rb)
-                        {
-                            rb.isKinematic = false;
-                            if (collidingDown)
-                            {
-                                rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
-                            }
-                            else
-                            {
-                                //velocity.y -= 9.81f * Time.deltaTime;
-                                //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
-                                rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
-                            }
-                        }
 
-                        animator.SetBool("isWalking", true);
-                        animator.SetBool("isAttacking", false);
-                    }
-                }
 
-                //Flip enemy
-                if (playerDistance < 0 && !facingRight)
-                {
-                    Flip();
-                }
-                else if (playerDistance > 0 && facingRight)
-                {
-                    Flip();
                 }
             }
-         }
+
+            //Flip enemy
+            if (playerDistance < 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (playerDistance > 0 && facingRight)
+            {
+                Flip();
+            }
+        }
+
     }
 
     void Flip()
