@@ -49,6 +49,14 @@ TextureImporter:
     21300088: bridge_broken
     21300090: bridge_2
     21300092: bridge_broken_2
+    21300094: foreground_sea_end_0
+    21300096: foreground_sea_end_1
+    21300098: foreground_sea_end_2
+    21300100: foreground_sea_end_3
+    21300102: foreground_sea_end_4
+    21300104: foreground_sea_end_5
+    21300106: foreground_sea_end_6
+    21300108: foreground_sea_end_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1077,6 +1085,166 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 93534b3aa2984914c9bf64b760ae2b94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_0
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 234
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a841cda5a98bd04d80ecfafd696b898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_1
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 201
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a247d71a9ae5cc4d9cdbb99b1a82f1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_2
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 168
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670a48971934ba3499394cd9437b3c73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_3
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 135
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c64153c5797784594b460c4918996c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_4
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 102
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd30f73e43b4309498ae0542eb01a949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_5
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 69
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca0fbeec01391749823122cfca3c55b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_6
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 37
+        width: 144
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ff018350732cf4993777828dea1ec7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_7
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 3
+        width: 144
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135c6a969ccf1df46915e71c1d21ba91
       vertices: []
       indices: 
       edges: []
