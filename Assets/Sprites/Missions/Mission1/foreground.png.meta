@@ -49,14 +49,22 @@ TextureImporter:
     21300088: bridge_broken
     21300090: bridge_2
     21300092: bridge_broken_2
-    21300094: foreground_sea_end_0
-    21300096: foreground_sea_end_1
-    21300098: foreground_sea_end_2
-    21300100: foreground_sea_end_3
-    21300102: foreground_sea_end_4
-    21300104: foreground_sea_end_5
-    21300106: foreground_sea_end_6
-    21300108: foreground_sea_end_7
+    21300094: foreground_water_end_0
+    21300096: foreground_water_end_1
+    21300098: foreground_water_end_2
+    21300100: foreground_water_end_3
+    21300102: foreground_water_end_4
+    21300104: foreground_water_end_5
+    21300106: foreground_water_end_6
+    21300108: foreground_water_end_7
+    21300110: foreground_sea_end_0
+    21300112: foreground_sea_end_1
+    21300114: foreground_sea_end_2
+    21300116: foreground_sea_end_3
+    21300118: foreground_sea_end_4
+    21300120: foreground_sea_end_5
+    21300122: foreground_sea_end_6
+    21300124: foreground_sea_end_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1090,7 +1098,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_0
+      name: foreground_water_end_0
       rect:
         serializedVersion: 2
         x: 2640
@@ -1110,7 +1118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_1
+      name: foreground_water_end_1
       rect:
         serializedVersion: 2
         x: 2640
@@ -1130,11 +1138,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_2
+      name: foreground_water_end_2
       rect:
         serializedVersion: 2
         x: 2640
-        y: 168
+        y: 166
         width: 144
         height: 32
       alignment: 0
@@ -1150,7 +1158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_3
+      name: foreground_water_end_3
       rect:
         serializedVersion: 2
         x: 2640
@@ -1170,7 +1178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_4
+      name: foreground_water_end_4
       rect:
         serializedVersion: 2
         x: 2640
@@ -1190,7 +1198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_5
+      name: foreground_water_end_5
       rect:
         serializedVersion: 2
         x: 2640
@@ -1210,7 +1218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_6
+      name: foreground_water_end_6
       rect:
         serializedVersion: 2
         x: 2640
@@ -1230,10 +1238,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foreground_sea_end_7
+      name: foreground_water_end_7
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2638
         y: 3
         width: 144
         height: 32
@@ -1245,6 +1253,166 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 135c6a969ccf1df46915e71c1d21ba91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_0
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 250
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347625e754b86304883557b1ca9ec92e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_1
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 233
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53af2df8138de234c850686ef956b859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_2
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 216
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe3297e03220a54599ac56081c96400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_3
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 199
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5336bdade64ae04b9f9f7f9959bd63f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_4
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 182
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c600384923a27449540c8697ff35b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_5
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 165
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbe7daa11b7d2a4e8a110280065eabe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_6
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 148
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247fd6c86fbcdba49acfd9b02ed58c9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_sea_end_7
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 131
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fdf9918a0e9704ea449048f71609c4
       vertices: []
       indices: 
       edges: []
