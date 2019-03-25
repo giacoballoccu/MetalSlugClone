@@ -13,14 +13,18 @@ public class SoldierController : MonoBehaviour
     public GameObject projSpawner;
 
     Animator anim;
+    EnemyControl ec;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        ec = GetComponent<EnemyControl>();
     }
 
     void FixedUpdate()
     {
+        FlipShoot();
+
         if (anim.GetBool("isAttacking_2"))
         {
             ThrowGranate();
@@ -29,6 +33,8 @@ public class SoldierController : MonoBehaviour
 
     void ThrowGranate()
     {
+        shotTime = shotTime + Time.deltaTime;
+
         if (shotTime > nextFire)
         {
             nextFire = shotTime + fireDelta;
@@ -40,10 +46,24 @@ public class SoldierController : MonoBehaviour
         }
     }
 
+    void FlipShoot()
+    {
+        if (ec.facingRight)
+        {
+            //Fire right
+            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            //Fire left
+            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 180);
+        }
+    }
+
     private IEnumerator WaitGranate()
     {
         yield return new WaitForSeconds(0.1f);
-        BulletManager.GetGrenadePool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+        BulletManager.GetEnemyGrenadePool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
         yield return new WaitForSeconds(0.15f);
     }
 }

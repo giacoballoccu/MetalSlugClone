@@ -11,6 +11,14 @@ public class GrenadeMovement : MonoBehaviour
     public float grenadeForce = 2.5f;
     public Animator grenadeAnimator;
     public GameObject grenadeSpawn;
+
+    public enum LauncherType
+    {
+        Player,
+        Enemy
+    };
+    public LauncherType launcher = LauncherType.Player;
+
     Vector3 grenadeDirection;
     private Vector2 startingPoint;
     private Vector2 controlPoint;
@@ -67,7 +75,7 @@ public class GrenadeMovement : MonoBehaviour
         if (hasHit)
             return;
 
-        if (GameManager.CanTriggerGrenade(collision.tag))
+        if (GameManager.CanTriggerGrenade(collision.tag) && !(collision.tag == "Player" && launcher == LauncherType.Player) && !(collision.tag == "Enemy" && launcher == LauncherType.Enemy))
         {
             hasHit = true;
             StartCoroutine(Explosion(collision));

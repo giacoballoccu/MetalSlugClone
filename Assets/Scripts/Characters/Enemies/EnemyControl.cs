@@ -20,7 +20,7 @@ public class EnemyControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
-    private bool facingRight = false;
+    public bool facingRight = false;
 
     //Enemy gravity
     private bool collidingDown = false;
@@ -134,10 +134,6 @@ public class EnemyControl : MonoBehaviour
                         if (shotTime > nextFire)
                         {
                             nextFire = shotTime + fireDelta;
-
-
-                            //followPlayer.GetComponent<Health>().Hit(attackDamage);
-                            //Throw object
 
                             nextFire = nextFire - shotTime;
                             shotTime = 0.0f;
