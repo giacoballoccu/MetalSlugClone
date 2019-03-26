@@ -215,8 +215,10 @@ MonoBehaviour:
   attackDamage: 10
   isMovable: 1
   deathClip: {fileID: 0}
+  throwableObj: {fileID: 0}
+  canThrow: 1
   activationDistance: 1.8
-  attackDistance: 0.5
+  attackDistance: 1
   facingRight: 0
   fireDelta: 0.5
 --- !u!95 &6436869125425301152

@@ -13,6 +13,11 @@ public class EnemyControl : MonoBehaviour
     private Health health;
     private BlinkingSprite blinkingSprite;
 
+
+    [Header("Throwable")]
+    public GameObject throwableObj;
+    public bool canThrow = false;
+
     [Header("Enemy activation")]
     public float activationDistance = 1.8f;
     public float attackDistance = 0.5f;
@@ -90,8 +95,14 @@ public class EnemyControl : MonoBehaviour
                     {
                         nextFire = shotTime + fireDelta;
 
-
-                        followPlayer.GetComponent<Health>().Hit(attackDamage);
+                        if (canThrow)
+                        {
+                            //Instantiate throwable
+                        }
+                        else
+                        {
+                            followPlayer.GetComponent<Health>().Hit(attackDamage);
+                        }
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
@@ -120,7 +131,7 @@ public class EnemyControl : MonoBehaviour
                     }
                     else
                     {
-                        //Attack player - secondary attack (far)
+                        //Attack player - secondary attack (far) - used by soldiers granate
                         animator.SetBool("isAttacking_2", true);
                         animator.SetBool("isAttacking", false);
 

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1745420622547051970, guid: c5058886dc46ad74dabd412a31e46f25,
         type: 3}
       propertyPath: m_Name
-      value: Zombie3
+      value: Zombie3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1745420622547051996, guid: c5058886dc46ad74dabd412a31e46f25,
         type: 3}
@@ -73,6 +73,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21301664, guid: 2996d9c0f811969468cf955cec9a39a6,
         type: 3}
+    - target: {fileID: 1745420622547051998, guid: c5058886dc46ad74dabd412a31e46f25,
+        type: 3}
+      propertyPath: attackDistance
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1745420622547051997, guid: c5058886dc46ad74dabd412a31e46f25,
         type: 3}
       propertyPath: m_Controller
