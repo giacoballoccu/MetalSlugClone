@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MarcoTopControllerMachineGun
+  m_Controller: {fileID: 9100000, guid: cb6d889f06492bb4ba6fbe20637c8aee, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4911ae4fa94e5be44a3e63d378613368, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4911ae4fa94e5be44a3e63d378613368, type: 2}
