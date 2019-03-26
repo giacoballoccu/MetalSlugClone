@@ -25,24 +25,24 @@ TextureImporter:
     21300040: zombies_20
     21300042: zombies_21
     21300044: zombies_22
-    21300046: zombies_23
-    21300048: zombies_24
+    21300046: zombies_a_12
+    21300048: zombies_a_1
     21300050: zombies_25
     21300052: zombies_26
     21300054: zombies_27
-    21300056: zombies_28
-    21300058: zombies_29
+    21300056: zombies_a_2
+    21300058: zombies_a_13
     21300060: zombies_30
     21300062: zombies_31
     21300064: zombies_32
     21300066: zombies_33
     21300068: zombies_34
     21300070: zombies_35
-    21300072: zombies_36
+    21300072: zombies_a_3
     21300074: zombies_37
     21300076: zombies_38
-    21300078: zombies_39
-    21300080: zombies_40
+    21300078: zombies_a_9
+    21300080: zombies_a_11
     21300082: zombies_41
     21300084: zombies_42
     21300086: zombies_43
@@ -53,7 +53,7 @@ TextureImporter:
     21300096: zombies_48
     21300098: zombies_49
     21300100: zombies_50
-    21300102: zombies_51
+    21300102: zombies_a_4
     21300104: zombies_52
     21300106: zombies_53
     21300108: zombies_54
@@ -64,17 +64,17 @@ TextureImporter:
     21300118: zombies_59
     21300120: zombies_60
     21300122: zombies_61
-    21300124: zombies_62
+    21300124: zombies_a_5
     21300126: zombies_63
     21300128: zombies_64
-    21300130: zombies_65
+    21300130: zombies_a_6
     21300132: zombies_66
     21300134: zombies_67
     21300136: zombies_68
-    21300138: zombies_69
-    21300140: zombies_70
+    21300138: zombies_a_7
+    21300140: zombies_a_8
     21300142: zombies_71
-    21300144: zombies_72
+    21300144: zombies_a_10
     21300146: zombies_73
     21300148: zombies_74
     21300150: zombies_75
@@ -1798,7 +1798,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_23
+      name: zombies_a_12
       rect:
         serializedVersion: 2
         x: 3
@@ -1818,7 +1818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_24
+      name: zombies_a_1
       rect:
         serializedVersion: 2
         x: 5
@@ -1878,7 +1878,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_28
+      name: zombies_a_2
       rect:
         serializedVersion: 2
         x: 37
@@ -1898,7 +1898,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_29
+      name: zombies_a_13
       rect:
         serializedVersion: 2
         x: 37
@@ -1958,7 +1958,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_36
+      name: zombies_a_3
       rect:
         serializedVersion: 2
         x: 76
@@ -2038,7 +2038,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_51
+      name: zombies_a_4
       rect:
         serializedVersion: 2
         x: 128
@@ -2118,7 +2118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_62
+      name: zombies_a_5
       rect:
         serializedVersion: 2
         x: 176
@@ -2158,7 +2158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_65
+      name: zombies_a_6
       rect:
         serializedVersion: 2
         x: 223
@@ -2238,7 +2238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_69
+      name: zombies_a_7
       rect:
         serializedVersion: 2
         x: 277
@@ -2258,7 +2258,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_70
+      name: zombies_a_8
       rect:
         serializedVersion: 2
         x: 325
@@ -2298,7 +2298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombies_72
+      name: zombies_a_10
       rect:
         serializedVersion: 2
         x: 406
@@ -23846,7 +23846,7 @@ TextureImporter:
         width: 14
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -23866,7 +23866,7 @@ TextureImporter:
         width: 36
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -23886,7 +23886,7 @@ TextureImporter:
         width: 31
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -23906,13 +23906,53 @@ TextureImporter:
         width: 31
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: dca4ab6b2f74a274e81fc95a65cbbba2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombies_a_9
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 4960
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f45ba8ec9691b4d974590dd4b846d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombies_a_11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 4960
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22618056e771d9f44a4c4b16ea0c6f86
       vertices: []
       indices: 
       edges: []
