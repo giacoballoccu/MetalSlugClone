@@ -73,6 +73,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21301664, guid: 2996d9c0f811969468cf955cec9a39a6,
         type: 3}
+    - target: {fileID: 1745420622547051992, guid: c5058886dc46ad74dabd412a31e46f25,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1745420622547051998, guid: c5058886dc46ad74dabd412a31e46f25,
         type: 3}
       propertyPath: attackDistance

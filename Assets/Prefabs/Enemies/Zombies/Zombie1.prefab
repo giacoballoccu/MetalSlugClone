@@ -185,7 +185,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6436869125425301154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,11 +214,13 @@ MonoBehaviour:
   speed: 0.5
   attackDamage: 10
   isMovable: 1
+  canMelee: 0
   deathClip: {fileID: 0}
   throwableObj: {fileID: 0}
   canThrow: 1
   activationDistance: 1.8
   attackDistance: 1
+  meleeDistance: 0.5
   facingRight: 0
   fireDelta: 0.5
 --- !u!95 &6436869125425301152
