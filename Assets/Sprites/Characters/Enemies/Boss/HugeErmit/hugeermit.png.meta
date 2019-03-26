@@ -26,6 +26,42 @@ TextureImporter:
     21300042: hugeermit_dc_10
     21300044: hugeermit_dc_11
     21300046: hugeermit_dc_12
+    21300048: hugeermit_id_1
+    21300050: hugeermit_id_2
+    21300052: hugeermit_id_3
+    21300054: hugeermit_id_4
+    21300056: hugeermit_id_5
+    21300058: hugeermit_id_6
+    21300060: hugeermit_id_7
+    21300062: hugeermit_id_8
+    21300064: hugeermit_id_9
+    21300066: hugeermit_id_10
+    21300068: hugeermit_id_11
+    21300070: hugeermit_id_12
+    21300072: hugeermit_dying_1
+    21300074: hugeermit_dying_2
+    21300076: hugeermit_dying_3
+    21300078: hugeermit_dying_4
+    21300080: hugeermit_dying_5
+    21300082: hugeermit_dying_6
+    21300084: hugeermit_dying_7
+    21300086: hugeermit_dying_8
+    21300088: hugeermit_dying_9
+    21300090: hugeermit_dying_10
+    21300092: hugeermit_dying_11
+    21300094: hugeermit_dying_12
+    21300096: hugeermit_water_1
+    21300098: hugeermit_water_2
+    21300100: hugeermit_water_3
+    21300102: hugeermit_water_4
+    21300104: hugeermit_water_5
+    21300106: hugeermit_water_6
+    21300108: hugeermit_water_7
+    21300110: hugeermit_water_8
+    21300112: hugeermit_water_9
+    21300114: hugeermit_water_10
+    21300116: hugeermit_11
+    21300118: hugeermit_water_12
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -594,6 +630,726 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f5dd5c47190f69c40a13dfed37950189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b35c21d48d8f0647ba4b9398e807bda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c43c14d4d575a4e9034b72d5f9de7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd0aba8a76f9ee408bfdd3713dc9a73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_4
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfff9d7f5857cfe4aae9f6834e8a83f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_5
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee06b1c360c52c43bf4476edf43c1a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_6
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d30a84ab2072e47b77355596e1e4c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_7
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb744fa87554b848a2ba8baca4de73c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_8
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1102aa07c376b5f4894929a6514ce866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_9
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf591f9b589de246b50e8edc4af4759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_10
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c3f88f431772542be9eaf96c31edfa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_11
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb4253bb03b1ee488b1d7dc410fe378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_id_12
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 1627
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646228a0000c2244980d6e45a115cbb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3299e8f9756764f8adbfa73d1e2be0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dea23a67671d146a2b0d5c539d3664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1620b521f6f6ec346b986b364e820d98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_4
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 657
+        width: 230
+        height: 181
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72a38332464f44409bb83d0bc7952bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_5
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9d75bc088b99b48a8ec34226f323cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_6
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb769517143275f4aad9b633ecdb5887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_7
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4c23d470c173d478377cbd92d6292e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_8
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca1b1e71abadd442ab41d24d09961db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_9
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedf0ec10587548429d314420527b561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_10
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a645b3ad4830774baa4f82fe584b664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_11
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3aeb25a8753e34aa6658f2324ec11f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_dying_12
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 657
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e638d5ed2541b1c44aec73fbd0299d5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 286
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8da32bccfb660a42bd3eaffe8bc0b4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 286
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe908b8485d14418c13d0236370fe6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_3
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 286
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034bffcc75a93734db128d9dc59bb1e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_4
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 286
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d46e76d05db64449ce3311ef5e8904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_5
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 286
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c7285b35f93c44c86cf7c8714b46b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 226
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2823bc8fddbaf4a4bac96d7dccdd47e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_7
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 226
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1103a4f0ea5b548ada0224abdc71c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_8
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 226
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07936d4d1f11f1448a58c2734b92fce0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_9
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 226
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400eab5e0d4d53643bb0e56e8ca502a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_10
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 226
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61f91cbbb1367742aa24aac77d38af5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_11
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 166
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a69ebc14c97f64abe1212d73a3a16a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hugeermit_water_12
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 166
+        width: 264
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13fc9232e9f8644c9b0d6e026134f93
       vertices: []
       indices: 
       edges: []
