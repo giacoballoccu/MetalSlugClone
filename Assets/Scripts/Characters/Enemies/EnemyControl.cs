@@ -9,13 +9,19 @@ public class EnemyControl : MonoBehaviour
     public float speed = 0.5f;
     public float attackDamage = 10f;
     public bool isMovable = true;
+    public bool canMelee = true;
     public AudioClip deathClip;
     private Health health;
     private BlinkingSprite blinkingSprite;
 
+    [Header("Throwable")]
+    public GameObject throwableObj;
+    public bool canThrow = false;
+
     [Header("Enemy activation")]
     public float activationDistance = 1.8f;
-    public float attackDistance = 0.5f;
+    public float attackDistance = 0.7f;         //Far attack
+    public float meleeDistance = 0.5f;          //Near attack
     public const float CHANGE_SIGN = -1;
 
     private Rigidbody2D rb;
@@ -74,7 +80,7 @@ public class EnemyControl : MonoBehaviour
             float playerDistance = transform.position.x - followPlayer.transform.position.x;
             if (playerDistance < activationDistance)
             {
-                if (Mathf.Abs(playerDistance) <= attackDistance)
+                if (Mathf.Abs(playerDistance) <= meleeDistance && canMelee)
                 {
                     //Attack player - Primary attack (near)
                     animator.SetBool("isAttacking", true);
@@ -90,12 +96,32 @@ public class EnemyControl : MonoBehaviour
                     {
                         nextFire = shotTime + fireDelta;
 
-
                         followPlayer.GetComponent<Health>().Hit(attackDamage);
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
                     }
+                }
+                else if(Mathf.Abs(playerDistance) <= attackDistance && canThrow)
+                {
+                    //Attack player - Secondary attack (far)
+                    animator.SetBool("isAttacking_2", true);
+                    animator.SetBool("isAttacking", false);
+
+                    if (rb && !canMelee)
+                        rb.isKinematic = true;
+                    else
+                        rb.isKinematic = false;
+
+                    /*shotTime = shotTime + Time.deltaTime;
+
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }*/
                 }
                 else
                 {
@@ -118,29 +144,6 @@ public class EnemyControl : MonoBehaviour
                         animator.SetBool("isAttacking", false);
                         animator.SetBool("isAttacking_2", false);
                     }
-                    else
-                    {
-                        //Attack player - secondary attack (far)
-                        animator.SetBool("isAttacking_2", true);
-                        animator.SetBool("isAttacking", false);
-
-                        /*if (rb)
-                            rb.isKinematic = true;*/
-
-                        rb.isKinematic = false;
-                        
-                        shotTime = shotTime + Time.deltaTime;
-
-                        if (shotTime > nextFire)
-                        {
-                            nextFire = shotTime + fireDelta;
-
-                            nextFire = nextFire - shotTime;
-                            shotTime = 0.0f;
-                        }
-                    }
-
-
                 }
             }
 
@@ -197,7 +200,7 @@ public class EnemyControl : MonoBehaviour
             AudioManager.PlayEnemyDeathAudio(deathClip);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Walkable"))
         {
