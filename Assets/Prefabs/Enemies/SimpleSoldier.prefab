@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   attackDamage: 10
-  isMovable: 0
+  isMovable: 1
   canMelee: 1
   deathClip: {fileID: 0}
   projSpawner: {fileID: 1622775181327549391}

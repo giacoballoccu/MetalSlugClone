@@ -134,7 +134,7 @@ public class ThrowableMovement : MonoBehaviour
 
     private void ResetMovement(Collider2D collision)
     {
-        //collision.GetComponent<Health>()?.Hit(throwableDamage);
+        collision.GetComponent<Health>()?.Hit(throwableDamage);
 
         rb.angularVelocity = 0;
         rb.gravityScale = 0;
