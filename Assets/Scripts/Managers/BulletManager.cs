@@ -8,7 +8,6 @@ public class BulletManager : MonoBehaviour
     [SerializeField] public GameObject _normalBullet;
     [SerializeField] public GameObject _heavyMachineBullet;
     [SerializeField] public GameObject _grenade;
-    [SerializeField] public GameObject _enemyGrenade;
     [SerializeField] public int _poolCount = 10;
 
     static protected Dictionary<GameObject, BulletPool> _pools = new Dictionary<GameObject, BulletPool>(); // <prefab, pool>
@@ -28,8 +27,6 @@ public class BulletManager : MonoBehaviour
             _pools[_heavyMachineBullet] = new BulletPool(_heavyMachineBullet);
         if (_grenade)
             _pools[_grenade] = new BulletPool(_grenade);
-        if (_enemyGrenade)
-            _pools[_enemyGrenade] = new BulletPool(_enemyGrenade);
     }
     
     public static int GetPoolCount()
@@ -57,13 +54,6 @@ public class BulletManager : MonoBehaviour
     {
         if (_instance)
             return _pools[_instance._grenade];
-        return null;
-    }
-
-    public static BulletPool GetEnemyGrenadePool()
-    {
-        if (_instance)
-            return _pools[_instance._enemyGrenade];
         return null;
     }
 
