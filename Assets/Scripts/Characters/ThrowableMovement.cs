@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeMovement : MonoBehaviour
+public class ThrowableMovement : MonoBehaviour
 {
-
-    private Rigidbody2D rb;
-   
-    private float damageGrenade = 300;
-    public float grenadeForce = 2.5f;
-    public Animator grenadeAnimator;
-    public GameObject grenadeSpawn;
+    [Header("Throwable Details")]
+    private float throwableDamage = 300;
+    public float throwableForce = 2.5f;
 
     public enum LauncherType
     {
@@ -19,12 +15,32 @@ public class GrenadeMovement : MonoBehaviour
     };
     public LauncherType launcher = LauncherType.Player;
 
-    Vector3 grenadeDirection;
+    public enum ThrowableType
+    {
+        Grenade,
+        EnemyGrenade,
+        Vomit,
+        Bubble
+    };
+    public ThrowableType throwable = ThrowableType.Grenade;
+
+    public bool canExplode = true;
+
+
+    private Animator throwableAnimator;
+    private Rigidbody2D rb;
+
+    Vector3 throwableDirection;
     private Vector2 startingPoint;
     private Vector2 controlPoint;
     private Vector2 endingPoint;
     private bool hasHit;
     private bool isSpawned;
+
+    private void Start()
+    {
+        throwableAnimator = GetComponent<Animator>();
+    }
 
     void OnEnable()
     {
@@ -37,21 +53,21 @@ public class GrenadeMovement : MonoBehaviour
         switch (rb.rotation)
         {
             case 0:
-                grenadeDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
+                throwableDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
                 break;
             case 180:
-                grenadeDirection = Quaternion.AngleAxis(-45, Vector3.forward) * Vector3.left;
+                throwableDirection = Quaternion.AngleAxis(-45, Vector3.forward) * Vector3.left;
                 break;
             case -90:
-                grenadeDirection = Quaternion.AngleAxis(-45, Vector3.forward) * Vector3.left;
+                throwableDirection = Quaternion.AngleAxis(-45, Vector3.forward) * Vector3.left;
                 break;
             case 90:
-                grenadeDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
+                throwableDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
                 break;
         }
         rb.gravityScale = .5f;
         rb.rotation = 0;
-        rb.AddForce(grenadeDirection * grenadeForce, ForceMode2D.Impulse);
+        rb.AddForce(throwableDirection * throwableForce, ForceMode2D.Impulse);
         hasHit = false;
         isSpawned = true;
     }
@@ -60,8 +76,19 @@ public class GrenadeMovement : MonoBehaviour
     {
         if (!isSpawned)
             return;
-        isSpawned = false;
-        BulletManager.GetGrenadePool().Despawn(this.gameObject);
+
+        if (throwable == ThrowableType.Grenade)
+        {
+            //Is a Grenade
+            isSpawned = false;
+            BulletManager.GetGrenadePool().Despawn(this.gameObject);
+        }
+        else
+        {
+            //Is an enemy throwable
+            Destroy(this);
+        }
+        
     }
 
     //Destroy the bulled when out of camera
@@ -78,22 +105,25 @@ public class GrenadeMovement : MonoBehaviour
         if (GameManager.CanTriggerGrenade(collision.tag) && !(collision.tag == "Player" && launcher == LauncherType.Player) && !(collision.tag == "Enemy" && launcher == LauncherType.Enemy))
         {
             hasHit = true;
-            StartCoroutine(Explosion(collision));
+            if (canExplode)
+            {
+                StartCoroutine(Explosion(collision));
+            }
         }
     }
 
     private IEnumerator Explosion(Collider2D collision)
     {
         AudioManager.PlayGrenadeHitAudio();
-        grenadeAnimator.SetBool("hasHittenSth", true);
+        throwableAnimator.SetBool("hasHittenSth", true);
 
-        collision.GetComponent<Health>()?.Hit(damageGrenade);
+        collision.GetComponent<Health>()?.Hit(throwableDamage);
 
         rb.angularVelocity = 0;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(1.7f);
-        grenadeAnimator.SetBool("hasHittenSth", false);
+        throwableAnimator.SetBool("hasHittenSth", false);
         Despawn();
     }
 }

@@ -13,6 +13,7 @@ public class EnemyControl : MonoBehaviour
     public AudioClip deathClip;
     private Health health;
     private BlinkingSprite blinkingSprite;
+    public GameObject projSpawner;
 
     [Header("Throwable")]
     public GameObject throwableObj;
@@ -107,21 +108,24 @@ public class EnemyControl : MonoBehaviour
                     //Attack player - Secondary attack (far)
                     animator.SetBool("isAttacking_2", true);
                     animator.SetBool("isAttacking", false);
+                    FlipShoot();
 
                     if (rb && !canMelee)
                         rb.isKinematic = true;
                     else
                         rb.isKinematic = false;
 
-                    /*shotTime = shotTime + Time.deltaTime;
+                    shotTime = shotTime + Time.deltaTime;
 
                     if (shotTime > nextFire)
                     {
                         nextFire = shotTime + fireDelta;
 
+                        StartCoroutine(WaitSecondaryAttack());
+
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
-                    }*/
+                    }
                 }
                 else
                 {
@@ -169,6 +173,20 @@ public class EnemyControl : MonoBehaviour
         facingRight = !facingRight;
     }
 
+    void FlipShoot()
+    {
+        if (facingRight)
+        {
+            //Fire right
+            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            //Fire left
+            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 180);
+        }
+    }
+
     private void OnDead(float damage)
     {
         StartCoroutine(Die());
@@ -214,5 +232,12 @@ public class EnemyControl : MonoBehaviour
         {
             collidingDown = false;
         }
+    }
+
+    private IEnumerator WaitSecondaryAttack()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Instantiate(throwableObj, projSpawner.transform.position, projSpawner.transform.rotation);
+        yield return new WaitForSeconds(0.15f);
     }
 }
