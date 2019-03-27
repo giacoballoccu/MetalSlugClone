@@ -73,9 +73,9 @@ public class EnemyControl : MonoBehaviour
 
         //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
-
         if (health.IsAlive())
         {
+            FlipShoot();
             animator.SetBool("isFalling", !collidingDown);
 
             float playerDistance = transform.position.x - followPlayer.transform.position.x;
@@ -108,7 +108,6 @@ public class EnemyControl : MonoBehaviour
                     //Attack player - Secondary attack (far)
                     animator.SetBool("isAttacking_2", true);
                     animator.SetBool("isAttacking", false);
-                    FlipShoot();
 
                     if (rb && !canMelee)
                         rb.isKinematic = true;
@@ -178,12 +177,12 @@ public class EnemyControl : MonoBehaviour
         if (facingRight)
         {
             //Fire right
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 0);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
             //Fire left
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 180);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, -180);
         }
     }
 

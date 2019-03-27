@@ -65,6 +65,7 @@ public class ThrowableMovement : MonoBehaviour
                 throwableDirection = Quaternion.AngleAxis(45, Vector3.forward) * Vector3.right;
                 break;
         }
+
         rb.gravityScale = .5f;
         rb.rotation = 0;
         rb.AddForce(throwableDirection * throwableForce, ForceMode2D.Impulse);
@@ -77,16 +78,18 @@ public class ThrowableMovement : MonoBehaviour
         if (!isSpawned)
             return;
 
+
+        isSpawned = false;
+
         if (throwable == ThrowableType.Grenade)
         {
             //Is a Grenade
-            isSpawned = false;
             BulletManager.GetGrenadePool().Despawn(this.gameObject);
         }
         else
         {
             //Is an enemy throwable
-            Destroy(this);
+            Destroy(gameObject);
         }
         
     }
@@ -109,6 +112,11 @@ public class ThrowableMovement : MonoBehaviour
             {
                 StartCoroutine(Explosion(collision));
             }
+            else
+            {
+                ResetMovement(collision);
+                Despawn();
+            }
         }
     }
 
@@ -117,13 +125,19 @@ public class ThrowableMovement : MonoBehaviour
         AudioManager.PlayGrenadeHitAudio();
         throwableAnimator.SetBool("hasHittenSth", true);
 
-        collision.GetComponent<Health>()?.Hit(throwableDamage);
+        ResetMovement(collision);
+
+        yield return new WaitForSeconds(1.7f);
+        throwableAnimator.SetBool("hasHittenSth", false);
+        Despawn();
+    }
+
+    private void ResetMovement(Collider2D collision)
+    {
+        //collision.GetComponent<Health>()?.Hit(throwableDamage);
 
         rb.angularVelocity = 0;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
-        yield return new WaitForSeconds(1.7f);
-        throwableAnimator.SetBool("hasHittenSth", false);
-        Despawn();
     }
 }
