@@ -5,6 +5,7 @@ using UnityEngine;
 public class MarcoBoatStartMove : MonoBehaviour
 {
     public GameObject boat;
+    public GameObject target0;
     public GameObject target1;
     public GameObject target2;
     public GameObject target3;
@@ -22,7 +23,11 @@ public class MarcoBoatStartMove : MonoBehaviour
 
             float step = speed * Time.deltaTime;
 
-            if (target1 != null)
+            if (target0 != null)
+            {
+                //Enemy boat
+                target = target0;
+            }else if (target1 != null)
             {
                 //First bridge
                 target = target1;
