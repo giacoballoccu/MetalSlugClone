@@ -35,6 +35,7 @@ Transform:
   - {fileID: 1765443406516593717}
   - {fileID: 1765443407358117544}
   - {fileID: 1765443407276444450}
+  - {fileID: 6470835912323107747}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58,9 +59,8 @@ MonoBehaviour:
   fireDelta: 0.3
   crouchDelta: 0.5
   jumpDelta: 0.8
-  projectile: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
-    type: 3}
   projSpawner: {fileID: 1765443407358117547}
+  granadeSpawner: {fileID: 6250641544266386455}
   granate: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
   meleeDistance: 0.4
   damageMelee: 1000
@@ -452,4 +452,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765443406479915049}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6250641544266386455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6470835912323107747}
+  m_Layer: 0
+  m_Name: GranadeSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6470835912323107747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250641544266386455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1765443406479915049}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

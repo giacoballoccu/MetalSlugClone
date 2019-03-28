@@ -6,11 +6,18 @@ public class BulletMovement : MonoBehaviour
 {
 
     private Rigidbody2D rb;
+    private float expireTime;
+    private bool isSpawned;
+
     public float bulletForce = 3;
     public float lifeTime = 5;
     public float damageShot = 100;
-    private float expireTime;
-    private bool isSpawned;
+    public enum LauncherType
+    {
+        Player,
+        Enemy
+    };
+    public LauncherType launcher = LauncherType.Player;
 
     void OnEnable()
     {
@@ -52,13 +59,7 @@ public class BulletMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
-        {
-            collision.gameObject.GetComponent<Health>().Hit(damageShot);
-            AudioManager.PlayShotHitAudio();
-            Despawn();
-        }
-        else if (collision.CompareTag("Building"))
+        if ((collision.CompareTag("Enemy") && launcher != LauncherType.Enemy) || (collision.CompareTag("Player") && launcher != LauncherType.Player) || collision.CompareTag("Building"))
         {
             collision.gameObject.GetComponent<Health>().Hit(damageShot);
             AudioManager.PlayShotHitAudio();

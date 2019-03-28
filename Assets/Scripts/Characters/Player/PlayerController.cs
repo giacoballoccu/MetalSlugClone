@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projSpawner;
 
     [Header("Granate")]
+    public GameObject granadeSpawner;
     public GameObject granate;
 
     [Header("Melee")]
@@ -394,35 +395,41 @@ public class PlayerController : MonoBehaviour
 
     void FlipShoot()
     {
-        if (topAnimator.GetBool("isLookingUp") && facingRight)
+        if (topAnimator.GetBool("isLookingUp"))
         {
             //Fire up
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 90);
-        }
-        else if (topAnimator.GetBool("isLookingUp") && !facingRight)
-        {
-            //Fire up
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 270);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (topAnimator.GetBool("isCrouched") && !isGrounded && facingRight)
         {
             //Fire down
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 270);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 270);
         }
         else if (topAnimator.GetBool("isCrouched") && !isGrounded && !facingRight)
         {
             //Fire down
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 90);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (facingRight)
         {
             //Fire right
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 0);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
             //Fire left
-            projSpawner.transform.localEulerAngles = new Vector3(0, 0, 180);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, -180);
+        }
+
+        if (facingRight)
+        {
+            //Fire right
+            granadeSpawner.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            //Fire left
+            granadeSpawner.transform.rotation = Quaternion.Euler(0, 0, -180);
         }
     }
 
@@ -450,7 +457,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitGranate()
     {
         yield return new WaitForSeconds(0.1f);
-        BulletManager.GetGrenadePool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+        BulletManager.GetGrenadePool().Spawn(granadeSpawner.transform.position, granadeSpawner.transform.rotation);
         yield return new WaitForSeconds(0.15f);
     }
 

@@ -1,0 +1,4142 @@
+fileFormatVersion: 2
+guid: 9ebe5aace885a0f4aa498c819d7fa584
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_0
+    21300002: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_1
+    21300004: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_2
+    21300006: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_3
+    21300008: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_4
+    21300010: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_5
+    21300012: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_6
+    21300014: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_7
+    21300016: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_8
+    21300018: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_9
+    21300020: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_10
+    21300022: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_11
+    21300024: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_12
+    21300026: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_13
+    21300028: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_14
+    21300030: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_15
+    21300032: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_16
+    21300034: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_17
+    21300036: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_18
+    21300038: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_19
+    21300040: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_20
+    21300042: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_21
+    21300044: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_22
+    21300046: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_23
+    21300048: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_24
+    21300050: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_25
+    21300052: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_26
+    21300054: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_27
+    21300056: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_28
+    21300058: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_29
+    21300060: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_30
+    21300062: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_31
+    21300064: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_32
+    21300066: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_33
+    21300068: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_34
+    21300070: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_35
+    21300072: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_36
+    21300074: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_37
+    21300076: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_38
+    21300078: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_39
+    21300080: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_40
+    21300082: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_41
+    21300084: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_42
+    21300086: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_43
+    21300088: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_44
+    21300090: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_45
+    21300092: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_46
+    21300094: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_47
+    21300096: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_48
+    21300098: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_49
+    21300100: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_50
+    21300102: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_51
+    21300104: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_52
+    21300106: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_53
+    21300108: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_54
+    21300110: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_55
+    21300112: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_56
+    21300114: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_57
+    21300116: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_58
+    21300118: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_59
+    21300120: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_60
+    21300122: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_61
+    21300124: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_62
+    21300126: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_63
+    21300128: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_64
+    21300130: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_65
+    21300132: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_66
+    21300134: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_67
+    21300136: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_68
+    21300138: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_69
+    21300140: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_70
+    21300142: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_71
+    21300144: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_72
+    21300146: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_73
+    21300148: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_74
+    21300150: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_75
+    21300152: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_76
+    21300154: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_77
+    21300156: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_78
+    21300158: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_79
+    21300160: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_80
+    21300162: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_81
+    21300164: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_82
+    21300166: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_83
+    21300168: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_84
+    21300170: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_85
+    21300172: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_86
+    21300174: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_87
+    21300176: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_88
+    21300178: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_89
+    21300180: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_90
+    21300182: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_91
+    21300184: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_92
+    21300186: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_93
+    21300188: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_94
+    21300190: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_95
+    21300192: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_96
+    21300194: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_97
+    21300196: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_98
+    21300198: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_99
+    21300200: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_100
+    21300202: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_101
+    21300204: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_102
+    21300206: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_103
+    21300208: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_104
+    21300210: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_105
+    21300212: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_106
+    21300214: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_107
+    21300216: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_108
+    21300218: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_109
+    21300220: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_110
+    21300222: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_111
+    21300224: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_112
+    21300226: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_113
+    21300228: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_114
+    21300230: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_115
+    21300232: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_116
+    21300234: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_117
+    21300236: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_118
+    21300238: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_119
+    21300240: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_120
+    21300242: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_121
+    21300244: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_122
+    21300246: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_123
+    21300248: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_124
+    21300250: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_125
+    21300252: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_126
+    21300254: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_127
+    21300256: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_128
+    21300258: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_129
+    21300260: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_130
+    21300262: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_131
+    21300264: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_132
+    21300266: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_133
+    21300268: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_134
+    21300270: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_135
+    21300272: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_136
+    21300274: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_137
+    21300276: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_138
+    21300278: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_139
+    21300280: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_140
+    21300282: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_141
+    21300284: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_142
+    21300286: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_143
+    21300288: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_144
+    21300290: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_145
+    21300292: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_146
+    21300294: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_147
+    21300296: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_148
+    21300298: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_149
+    21300300: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_150
+    21300302: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_151
+    21300304: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_152
+    21300306: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_153
+    21300308: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_154
+    21300310: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_155
+    21300312: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_156
+    21300314: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_157
+    21300316: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_158
+    21300318: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_159
+    21300320: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_160
+    21300322: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_161
+    21300324: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_162
+    21300326: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_163
+    21300328: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_164
+    21300330: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_165
+    21300332: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_166
+    21300334: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_167
+    21300336: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_168
+    21300338: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_169
+    21300340: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_170
+    21300342: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_171
+    21300344: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_172
+    21300346: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_173
+    21300348: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_174
+    21300350: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_175
+    21300352: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_176
+    21300354: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_177
+    21300356: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_178
+    21300358: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_179
+    21300360: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_180
+    21300362: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_181
+    21300364: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_182
+    21300366: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_183
+    21300368: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_184
+    21300370: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_185
+    21300372: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_186
+    21300374: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_187
+    21300376: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_188
+    21300378: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_189
+    21300380: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_190
+    21300382: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_191
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1581
+        width: 83
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b0f15d8ba10b045b9ebef39d9086b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1581
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb773435d2c82c94e8295c4f660d3320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1581
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f476caf09f5ced543b3a5fa41aa7c71a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_3
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1581
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2069db060af1643b3d72ae88a90bb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_4
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1581
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99aad5e9271ffe0429d6b94aac049d18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1517
+        width: 83
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22d1075e9fd01748994c6ec0541c542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1448
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892c71ca6f9d06940bafe29d421f377e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_7
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1448
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989b7c3cccd4d4b4f8a9ac33787ce28c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_8
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1448
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a1d6067380cc04bab7160bbce17501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_9
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1448
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6784fec91122eea4f9b3cd510467b82f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_10
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1448
+        width: 82
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db944ffc8da2fc4b888153cbc7ffeb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1379
+        width: 83
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f20255b7853e064f8627a7d2fba96c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1306
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53eefc48872416045811632176308116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1306
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa437d1c6724de544950b72fc6c30b3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_14
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1306
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3abae4d287e47e4da1241052b1a086f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_15
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1306
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e628dfa81b3020c428a4d26c64a94f3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_16
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1306
+        width: 82
+        height: 69
+      alignment: 9
+      pivot: {x: 0.555, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84490599515f85449552f5f18a87c87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_17
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1306
+        width: 82
+        height: 69
+      alignment: 9
+      pivot: {x: 0.555, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3883833d25c7f144fa1de81094c3daf1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1229
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479c3fade29cc87448bbbed396e27524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1229
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb8a743d7f957447b8b0342d20f7fb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_20
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1229
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85b7556d32b6744b88d6d5682accfd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_21
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1229
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070d6b51b72933f42829c2ae6f6ed929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_22
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1229
+        width: 78
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bc46c7a53360d47a60d8b234fa706d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_23
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1229
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a49f2b65125be14195cf94a6f98e747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1152
+        width: 59
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465a6b312a9371c4184a5936ffe5220a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1152
+        width: 57
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea5df8ad17ceef4e8ac30590a36434a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_26
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1152
+        width: 57
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9a958c32ea9334295b0cd13b905dcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_27
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1152
+        width: 57
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cdc486a3674514083137b303efc58d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_28
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1152
+        width: 67
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21346078f5c55ab4a8185d8dcacbe42a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_29
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1152
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af2e1c969dec0149a977134c4191126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1075
+        width: 59
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f74dde736aa0443ab72f68d62b3925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_31
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1075
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd189929f288c142af635829600068f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_32
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1075
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c0059ebcb86c9499daac0bc6dcbcc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_33
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1075
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beabcae4700bd3943b4f4e044934836a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_34
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1075
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838bc309dc9344547a6bfe8f6407a459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_35
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1075
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc328561964d0564db53af9e4ac5eff5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_36
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 998
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eed838f85be7d4e8f31a40bc31cf45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_37
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 998
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f16a367e06332c47916048aeac02de2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_38
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 998
+        width: 43
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc737402006fb294b949596ba0cd2a64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_39
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 998
+        width: 43
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f843c5f1700d5a14aaa1f74d83687070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_40
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 998
+        width: 54
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f2e2213d10c184ea7912be9284414d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_41
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 998
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce861903cae67d4a8236192a443f5b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_42
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 921
+        width: 64
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5329e8f33659e2f499f3967434e2d042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_43
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 921
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2af8dc26d9b2cb4ba1c713e17e11626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_44
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 921
+        width: 44
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091f2e67318208b44955c6390a767998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_45
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 921
+        width: 44
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9362e1de1e9478643957f2fab399639b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_46
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 921
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf4b9bb64d772e49bc9f101777b8130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_47
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 921
+        width: 64
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea580902bba8ef48ad5509d5cde004c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_48
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 849
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331c4cc64c6d7a540ad8a27681769f93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_49
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 848
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d823cf8f7222f04f80ba9dec995d43b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_50
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 846
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754e13a97dec84b408924f1217db779e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_51
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 844
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6edfc4420f8a34d851504e3aab7388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_52
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 844
+        width: 57
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250fe3cac7b810441bdfcfec29a9507a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_53
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 844
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844bab45896043a43b23e9edf9f65fdd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_54
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 844
+        width: 43
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7122bfd79d76db40b4b189d70ab4887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_55
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 772
+        width: 44
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e2edde319d6184f96065eb403b385a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_56
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 816
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3059a11f9318974e88085801340d3ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_57
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 816
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054c80acaab14f649afa7b89be1ab3be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_58
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 822
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6dce4c12d38614ab191a7e17c40a1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_59
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 817
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342c6eb9dae64b444882eed1f20c1227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 817
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a2a988a8bcac743945fd007869bc9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_61
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 817
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922bcb35de2c8884289ade13eead89e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_62
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 817
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d609f351483db4ba930b07c587340f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_63
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 822
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29322d0dcba12e4ab36caa647333135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_64
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 815
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca839b0e62315be4d8a24167844ef6c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 815
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148ea2791719301479b624c238eb7320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_66
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 782
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7516da7c3df2544289079985ebdafdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_67
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 805
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4f22100244b3a4a916cd92bf8816a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_68
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 805
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f056cf381cd934e4f935c0cc6aad87ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_69
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 805
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bc7e9755576d14086a174a58dbab7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_70
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 805
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23395436d1449c2469bd2b59dc635f73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_71
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 805
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2c64b252a03534ea7d4a5ba7084507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_72
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 803
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f995e883b3152124788755c50878a117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_73
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 805
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083ce9cc28da6cc4c8f2cea93018521e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_74
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 805
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c4866c60c627b498d05f8d0c6de277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_75
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 805
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b805165ff76f84399f12266ea8b553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_76
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 805
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b890415385cadf04abaf51bbb8f73ecf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_77
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 789
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37dda6a8836fda43877ce167708360c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_78
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 790
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6fa9e280901694aa65c01a34dd952a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 790
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8025751661dd459499681f81451e9ff1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_80
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 790
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c5500e930dc5a45b626b12c26d1858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_81
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 790
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fa1978628e0ca44b7a074871b64396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_82
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f923fbcd11c75a46af3736c20138c16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_83
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 790
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12acfcbf03c88d449bf8c0bb6a3fccef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_84
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 790
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2bbb55c2b71fa4f8781ce7dacde8b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_85
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991323bec88d59543a1cbd8063602df9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_86
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c760b8f72238aa45b3f22f43c6b8c61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_87
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4d3aff5df63584cb60fc747960c990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_88
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 788
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49161842fa8d6840855dcdcf592c70a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_89
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cd143dd0d94824ab1f6d8f45282dc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_90
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 788
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea106ac52bdb4c41a55e98699cff959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_91
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7b46ed8f016014497acc42ce043b02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_92
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fd90bba54fe8743b116c73bafbbf93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_93
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f2b5561b99dc14d88453c7e4df6d62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_94
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9cfc72de610b94491a07bf0bcc54fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_95
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 790
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb32517f48763ba44ac36a52bb1f39a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_96
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 790
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b53d8630317694eb7e487a59dad815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_97
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 701
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27621056186a7744ebad039f77ab60d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_98
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 701
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d38cfe1c3435e4f8e2054d09390b81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_99
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 701
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c485ee4d50608408e62c9588d6a2fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_100
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 701
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65604777eaac0ec4d93f8623eda08aa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_101
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 701
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8342d310703ec6c49a23a9ccc5d1da80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_102
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 701
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b2bd8f6899ae34eb0b586118b70957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_103
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 629
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7678e8ff466ba844ebc6cc68675731ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_104
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 629
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f0b7711571dca4d83efb8d1a10558e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_105
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 629
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60829535914d56d4a8566a4b84f96ef8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_106
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 629
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb28f42f5da2ad9458169d6b73206dee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_107
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 629
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9337e44b054cb24ebaf15249b25e0d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_108
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 629
+        width: 83
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7893d26b4cbaa2e4298da151fb03df9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_109
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 554
+        width: 73
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97b28163b9863b40920a8f4a895e5f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_110
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 554
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b82e298ec54a540aff1beb42ab77b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_111
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 554
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6923b0ac8b6ba4c926fd83f1986cbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_112
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 554
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af66a7b09c4fa7459160c5b4c111971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_113
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 554
+        width: 82
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023263b9028668c48bb70bffcdf87c61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_114
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 554
+        width: 82
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c054f129e5b1b7459e23a9062c1c8df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_115
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 476
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad78aa2a54c517f4d835abcedb5b8004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_116
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 476
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6378a2cb3de34f4b9b5d566d034063a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_117
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 476
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e823108fa411814a8ca1f23c36b53ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_118
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 476
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f8a039fa3e4a64aa21957bb4f1dcb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_119
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 476
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d85c3181d21f641a6d000f0fc776bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_120
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 476
+        width: 84
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475c868c9a5519b479a52a95c21ba80b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_121
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 397
+        width: 59
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8257e60a02d569645bcf0ccf22f61f60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_122
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 397
+        width: 57
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296f4d49cc95d194aa74e97d8b4390b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_123
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 397
+        width: 57
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f786edbad3d45d64396eebc1a650a68f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_124
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 397
+        width: 57
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5167c40f1f2ac41459fee89ede267f6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_125
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 397
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8367635e11bab54388e5a8737b2d42d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_126
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 397
+        width: 69
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c5a38d0af04994daf84e1fa66c166d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_127
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 318
+        width: 59
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65246e2df2e06b44994c76b86e8b76b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_128
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 318
+        width: 53
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2aa2d37d4ad20c40bf60edb22d5b70a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_129
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 318
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78f3fa15d0f28e459a34e3ccdaa32ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_130
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 318
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d42ae3197e37a04187102c82c171ca3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_131
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 318
+        width: 61
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8647eca01e1ed642b09408292b35c9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_132
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 318
+        width: 61
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e61ffad83ab708488e663212d6267b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_133
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 239
+        width: 61
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef18fbb02df1ce4b8c5f9bef4972ab9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_134
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 239
+        width: 46
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6c25d24590da24aa723291ca6b3919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_135
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 239
+        width: 43
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966ae5bc477abac4ea956daa09bd7b39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_136
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 239
+        width: 43
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc46e233ec6a24c4395b6862004a4d49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_137
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 239
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a0ddd39ad14b240bcac3e46105ae3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_138
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 239
+        width: 61
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ff695471394c1429697fe3b0bb4ca9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_139
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 160
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dca7a2f3b084ad44b581c735ac3c7d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_140
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 160
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9051d8e3da9624e956cf2a3d0ee259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_141
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 160
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89812a9fdc3ff9459ee0debb086b35d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_142
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 160
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4b1ff0bf06a3a4ea67406ad6c2dda2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_143
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 160
+        width: 53
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e33bbeb48622746a6dee39f2107d0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_144
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb361494e80f1144496338d45ff97db4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_145
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 84
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e6ae76a79e2764aa5e9fbba951dfd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_146
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 82
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf832b5c72984f42aa5e497b06ff04f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_147
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 81
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c25a00325521b74aa42d32989f809c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_148
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 80
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f42af436e7f4f141a3a25df50fd126b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_149
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 81
+        width: 57
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032959d5804b8e249bcf31d4f683505e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_150
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 81
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3cbf08669845646a3c5836fc99b289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_151
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 81
+        width: 43
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cf1e1c8c4a5344594f98dc28c5c686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 492
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3710d85c77948624ab9cc686def9173c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_153
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad1db8384e1e514b853619fe65534c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_154
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04aaa1bccd566dd4aa73e94ee257d401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_155
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 47
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f78d59529796c4489f63f73f08aeb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_156
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 49
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caf1f2edad2d864b8ec68f008229058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_157
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 49
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d09dca45bec9e46bba1c5f428d773b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_158
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 49
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7083153608f68764092af39f3ba16f4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_159
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 49
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2634a81dfdaca28408788d4ea83dd918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_160
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 47
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d12fbdbcb3ee6479c7ea87410e047a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_161
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 14
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f2d0fe7316b124cab78a2118343068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_162
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 37
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17539a24cfa7554d96073993a54c960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_163
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 37
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5309946223edffb48a85acdb80609bb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_164
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 37
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e501ff3199449f4191e00f291cbd515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_165
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 37
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77df3e69db6ebe4daaaaa05681b862d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_166
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 37
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5802c9f5088e0d841ac827ecf33cd712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_167
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 35
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813f4b2855a892943aee29c4339d5142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_168
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 37
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9c48b19f044c541ad52cf77083fec2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_169
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 37
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27942bec2d18d243900762eb46df556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_170
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 37
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed684bffe660d94588f0a11d80aa3c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_171
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 37
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec0a571f224a6a428e9b543c48c487d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_172
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 21
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1dbef843a08d841b505d387639e4e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_173
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 22
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16474207e004195459111ee81234eda2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_174
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 22
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987d420154032a04f884d13df8189137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_175
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 22
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0c9ba35d7ff7344940a60637e14691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_176
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 22
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dfe87e873cd194db4246284f492095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_177
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abf6e3e834fa3c4e8a7995ce92092ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_178
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 22
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933a01e10014c8b48afbe34fce9e1298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_179
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 22
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842788c53f785914a80f199535b1c08b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_180
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c83f2fc0a39828499e03b906aab92f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_181
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc50fa2f87ff77f43aa19cb280f176ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_182
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6ba1489ae2f4744acf8939186356ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_183
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 20
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee71a6d576bdf6b4f9d06c2fcc7ede13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_184
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d4895f52b9f5c428ff2c7a5d99405f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_185
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 20
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f505349de0ade49bd569572549a581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_186
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82a23cc4ac4ce84080b762f95967041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_187
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d113cd565c2a4e84092a12439d0cec26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_188
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b71eb6323b47c4a928dba79ab27d5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_189
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56879dd48364894085a675d352d9b23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_190
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfb050a9aaa7a04081ee0cb57136e98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - MH-6J Masknell_191
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 22
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301368db8012b564399659461fcf553b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c06739ffba977124983761b30b31d8d9
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
