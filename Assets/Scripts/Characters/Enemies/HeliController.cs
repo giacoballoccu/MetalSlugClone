@@ -51,9 +51,16 @@ public class HeliController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!health.IsAlive())
+            return;
+
         Move();
         FlipShoot();
-        Fire();
+
+        if (canFire)
+        {
+            Fire();
+        }
     }
 
     void Flip()
@@ -152,6 +159,9 @@ public class HeliController : MonoBehaviour
     private IEnumerator Die()
     {
         //PlayDeathAudio();
+
+        HeliManager.HeliKilled();
+
         animator.SetBool("isDying", true);
         if (rb)
             rb.isKinematic = true;
@@ -159,5 +169,10 @@ public class HeliController : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    public void SetFire(bool canFire)
+    {
+        this.canFire = canFire;
     }
 }

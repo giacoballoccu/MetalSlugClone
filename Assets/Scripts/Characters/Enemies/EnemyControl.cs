@@ -174,6 +174,9 @@ public class EnemyControl : MonoBehaviour
 
     void FlipShoot()
     {
+        if (projSpawner == null)
+            return;
+
         if (facingRight)
         {
             //Fire right
