@@ -18,8 +18,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Marco Controller")]
     public Animator topAnimator;
-    public Animator bottomAnimator;
-    public GameObject Up;
+    private Animator bottomAnimator;
+    public GameObject bottom;
+    public GameObject up;
 
     private Rigidbody2D rb;
 
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public float damageMelee = 1000f;
 
     private Health health;
+    private bool asObjUp = false;
 
     public GameObject foreground;
     public new Camera camera;
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bottomAnimator = bottom.GetComponent<Animator>();
         registerHealth();
     }
 
@@ -346,6 +349,9 @@ public class PlayerController : MonoBehaviour
                 topAnimator.SetBool("isCrouched", true);
                 bottomAnimator.SetBool("isCrouched", true);
 
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                bottom.GetComponent<BoxCollider2D>().enabled = true;
+
                 if (isGrounded)
                 {
                     StartCoroutine(WaitCrouch());
@@ -365,20 +371,27 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            topAnimator.SetBool("isCrouched", false);
-            bottomAnimator.SetBool("isCrouched", false);
-
-            if (isGrounded)
+            if (!asObjUp)
             {
-                Up.SetActive(true);
-            }
+                topAnimator.SetBool("isCrouched", false);
+                bottomAnimator.SetBool("isCrouched", false);
 
-            if (wasCrounching)
-            {
-                maxSpeed += 0.4f;
-                projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y + 0.14f, 0);
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                bottom.GetComponent<BoxCollider2D>().enabled = false;
+
+                if (isGrounded)
+                {
+                    up.GetComponent<SpriteRenderer>().enabled = true;
+                }
+
+                if (wasCrounching)
+                {
+                    maxSpeed += 0.4f;
+                    projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y + 0.14f, 0);
+                }
+
+                wasCrounching = false;
             }
-            wasCrounching = false;
         }
     }
 
@@ -447,6 +460,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Roof"))
+        {
+            asObjUp = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Roof"))
+        {
+            asObjUp = false;
+        }
+    }
+
     private IEnumerator WaitFire()
     {
         yield return new WaitForSeconds(0.1f); //Da il tempo all'animazione di fare il primo frame
@@ -493,7 +523,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitCrouch()
     {
         yield return new WaitForSeconds(0.25f);
-        Up.SetActive(false);
+        up.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(0.25f);
     }
 }

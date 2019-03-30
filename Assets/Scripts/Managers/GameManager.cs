@@ -197,13 +197,13 @@ public class GameManager : MonoBehaviour
         return GetEnemyLayer() + GetBuildingLayer();
     }
 
-    public static bool CanTriggerGrenade(string tag)
+    public static bool CanTriggerThrowable(string tag)
     {
         //If there is no current Game Manager, exit
         if (current == null)
             return false;
 
-        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player";
+        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof";
     }
 
     public static void SetDifficultyMode(int difficulty)

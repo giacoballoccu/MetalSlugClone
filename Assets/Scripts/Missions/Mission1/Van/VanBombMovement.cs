@@ -31,7 +31,7 @@ public class VanBombMovement : MonoBehaviour
     {
         if (rb != null)
         {
-            if (GameManager.CanTriggerGrenade(collision.tag))
+            if (GameManager.CanTriggerThrowable(collision.tag))
             {
                 vanBombAnimator.SetBool("hasHittenSth", true);
                 {
