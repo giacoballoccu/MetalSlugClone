@@ -208,7 +208,13 @@ public class EnemyControl : MonoBehaviour
         animator.SetBool("isDying", true);
         if (rb)
             rb.isKinematic = true;
-        GetComponent<BoxCollider2D>().enabled = false;
+        if (GetComponent<BoxCollider2D>())
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        } else if (GetComponent<CapsuleCollider2D>())
+        {
+            GetComponent<CapsuleCollider2D>().enabled = false;
+        }
 
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
