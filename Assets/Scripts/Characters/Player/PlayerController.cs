@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
     public GameObject granadeSpawner;
     public GameObject granate;
 
+    [Header("Heavy Machine Gun")]
+    public AnimatorOverrideController machineGunAnimator;
+
     [Header("Melee")]
     public float meleeDistance = 0.4f;
     public float damageMelee = 1000f;
@@ -55,6 +58,13 @@ public class PlayerController : MonoBehaviour
 
     public GameObject foreground;
     public new Camera camera;
+
+    public enum CollectibleType
+    {
+        HeavyMachineGun,
+        Ammo,
+        MedKit,
+    };
 
     void Start()
     {
@@ -525,5 +535,18 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         up.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(0.25f);
+    }
+
+    public void getCollectible(CollectibleType type)
+    {
+        switch (type)
+        {
+            case CollectibleType.HeavyMachineGun:
+                topAnimator.runtimeAnimatorController = machineGunAnimator;
+                break;
+            default:
+                Debug.Log("Collectible not found");
+                break;
+        }
     }
 }
