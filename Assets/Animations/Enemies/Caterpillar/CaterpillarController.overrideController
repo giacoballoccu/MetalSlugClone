@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CaterpillarController
+  m_Controller: {fileID: 9100000, guid: 819acce90f84a2c4d8a9994c4cc72fc8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6d1de3ae0b3421c4e9f0f61f9aade751, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f9d8d5222d754914983713d8f18d3b71, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8e66f602e98e22b4caf24bfeb9074984, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f3f19e01ca2d1314eabe56f5965674ca, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 32d582390edfc004c8475b5d87778d43, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d7e0e816103c7cf448ce589e4f3da81e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 889bd497de9491848958d06c84767d80, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8974a8d064f4c8c4e8c1e7a16fdb3c61, type: 2}
