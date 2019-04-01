@@ -269,4 +269,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
         GameReset();
     }
+
+    public static bool CanTriggerEnemyBombs(string tag)
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return false;
+
+        return tag == "Player" || tag == "Walkable" || tag == "Marco Boat";
+    }
 }

@@ -7,8 +7,9 @@ public class VanBombMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private float damageBomb = 100;
+    private float damageBomb = 5;
     public Animator vanBombAnimator;
+    public float lifeTime = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,12 @@ public class VanBombMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +37,7 @@ public class VanBombMovement : MonoBehaviour
     {
         if (rb != null)
         {
-            if (GameManager.CanTriggerThrowable(collision.tag))
+            if (collision.tag == "Player" || collision.tag == "Boat")
             {
                 vanBombAnimator.SetBool("hasHittenSth", true);
                 {
@@ -41,7 +47,7 @@ public class VanBombMovement : MonoBehaviour
                     }
                 }
                 Destroy(rb);
-                yield return new WaitForSeconds(1.7f);
+                yield return new WaitForSeconds(1.3f);
                 vanBombAnimator.SetBool("hasHittenSth", false);
                 Destroy(gameObject);
             }
