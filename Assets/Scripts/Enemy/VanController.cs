@@ -57,7 +57,6 @@ public class VanController : MonoBehaviour
                     nextFire = shotTime + fireDelta;
 
                     StartCoroutine(SpawnBombs());
-
                     nextFire = nextFire - shotTime;
                     shotTime = 0.0f;
                 }
@@ -90,8 +89,7 @@ public class VanController : MonoBehaviour
 
     private void OnHit(float damage)
     {
-        animator.SetTrigger("isHitten");
-
+      
         GameManager.AddScore(damage);
         blinkingSprite.Play();
     }
@@ -108,15 +106,17 @@ public class VanController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator SpawnBombs()
+
+        private IEnumerator SpawnBombs()
     {
-      
+
         for (int i=0; i<4; i++)
         {
             newSpawn = bombSpawner.transform.position;
-            newSpawn = new Vector3(Random.Range(33.265f, 35f), 0.835f, 0.06542f);
+            newSpawn = new Vector3(Random.Range(33.465f, 35f), 0.835f, 0.06542f);
             Instantiate(bomb, newSpawn, bombSpawner.transform.rotation);
             yield return new WaitForSeconds(0.3f);
         }
+        
     }
 }

@@ -37,7 +37,7 @@ public class VanBombMovement : MonoBehaviour
     {
         if (rb != null)
         {
-            if (collision.tag == "Player" || collision.tag == "Marco Boat")
+            if (collision.tag == "Player" || collision.tag == "Boat")
             {
                 vanBombAnimator.SetBool("hasHittenSth", true);
                 {
