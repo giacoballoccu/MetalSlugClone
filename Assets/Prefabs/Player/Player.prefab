@@ -63,6 +63,8 @@ MonoBehaviour:
   granadeSpawner: {fileID: 6250641544266386455}
   granate: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
   machineGunAnimator: {fileID: 22100000, guid: e22904daed3847e4f8e255e3400551be, type: 2}
+  bottomMachineGunAnimator: {fileID: 22100000, guid: 846e0d697e8088048bbc9ee714fbcf78,
+    type: 2}
   meleeDistance: 0.4
   damageMelee: 1000
   foreground: {fileID: 0}

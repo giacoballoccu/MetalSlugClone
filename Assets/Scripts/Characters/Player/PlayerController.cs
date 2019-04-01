@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Heavy Machine Gun")]
     public AnimatorOverrideController machineGunAnimator;
+    public AnimatorOverrideController bottomMachineGunAnimator;
 
     [Header("Melee")]
     public float meleeDistance = 0.4f;
@@ -543,6 +544,7 @@ public class PlayerController : MonoBehaviour
         {
             case CollectibleType.HeavyMachineGun:
                 topAnimator.runtimeAnimatorController = machineGunAnimator;
+                bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
                 break;
             default:
                 Debug.Log("Collectible not found");
