@@ -38,6 +38,8 @@ public class EnemyControl : MonoBehaviour
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
 
+    private bool canFall = false;
+
     private void Start()
     {
         followPlayer = GameManager.GetPlayer();
@@ -45,6 +47,19 @@ public class EnemyControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         blinkingSprite = GetComponent<BlinkingSprite>();
         registerHealth();
+        checkCanFall();
+    }
+
+    private void checkCanFall()
+    {
+        foreach (var parameter in animator.parameters)
+        {
+            if (parameter.name == "isFalling")
+            {
+                canFall = true;
+                break;
+            }
+        }
     }
 
     public void setFollow(GameObject follow)
@@ -76,7 +91,8 @@ public class EnemyControl : MonoBehaviour
         if (health.IsAlive())
         {
             FlipShoot();
-            animator.SetBool("isFalling", !collidingDown);
+            if (canFall)
+                animator.SetBool("isFalling", !collidingDown);
 
             float playerDistance = transform.position.x - followPlayer.transform.position.x;
             if (playerDistance < activationDistance)
