@@ -102,21 +102,21 @@ public class VanController : MonoBehaviour
             rb.isKinematic = true;
         GetComponent<BoxCollider2D>().enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.075f);
         Destroy(gameObject);
     }
 
 
         private IEnumerator SpawnBombs()
     {
-
+        yield return new WaitForSeconds(0.12f);
         for (int i=0; i<4; i++)
         {
             newSpawn = bombSpawner.transform.position;
-            newSpawn = new Vector3(Random.Range(33.465f, 35f), 0.835f, 0.06542f);
+            newSpawn = new Vector3(Random.Range(33.465f, 35f), 0.935f, 0.06542f);
             Instantiate(bomb, newSpawn, bombSpawner.transform.rotation);
             yield return new WaitForSeconds(0.3f);
         }
-        
+       
     }
 }
