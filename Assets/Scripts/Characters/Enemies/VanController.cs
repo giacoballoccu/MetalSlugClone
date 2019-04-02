@@ -23,7 +23,7 @@ public class VanController : MonoBehaviour
 
     [Header("Bomb")]
     public GameObject bomb;
-    public GameObject bombSpawner;
+    public Transform bombSpawner;
     private Vector3 newSpawn;
     private Random random = new Random();
 
@@ -119,8 +119,7 @@ public class VanController : MonoBehaviour
         yield return new WaitForSeconds(0.12f);
         for (int i=0; i<4; i++)
         {
-            newSpawn = bombSpawner.transform.position;
-            newSpawn = new Vector3(Random.Range(33.465f, 35f), 0.935f, 0.06542f);
+            newSpawn = new Vector3(Random.Range(bombSpawner.position.x-1, bombSpawner.position.x+1), bombSpawner.position.y, bombSpawner.position.z);
             Instantiate(bomb, newSpawn, bombSpawner.transform.rotation);
             yield return new WaitForSeconds(0.3f);
         }

@@ -229,4 +229,4 @@ MonoBehaviour:
   activationDistance: 3.5
   fireDelta: 5
   bomb: {fileID: 6000045305501160609, guid: 166049ea82e921d46bfb2dc9f6947ddf, type: 3}
-  bombSpawner: {fileID: 2138996362}
+  bombSpawner: {fileID: 2138996363}
