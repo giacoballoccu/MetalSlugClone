@@ -27,10 +27,7 @@ public class VanController : MonoBehaviour
     private Vector3 newSpawn;
     private Random random = new Random();
 
-    void OnDisable()
-    {
-        ownBridge.SetBridgeDestroyed();
-    }
+
 
     void Start()
     {
@@ -109,7 +106,9 @@ public class VanController : MonoBehaviour
             rb.isKinematic = true;
         GetComponent<BoxCollider2D>().enabled = false;
 
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(0.2f);
+        ownBridge.SetBridgeDestroyed();
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
 
