@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2138996362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138996363}
+  m_Layer: 0
+  m_Name: bombSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138996363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138996362}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.0230322, y: 1.3420438, z: 0.06542969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6565219500553693619}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6565219500553693618
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,10 +43,9 @@ GameObject:
   - component: {fileID: 6565219500553693630}
   - component: {fileID: 6565219500553693629}
   - component: {fileID: 6565219500553693631}
-  - component: {fileID: 6565219500553693624}
   - component: {fileID: 6565219500553693626}
   - component: {fileID: 6565219500553693625}
-  - component: {fileID: 4543986602471598629}
+  - component: {fileID: 280346648}
   m_Layer: 0
   m_Name: Van
   m_TagString: Enemy
@@ -34,7 +63,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.08, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2138996363}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -157,30 +187,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6565219500553693624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6565219500553693618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14fda677e83efc34abfaf1b74f3144b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  attackDamage: 10
-  isMovable: 0
-  canMelee: 0
-  deathClip: {fileID: 0}
-  throwableObj: {fileID: 0}
-  canThrow: 1
-  activationDistance: 1.8
-  attackDistance: 0.5
-  meleeDistance: 0.5
-  facingRight: 0
-  fireDelta: 0.5
 --- !u!114 &6565219500553693626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 0.15
---- !u!114 &4543986602471598629
+--- !u!114 &280346648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +222,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6565219500553693618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385b205bc7255184088a04618e7e37bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 94ff3477421226c4ca8ccc737ec52d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownBridge: {fileID: 0}
+  activationDistance: 5
+  fireDelta: 5
+  bomb: {fileID: 6000045305501160609, guid: d36aee83cddcbc740874fc53a8b0f444, type: 3}
+  bombSpawner: {fileID: 2138996362}
