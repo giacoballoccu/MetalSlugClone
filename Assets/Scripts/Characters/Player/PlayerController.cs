@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Heavy Machine Gun")]
     public AnimatorOverrideController machineGunAnimator;
+    public AnimatorOverrideController bottomMachineGunAnimator;
 
     [Header("Melee")]
     public float meleeDistance = 0.4f;
@@ -351,8 +352,28 @@ public class PlayerController : MonoBehaviour
     void Crouch()
     {
         crouchTime = crouchTime + Time.deltaTime;
+        if (Input.GetButton("Crouch") && Input.GetButton("Jump") && isGrounded)
+        {
+            isGrounded = false;
+            if (crouchTime > nextCrouch)
+            {
+                topAnimator.SetBool("isCrouched", true);
+                topAnimator.SetBool("isJumping", true);
+                bottomAnimator.SetBool("isJumping", true);
 
-        if (Input.GetButton("Crouch") && !Input.GetButton("Jump") && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")))
+                if (!wasCrounching)
+                {
+                    maxSpeed -= 0.4f;
+                    projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y - 0.14f, 0);
+                }
+
+                nextCrouch = crouchTime + crouchDelta;
+                nextCrouch = nextCrouch - crouchTime;
+                crouchTime = 0.0f;
+                wasCrounching = true;
+            }
+        }
+        else if (Input.GetButton("Crouch") && !Input.GetButton("Jump") && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
         {
             if (crouchTime > nextCrouch)
             {
@@ -378,10 +399,10 @@ public class PlayerController : MonoBehaviour
                 wasCrounching = true;
             }
 
-        }
+        } 
         else
         {
-            if (!asObjUp)
+            if (!asObjUp && isGrounded)
             {
                 topAnimator.SetBool("isCrouched", false);
                 bottomAnimator.SetBool("isCrouched", false);
@@ -423,15 +444,15 @@ public class PlayerController : MonoBehaviour
             //Fire up
             projSpawner.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
-        else if (topAnimator.GetBool("isCrouched") && !isGrounded && facingRight)
+        else if (topAnimator.GetBool("isCrouched") && topAnimator.GetBool("isJumping") && facingRight && !isGrounded)
         {
             //Fire down
-            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 270);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
-        else if (topAnimator.GetBool("isCrouched") && !isGrounded && !facingRight)
+        else if (topAnimator.GetBool("isCrouched") && topAnimator.GetBool("isJumping") && !facingRight && !isGrounded)
         {
             //Fire down
-            projSpawner.transform.rotation = Quaternion.Euler(0, 0, 90);
+            projSpawner.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
         else if (facingRight)
         {
@@ -444,6 +465,7 @@ public class PlayerController : MonoBehaviour
             projSpawner.transform.rotation = Quaternion.Euler(0, 0, -180);
         }
 
+        //Granade
         if (facingRight)
         {
             //Fire right
@@ -543,6 +565,7 @@ public class PlayerController : MonoBehaviour
         {
             case CollectibleType.HeavyMachineGun:
                 topAnimator.runtimeAnimatorController = machineGunAnimator;
+                bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
                 break;
             default:
                 Debug.Log("Collectible not found");

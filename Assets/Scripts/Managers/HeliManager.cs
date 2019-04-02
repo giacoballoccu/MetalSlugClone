@@ -39,10 +39,17 @@ public class HeliManager : MonoBehaviour
     {
         for (int i = 0; i < nHeli; i++)
         {
-            if (IsAlive((GameObject) heliList[i]))
+            try
             {
-                SetFire((GameObject) heliList[i]);
-                break;
+                if (IsAlive((GameObject)heliList[i]))
+                {
+                    SetFire((GameObject)heliList[i]);
+                    break;
+                }
+            }
+            catch (System.IndexOutOfRangeException io)
+            {
+
             }
         }
     }

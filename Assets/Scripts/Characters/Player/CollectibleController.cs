@@ -11,6 +11,7 @@ public class CollectibleController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().getCollectible(type);
+            Destroy(gameObject);
         }
     }
 }
