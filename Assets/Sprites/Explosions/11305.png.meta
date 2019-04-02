@@ -28,6 +28,30 @@ TextureImporter:
     21300046: vanbomb_explosion_24
     21300048: vanbomb_explosion_25
     21300050: vanbomb_explosion_26
+    21300052: huge_explosion_1
+    21300054: huge_explosion_2
+    21300056: huge_explosion_3
+    21300058: huge_explosion_4
+    21300060: huge_explosion_5
+    21300062: huge_explosion_6
+    21300064: huge_explosion_7
+    21300066: huge_explosion_8
+    21300068: huge_explosion_9
+    21300070: huge_explosion_10
+    21300072: huge_explosion_11
+    21300074: huge_explosion_12
+    21300076: huge_explosion_13
+    21300078: huge_explosion_14
+    21300080: huge_explosion_15
+    21300082: huge_explosion_16
+    21300084: huge_explosion_17
+    21300086: huge_explosion_18
+    21300088: huge_explosion_19
+    21300090: huge_explosion_20
+    21300092: huge_explosion_21
+    21300094: huge_explosion_22
+    21300096: huge_explosion_23
+    21300098: huge_explosion_24
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -636,6 +660,486 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 22dca9c71328711469a19ce3b8a3adae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 439
+        width: 76
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a60139e448ecb43b05518a03ccd03e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 440
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b205381cce41d4ebf241d6f4f0712b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 439
+        width: 89
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f147c0b6b0d4054a861ec0f78b520da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_4
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 440
+        width: 86
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b39fd2b61a63ac42bfa4a7da82f7ea3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 438
+        width: 90
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0531c663b6125b64ba14ae433803deab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_6
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 438
+        width: 96
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf7ae172f801204492f00605eae2ba6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 324
+        width: 103
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9209c8a4b5ddaf84d9b61b8c7536fd56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_8
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 324
+        width: 107
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679d526253b78034aa78591518a81ba9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 324
+        width: 110
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3a68c8b4d49914a8fc16c89c4ad4f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_10
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 324
+        width: 111
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99db9023587af504f94165d6f5140ab1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_11
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 325
+        width: 106
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728c0423e44008b428a14ae1c0f8876e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 194
+        width: 111
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3ac625509360040b5be76bc9fc65ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_13
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 194
+        width: 111
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da404167c82c2334d9510488613a196d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_14
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 194
+        width: 116
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa48261a8db1bc54c8bea6f10171ee09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_15
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 199
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc46f2846fa2f247827b6480f32a0de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_16
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 199
+        width: 108
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93bf231ee28682409ba0273e1ce17af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 79
+        width: 106
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540639163cb6f9d4e86225ba1e31cac9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 81
+        width: 106
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e1beea0f93a444c9ff596c07f128cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_19
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 81
+        width: 107
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f032a9eee49af33429e9c7ab3484fdcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_20
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 81
+        width: 107
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fc67fa45805414ea9ec2cae566c760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_21
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 80
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317442134287e8b46be727fecff15182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 70
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccfbe58eb3b3a543a3b424e074b65ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_23
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3
+        width: 68
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146d7c35329c87343896fe05d0623c78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huge_explosion_24
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 4
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65486e74f743fee4ea5550b2580626f9
       vertices: []
       indices: 
       edges: []
