@@ -225,8 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ff3477421226c4ca8ccc737ec52d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownBridge: {fileID: 0}
-  activationDistance: 5
+  activationDistance: 3.5
   fireDelta: 5
   bomb: {fileID: 6000045305501160609, guid: abf1978a81be9774d86617e48ad3a1c0, type: 3}
   bombSpawner: {fileID: 2138996362}
