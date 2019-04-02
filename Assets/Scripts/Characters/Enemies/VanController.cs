@@ -109,7 +109,7 @@ public class VanController : MonoBehaviour
             rb.isKinematic = true;
         GetComponent<BoxCollider2D>().enabled = false;
 
-        yield return new WaitForSeconds(2.075f);
+        yield return new WaitForSeconds(1.8f);
         Destroy(gameObject);
     }
 

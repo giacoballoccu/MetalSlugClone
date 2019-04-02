@@ -232,7 +232,7 @@ public class EnemyControl : MonoBehaviour
             GetComponent<CapsuleCollider2D>().enabled = false;
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.8f);
         Destroy(gameObject);
     }
 
