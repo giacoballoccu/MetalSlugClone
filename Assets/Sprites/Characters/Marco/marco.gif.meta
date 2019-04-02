@@ -8726,8 +8726,8 @@ TextureImporter:
         y: 4399
         width: 34
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8746,8 +8746,8 @@ TextureImporter:
         y: 4398
         width: 29
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.9, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8766,8 +8766,8 @@ TextureImporter:
         y: 4399
         width: 26
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8786,8 +8786,8 @@ TextureImporter:
         y: 4397
         width: 38
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8806,8 +8806,8 @@ TextureImporter:
         y: 4397
         width: 40
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8826,8 +8826,8 @@ TextureImporter:
         y: 4397
         width: 39
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8846,8 +8846,8 @@ TextureImporter:
         y: 4397
         width: 37
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8866,8 +8866,8 @@ TextureImporter:
         y: 4397
         width: 38
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9346,8 +9346,8 @@ TextureImporter:
         y: 4277
         width: 22
         height: 69
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1.1, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9366,8 +9366,8 @@ TextureImporter:
         y: 4277
         width: 22
         height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1.1, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9386,34 +9386,14 @@ TextureImporter:
         y: 4277
         width: 22
         height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1.1, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 9f015ecd425d82347a232c3b6c0e9a6a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_266
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 4326
-        width: 10
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d1b12992c6c65c4a9d79112746c815a
       vertices: []
       indices: 
       edges: []
@@ -9639,33 +9619,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marco_278
+      name: marco_279
       rect:
         serializedVersion: 2
         x: 884
         y: 4296
-        width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdbf7d176466ae34391c32bf69a9506c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_279
-      rect:
-        serializedVersion: 2
-        x: 917
-        y: 4310
-        width: 45
-        height: 33
+        width: 78
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9825,9 +9785,9 @@ TextureImporter:
         x: 106
         y: 4277
         width: 24
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 72
+      alignment: 9
+      pivot: {x: 1, y: 0.16}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10846,8 +10806,8 @@ TextureImporter:
         y: 4178
         width: 34
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10866,8 +10826,8 @@ TextureImporter:
         y: 4178
         width: 34
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10886,8 +10846,8 @@ TextureImporter:
         y: 4178
         width: 34
         height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -13024,7 +12984,7 @@ TextureImporter:
         serializedVersion: 2
         x: 548
         y: 4004
-        width: 42
+        width: 63
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -14754,166 +14714,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f82f7e825c4534c4c952b19415aca0a1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_537
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 3797
-        width: 36
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7edc4782c9c984b48a348eb34344995c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_538
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 3798
-        width: 37
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b01802a7bafddd4089bb3f0f50d16e6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_539
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 3799
-        width: 38
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f98a7054adf745646b07c9e08a30c0ae
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_540
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 3799
-        width: 39
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf8a1716161cda24c993b30b2def4659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_541
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 3800
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e40fa46f95e23a4ea8289a4c179af98
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_542
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 3806
-        width: 38
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de8ca057d89fb154380c4fae6e5533d0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_543
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 3801
-        width: 42
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0df898952d7dd740bf5189f756f2e41
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: marco_544
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 3798
-        width: 39
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecfbb650460ecc846bd98f06ac5d0b06
       vertices: []
       indices: 
       edges: []
