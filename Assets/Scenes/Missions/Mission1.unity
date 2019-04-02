@@ -5883,6 +5883,10 @@ PrefabInstance:
       propertyPath: ownBridge
       value: 
       objectReference: {fileID: 870282546}
+    - target: {fileID: 280346648, guid: 23a62deb9afc6e349b51583912d4ba6a, type: 3}
+      propertyPath: ownBridge
+      value: 
+      objectReference: {fileID: 870282546}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23a62deb9afc6e349b51583912d4ba6a, type: 3}
 --- !u!4 &1669860828 stripped
@@ -8860,8 +8864,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4543986602471598629, guid: 23a62deb9afc6e349b51583912d4ba6a,
-        type: 3}
+    - target: {fileID: 280346648, guid: 23a62deb9afc6e349b51583912d4ba6a, type: 3}
       propertyPath: ownBridge
       value: 
       objectReference: {fileID: 146506200}

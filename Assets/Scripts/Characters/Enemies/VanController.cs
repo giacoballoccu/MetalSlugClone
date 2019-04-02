@@ -8,6 +8,9 @@ public class VanController : MonoBehaviour
     private Health health;
     private BlinkingSprite blinkingSprite;
 
+    [Header("Bridge activation")]
+    public BridgeController ownBridge;
+
     [Header("Enemy activation")]
     public float activationDistance = 1.8f;
     private Rigidbody2D rb;
@@ -23,7 +26,12 @@ public class VanController : MonoBehaviour
     public GameObject bombSpawner;
     private Vector3 newSpawn;
     private Random random = new Random();
-    // Start is called before the first frame update
+
+    void OnDisable()
+    {
+        ownBridge.SetBridgeDestroyed();
+    }
+
     void Start()
     {
         followPlayer = GameManager.GetPlayer();
@@ -33,7 +41,6 @@ public class VanController : MonoBehaviour
         registerHealth();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (GameManager.IsGameOver())
