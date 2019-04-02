@@ -106,9 +106,11 @@ public class VanController : MonoBehaviour
             rb.isKinematic = true;
         GetComponent<BoxCollider2D>().enabled = false;
 
+
         yield return new WaitForSeconds(0.2f);
         ownBridge.SetBridgeDestroyed();
         yield return new WaitForSeconds(2f);
+
         Destroy(gameObject);
     }
 
