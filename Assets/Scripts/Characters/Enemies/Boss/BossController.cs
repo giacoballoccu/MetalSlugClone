@@ -13,8 +13,10 @@ public class BossController : MonoBehaviour
     public bool canMelee = true;
     public AudioClip deathClip;
     private Health health;
+    private float maxHealth = 1000;
     private BlinkingSprite blinkingSprite;
     public GameObject projSpawner;
+    private float spawnOffsetUp = 0.05f;
 
     [Header("Throwable")]
     public GameObject throwableObj;
@@ -44,22 +46,27 @@ public class BossController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        
-        followPlayer = GameManager.GetPlayer();
+
         animator = GetComponent<Animator>();
+        followPlayer = GameManager.GetPlayer();
+        registerHealth();
         rb = GetComponent<Rigidbody2D>();
         blinkingSprite = GetComponent<BlinkingSprite>();
-        registerHealth();
+        
     }
 
     private void registerHealth()
     {
         health = GetComponent<Health>();
+        if(maxHealth == -1f)
+        {
+            maxHealth = health.GetHealth();
+        }
+
         // register health delegate
         health.onDead += OnDead;
         health.onHit += OnHit;
-        if(health.GetHealth() <= health.GetHealth() / 2)
+        if(health.GetHealth() <= maxHealth / 2)
         {
             StartCoroutine(HalfHealth());
         }
@@ -97,19 +104,28 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(followPlayer.transform.position.x == 20.8)
+        Debug.Log(followPlayer.transform.position.x);
+        if(followPlayer.transform.position.x >= 47f)
         {
-            Spawn();
+            StartCoroutine(Spawn());
         }
 
 
         
     }
 
-    void Spawn()
+    private IEnumerator  Spawn()
     {
-        rb.AddForce(new Vector2(0f, 5f));
-    }
+        yield return new WaitForSeconds(2f);
+        rb.isKinematic = false;
+        while(this.transform.position.y < -0.1f)
+        {
+            this.transform.position = new Vector3( this.transform.position.x, this.transform.position.y + spawnOffsetUp, this.transform.position.z);
+            yield return new WaitForSeconds(1f);
+        }
+        rb.isKinematic = true;
+        
+            }
 
     private IEnumerator HalfHealth()
     {

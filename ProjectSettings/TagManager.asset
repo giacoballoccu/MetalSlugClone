@@ -14,6 +14,7 @@ TagManager:
   - Marco Boat
   - Water Dead
   - Roof
+  - Boss
   layers:
   - Default
   - TransparentFX
