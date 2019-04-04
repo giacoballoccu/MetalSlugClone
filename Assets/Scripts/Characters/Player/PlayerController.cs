@@ -581,6 +581,8 @@ public class PlayerController : MonoBehaviour
             case CollectibleType.HeavyMachineGun:
                 topAnimator.runtimeAnimatorController = machineGunAnimator;
                 bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
+                GameManager.SetHeavyMachineAmmo(120);
+                UIManager.UpdateAmmoUI();
                 haveMachineGun = true;
                 break;
             case CollectibleType.MedKit:
@@ -588,6 +590,12 @@ public class PlayerController : MonoBehaviour
                 break;
             case CollectibleType.Ammo:
                 GameManager.addAmmo();
+
+                if (!haveMachineGun)
+                {
+                    GameManager.SetHeavyMachineAmmo(0);
+                    UIManager.UpdateAmmoUI();
+                }
                 break;
             default:
                 Debug.Log("Collectible not found");
@@ -602,6 +610,7 @@ public class PlayerController : MonoBehaviour
             topAnimator.runtimeAnimatorController = pistolAnimator;
             bottomAnimator.runtimeAnimatorController = bottomPistolAnimator;
             haveMachineGun = false;
+            UIManager.UpdateAmmoUI();
         }
     }
 }

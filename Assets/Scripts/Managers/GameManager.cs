@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
     int bombs = 10;
-    int heavyMachineAmmo = 100;
+    int heavyMachineAmmo = 0;
     int difficulty = (int) Df.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
@@ -166,6 +166,16 @@ public class GameManager : MonoBehaviour
         return current.heavyMachineAmmo;
     }
 
+    public static void SetHeavyMachineAmmo(int ammo)
+    {
+        //If there is no current Game Manager, return 0
+        if (current == null)
+            return;
+
+        //Return the state of the game
+        current.heavyMachineAmmo = ammo;
+    }
+
     public static void RemoveHeavyMachineAmmo()
     {
         //If there is no current Game Manager, exit
@@ -184,6 +194,9 @@ public class GameManager : MonoBehaviour
 
         current.bombs += 10;
         current.heavyMachineAmmo += 120;
+
+        UIManager.UpdateBombsUI();
+        UIManager.UpdateAmmoUI();
     }
 
     public static bool IsGameOver()
