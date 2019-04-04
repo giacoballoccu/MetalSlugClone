@@ -13,10 +13,14 @@ public class BossController : MonoBehaviour
     public bool canMelee = true;
     public AudioClip deathClip;
     private Health health;
-    private float maxHealth = 1000;
+    private float maxHealth = 10000;
     private BlinkingSprite blinkingSprite;
     public GameObject projSpawner;
     private float spawnOffsetUp = 0.05f;
+    public GameObject waterOnSpawn1;
+    public GameObject waterOnSpawn2;
+    public GameObject waterOnSpawn3;
+    public GameObject waterOnSpawn4;
 
     [Header("Throwable")]
     public GameObject throwableObj;
@@ -48,6 +52,7 @@ public class BossController : MonoBehaviour
     {
 
         animator = GetComponent<Animator>();
+       
         followPlayer = GameManager.GetPlayer();
         registerHealth();
         rb = GetComponent<Rigidbody2D>();
@@ -55,13 +60,44 @@ public class BossController : MonoBehaviour
         
     }
 
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (GameManager.IsGameOver())
+            return;
+
+        if (followPlayer.transform.position.x >= 47f)
+        {
+            StartCoroutine(Spawn());
+        }
+
+        if (health.IsAlive())
+        {
+            float playerDistance = transform.position.x - followPlayer.transform.position.x;
+            if (rb && isMovable)
+            {
+                rb.isKinematic = false;
+                if (collidingDown)
+                {
+                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
+                }
+                else
+                {
+                    //velocity.y -= 9.81f * Time.deltaTime;
+                    //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                }
+
+
+
+            }
+        }
+    }
+
     private void registerHealth()
     {
         health = GetComponent<Health>();
-        if(maxHealth == -1f)
-        {
-            maxHealth = health.GetHealth();
-        }
+
 
         // register health delegate
         health.onDead += OnDead;
@@ -101,35 +137,46 @@ public class BossController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setFollow(GameObject follow)
     {
-        Debug.Log(followPlayer.transform.position.x);
-        if(followPlayer.transform.position.x >= 47f)
-        {
-            StartCoroutine(Spawn());
-        }
-
-
-        
+        followPlayer = follow;
     }
 
+   
     private IEnumerator  Spawn()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         rb.isKinematic = false;
-        while(this.transform.position.y < -0.1f)
+        waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", true);
+        waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", true);
+        waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", true);
+        waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", true);
+
+        while (this.transform.position.y < -0.1f)
         {
             this.transform.position = new Vector3( this.transform.position.x, this.transform.position.y + spawnOffsetUp, this.transform.position.z);
             yield return new WaitForSeconds(1f);
         }
+        waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", false);
+        waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", false);
+        waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", false);
+        waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", false);
         rb.isKinematic = true;
-        
+        rb.simulated = true;
             }
 
     private IEnumerator HalfHealth()
     {
         animator.SetBool("isHalfHealth", true);
         yield return new WaitForSeconds(0.11f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.tag);
+        if (collision.gameObject.tag == "Bridge");
+        {
+            Debug.Log("ho toccato un ponte");
+        }
     }
 }

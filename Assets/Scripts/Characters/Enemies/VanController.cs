@@ -109,7 +109,7 @@ public class VanController : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
         ownBridge.SetBridgeDestroyed();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.7f);
 
         Destroy(gameObject);
     }
