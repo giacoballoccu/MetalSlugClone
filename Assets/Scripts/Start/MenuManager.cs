@@ -34,11 +34,17 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI bgmTextCounter;
     public TextMeshProUGUI sfxTextCounter;
 
+    [Header("Rercords")]
+    public TextMeshProUGUI mission1Text;
+    public TextMeshProUGUI mission2Text;
+    public TextMeshProUGUI mission3Text;
+
     private GameObject currentMenu;
 
     void Start()
     {
         RefreshAudioText();
+        RefreshPointsText();
         StartCoroutine("blinkStart");
     }
 
@@ -230,4 +236,11 @@ public class MenuManager : MonoBehaviour
             sfxTextCounter.SetText(Math.Round(sfxCnt * 10).ToString());
     }
     /* End settings */
+
+    void RefreshPointsText()
+    {
+        mission1Text.SetText(GameManager.GetMission1Points().ToString());
+        mission2Text.SetText(GameManager.GetMission2Points().ToString());
+        mission3Text.SetText(GameManager.GetMission3Points().ToString());
+    }
 }

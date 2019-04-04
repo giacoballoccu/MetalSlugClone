@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     int difficulty = (int) Df.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
+    float mission1Points = 0f;
+    float mission2Points = 0f;
+    float mission3Points = 0f;
 
     [Header("Layers")]
     public LayerMask enemyLayer;
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         LoadSettings();
+        LoadRecords();
+        SaveRecords();
     }
 
     void Update()
@@ -78,6 +83,29 @@ public class GameManager : MonoBehaviour
         {
             SetBgmAudio(settings.bgmVolume);
             SetSfxAudio(settings.sfxVolume);
+            AudioManager.RefreshAudioVolume();
+        }
+    }
+
+    private void SaveRecords()
+    {
+        Records records = SaveManager.GetRecords();
+        if (records == null)
+            records = new Records();
+        records.mission1Points = GetMission1Points();
+        records.mission2Points = GetMission2Points();
+        records.mission3Points = GetMission3Points();
+        SaveManager.SetRecords(records);
+    }
+
+    private void LoadRecords()
+    {
+        Records records = SaveManager.GetRecords();
+        if (records != null)
+        {
+            SetMission1Points(records.mission1Points);
+            SetMission2Points(records.mission2Points);
+            SetMission3Points(records.mission3Points);
             AudioManager.RefreshAudioVolume();
         }
     }
@@ -250,6 +278,54 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return 0f;
         return current.sfxAudio;
+    }
+
+    public static void SetMission1Points(float points, bool save = false)
+    {
+        if (current == null)
+            return;
+        current.mission1Points = points;
+        if (save)
+            current.SaveRecords();
+    }
+
+    public static float GetMission1Points()
+    {
+        if (current == null)
+            return 0f;
+        return current.mission1Points;
+    }
+
+    public static void SetMission2Points(float points, bool save = false)
+    {
+        if (current == null)
+            return;
+        current.mission2Points = points;
+        if (save)
+            current.SaveRecords();
+    }
+
+    public static float GetMission2Points()
+    {
+        if (current == null)
+            return 0f;
+        return current.mission2Points;
+    }
+
+    public static void SetMission3Points(float points, bool save = false)
+    {
+        if (current == null)
+            return;
+        current.mission3Points = points;
+        if (save)
+            current.SaveRecords();
+    }
+
+    public static float GetMission3Points()
+    {
+        if (current == null)
+            return 0f;
+        return current.mission3Points;
     }
 
     public static void GameReset()
