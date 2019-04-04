@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
-    int bombs = 200;
+    int bombs = 10;
+    int heavyMachineAmmo = 100;
     int difficulty = (int) Df.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
@@ -153,6 +154,36 @@ public class GameManager : MonoBehaviour
 
         current.bombs--;
         UIManager.UpdateBombsUI();
+    }
+
+    public static int GetHeavyMachineAmmo()
+    {
+        //If there is no current Game Manager, return 0
+        if (current == null)
+            return 100;
+
+        //Return the state of the game
+        return current.heavyMachineAmmo;
+    }
+
+    public static void RemoveHeavyMachineAmmo()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.heavyMachineAmmo--;
+        UIManager.UpdateAmmoUI();
+    }
+
+    public static void addAmmo()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.bombs += 10;
+        current.heavyMachineAmmo += 120;
     }
 
     public static bool IsGameOver()
