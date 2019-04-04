@@ -3,6 +3,7 @@
 // the UI Manager. All game commands are issued through the static methods of this class
 
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +19,8 @@ public class GameManager : MonoBehaviour
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
-    int bombs = 200;
+    int bombs = 10;
+    int heavyMachineAmmo = 0;
     int difficulty = (int) Df.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
@@ -155,6 +157,49 @@ public class GameManager : MonoBehaviour
         UIManager.UpdateBombsUI();
     }
 
+    public static int GetHeavyMachineAmmo()
+    {
+        //If there is no current Game Manager, return 0
+        if (current == null)
+            return 100;
+
+        //Return the state of the game
+        return current.heavyMachineAmmo;
+    }
+
+    public static void SetHeavyMachineAmmo(int ammo)
+    {
+        //If there is no current Game Manager, return 0
+        if (current == null)
+            return;
+
+        //Return the state of the game
+        current.heavyMachineAmmo = ammo;
+    }
+
+    public static void RemoveHeavyMachineAmmo()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.heavyMachineAmmo--;
+        UIManager.UpdateAmmoUI();
+    }
+
+    public static void addAmmo()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.bombs += 10;
+        current.heavyMachineAmmo += 120;
+
+        UIManager.UpdateBombsUI();
+        UIManager.UpdateAmmoUI();
+    }
+
     public static bool IsGameOver()
     {
         //If there is no current Game Manager, return false
@@ -178,6 +223,8 @@ public class GameManager : MonoBehaviour
         //game over audio
         UIManager.DisplayGameOverText();
         AudioManager.PlayGameOverAudio();
+
+        current.StartCoroutine(current.WaitHome());
     }
 
     public static LayerMask GetBuildingLayer()
@@ -353,5 +400,11 @@ public class GameManager : MonoBehaviour
             return false;
 
         return tag == "Player" || tag == "Walkable" || tag == "Marco Boat";
+    }
+
+    private IEnumerator WaitHome()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
     }
 }

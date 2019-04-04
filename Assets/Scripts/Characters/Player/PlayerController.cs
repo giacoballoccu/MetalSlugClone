@@ -46,9 +46,14 @@ public class PlayerController : MonoBehaviour
     public GameObject granadeSpawner;
     public GameObject granate;
 
+    [Header("Pistol")]
+    public AnimatorOverrideController pistolAnimator;
+    public AnimatorOverrideController bottomPistolAnimator;
+
     [Header("Heavy Machine Gun")]
     public AnimatorOverrideController machineGunAnimator;
     public AnimatorOverrideController bottomMachineGunAnimator;
+    private bool haveMachineGun = false;
 
     [Header("Melee")]
     public float meleeDistance = 0.4f;
@@ -88,6 +93,7 @@ public class PlayerController : MonoBehaviour
         if (GameManager.IsGameOver() || !health.IsAlive())
             return;
 
+        checkHeavyAmmo();
         Fire();
         ThrowGranate();
         MoveHorizontally();
@@ -512,7 +518,16 @@ public class PlayerController : MonoBehaviour
     private IEnumerator WaitFire()
     {
         yield return new WaitForSeconds(0.1f); //Da il tempo all'animazione di fare il primo frame
-        BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+        if (haveMachineGun)
+        {
+            BulletManager.GetHeavyMachineBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+            GameManager.RemoveHeavyMachineAmmo();
+        }
+        else
+        {
+            BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+        }
+        
         yield return new WaitForSeconds(0.2f); //Impedisce che si possa spammare il tasto
     }
 
@@ -566,13 +581,36 @@ public class PlayerController : MonoBehaviour
             case CollectibleType.HeavyMachineGun:
                 topAnimator.runtimeAnimatorController = machineGunAnimator;
                 bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
+                GameManager.SetHeavyMachineAmmo(120);
+                UIManager.UpdateAmmoUI();
+                haveMachineGun = true;
                 break;
             case CollectibleType.MedKit:
                 health.increaseHealth();
                 break;
+            case CollectibleType.Ammo:
+                GameManager.addAmmo();
+
+                if (!haveMachineGun)
+                {
+                    GameManager.SetHeavyMachineAmmo(0);
+                    UIManager.UpdateAmmoUI();
+                }
+                break;
             default:
                 Debug.Log("Collectible not found");
                 break;
+        }
+    }
+
+    public void checkHeavyAmmo()
+    {
+        if (GameManager.GetHeavyMachineAmmo() <= 0 && haveMachineGun)
+        {
+            topAnimator.runtimeAnimatorController = pistolAnimator;
+            bottomAnimator.runtimeAnimatorController = bottomPistolAnimator;
+            haveMachineGun = false;
+            UIManager.UpdateAmmoUI();
         }
     }
 }

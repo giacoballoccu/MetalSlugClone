@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public Image healthBar;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI bombs;
+    public TextMeshProUGUI ammoText;
 
     void Awake()
     {
@@ -48,6 +49,23 @@ public class UIManager : MonoBehaviour
 
         //Refresh the score
         current.bombs.SetText(GameManager.GetBombs().ToString());
+    }
+
+    public static void UpdateAmmoUI()
+    {
+        //If there is no current UIManager, exit
+        if (current == null)
+            return;
+
+        //Refresh the score
+        if (GameManager.GetHeavyMachineAmmo() == 0)
+        {
+            current.ammoText.SetText("oo");
+        }
+        else
+        {
+            current.ammoText.SetText(GameManager.GetHeavyMachineAmmo().ToString());
+        }
     }
 
     public static void DisplayGameOverText()

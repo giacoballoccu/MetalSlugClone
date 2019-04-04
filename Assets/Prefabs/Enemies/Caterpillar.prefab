@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  health: 0
 --- !u!114 &2206515877999296322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ MonoBehaviour:
   canThrow: 0
   activationDistance: 1.8
   attackDistance: 0.7
-  meleeDistance: 0.5
+  meleeDistance: 1
   facingRight: 0
   fireDelta: 0.5
 --- !u!50 &2206515877999296332

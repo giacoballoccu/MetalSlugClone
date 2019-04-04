@@ -45,9 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _normalBullet: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
     type: 3}
-  _heavyMachineBullet: {fileID: 0}
-  _grenade: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+  _heavyMachineBullet: {fileID: 8006553557397422676, guid: bbb660fee504ac747ab62b0772a2f68c,
     type: 3}
-  _enemyGrenade: {fileID: 856747028061328606, guid: 2112469feb5566445901ae3d4c8cffa2,
+  _grenade: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
     type: 3}
   _poolCount: 10
