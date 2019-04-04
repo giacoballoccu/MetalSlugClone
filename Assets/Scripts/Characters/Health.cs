@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100;
-    private float health;
+    public float health;
 
     public delegate void OnDamageEvent(float damage);    public OnDamageEvent onHit;    public OnDamageEvent onDead;
 
@@ -27,6 +27,14 @@ public class Health : MonoBehaviour
     public float GetHealth()
     {
         return health;
+    }
+
+    public void increaseHealth()
+    {
+        health += maxHealth * 0.2f;
+        if (health > maxHealth)
+            health = maxHealth;
+        UIManager.UpdateHealthUI(health, maxHealth);
     }
 
     public void Hit(float damage)

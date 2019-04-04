@@ -1688,7 +1688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -109.5, y: 79.48004}
+  m_AnchoredPosition: {x: -109.5, y: -5.1}
   m_SizeDelta: {x: 198.7, y: 55.100006}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &778673125
@@ -1832,7 +1832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &802580877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2920,7 +2920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 27.73999, y: 59.480057}
+  m_AnchoredPosition: {x: 27.73999, y: -26.3}
   m_SizeDelta: {x: 198.7, y: 55.100006}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1279123299
@@ -4770,7 +4770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -109.5, y: 160.60002}
+  m_AnchoredPosition: {x: -109.5, y: -7.1}
   m_SizeDelta: {x: 198.7, y: 55.100006}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1613936506
@@ -5995,7 +5995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 27.73999, y: 140.6}
+  m_AnchoredPosition: {x: 27.73999, y: -28.1}
   m_SizeDelta: {x: 198.7, y: 55.100006}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1924073441
@@ -6171,8 +6171,8 @@ MonoBehaviour:
   bgmTextCounter: {fileID: 1585224641}
   sfxTextCounter: {fileID: 44135386}
   mission1Text: {fileID: 1966575436}
-  mission2Text: {fileID: 0}
-  mission3Text: {fileID: 0}
+  mission2Text: {fileID: 778673125}
+  mission3Text: {fileID: 1613936506}
 --- !u!4 &1934271746
 Transform:
   m_ObjectHideFlags: 0

@@ -567,6 +567,9 @@ public class PlayerController : MonoBehaviour
                 topAnimator.runtimeAnimatorController = machineGunAnimator;
                 bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
                 break;
+            case CollectibleType.MedKit:
+                health.increaseHealth();
+                break;
             default:
                 Debug.Log("Collectible not found");
                 break;
