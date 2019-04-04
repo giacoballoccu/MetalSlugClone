@@ -18,6 +18,7 @@ public class ThrowableMovement : MonoBehaviour
     public enum ThrowableType
     {
         Grenade,
+        BossHeavyBomb,
         EnemyGrenade,
         Vomit,
         Bubble
@@ -31,9 +32,7 @@ public class ThrowableMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     Vector3 throwableDirection;
-    private Vector2 startingPoint;
-    private Vector2 controlPoint;
-    private Vector2 endingPoint;
+
     private bool hasHit;
     private bool isSpawned;
 
@@ -105,18 +104,28 @@ public class ThrowableMovement : MonoBehaviour
         if (hasHit)
             return;
 
+
+
         if (GameManager.CanTriggerThrowable(collision.tag) && !(collision.tag == "Player" && launcher == LauncherType.Player) && !(collision.tag == "Enemy" && launcher == LauncherType.Enemy))
         {
             hasHit = true;
+
             if (canExplode)
             {
+                if (throwable == ThrowableType.BossHeavyBomb)
+                {
+                    if (collision.tag == "Bridge")
+                    {
+                        Destroy(collision.gameObject);
+                    }
+                }
                 StartCoroutine(Explosion(collision));
-            }
+                }
             else
-            {
-                ResetMovement(collision);
-                Despawn();
-            }
+                {
+                    ResetMovement(collision);
+                    Despawn();
+                }
         }
     }
 
@@ -131,6 +140,7 @@ public class ThrowableMovement : MonoBehaviour
         throwableAnimator.SetBool("hasHittenSth", false);
         Despawn();
     }
+
 
     private void ResetMovement(Collider2D collision)
     {

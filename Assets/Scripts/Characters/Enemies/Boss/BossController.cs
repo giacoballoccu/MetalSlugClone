@@ -173,10 +173,10 @@ public class BossController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
-        if (collision.gameObject.tag == "Bridge");
+        
+        if (collision.gameObject.tag == "Bridge")
         {
-            Debug.Log("ho toccato un ponte");
+            Destroy(collision.gameObject);
         }
     }
 }

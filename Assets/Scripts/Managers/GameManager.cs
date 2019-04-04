@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return false;
 
-        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof";
+        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof" || tag == "Bridge";
     }
 
     public static void SetDifficultyMode(int difficulty)
@@ -276,6 +276,6 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return false;
 
-        return tag == "Player" || tag == "Walkable" || tag == "Marco Boat";
+        return tag == "Player" || tag == "Walkable" || tag == "Marco Boat" || tag == "Bridge";
     }
 }
