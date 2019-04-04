@@ -3,6 +3,7 @@
 // the UI Manager. All game commands are issued through the static methods of this class
 
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -222,6 +223,8 @@ public class GameManager : MonoBehaviour
         //game over audio
         UIManager.DisplayGameOverText();
         AudioManager.PlayGameOverAudio();
+
+        current.StartCoroutine(current.WaitHome());
     }
 
     public static LayerMask GetBuildingLayer()
@@ -397,5 +400,11 @@ public class GameManager : MonoBehaviour
             return false;
 
         return tag == "Player" || tag == "Walkable" || tag == "Marco Boat";
+    }
+
+    private IEnumerator WaitHome()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
     }
 }
