@@ -27,6 +27,7 @@ public class TriggerTarget : MonoBehaviour
             if (Mathf.Abs(transform.position.x - target.position.x) < 2.64f)
             {
                 Instantiate(prefabRoom, transform.position, transform.rotation);
+                isActive = false;
             }
             //Debug.Log(Mathf.Abs(transform.position.x - target.position.x));
         }

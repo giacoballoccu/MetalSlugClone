@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RunningTarget : MonoBehaviour
 {
-    public float speedX = 0.4f;
-    public float speedY = 0f;
-    public bool running = false;
+    float speedX = 0.5f;
+    float speedY = 0f;
+    bool running = false;
 
     public void SetRunning(bool flag)
     {
