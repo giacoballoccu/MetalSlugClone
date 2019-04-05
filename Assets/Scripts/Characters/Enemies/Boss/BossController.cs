@@ -179,14 +179,29 @@ public class BossController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        if(collider != null)
+        {
+            if (collider.CompareTag("Walkable"))
+            {
+                GameObject bridge = collider.gameObject;
+                collider.enabled = false;
+                StartCoroutine(DestroyBridge(bridge));
+
+            }
+            if (collider.CompareTag("Player"))
+            {
+                followPlayer.GetComponent<Health>().Hit(attackDamage);
+            }
+        }
         
-        if (collider.CompareTag("Walkable"))
-        {
-            Destroy(collider.gameObject);
-        }
-        if (collider.CompareTag("Player"))
-        {
-            followPlayer.GetComponent<Health>().Hit(attackDamage);
-        }
+    }
+
+    private IEnumerator DestroyBridge(GameObject bridge)
+    {
+
+        bridge.GetComponent<Animator>().SetBool("onDestroy", true);
+        yield return new WaitForSeconds(1.2f);
+        bridge.GetComponent<Animator>().SetBool("onDestroy", false);
+        Destroy(bridge);
     }
 }
