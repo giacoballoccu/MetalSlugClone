@@ -71,9 +71,10 @@ public class BossController : MonoBehaviour
 
         if (!isSpawned && followPlayer.transform.position.x >= 47f)
         {
-            StartCoroutine(Spawn());
+            isSpawned = true;
             parallax.setActive(false);
-            runningTarget.SetRunning(true);
+            AudioManager.StartBossAudio();
+            StartCoroutine(Spawn());
         }
 
         if (health.IsAlive())
@@ -150,25 +151,24 @@ public class BossController : MonoBehaviour
    
     private IEnumerator  Spawn()
     {
-
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.3f);
         waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", true);
         waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", true);
         waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", true);
         waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", true);
 
-        while (this.transform.position.y < -0.1f)
+        while (this.transform.position.y < -.1f)
         {
             this.transform.position = new Vector3( this.transform.position.x, this.transform.position.y + spawnOffsetUp, this.transform.position.z);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.1f);
         }
         waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", false);
         waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", false);
         waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", false);
         waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", false);
         CameraManager.AfterBossSpawn();
+        runningTarget.SetRunning(true);
         rb.simulated = true;
-        isSpawned = true;
     }
 
     private IEnumerator HalfHealth()

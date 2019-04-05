@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     [Header("Music")]
     public AudioClip musicClip;         //The background music
     public AudioClip gameOverClip;      //Played once on game over
+    public AudioClip bossClip;          // the bgm of the boss fight
 
     [Header("Player")]
     public AudioClip marcoDeathClip;    //Marco Death Sound
@@ -102,6 +103,15 @@ public class AudioManager : MonoBehaviour
         current.musicSource.loop = true;
         current.musicSource.Play();
         PlayLevelStartAudio();
+    }
+
+    public static void StartBossAudio()
+    {
+        if (!current)
+            return;
+        current.musicSource.clip = current.bossClip;
+        current.musicSource.loop = true;
+        current.musicSource.Play();
     }
 
     public static void PlayLevelStartAudio()
