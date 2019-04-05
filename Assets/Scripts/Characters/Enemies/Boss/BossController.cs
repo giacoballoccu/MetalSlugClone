@@ -47,6 +47,7 @@ public class BossController : MonoBehaviour
     private float nextFire = 0.5f;
 
     private bool canFall = false;
+    public Parallaxing parallax;
 
     // Start is called before the first frame update
     void Start()
@@ -67,9 +68,10 @@ public class BossController : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        if (followPlayer.transform.position.x >= 47f && !isSpawned)
+        if (!isSpawned && followPlayer.transform.position.x >= 47f)
         {
             StartCoroutine(Spawn());
+            parallax?.setActive(false);
         }
 
         if (health.IsAlive())
@@ -164,7 +166,7 @@ public class BossController : MonoBehaviour
         waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", false);
         rb.simulated = true;
         isSpawned = true;
-            }
+    }
 
     private IEnumerator HalfHealth()
     {
