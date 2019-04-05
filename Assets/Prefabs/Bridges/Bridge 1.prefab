@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3035517403463528054}
   - component: {fileID: 3035517403463528008}
   - component: {fileID: 3035517403463528009}
+  - component: {fileID: 3673564204090088537}
   m_Layer: 0
   m_Name: Bridge 1
   m_TagString: Walkable
@@ -98,3 +99,22 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.32480454, y: 0.11300106}
   - {x: 0.32000136, y: 0.10578813}
+--- !u!95 &3673564204090088537
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3035517403463528055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ad4e465fa480a74db50b8ea5a363e81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
