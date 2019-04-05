@@ -21,6 +21,7 @@ public class BossController : MonoBehaviour
     public GameObject waterOnSpawn2;
     public GameObject waterOnSpawn3;
     public GameObject waterOnSpawn4;
+    private bool isSpawned = false;
 
     [Header("Throwable")]
     public GameObject throwableObj;
@@ -66,7 +67,7 @@ public class BossController : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        if (followPlayer.transform.position.x >= 47f)
+        if (followPlayer.transform.position.x >= 47f && !isSpawned)
         {
             StartCoroutine(Spawn());
         }
@@ -145,8 +146,8 @@ public class BossController : MonoBehaviour
    
     private IEnumerator  Spawn()
     {
+
         yield return new WaitForSeconds(1.5f);
-        rb.isKinematic = false;
         waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", true);
         waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", true);
         waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", true);
@@ -161,8 +162,8 @@ public class BossController : MonoBehaviour
         waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", false);
         waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", false);
         waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", false);
-        rb.isKinematic = true;
         rb.simulated = true;
+        isSpawned = true;
             }
 
     private IEnumerator HalfHealth()
@@ -171,12 +172,16 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(0.11f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         
-        if (collision.gameObject.tag == "Bridge")
+        if (collider.CompareTag("Walkable"))
         {
-            Destroy(collision.gameObject);
+            Destroy(collider.gameObject);
+        }
+        if (collider.CompareTag("Player"))
+        {
+            followPlayer.GetComponent<Health>().Hit(attackDamage);
         }
     }
 }
