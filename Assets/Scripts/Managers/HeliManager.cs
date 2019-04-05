@@ -47,7 +47,7 @@ public class HeliManager : MonoBehaviour
                     break;
                 }
             }
-            catch (System.IndexOutOfRangeException io)
+            catch (System.IndexOutOfRangeException /*io*/)
             {
 
             }
