@@ -245,6 +245,15 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectWithTag("Player");
     }
 
+    public static GameObject GetRunningTarget() // not cached
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return null;
+
+        return GameObject.FindGameObjectWithTag("RunningTarget");
+    }
+
     public static LayerMask GetEnemyLayer()
     {
         //If there is no current Game Manager, exit

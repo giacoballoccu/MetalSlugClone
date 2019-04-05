@@ -17,6 +17,7 @@ TagManager:
   - Bridge
   - Granate
   - EnemyBomb
+  - RunningTarget
   layers:
   - Default
   - TransparentFX
