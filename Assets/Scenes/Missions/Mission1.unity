@@ -567,6 +567,11 @@ PrefabInstance:
       propertyPath: runningTarget
       value: 
       objectReference: {fileID: 46880571}
+    - target: {fileID: 1859705039169141558, guid: 520b49f14e64d1f4ab10f08330ca0706,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
 --- !u!1001 &200841295
