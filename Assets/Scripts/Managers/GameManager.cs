@@ -404,7 +404,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator WaitHome()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(0);
+        GameReset();
     }
 }
