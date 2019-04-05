@@ -14,8 +14,9 @@ TagManager:
   - Marco Boat
   - Water Dead
   - Roof
-  - Boss
   - Bridge
+  - Granate
+  - EnemyBomb
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - Enemy
   - Walkable
   - Building
-  - Bridge
   - 
+  - IgnoreRoof
   - 
   - 
   - 

@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return false;
 
-        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof" || tag == "Bridge";
+        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof" || tag == "Bridge" || tag == "EnemyBomb";
     }
 
     public static void SetDifficultyMode(int difficulty)
