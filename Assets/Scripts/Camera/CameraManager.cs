@@ -23,6 +23,8 @@ public class CameraManager : MonoBehaviour
     [Header("Zone 3")]
     public CinemachineVirtualCamera vcamZ3A;
 
+    //public bool enableParallax = true;
+
     void Awake()
     {
         if (current)
@@ -73,6 +75,12 @@ public class CameraManager : MonoBehaviour
             cam2.gameObject.SetActive(true);
     }
 
+    //public static void EnableParallax(bool flag)
+    //{
+    //    if (current)
+    //        current.enableParallax = flag;
+    //}
+
     #region Mission 1 Switches
     public static void AfterCrabTower()
     {
@@ -90,6 +98,15 @@ public class CameraManager : MonoBehaviour
             return;
 
         current.SwitchZ1BtoZ1C();
+    }
+
+    public static void AfterBossSpawn()
+    {
+        //If there is no current Camera Manager, exit
+        if (current == null)
+            return;
+
+        current.SwitchZ2CtoZ3A();
     }
 
     public static void AfterSunkCartel()
