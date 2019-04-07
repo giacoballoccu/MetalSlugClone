@@ -52,32 +52,32 @@ TextureImporter:
     21300094: 11305_47
     21300096: 11305_48
     21300098: 11305_49
-    21300100: 11305_50
-    21300102: 11305_51
-    21300104: 11305_52
-    21300106: 11305_53
-    21300108: 11305_54
-    21300110: 11305_55
-    21300112: 11305_56
-    21300114: 11305_57
-    21300116: 11305_58
-    21300118: 11305_59
-    21300120: 11305_60
-    21300122: 11305_61
-    21300124: 11305_62
-    21300126: 11305_63
-    21300128: 11305_64
-    21300130: 11305_65
-    21300132: 11305_66
-    21300134: 11305_67
-    21300136: 11305_68
-    21300138: 11305_69
-    21300140: 11305_70
-    21300142: 11305_71
-    21300144: 11305_72
-    21300146: 11305_73
-    21300148: 11305_74
-    21300150: 11305_75
+    21300100: medium_1
+    21300102: medium_2
+    21300104: medium_3
+    21300106: medium_4
+    21300108: medium_5
+    21300110: medium_18
+    21300112: medium_6
+    21300114: medium_19
+    21300116: medium_7
+    21300118: medium_20
+    21300120: medium_8
+    21300122: medium_21
+    21300124: medium_9
+    21300126: medium_22
+    21300128: medium_23
+    21300130: medium_10
+    21300132: medium_24
+    21300134: medium_11
+    21300136: medium_25
+    21300138: medium_12
+    21300140: medium_13
+    21300142: medium_14
+    21300144: medium_15
+    21300146: medium_16
+    21300148: medium_17
+    21300150: medium_26
     21300152: 11305_76
     21300154: 11305_77
     21300156: 11305_78
@@ -1893,7 +1893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_50
+      name: medium_1
       rect:
         serializedVersion: 2
         x: 4
@@ -1913,7 +1913,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_51
+      name: medium_2
       rect:
         serializedVersion: 2
         x: 55
@@ -1933,7 +1933,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_52
+      name: medium_3
       rect:
         serializedVersion: 2
         x: 106
@@ -1953,7 +1953,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_53
+      name: medium_4
       rect:
         serializedVersion: 2
         x: 152
@@ -1973,7 +1973,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_54
+      name: medium_5
       rect:
         serializedVersion: 2
         x: 201
@@ -1993,12 +1993,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_55
+      name: medium_18
       rect:
         serializedVersion: 2
-        x: 234
+        x: 232
         y: 2847
-        width: 41
+        width: 45
         height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2013,7 +2013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_56
+      name: medium_6
       rect:
         serializedVersion: 2
         x: 248
@@ -2033,7 +2033,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_57
+      name: medium_19
       rect:
         serializedVersion: 2
         x: 278
@@ -2053,7 +2053,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_58
+      name: medium_7
       rect:
         serializedVersion: 2
         x: 297
@@ -2073,7 +2073,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_59
+      name: medium_20
       rect:
         serializedVersion: 2
         x: 320
@@ -2093,7 +2093,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_60
+      name: medium_8
       rect:
         serializedVersion: 2
         x: 344
@@ -2113,7 +2113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_61
+      name: medium_21
       rect:
         serializedVersion: 2
         x: 361
@@ -2133,7 +2133,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_62
+      name: medium_9
       rect:
         serializedVersion: 2
         x: 394
@@ -2153,7 +2153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_63
+      name: medium_22
       rect:
         serializedVersion: 2
         x: 399
@@ -2173,7 +2173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_64
+      name: medium_23
       rect:
         serializedVersion: 2
         x: 437
@@ -2193,7 +2193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_65
+      name: medium_10
       rect:
         serializedVersion: 2
         x: 444
@@ -2213,7 +2213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_66
+      name: medium_24
       rect:
         serializedVersion: 2
         x: 473
@@ -2233,7 +2233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_67
+      name: medium_11
       rect:
         serializedVersion: 2
         x: 492
@@ -2253,7 +2253,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_68
+      name: medium_25
       rect:
         serializedVersion: 2
         x: 511
@@ -2273,13 +2273,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_69
+      name: medium_12
       rect:
         serializedVersion: 2
         x: 538
-        y: 2891
+        y: 2909
         width: 47
-        height: 67
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2293,13 +2293,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_70
+      name: medium_13
       rect:
         serializedVersion: 2
         x: 4
-        y: 2818
-        width: 59
-        height: 72
+        y: 2842
+        width: 45
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2313,7 +2313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_71
+      name: medium_14
       rect:
         serializedVersion: 2
         x: 51
@@ -2333,7 +2333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_72
+      name: medium_15
       rect:
         serializedVersion: 2
         x: 98
@@ -2353,7 +2353,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_73
+      name: medium_16
       rect:
         serializedVersion: 2
         x: 145
@@ -2373,7 +2373,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_74
+      name: medium_17
       rect:
         serializedVersion: 2
         x: 190
@@ -2393,13 +2393,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11305_75
+      name: medium_26
       rect:
         serializedVersion: 2
         x: 542
         y: 2864
         width: 30
-        height: 22
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 115777884374836620}
   - component: {fileID: 115777884374836618}
   m_Layer: 12
-  m_Name: Bridge 0
+  m_Name: BridgeEdge
   m_TagString: Walkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.32480454, y: 0.11300106}
-  - {x: 0.32000136, y: 0.10578813}
+  - {x: -0.12722012, y: 0.11624017}
+  - {x: 0.24226326, y: 0.11550539}
 --- !u!95 &115777884374836618
 Animator:
   serializedVersion: 3

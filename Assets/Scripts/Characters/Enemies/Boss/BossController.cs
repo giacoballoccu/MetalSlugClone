@@ -17,10 +17,8 @@ public class BossController : MonoBehaviour
     private BlinkingSprite blinkingSprite;
     public GameObject projSpawner;
     private float spawnOffsetUp = 0.05f;
-    public GameObject waterOnSpawn1;
-    public GameObject waterOnSpawn2;
-    public GameObject waterOnSpawn3;
-    public GameObject waterOnSpawn4;
+
+    public GameObject boat;
     private bool isSpawned = false;
 
     [Header("Throwable")]
@@ -69,7 +67,7 @@ public class BossController : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        if (!isSpawned && followPlayer.transform.position.x >= 47f)
+        if (!isSpawned && boat.transform.position.x >= 44.6f)
         {
             isSpawned = true;
             parallax.setActive(false);
@@ -151,21 +149,15 @@ public class BossController : MonoBehaviour
    
     private IEnumerator  Spawn()
     {
-        yield return new WaitForSeconds(.3f);
-        waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", true);
-        waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", true);
-        waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", true);
-        waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", true);
+        yield return new WaitForSeconds(7f);
+
 
         while (this.transform.position.y < -.1f)
         {
             this.transform.position = new Vector3( this.transform.position.x, this.transform.position.y + spawnOffsetUp, this.transform.position.z);
             yield return new WaitForSeconds(.1f);
         }
-        waterOnSpawn1.GetComponent<Animator>().SetBool("isSpawning", false);
-        waterOnSpawn2.GetComponent<Animator>().SetBool("isSpawning", false);
-        waterOnSpawn3.GetComponent<Animator>().SetBool("isSpawning", false);
-        waterOnSpawn4.GetComponent<Animator>().SetBool("isSpawning", false);
+
         CameraManager.AfterBossSpawn();
         runningTarget.SetRunning(true);
         rb.simulated = true;
@@ -190,6 +182,7 @@ public class BossController : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 followPlayer.GetComponent<Health>().Hit(attackDamage);
+                followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
             }
         }
         

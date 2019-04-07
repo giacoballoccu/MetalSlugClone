@@ -46,6 +46,7 @@ public class VanBombMovement : MonoBehaviour
                         collision.GetComponent<Health>().Hit(damageBomb);
                     }
                 }
+               this.enabled = false;
                 Destroy(rb);
                 yield return new WaitForSeconds(1.3f);
                 vanBombAnimator.SetBool("hasHittenSth", false);
