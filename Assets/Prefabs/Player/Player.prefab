@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8163072815345999352}
   m_Layer: 0
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 223971465086242360}
   m_Layer: 0
   m_Name: Up
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
