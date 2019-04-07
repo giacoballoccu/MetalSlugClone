@@ -184,7 +184,6 @@ public class BossController : MonoBehaviour
             if (collider.CompareTag("Walkable"))
             {
                 GameObject bridge = collider.gameObject;
-                collider.enabled = false;
                 StartCoroutine(DestroyBridge(bridge));
 
             }
@@ -198,7 +197,8 @@ public class BossController : MonoBehaviour
 
     private IEnumerator DestroyBridge(GameObject bridge)
     {
-
+        yield return new WaitForSeconds(0.25f);
+        bridge.GetComponent<Collider2D>().enabled = false;
         bridge.GetComponent<Animator>().SetBool("onDestroy", true);
         yield return new WaitForSeconds(1.2f);
         bridge.GetComponent<Animator>().SetBool("onDestroy", false);
