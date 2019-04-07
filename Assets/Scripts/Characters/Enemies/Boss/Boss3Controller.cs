@@ -5,8 +5,8 @@ using UnityEngine;
 public class Boss3Controller : MonoBehaviour
 {
     [Header("Attack1 time")]
-    private float attack1Time = 0f;
     public float attack1Delta = 11f;
+    private float attack1Time = 0f;
 
     public GameObject headSpawner;
     public GameObject bulletPrefab;
@@ -23,6 +23,9 @@ public class Boss3Controller : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        blinkingSprite = GetComponent<BlinkingSprite>();
+        registerHealth();
+
         initialY = transform.position.y;
 
         attack1Time = attack1Delta - 4;
@@ -30,18 +33,41 @@ public class Boss3Controller : MonoBehaviour
 
     void Update()
     {
-        // Oscillate Y
-        transform.position = new Vector3(transform.position.x, Mathf.Sin(Time.time) * 0.1f + initialY);
+        if (GameManager.IsGameOver())
+            return;
 
-        // Attack 1 delta time
-        attack1Time += Time.deltaTime;
-        if (attack1Time > attack1Delta && !headSpawner.GetComponent<Animator>().GetBool("prepareAttack1"))
+        if (health.IsAlive())
         {
-            StartCoroutine(Fire1());
+            // Oscillate Y
+            transform.position = new Vector3(transform.position.x, Mathf.Sin(Time.time) * 0.1f + initialY);
 
-            attack1Time = 0.0f;
+            // Attack 1 delta time
+            attack1Time += Time.deltaTime;
+            if (attack1Time > attack1Delta && !headSpawner.GetComponent<Animator>().GetBool("prepareAttack1"))
+            {
+                StartCoroutine(Fire1());
+
+                attack1Time = 0.0f;
+            }
         }
+    }
 
+    private void registerHealth()
+    {
+        health = GetComponent<Health>();
+        // register health delegate
+        health.onDead += OnDead;
+        health.onHit += OnHit;
+    }
+
+    private void OnDead(float damage)
+    {
+    }
+
+    private void OnHit(float damage)
+    {
+        GameManager.AddScore(damage);
+        blinkingSprite.Play();
     }
 
     private IEnumerator Fire1()

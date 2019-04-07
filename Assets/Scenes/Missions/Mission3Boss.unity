@@ -770,6 +770,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cb6d889f06492bb4ba6fbe20637c8aee, type: 2}
+    - target: {fileID: 223971465086242360, guid: 10d84f9cfeae4f54d9078ef51e03d394,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d84f9cfeae4f54d9078ef51e03d394, type: 3}
 --- !u!1 &1906739843
@@ -1363,7 +1368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30000
   health: 0
 --- !u!114 &2083848316
 MonoBehaviour:
@@ -1377,7 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38ed5e005b09984cada61a418a9d606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1Delta: 15
+  attack1Delta: 11
   headSpawner: {fileID: 2014698205}
   bulletPrefab: {fileID: 8074557712258021186, guid: 84a1e2dc8e60b034695c5b1e9c5d2641,
     type: 3}

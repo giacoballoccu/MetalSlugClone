@@ -94,9 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac15555dbf7ce64d8acc943cbb2a90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletForce: 3
+  bulletForce: 2
   lifeTime: 5
-  damageShot: 100
+  damageShot: 15
   launcher: 1
 --- !u!50 &3344899479662048602
 Rigidbody2D:
