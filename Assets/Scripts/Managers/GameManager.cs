@@ -466,8 +466,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-        Debug.Log(current.currentMission);
-
         // currentMission is updated in the PlayerWin method
         SceneManager.LoadScene((int) current.currentMission);
         ScoreReset();
