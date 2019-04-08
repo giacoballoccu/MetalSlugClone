@@ -18,6 +18,7 @@ TagManager:
   - Granate
   - EnemyBomb
   - RunningTarget
+  - Trigger
   layers:
   - Default
   - TransparentFX

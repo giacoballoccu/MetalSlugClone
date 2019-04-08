@@ -47,7 +47,7 @@ public class BossController : MonoBehaviour
 
     [Header("Time sprint")]
     private float sprintTime = 0.0f;
-    public float sprintDelta = 0f;
+    public float sprintDelta = 0.5f;
     private float nextSprint = 10f;
     public Parallaxing parallax;
     public RunningTarget runningTarget;
