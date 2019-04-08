@@ -16,7 +16,6 @@ public class PauseController : MonoBehaviour
 
     private void Start()
     {
-        RefreshAudioText();
     }
 
     // Update is called once per frame
@@ -30,6 +29,7 @@ public class PauseController : MonoBehaviour
 
     public void Open()
     {
+        RefreshAudioText();
         showMenu();
     }
 
