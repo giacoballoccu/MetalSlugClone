@@ -71,7 +71,7 @@ public class BossController : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        if (!isSpawned && boat.transform.position.x >= 44.6f)
+        if (!isSpawned && followPlayer.transform.position.x >= 44.6f)
         {
             isSpawned = true;
             parallax.setActive(false);
@@ -176,7 +176,6 @@ public class BossController : MonoBehaviour
         followPlayer = follow;
     }
 
-   
     private IEnumerator Spawn()
     {
         yield return new WaitForSeconds(7f);
@@ -207,14 +206,13 @@ public class BossController : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 followPlayer.GetComponent<Health>().Hit(attackDamage);
-                followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
+                //followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
             }
 
             if (collider.CompareTag("Walkable"))
             {
-                GameObject bridge = collider.gameObject;
-                StartCoroutine(DestroyBridge(bridge));
-
+                //GameObject bridge = collider.gameObject;
+                //StartCoroutine(DestroyBridge(bridge));
             }
 
         }
@@ -244,9 +242,9 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         runningTarget.SetRunning(true);
         speed = sprintSpeed;
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.1f);
         speed = restSpeed;
-        yield return new WaitForSeconds(1.25f);
+        yield return new WaitForSeconds(1.2f);
         speed = initialSpeed;
         yield return new WaitForSeconds(5f); // wait until next possible sprint
         canSprint = true;
