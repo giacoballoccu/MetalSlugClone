@@ -92,13 +92,21 @@ public class ThrowableMovement : MonoBehaviour
             //Is an enemy throwable
             Destroy(gameObject);
         }
-        
+
     }
 
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
-        Despawn();
+        if(throwable == ThrowableType.EnemyGrenade)
+        {
+            return;
+        }
+        else
+        {
+            Despawn();
+        }
+ 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -114,20 +122,23 @@ public class ThrowableMovement : MonoBehaviour
 
             if (canExplode)
             {
+                
                 if (throwable == ThrowableType.BossHeavyBomb)
                 {
-                    if (collision.tag == "Bridge")
+                    if (collision.tag == "Walkable")
                     {
-                        Destroy(collision.gameObject);
+                        GameObject hittenTerrain = collision.gameObject;
+                        StartCoroutine(DestroyHitten(hittenTerrain));
+
                     }
                 }
                 StartCoroutine(Explosion(collision));
-                }
+            }
             else
-                {
-                    ResetMovement(collision);
-                    Despawn();
-                }
+            {
+                ResetMovement(collision);
+                Despawn();
+            }
         }
     }
 
@@ -146,7 +157,7 @@ public class ThrowableMovement : MonoBehaviour
 
     private void ResetMovement(Collider2D collision)
     {
-        switch(throwable)
+        switch (throwable)
         {
             case ThrowableType.Grenade:
                 collision.GetComponent<Health>()?.Hit(throwableDamagePlayer);
@@ -157,13 +168,22 @@ public class ThrowableMovement : MonoBehaviour
             case ThrowableType.BossHeavyBomb:
                 collision.GetComponent<Health>()?.Hit(throwableDamageHeavybomb);
                 break;
-           
+
         }
-            
-        
+
+
 
         rb.angularVelocity = 0;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
+    }
+    private IEnumerator DestroyHitten(GameObject hittenTerrain)
+    {
+        yield return new WaitForSeconds(0.25f);
+        hittenTerrain.GetComponent<Collider2D>().enabled = false;
+        hittenTerrain.GetComponent<Animator>().SetBool("onDestroy", true);
+        yield return new WaitForSeconds(1.2f);
+        hittenTerrain.GetComponent<Animator>().SetBool("onDestroy", false);
+        Destroy(hittenTerrain);
     }
 }
