@@ -7,7 +7,6 @@ public class BossController : MonoBehaviour
 
     [Header("Enemy information")]
     GameObject followPlayer;
-    public float speed = 0.5f;
     public float attackDamage = 25f;
     public bool isMovable = true;
     public AudioClip deathClip;
@@ -19,6 +18,14 @@ public class BossController : MonoBehaviour
 
     public GameObject boat;
     private bool isSpawned = false;
+
+    [Header("Speeds")]
+    public float speed = 0.5f;
+    private float chargingSpeed = 0f;
+    private float restSpeed = 0.25f;
+    private float sprintSpeed = 2f;
+    private float initialSpeed = 0.5f;
+    
 
     [Header("Throwable")]
     public GameObject normalFire;
@@ -39,9 +46,9 @@ public class BossController : MonoBehaviour
     private float nextFire = 2f;
 
     [Header("Time sprint")]
-    //private float sprintTime = 0.0f;
-    //public float sprintDelta = 10f;
-    //private float nextSprint = 20f;
+    private float sprintTime = 0.0f;
+    public float sprintDelta = 0f;
+    private float nextSprint = 10f;
     public Parallaxing parallax;
     public RunningTarget runningTarget;
 
@@ -81,8 +88,8 @@ public class BossController : MonoBehaviour
                     rb.isKinematic = false;
                     rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
                 }
-                /*
-                if(Random.Range(0, 10) <= 1) //20% chance of sprint
+                
+                if(Random.Range(0, 10) <= 3) //40% chance of sprint
                 {
                     sprintTime = sprintTime + Time.deltaTime;
 
@@ -95,8 +102,7 @@ public class BossController : MonoBehaviour
                         nextSprint = nextSprint - sprintTime;
                         sprintTime = 0.0f;
                     }
-                    StartCoroutine(Sprint());
-                }*/
+                }
                 if (!(health.GetHealth() <= maxHealth / 2) && this.transform.position.y >= -.9f)
                 {
                     shotTime = shotTime + Time.deltaTime;
@@ -188,10 +194,10 @@ public class BossController : MonoBehaviour
             yield return new WaitForSeconds(.1f);
         }
 
-        rb.simulated = true;
         CameraManager.AfterBossSpawn();
         runningTarget.SetRunning(true);
 
+        rb.simulated = true;
     }
 
     private IEnumerator HalfHealth()
@@ -240,11 +246,13 @@ public class BossController : MonoBehaviour
 
     private IEnumerator Sprint()
     {
-        rb.isKinematic = true;
-        yield return new WaitForSeconds(0.5f);
-        rb.isKinematic = false;
-        speed = 2f;
-        yield return new WaitForSeconds(0.5f);
-        speed = 0.5f;
+        speed = chargingSpeed;
+        yield return new WaitForSeconds(1.5f);
+        runningTarget.SetRunning(true);
+        speed = sprintSpeed;
+        yield return new WaitForSeconds(1.2f);
+        speed = restSpeed;
+        yield return new WaitForSeconds(.75f);
+        speed = initialSpeed;
     }
 }
