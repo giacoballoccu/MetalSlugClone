@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     static GameManager current;
 
     enum Df {Easy = 1, Medium, Hard }
+    enum Missions { Home = 0, Mission1, Mission2, Mission3, Mission3Boss }
 
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     int difficulty = (int) Df.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
+    Missions currentMission = Missions.Home;
     float mission1Points = 0f;
     float mission2Points = 0f;
     float mission3Points = 0f;
@@ -137,6 +139,14 @@ public class GameManager : MonoBehaviour
         return current.score;
     }
 
+    public static void ScoreReset()
+    {
+        if (!current)
+            return;
+
+        current.score = 0;
+    }
+
     public static int GetBombs()
     {
         //If there is no current Game Manager, return 0
@@ -187,7 +197,7 @@ public class GameManager : MonoBehaviour
         UIManager.UpdateAmmoUI();
     }
 
-    public static void addAmmo()
+    public static void AddAmmo()
     {
         //If there is no current Game Manager, exit
         if (current == null)
@@ -225,6 +235,31 @@ public class GameManager : MonoBehaviour
         AudioManager.PlayGameOverAudio();
 
         current.StartCoroutine(current.WaitHome());
+    }
+
+    public static void PlayerWin()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        UIManager.DisplayWinText();
+        //AudioManager.PlayGameOverAudio();
+
+        current.isGameOver = true;
+
+        current.currentMission = (Missions) SceneManager.GetActiveScene().buildIndex;
+
+
+        if (current.currentMission >= Missions.Mission3Boss)
+        {
+            current.currentMission = Missions.Home;
+        } else
+        {
+            current.currentMission++;
+        }
+
+        current.StartCoroutine(current.WaitNextMission());
     }
 
     public static LayerMask GetBuildingLayer()
@@ -416,5 +451,16 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(7f);
         SceneManager.LoadScene(0);
         GameReset();
+    }
+
+    private IEnumerator WaitNextMission()
+    {
+        yield return new WaitForSeconds(5f);
+
+        Debug.Log(current.currentMission);
+
+        // currentMission is updated in the PlayerWin method
+        SceneManager.LoadScene((int) current.currentMission);
+        ScoreReset();
     }
 }

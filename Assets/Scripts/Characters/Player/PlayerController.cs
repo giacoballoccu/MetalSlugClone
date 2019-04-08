@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         if (GameManager.IsGameOver() || !health.IsAlive())
             return;
 
-        checkHeavyAmmo();
+        CheckHeavyAmmo();
         Fire();
         ThrowGranate();
         MoveHorizontally();
@@ -591,7 +591,7 @@ public class PlayerController : MonoBehaviour
                 health.increaseHealth();
                 break;
             case CollectibleType.Ammo:
-                GameManager.addAmmo();
+                GameManager.AddAmmo();
 
                 if (!haveMachineGun)
                 {
@@ -605,7 +605,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void checkHeavyAmmo()
+    public void CheckHeavyAmmo()
     {
         if (GameManager.GetHeavyMachineAmmo() <= 0 && haveMachineGun)
         {
