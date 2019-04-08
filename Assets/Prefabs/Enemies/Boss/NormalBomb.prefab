@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwableForce: 4
   launcher: 1
-  throwable: 2
+  throwable: 1
   canExplode: 1
 --- !u!50 &7443417199504763096
 Rigidbody2D:

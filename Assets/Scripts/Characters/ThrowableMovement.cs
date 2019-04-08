@@ -7,6 +7,7 @@ public class ThrowableMovement : MonoBehaviour
     [Header("Throwable Details")]
     private float throwableDamagePlayer = 300f;
     private float throwableDamageEnemy = 25f;
+    private float throwableDamageBoss = 25f;
     private float throwableDamageHeavybomb = 50f;
     public float throwableForce = 2.5f;
 
@@ -20,6 +21,7 @@ public class ThrowableMovement : MonoBehaviour
     public enum ThrowableType
     {
         Grenade,
+        BossBomb,
         BossHeavyBomb,
         EnemyGrenade,
         Vomit,
@@ -98,7 +100,7 @@ public class ThrowableMovement : MonoBehaviour
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
-        if(throwable == ThrowableType.EnemyGrenade)
+        if(throwable == ThrowableType.BossHeavyBomb || throwable == ThrowableType.BossBomb)
         {
             return;
         }
@@ -168,7 +170,9 @@ public class ThrowableMovement : MonoBehaviour
             case ThrowableType.BossHeavyBomb:
                 collision.GetComponent<Health>()?.Hit(throwableDamageHeavybomb);
                 break;
-
+            case ThrowableType.BossBomb:
+                collision.GetComponent<Health>()?.Hit(throwableDamageBoss);
+                break;
         }
 
 

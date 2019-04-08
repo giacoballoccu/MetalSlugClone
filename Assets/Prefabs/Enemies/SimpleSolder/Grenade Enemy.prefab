@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 5665392374265219016, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
         type: 3}
       propertyPath: throwable
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5665392374265219016, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
         type: 3}
