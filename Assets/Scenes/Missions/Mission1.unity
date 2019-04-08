@@ -541,21 +541,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
-      propertyPath: waterOnSpawn1
+      propertyPath: boat
       value: 
-      objectReference: {fileID: 1365311221}
-    - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
-      propertyPath: waterOnSpawn2
-      value: 
-      objectReference: {fileID: 675813239}
-    - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
-      propertyPath: waterOnSpawn3
-      value: 
-      objectReference: {fileID: 1185455395}
-    - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
-      propertyPath: waterOnSpawn4
-      value: 
-      objectReference: {fileID: 1205982974}
+      objectReference: {fileID: 1930952383}
     - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
       propertyPath: parallax
       value: 
@@ -564,11 +552,6 @@ PrefabInstance:
       propertyPath: runningTarget
       value: 
       objectReference: {fileID: 46880571}
-    - target: {fileID: 1859705039169141558, guid: 520b49f14e64d1f4ab10f08330ca0706,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
 --- !u!1001 &200841295
@@ -2187,31 +2170,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &786181773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1268712062418864793, guid: 87975f218fa12d3448559109f6b6aa57,
-    type: 3}
-  m_PrefabInstance: {fileID: 1268712062893146695}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &786181777
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786181773}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ad4e465fa480a74db50b8ea5a363e81, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &790437854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,49 +2721,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &992930802 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7144580459191694074, guid: 520b49f14e64d1f4ab10f08330ca0706,
-    type: 3}
-  m_PrefabInstance: {fileID: 200280532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &992930803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7144580459191694077, guid: 520b49f14e64d1f4ab10f08330ca0706,
     type: 3}
   m_PrefabInstance: {fileID: 200280532}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &992930804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992930802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c76f10cd06b6a64f9834c5c3a580c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  attackDamage: 10
-  isMovable: 1
-  canMelee: 1
-  deathClip: {fileID: 0}
-  projSpawner: {fileID: 0}
-  waterOnSpawn1: {fileID: 1365311221}
-  waterOnSpawn2: {fileID: 675813239}
-  waterOnSpawn3: {fileID: 1185455395}
-  waterOnSpawn4: {fileID: 1205982974}
-  throwableObj: {fileID: 0}
-  canThrow: 0
-  activationDistance: 1.8
-  attackDistance: 0.7
-  meleeDistance: 0.5
-  facingRight: 0
-  fireDelta: 0.5
-  parallax: {fileID: 427510513}
-  runningTarget: {fileID: 46880571}
 --- !u!1001 &993439507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4369,8 +4290,16 @@ MonoBehaviour:
   target1: {fileID: 280346646}
   target2: {fileID: 529018613}
   target3: {fileID: 1910013256}
+  waterSpawners: {fileID: 1958615764}
+  waterOnSpawn1: {fileID: 1365311221}
+  waterOnSpawn2: {fileID: 675813239}
+  waterOnSpawn3: {fileID: 1185455395}
+  waterOnSpawn4: {fileID: 1205982974}
+  thirdPart: {fileID: 1365498233}
   offsetToTarget: 2.1
   speed: 0.35
+  explosion: {fileID: 7172163603368778983, guid: 5a042bc72e1f5a84b9945acd8d01bcf3,
+    type: 3}
 --- !u!1 &1436071235
 GameObject:
   m_ObjectHideFlags: 0
