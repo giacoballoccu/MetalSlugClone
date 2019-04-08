@@ -523,6 +523,10 @@ public class PlayerController : MonoBehaviour
         if (haveMachineGun)
         {
             BulletManager.GetHeavyMachineBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+            yield return new WaitForSeconds(0.05f);
+            BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+            yield return new WaitForSeconds(0.05f);
+            BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
             GameManager.RemoveHeavyMachineAmmo();
         }
         else
