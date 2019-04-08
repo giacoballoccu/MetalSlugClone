@@ -5,7 +5,9 @@ using UnityEngine;
 public class ThrowableMovement : MonoBehaviour
 {
     [Header("Throwable Details")]
-    private float throwableDamage = 300;
+    private float throwableDamagePlayer = 300f;
+    private float throwableDamageEnemy = 25f;
+    private float throwableDamageHeavybomb = 50f;
     public float throwableForce = 2.5f;
 
     public enum LauncherType
@@ -144,7 +146,21 @@ public class ThrowableMovement : MonoBehaviour
 
     private void ResetMovement(Collider2D collision)
     {
-        collision.GetComponent<Health>()?.Hit(throwableDamage);
+        switch(throwable)
+        {
+            case ThrowableType.Grenade:
+                collision.GetComponent<Health>()?.Hit(throwableDamagePlayer);
+                break;
+            case ThrowableType.EnemyGrenade:
+                collision.GetComponent<Health>()?.Hit(throwableDamageEnemy);
+                break;
+            case ThrowableType.BossHeavyBomb:
+                collision.GetComponent<Health>()?.Hit(throwableDamageHeavybomb);
+                break;
+           
+        }
+            
+        
 
         rb.angularVelocity = 0;
         rb.gravityScale = 0;

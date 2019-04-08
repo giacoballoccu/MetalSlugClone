@@ -8,9 +8,8 @@ public class BossController : MonoBehaviour
     [Header("Enemy information")]
     GameObject followPlayer;
     public float speed = 0.5f;
-    public float attackDamage = 10f;
+    public float attackDamage = 25f;
     public bool isMovable = true;
-    public bool canMelee = true;
     public AudioClip deathClip;
     private Health health;
     private float maxHealth = 10000;
@@ -22,29 +21,27 @@ public class BossController : MonoBehaviour
     private bool isSpawned = false;
 
     [Header("Throwable")]
-    public GameObject throwableObj;
-    public bool canThrow = false;
+    public GameObject normalFire;
+    public GameObject heavyBomb;
+    public bool canThrow = true;
 
     [Header("Enemy activation")]
-    public float activationDistance = 1.8f;
-    public float attackDistance = 0.7f;         //Far attack
-    public float meleeDistance = 0.5f;          //Near attack
     public const float CHANGE_SIGN = -1;
 
     private Rigidbody2D rb;
     private Animator animator;
-    public bool facingRight = false;
 
-    //Enemy gravity
-    private bool collidingDown = false;
-    Vector2 velocity = Vector2.zero;
+
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
     public float fireDelta = 0.5f;
-    private float nextFire = 0.5f;
+    private float nextFire = 2f;
 
-    private bool canFall = false;
+    [Header("Time sprint")]
+    //private float sprintTime = 0.0f;
+    //public float sprintDelta = 10f;
+    //private float nextSprint = 20f;
     public Parallaxing parallax;
     public RunningTarget runningTarget;
 
@@ -75,25 +72,59 @@ public class BossController : MonoBehaviour
             StartCoroutine(Spawn());
         }
 
-        if (health.IsAlive())
-        {
-            float playerDistance = transform.position.x - followPlayer.transform.position.x;
-            if (rb && isMovable)
+        if (isSpawned) {
+            if (health.IsAlive())
             {
-                rb.isKinematic = false;
-                if (collidingDown)
+                float playerDistance = transform.position.x - followPlayer.transform.position.x;
+                if (rb && isMovable)
                 {
-                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
-                }
-                else
-                {
-                    //velocity.y -= 9.81f * Time.deltaTime;
-                    //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
+                    rb.isKinematic = false;
                     rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
                 }
+                /*
+                if(Random.Range(0, 10) <= 1) //20% chance of sprint
+                {
+                    sprintTime = sprintTime + Time.deltaTime;
 
+                    if(sprintTime > nextSprint)
+                    {
+                        nextSprint = sprintTime + sprintDelta;
 
+                        StartCoroutine(Sprint());
 
+                        nextSprint = nextSprint - sprintTime;
+                        sprintTime = 0.0f;
+                    }
+                    StartCoroutine(Sprint());
+                }*/
+                if (!(health.GetHealth() <= maxHealth / 2) && this.transform.position.y >= -.9f)
+                {
+                    shotTime = shotTime + Time.deltaTime;
+
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
+
+                        StartCoroutine(WaitFire(normalFire));
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
+                }
+                else if (this.transform.position.y >= -.9f && health.GetHealth() <= maxHealth / 2)
+                {
+                    shotTime = shotTime + Time.deltaTime;
+
+                    if (shotTime > nextFire)
+                    {
+                        nextFire = shotTime + fireDelta;
+
+                        StartCoroutine(WaitFire(heavyBomb));
+
+                        nextFire = nextFire - shotTime;
+                        shotTime = 0.0f;
+                    }
+                }
             }
         }
     }
@@ -151,41 +182,50 @@ public class BossController : MonoBehaviour
     {
         yield return new WaitForSeconds(7f);
 
-
         while (this.transform.position.y < -.1f)
         {
             this.transform.position = new Vector3( this.transform.position.x, this.transform.position.y + spawnOffsetUp, this.transform.position.z);
             yield return new WaitForSeconds(.1f);
         }
 
+        rb.simulated = true;
         CameraManager.AfterBossSpawn();
         runningTarget.SetRunning(true);
-        rb.simulated = true;
+
     }
 
     private IEnumerator HalfHealth()
     {
         animator.SetBool("isHalfHealth", true);
-        yield return new WaitForSeconds(0.11f);
+        yield return new WaitForSeconds(1f);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider != null)
         {
+            if (collider.CompareTag("Player"))
+            {
+                followPlayer.GetComponent<Health>().Hit(attackDamage);
+                followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
+            }
+
             if (collider.CompareTag("Walkable"))
             {
                 GameObject bridge = collider.gameObject;
                 StartCoroutine(DestroyBridge(bridge));
 
             }
-            if (collider.CompareTag("Player"))
-            {
-                followPlayer.GetComponent<Health>().Hit(attackDamage);
-                followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
-            }
+
         }
         
+    }
+
+    private IEnumerator WaitFire(GameObject throwableObj)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Instantiate(throwableObj, projSpawner.transform.position, projSpawner.transform.rotation);
+        yield return new WaitForSeconds(0.15f);
     }
 
     private IEnumerator DestroyBridge(GameObject bridge)
@@ -196,5 +236,15 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
         bridge.GetComponent<Animator>().SetBool("onDestroy", false);
         Destroy(bridge);
+    }
+
+    private IEnumerator Sprint()
+    {
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(0.5f);
+        rb.isKinematic = false;
+        speed = 2f;
+        yield return new WaitForSeconds(0.5f);
+        speed = 0.5f;
     }
 }
