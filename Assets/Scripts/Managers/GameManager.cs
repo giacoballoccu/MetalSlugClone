@@ -250,6 +250,22 @@ public class GameManager : MonoBehaviour
 
         current.currentMission = (Missions) SceneManager.GetActiveScene().buildIndex;
 
+        // Update json score
+        if (current.currentMission == Missions.Mission1 && current.score > GetMission1Points())
+        {
+            SetMission1Points(current.score);
+            SaveManager.SetRecords(new Records(current.score, GetMission2Points(), GetMission3Points()));
+        }
+        else if (current.currentMission == Missions.Mission2 && current.score > GetMission2Points())
+        {
+            SetMission2Points(current.score);
+            SaveManager.SetRecords(new Records(GetMission1Points(), current.score, GetMission3Points()));
+        }
+        else if (current.currentMission == Missions.Mission3Boss && current.score > GetMission3Points())
+        {
+            SetMission3Points(current.score);
+            SaveManager.SetRecords(new Records(GetMission1Points(), GetMission2Points(), current.score));
+        }
 
         if (current.currentMission >= Missions.Mission3Boss)
         {
@@ -371,13 +387,11 @@ public class GameManager : MonoBehaviour
         return current.sfxAudio;
     }
 
-    public static void SetMission1Points(float points, bool save = false)
+    public static void SetMission1Points(float points)
     {
         if (current == null)
             return;
         current.mission1Points = points;
-        if (save)
-            current.SaveRecords();
     }
 
     public static float GetMission1Points()
@@ -387,13 +401,11 @@ public class GameManager : MonoBehaviour
         return current.mission1Points;
     }
 
-    public static void SetMission2Points(float points, bool save = false)
+    public static void SetMission2Points(float points)
     {
         if (current == null)
             return;
         current.mission2Points = points;
-        if (save)
-            current.SaveRecords();
     }
 
     public static float GetMission2Points()
@@ -403,13 +415,11 @@ public class GameManager : MonoBehaviour
         return current.mission2Points;
     }
 
-    public static void SetMission3Points(float points, bool save = false)
+    public static void SetMission3Points(float points)
     {
         if (current == null)
             return;
         current.mission3Points = points;
-        if (save)
-            current.SaveRecords();
     }
 
     public static float GetMission3Points()
