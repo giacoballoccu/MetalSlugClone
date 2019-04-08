@@ -83,7 +83,7 @@ public class ThrowableMovement : MonoBehaviour
         if (throwable == ThrowableType.Grenade)
         {
             //Is a Grenade
-            BulletManager.GetGrenadePool().Despawn(this.gameObject);
+            BulletManager.GetGrenadePool()?.Despawn(this.gameObject);
         }
         else
         {

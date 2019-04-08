@@ -563,7 +563,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = MeleeRay();
         if (hit && hit.collider != null)
         {
-            hit.collider.GetComponent<Health>().Hit(damageMelee);
+            hit.collider?.GetComponent<Health>()?.Hit(damageMelee);
             AudioManager.PlayMeleeHitAudio();
         }
         yield return new WaitForSeconds(0.2f);

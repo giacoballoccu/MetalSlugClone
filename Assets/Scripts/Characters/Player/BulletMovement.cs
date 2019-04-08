@@ -48,7 +48,7 @@ public class BulletMovement : MonoBehaviour
         if (!isSpawned)
             return;
         isSpawned = false;
-        BulletManager.GetNormalBulletPool().Despawn(this.gameObject);
+        BulletManager.GetNormalBulletPool()?.Despawn(this.gameObject);
     }
 
     //Destroy the bulled when out of camera
