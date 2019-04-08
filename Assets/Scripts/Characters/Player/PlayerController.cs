@@ -494,7 +494,9 @@ public class PlayerController : MonoBehaviour
         } else if (col.gameObject.CompareTag("Water Dead"))
         {
             health.Hit(100);
-            gameObject.transform.parent = foreground.transform;
+
+            if (foreground != null) 
+                gameObject.transform.parent = foreground.transform;
         }
     }
 
