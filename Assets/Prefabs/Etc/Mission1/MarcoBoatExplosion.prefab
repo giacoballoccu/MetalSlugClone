@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 7172163603368778980}
   - component: {fileID: 7172163603368778981}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: MarcoBoatExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7172163603368778982
 Transform:
   m_ObjectHideFlags: 0

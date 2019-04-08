@@ -46,9 +46,9 @@ public class BossController : MonoBehaviour
     private float nextFire = 2f;
 
     [Header("Time sprint")]
-    private float sprintTime = 0.0f;
-    public float sprintDelta = 0.5f;
-    private float nextSprint = 10f;
+    private bool canSprint = true;
+
+    [Header("Camera")]
     public Parallaxing parallax;
     public RunningTarget runningTarget;
 
@@ -79,7 +79,8 @@ public class BossController : MonoBehaviour
             StartCoroutine(Spawn());
         }
 
-        if (isSpawned) {
+        if (isSpawned)
+        {
             if (health.IsAlive())
             {
                 float playerDistance = transform.position.x - followPlayer.transform.position.x;
@@ -88,21 +89,13 @@ public class BossController : MonoBehaviour
                     rb.isKinematic = false;
                     rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
                 }
-                
-                if(Random.Range(0, 10) <= 3) //40% chance of sprint
+
+                if (canSprint && Random.Range(0, 100) < 10) // 10% chance of sprint
                 {
-                    sprintTime = sprintTime + Time.deltaTime;
-
-                    if(sprintTime > nextSprint)
-                    {
-                        nextSprint = sprintTime + sprintDelta;
-
-                        StartCoroutine(Sprint());
-
-                        nextSprint = nextSprint - sprintTime;
-                        sprintTime = 0.0f;
-                    }
+                    canSprint = false;
+                    StartCoroutine(Sprint());
                 }
+
                 if (!(health.GetHealth() <= maxHealth / 2) && this.transform.position.y >= -.9f)
                 {
                     shotTime = shotTime + Time.deltaTime;
@@ -184,7 +177,7 @@ public class BossController : MonoBehaviour
     }
 
    
-    private IEnumerator  Spawn()
+    private IEnumerator Spawn()
     {
         yield return new WaitForSeconds(7f);
 
@@ -196,6 +189,7 @@ public class BossController : MonoBehaviour
 
         CameraManager.AfterBossSpawn();
         runningTarget.SetRunning(true);
+        runningTarget.SetSpeed(initialSpeed);
 
         rb.simulated = true;
     }
@@ -254,5 +248,7 @@ public class BossController : MonoBehaviour
         speed = restSpeed;
         yield return new WaitForSeconds(1.25f);
         speed = initialSpeed;
+        yield return new WaitForSeconds(5f); // wait until next possible sprint
+        canSprint = true;
     }
 }

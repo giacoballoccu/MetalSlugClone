@@ -90,7 +90,7 @@ public class MarcoBoatStartMove : MonoBehaviour
 
         //boat.GetComponent<Rigidbody2D>().isKinematic = true;
         yield return new WaitForSeconds(0.5f);
-        Destroy(explosion);
+        explosion.SetActive(false);
         waterOnSpawn1.GetComponent<Animator>().SetBool("BoatExploding", false);
         waterOnSpawn2.GetComponent<Animator>().SetBool("BoatExploding", false);
         waterOnSpawn3.GetComponent<Animator>().SetBool("BoatExploding", false);
