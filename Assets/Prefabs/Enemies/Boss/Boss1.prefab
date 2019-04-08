@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10000
+  health: 0
 --- !u!212 &7144580459191694072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -318,7 +319,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!60 &4921628371596366543
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -438,20 +439,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c76f10cd06b6a64f9834c5c3a580c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
   attackDamage: 10
   isMovable: 1
-  canMelee: 1
   deathClip: {fileID: 0}
   projSpawner: {fileID: 1317732850}
-  waterOnSpawn1: {fileID: 0}
-  waterOnSpawn2: {fileID: 0}
-  waterOnSpawn3: {fileID: 0}
-  waterOnSpawn4: {fileID: 0}
-  throwableObj: {fileID: 0}
+  boat: {fileID: 0}
+  speed: 0.25
+  normalFire: {fileID: 7443417199504763097, guid: 167980b0d1c775f4ea1155d2a742d1c2,
+    type: 3}
+  heavyBomb: {fileID: 7341324662454442780, guid: 203909549fef0844caafb6ddca79baa1,
+    type: 3}
   canThrow: 0
-  activationDistance: 1.8
-  attackDistance: 0.7
-  meleeDistance: 0.5
-  facingRight: 0
   fireDelta: 0.5
+  sprintDelta: 0
+  parallax: {fileID: 0}
+  runningTarget: {fileID: 0}
