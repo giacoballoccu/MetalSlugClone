@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         //If the game is over, exit
         if (isGameOver)
             return;
-
+        Debug.Log(GetPlayer().transform.position);
         //Update the total game time and tell the UI Manager to update
         totalGameTime += Time.deltaTime;
         // UIManager.UpdateTimeUI(totalGameTime); // todo implement or delete
