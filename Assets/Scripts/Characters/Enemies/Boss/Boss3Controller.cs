@@ -151,6 +151,7 @@ public class Boss3Controller : MonoBehaviour
 
     private void OnDead(float damage)
     {
+        GetComponent<Animator>().SetBool("isDying", true);
     }
 
     private void OnHit(float damage)
