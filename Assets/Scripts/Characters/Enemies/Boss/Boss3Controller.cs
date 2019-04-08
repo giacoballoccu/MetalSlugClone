@@ -164,6 +164,12 @@ public class Boss3Controller : MonoBehaviour
 
     private void OnDead(float damage)
     {
+        headSpawner.GetComponent<Animator>().SetBool("isDying", true);
+        mouthSpawner.GetComponent<Animator>().SetBool("isDying", true);
+
+        StopCoroutine(Fire1());
+        StopCoroutine(Fire2Wait());
+        GameManager.PlayerWin();
         GetComponent<Animator>().SetBool("isDying", true);
         StopBossCoroutines();
     }
@@ -191,7 +197,7 @@ public class Boss3Controller : MonoBehaviour
         headSpawner.GetComponent<Animator>().SetBool("prepareAttack1", false);
 
         // Fire 10 proj
-        while (nFires < 10)
+        while (nFires < 10 && !GameManager.IsGameOver())
         {
             GameObject bullet = Instantiate(bulletPrefab, prjSpawner.transform.position, prjSpawner.transform.rotation * Quaternion.Euler(0, 0, Random.Range(-halfAngleofCone, halfAngleofCone)));
             nFires++;
