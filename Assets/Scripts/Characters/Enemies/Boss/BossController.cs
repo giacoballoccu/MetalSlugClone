@@ -22,7 +22,7 @@ public class BossController : MonoBehaviour
     [Header("Speeds")]
     public float speed = 0.5f;
     private float chargingSpeed = 0f;
-    private float restSpeed = 0.25f;
+    private float restSpeed = 0.15f;
     private float sprintSpeed = 2f;
     private float initialSpeed = 0.5f;
     
@@ -252,7 +252,7 @@ public class BossController : MonoBehaviour
         speed = sprintSpeed;
         yield return new WaitForSeconds(1.2f);
         speed = restSpeed;
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(1.25f);
         speed = initialSpeed;
     }
 }
