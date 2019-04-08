@@ -81,17 +81,14 @@ public class ThrowableMovement : MonoBehaviour
         if (!isSpawned)
             return;
 
-
         isSpawned = false;
 
-        if (throwable == ThrowableType.Grenade)
+        if (throwable == ThrowableType.Grenade) //Is a Grenade
         {
-            //Is a Grenade
             BulletManager.GetGrenadePool()?.Despawn(this.gameObject);
         }
-        else
+        else //if (throwable == ThrowableType.BossHeavyBomb || throwable == ThrowableType.BossBomb) //Is an enemy throwable
         {
-            //Is an enemy throwable
             Destroy(gameObject);
         }
 
@@ -100,15 +97,7 @@ public class ThrowableMovement : MonoBehaviour
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
-        if(throwable == ThrowableType.BossHeavyBomb || throwable == ThrowableType.BossBomb)
-        {
-            return;
-        }
-        else
-        {
-            Despawn();
-        }
- 
+        Despawn();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -116,22 +105,18 @@ public class ThrowableMovement : MonoBehaviour
         if (hasHit)
             return;
 
-
-
         if (GameManager.CanTriggerThrowable(collision.tag) && !(collision.tag == "Player" && launcher == LauncherType.Player) && !(collision.tag == "Enemy" && launcher == LauncherType.Enemy))
         {
             hasHit = true;
 
             if (canExplode)
             {
-                
                 if (throwable == ThrowableType.BossHeavyBomb)
                 {
                     if (collision.tag == "Walkable")
                     {
                         GameObject hittenTerrain = collision.gameObject;
                         StartCoroutine(DestroyHitten(hittenTerrain));
-
                     }
                 }
                 StartCoroutine(Explosion(collision));
@@ -175,12 +160,11 @@ public class ThrowableMovement : MonoBehaviour
                 break;
         }
 
-
-
         rb.angularVelocity = 0;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
     }
+
     private IEnumerator DestroyHitten(GameObject hittenTerrain)
     {
         yield return new WaitForSeconds(0.25f);
