@@ -54,6 +54,7 @@ public class Boss3Controller : MonoBehaviour
         blinkingSprite = GetComponent<BlinkingSprite>();
         player = GameManager.GetPlayer();
         registerHealth();
+        registerPlayerHealth();
 
         initialY = transform.position.y;
 
@@ -149,9 +150,27 @@ public class Boss3Controller : MonoBehaviour
         health.onHit += OnHit;
     }
 
+    private void registerPlayerHealth()
+    {
+        Health playerHealth = player.GetComponent<Health>();
+        // register health delegate
+        playerHealth.onDead += OnPlayerDead;
+    }
+
+    private void StopBossCoroutines()
+    {
+        StopAllCoroutines();
+    }
+
     private void OnDead(float damage)
     {
         GetComponent<Animator>().SetBool("isDying", true);
+        StopBossCoroutines();
+    }
+
+    private void OnPlayerDead(float damage)
+    {
+        StopBossCoroutines();
     }
 
     private void OnHit(float damage)
