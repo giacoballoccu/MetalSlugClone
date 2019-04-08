@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
-    int bombs = 10;
+    int bombs = 200;
     int heavyMachineAmmo = 0;
     int difficulty = (int) Df.Medium;
     float bgmAudio = 1f;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3035517403463528009}
   - component: {fileID: 3673564204090088537}
   m_Layer: 0
-  m_Name: Bridge 1
+  m_Name: Bridge1a
   m_TagString: Walkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: -801432979
   m_SortingLayer: -6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300072, guid: 116df9806cc9d0b47bd08d084f964534, type: 3}
+  m_Sprite: {fileID: 21300166, guid: 116df9806cc9d0b47bd08d084f964534, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +97,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.32480454, y: 0.11300106}
-  - {x: 0.32000136, y: 0.10578813}
+  - {x: -0.16260564, y: 0.10759445}
+  - {x: 0.16320907, y: 0.10578813}
 --- !u!95 &3673564204090088537
 Animator:
   serializedVersion: 3
