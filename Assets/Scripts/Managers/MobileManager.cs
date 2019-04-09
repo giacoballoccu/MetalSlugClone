@@ -9,39 +9,72 @@ public class MobileManager : MonoBehaviour
     public Button jumpButton;
     public Button shootButton;
     public FloatingJoystick joystick;
-    PlayerController playerController;
-    static MobileManager instance;
+    static MobileManager current;
+    bool btnPressGrenade;
+    bool btnPressShoot;
+    bool btnPressJump;
 
     void Awake()
     {
-        instance = this;
+        current = this;
     }
 
-    void Start()
+    public void ClickButtonShoot()
     {
-        var player = GameManager.GetPlayer();
-        playerController = player.GetComponent<PlayerController>();
+        btnPressShoot = true;
     }
 
-    static public bool GetButtonBomb()
+    public void ClickButtonJump()
     {
+        btnPressJump = true;
+    }
+
+    public void ClickButtonGrenade()
+    {
+        btnPressGrenade = true;
+    }
+
+    static public bool GetButtonGrenade()
+    {
+        return current.btnPressGrenade;
+#if UNITY_STANDALONE
         return Input.GetKeyDown(KeyCode.G);
+#else
+        return current.btnPressGrenade;
+#endif
     }
 
     static public bool GetButtonFire1()
     {
+        return current.btnPressShoot;
+#if UNITY_STANDALONE
         return Input.GetButton("Fire1");
+#else
+        return current.btnPressShoot;
+#endif
     }
 
     static public bool GetButtonJump()
     {
+        return current.btnPressJump;
+#if UNITY_STANDALONE
         return Input.GetButton("Jump");
+#else
+        return current.btnPressJump;
+#endif
+    }
+
+    void LateUpdate()
+    {
+        btnPressShoot = false;
+        btnPressJump = false;
+        btnPressGrenade = false;
     }
 
     static public bool GetButtonCrouch()
     {
 #if UNITY_STANDALONE
-        return instance.joystick.Vertical < -0.6f;
+        return current.joystick.Vertical < -0.6f;
         return Input.GetButton("Crouch");
 #else
         return instance.joystick.Vertical < -0.6f;
@@ -51,7 +84,7 @@ public class MobileManager : MonoBehaviour
     static public float GetAxisHorizontal()
     {
 #if UNITY_STANDALONE
-        return instance.joystick.Horizontal;
+        return current.joystick.Horizontal;
         return Input.GetAxis("Horizontal");
 #else
         return instance.joystick.Horizontal;
@@ -61,7 +94,7 @@ public class MobileManager : MonoBehaviour
     static public float GetAxisVertical()
     {
 #if UNITY_STANDALONE
-        return instance.joystick.Vertical;
+        return current.joystick.Vertical;
         return Input.GetAxis("Vertical");
 #else
         return instance.joystick.Vertical;

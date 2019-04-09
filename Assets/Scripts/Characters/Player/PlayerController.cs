@@ -197,11 +197,9 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.GetBombs() > 0)
         {
-            
             shotTime = shotTime + Time.deltaTime;
-            if (MobileManager.GetButtonBomb())
+            if (MobileManager.GetButtonGrenade())
             {
-
                 GameManager.RemoveBomb();
                 if (!wasFiring2)
                 {
