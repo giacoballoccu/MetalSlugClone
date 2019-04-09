@@ -215,7 +215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   projSpawner: {fileID: 774066422842036229}
-  proj: {fileID: 8074557712258021186, guid: 84a1e2dc8e60b034695c5b1e9c5d2641, type: 3}
+  projPrefab: {fileID: 8074557712258021186, guid: 84a1e2dc8e60b034695c5b1e9c5d2641,
+    type: 3}
   fireDelta: 0.5
 --- !u!114 &8121500060854696278
 MonoBehaviour:

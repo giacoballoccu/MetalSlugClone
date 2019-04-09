@@ -6,7 +6,7 @@ public class HeliController : MonoBehaviour
 {
     public float speed = 0.5f;
     public GameObject projSpawner;
-    public GameObject proj;
+    public GameObject projPrefab;
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
@@ -136,7 +136,7 @@ public class HeliController : MonoBehaviour
         {
             nextFire = shotTime + fireDelta;
 
-            Instantiate(proj, projSpawner.transform.position, projSpawner.transform.rotation);
+            Instantiate(projPrefab, projSpawner.transform.position, projSpawner.transform.rotation);
 
             nextFire = nextFire - shotTime;
             shotTime = 0.0f;
