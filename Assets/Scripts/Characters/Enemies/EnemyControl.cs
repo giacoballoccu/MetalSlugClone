@@ -113,7 +113,9 @@ public class EnemyControl : MonoBehaviour
                     {
                         nextFire = shotTime + fireDelta;
 
-                        followPlayer.GetComponent<Health>().Hit(attackDamage);
+                        //Attack player only if it's on the same height
+                        if(transform.position.y + (GetComponent<SpriteRenderer>().bounds.size.y/2) > followPlayer.transform.position.y - 0.5f)
+                            followPlayer.GetComponent<Health>().Hit(attackDamage);
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;

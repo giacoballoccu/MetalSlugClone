@@ -547,6 +547,12 @@ public class PlayerController : MonoBehaviour
     private RaycastHit2D MeleeRay()
     {
         Vector2 startPos = transform.position;
+
+        if (topAnimator.GetBool("isCrouched"))
+        {
+            startPos = bottom.transform.position;
+        }
+
         float distance = meleeDistance;
         LayerMask layerMask = GameManager.GetEnemyLayer();
         Vector2 direction = (facingRight) ? transform.right : -transform.right;
