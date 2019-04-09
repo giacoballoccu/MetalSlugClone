@@ -22,6 +22,19 @@ public class MobileManager : MonoBehaviour
         current = this;
     }
 
+    void Start()
+    {
+#if UNITY_STANDALONE
+        if (!forceOnStandalone)
+        {
+            grenadeButton.gameObject.SetActive(false);
+            jumpButton.gameObject.SetActive(false);
+            shootButton.gameObject.SetActive(false);
+            joystick.gameObject.SetActive(false);
+        }
+#endif
+    }
+
     public void ClickButtonShoot()
     {
         btnPressShoot = true;
