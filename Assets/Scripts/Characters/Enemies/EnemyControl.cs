@@ -104,7 +104,7 @@ public class EnemyControl : MonoBehaviour
                     animator.SetBool("isAttacking_2", false);
 
                     if (rb)
-                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
                     shotTime = shotTime + Time.deltaTime;
 
@@ -127,7 +127,7 @@ public class EnemyControl : MonoBehaviour
                     animator.SetBool("isAttacking", false);
 
                    if (rb && !canMelee)
-                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                     else
                         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
