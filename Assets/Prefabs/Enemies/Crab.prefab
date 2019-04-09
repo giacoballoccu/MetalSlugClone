@@ -146,12 +146,13 @@ MonoBehaviour:
   projSpawner: {fileID: 0}
   throwableObj: {fileID: 0}
   canThrow: 0
-  activationDistance: 1.8
+  activationDistance: 2
   attackDistance: 0.5
   meleeDistance: 0.5
   facingRight: 0
   collidingDown: 0
   fireDelta: 0.5
+  rangedDelta: 2
 --- !u!61 &248927552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 300
   health: 0
 --- !u!114 &4917731817273997411
 MonoBehaviour:

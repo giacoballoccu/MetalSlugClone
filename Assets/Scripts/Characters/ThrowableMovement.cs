@@ -6,7 +6,7 @@ public class ThrowableMovement : MonoBehaviour
 {
     [Header("Throwable Details")]
     private float throwableDamagePlayer = 300f;
-    private float throwableDamageEnemy = 25f;
+    private float throwableDamageEnemy = 10f;
     private float throwableDamageBoss = 25f;
     private float throwableDamageHeavybomb = 50f;
     public float throwableForce = 2.5f;

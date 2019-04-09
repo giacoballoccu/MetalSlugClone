@@ -16,7 +16,6 @@ public class SunkBoatOpenDoor : MonoBehaviour
         {
             isDone = true;
             sunkBoat.GetComponent<SunkBoatController>().OpenDoor();
-            Destroy(gameObject);
         }
     }
 }

@@ -6,12 +6,12 @@ using Cinemachine;
 public class SunkBoatController : MonoBehaviour
 {
     public Animator doorAnimator;
+    public Animator explosion;
 
     void OnFinish()
     {
-        CameraManager.AfterSunkBoat();
-        this.gameObject.SetActive(false);
-    }
+        StartCoroutine(WaitExplosion());
+            }
 
     public void OpenDoor()
     {
@@ -19,5 +19,14 @@ public class SunkBoatController : MonoBehaviour
 
         GetComponent<EventSpawn>().onFinish += OnFinish;
         GetComponent<EventSpawn>().Trigger();
+    }
+
+    private IEnumerator WaitExplosion()
+    {
+        yield return new WaitForSeconds(.2f);
+        explosion.SetBool("isExploding", true);
+        yield return new WaitForSeconds(1.7f);
+        this.gameObject.SetActive(false);
+        CameraManager.AfterSunkBoat();
     }
 }

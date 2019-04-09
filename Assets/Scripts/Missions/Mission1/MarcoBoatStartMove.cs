@@ -126,6 +126,10 @@ public class MarcoBoatStartMove : MonoBehaviour
             isStarted = true;
             collision.gameObject.transform.parent = boat.transform;
         }
+        if (collision.CompareTag("Enemy"))
+        {
+            collision.gameObject.transform.parent = boat.transform;
+        }
 
         
     }

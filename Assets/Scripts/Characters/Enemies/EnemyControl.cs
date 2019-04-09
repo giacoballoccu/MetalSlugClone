@@ -37,6 +37,7 @@ public class EnemyControl : MonoBehaviour
     private float shotTime = 0.0f;
     public float fireDelta = 0.5f;
     private float nextFire = 0.5f;
+    public float rangedDelta = 2f;
 
     private bool canFall = false;
 
@@ -135,7 +136,7 @@ public class EnemyControl : MonoBehaviour
 
                     if (shotTime > nextFire)
                     {
-                        nextFire = shotTime + fireDelta;
+                        nextFire = shotTime + rangedDelta;
 
                         StartCoroutine(WaitSecondaryAttack());
 
@@ -243,7 +244,7 @@ public class EnemyControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Walkable"))
+        if (collision.collider.CompareTag("Walkable") || collision.collider.CompareTag("Marco Boat"))
         {
             collidingDown = true;
         }
@@ -251,7 +252,7 @@ public class EnemyControl : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Walkable"))
+        if (collision.collider.CompareTag("Walkable") || collision.collider.CompareTag("Marco Boat"))
         {
             collidingDown = false;
         }

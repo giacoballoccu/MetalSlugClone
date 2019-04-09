@@ -67,6 +67,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5665392374265219019, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300128, guid: d465deada5b159d4cb0e5584a4b3ffe3,
+        type: 3}
+    - target: {fileID: 5665392374265219018, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665392374265219017, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665392374265219017, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 5665392374265219016, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
         type: 3}
       propertyPath: launcher
@@ -92,6 +113,16 @@ PrefabInstance:
       propertyPath: throwableSpawn
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5665392374265219016, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+        type: 3}
+      propertyPath: throwableForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858975334122688018, guid: 969c77ef74c77ee4e9f6a33b41a4fad4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0d099c4f0ae095642897c3214395b927, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
 --- !u!95 &1455509023390833923 stripped
