@@ -13,7 +13,9 @@ public class MobileManager : MonoBehaviour
     bool btnPressGrenade;
     bool btnPressShoot;
     bool btnPressJump;
+#if UNITY_STANDALONE
     private bool forceOnStandalone = true;
+#endif
 
     void Awake()
     {
