@@ -36,7 +36,7 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonGrenade()
     {
-        return current.btnPressGrenade;
+        return current.btnPressGrenade; // todo deleteme
 #if UNITY_STANDALONE
         return Input.GetKeyDown(KeyCode.G);
 #else
@@ -46,7 +46,7 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonFire1()
     {
-        return current.btnPressShoot;
+        return current.btnPressShoot; // todo deleteme
 #if UNITY_STANDALONE
         return Input.GetButton("Fire1");
 #else
@@ -56,7 +56,7 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonJump()
     {
-        return current.btnPressJump;
+        return current.btnPressJump; // todo deleteme
 #if UNITY_STANDALONE
         return Input.GetButton("Jump");
 #else
@@ -73,31 +73,31 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonCrouch()
     {
+        return current.joystick.Vertical < -0.6f; // todo deleteme
 #if UNITY_STANDALONE
-        return current.joystick.Vertical < -0.6f;
         return Input.GetButton("Crouch");
 #else
-        return instance.joystick.Vertical < -0.6f;
+        return current.joystick.Vertical < -0.6f;
 #endif
     }
 
     static public float GetAxisHorizontal()
     {
+        return current.joystick.Horizontal; // todo deleteme
 #if UNITY_STANDALONE
-        return current.joystick.Horizontal;
         return Input.GetAxis("Horizontal");
 #else
-        return instance.joystick.Horizontal;
+        return current.joystick.Horizontal;
 #endif
     }
 
     static public float GetAxisVertical()
     {
+        return current.joystick.Vertical; // todo deleteme
 #if UNITY_STANDALONE
-        return current.joystick.Vertical;
         return Input.GetAxis("Vertical");
 #else
-        return instance.joystick.Vertical;
+        return current.joystick.Vertical;
 #endif
     }
 }
