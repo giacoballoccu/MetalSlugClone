@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266d5e8f8da8eb94da41b981df86e79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heli: {fileID: 1404301092065223393, guid: 234b987bb4471c942b5f01e60abeb02c, type: 3}
+  heliPrefab: {fileID: 1404301092065223393, guid: 234b987bb4471c942b5f01e60abeb02c,
+    type: 3}

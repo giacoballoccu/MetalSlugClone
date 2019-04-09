@@ -153,14 +153,13 @@ public class HeliController : MonoBehaviour
 
     private void OnDead(float damage)
     {
+        HeliManager.HeliDestroy(gameObject);
         StartCoroutine(Die());
     }
 
     private IEnumerator Die()
     {
         //PlayDeathAudio();
-
-        HeliManager.HeliKilled();
 
         animator.SetBool("isDying", true);
         if (rb)

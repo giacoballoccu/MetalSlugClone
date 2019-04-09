@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class HeliManager : MonoBehaviour
 {
-    public static int nHeli = 5;
-    public GameObject heli;
+    public int maxHeli = 5;
+    public GameObject heliPrefab;
 
-    static ArrayList heliList = new ArrayList();
+    public static List<GameObject> heliList = new List<GameObject>();
     private float secondsWait = 0;
 
     // Start is called before the first frame update
@@ -18,40 +18,31 @@ public class HeliManager : MonoBehaviour
 
     void Initialize()
     {
-        for (int i = 0; i < nHeli; i++)
+        for (int i = 0; i < maxHeli; i++)
         {
             StartCoroutine(WaitHeli(i == 0));
             secondsWait += 1.5f;
         }
     }
 
+    static public void HeliDestroy(GameObject gameObject)
+    {
+        heliList.Remove(gameObject);
+        SetMainHeliShooter();
+    }
+
+    static public void SetMainHeliShooter()
+    {
+        if (heliList.Count > 0)
+            SetFire(heliList[0]);
+    }
+
     private IEnumerator WaitHeli(bool first)
     {
         yield return new WaitForSeconds(secondsWait);
-        GameObject instantiated = Instantiate(heli, transform.position, transform.rotation, transform);
-        heliList.Add(instantiated);
-
-        if (first)
-            SetFire(instantiated);
-    }
-
-    public static void HeliKilled()
-    {
-        for (int i = 0; i < nHeli; i++)
-        {
-            try
-            {
-                if (IsAlive((GameObject)heliList[i]))
-                {
-                    SetFire((GameObject)heliList[i]);
-                    break;
-                }
-            }
-            catch (System.IndexOutOfRangeException /*io*/)
-            {
-
-            }
-        }
+        GameObject heli = Instantiate(heliPrefab, transform.position, transform.rotation, transform);
+        heliList.Add(heli);
+        SetMainHeliShooter();
     }
 
     static bool IsAlive(GameObject heli)
