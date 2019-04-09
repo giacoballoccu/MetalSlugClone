@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7798452772417471664}
   - component: {fileID: 7798452772417471665}
   - component: {fileID: 7798452772417471667}
-  - component: {fileID: 8013614219263715172}
+  - component: {fileID: 1284297018}
   m_Layer: 9
   m_Name: Boss3
   m_TagString: Enemy
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30000
+  maxHealth: 12000
   health: 0
 --- !u!114 &7798452772417471671
 MonoBehaviour:
@@ -176,7 +176,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &8013614219263715172
+--- !u!95 &1284297018
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
