@@ -622,6 +622,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
+      propertyPath: bossSpawner
+      value: 
+      objectReference: {fileID: 503088114}
+    - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
       propertyPath: boat
       value: 
       objectReference: {fileID: 1930952383}
@@ -633,10 +637,6 @@ PrefabInstance:
       propertyPath: runningTarget
       value: 
       objectReference: {fileID: 46880571}
-    - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
-      propertyPath: bossSpawner
-      value: 
-      objectReference: {fileID: 503088114}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
 --- !u!1001 &200841295
