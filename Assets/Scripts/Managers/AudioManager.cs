@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Voice")]
     public AudioClip levelStart;
+    public AudioClip levelComplete;
 
     [Header("Menu")]
     public AudioClip charSelect; // char selection
@@ -122,6 +123,17 @@ public class AudioManager : MonoBehaviour
 
         //Play the initial level voice
         current.voiceSource.clip = current.levelStart;
+        current.voiceSource.Play();
+    }
+
+    public static void PlayLevelCompleteAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Play the initial level voice
+        current.voiceSource.clip = current.levelComplete;
         current.voiceSource.Play();
     }
 

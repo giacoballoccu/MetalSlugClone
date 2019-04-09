@@ -243,7 +243,8 @@ public class GameManager : MonoBehaviour
             return;
 
         UIManager.DisplayWinText();
-        //AudioManager.PlayGameOverAudio();
+        AudioManager.PlayLevelCompleteAudio();
+        AudioManager.PlayGameOverAudio();
 
         current.isGameOver = true;
 
@@ -469,7 +470,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator WaitNextMission()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
 
         // currentMission is updated in the PlayerWin method
         SceneManager.LoadScene((int) current.currentMission);
