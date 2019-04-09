@@ -13,6 +13,7 @@ public class MobileManager : MonoBehaviour
     bool btnPressGrenade;
     bool btnPressShoot;
     bool btnPressJump;
+    private bool forceOnStandalone = true;
 
     void Awake()
     {
@@ -36,8 +37,12 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonGrenade()
     {
-        return current.btnPressGrenade; // todo deleteme
+        if (!current)
+            return false;
+
 #if UNITY_STANDALONE
+        if (current.forceOnStandalone)
+           return current.btnPressGrenade;
         return Input.GetKeyDown(KeyCode.G);
 #else
         return current.btnPressGrenade;
@@ -46,8 +51,12 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonFire1()
     {
-        return current.btnPressShoot; // todo deleteme
+        if (!current)
+            return false;
+
 #if UNITY_STANDALONE
+        if (current.forceOnStandalone)
+            return current.btnPressShoot;
         return Input.GetButton("Fire1");
 #else
         return current.btnPressShoot;
@@ -56,8 +65,12 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonJump()
     {
-        return current.btnPressJump; // todo deleteme
+        if (!current)
+            return false;
+
 #if UNITY_STANDALONE
+        if (current.forceOnStandalone)
+            return current.btnPressJump;
         return Input.GetButton("Jump");
 #else
         return current.btnPressJump;
@@ -73,8 +86,12 @@ public class MobileManager : MonoBehaviour
 
     static public bool GetButtonCrouch()
     {
-        return current.joystick.Vertical < -0.6f; // todo deleteme
+        if (!current)
+            return false;
+
 #if UNITY_STANDALONE
+        if (current.forceOnStandalone)
+            return current.joystick.Vertical < -0.6f;
         return Input.GetButton("Crouch");
 #else
         return current.joystick.Vertical < -0.6f;
@@ -83,8 +100,12 @@ public class MobileManager : MonoBehaviour
 
     static public float GetAxisHorizontal()
     {
-        return current.joystick.Horizontal; // todo deleteme
+        if (!current)
+            return 0;
+
 #if UNITY_STANDALONE
+        if (current.forceOnStandalone)
+            return current.joystick.Horizontal;
         return Input.GetAxis("Horizontal");
 #else
         return current.joystick.Horizontal;
@@ -93,8 +114,12 @@ public class MobileManager : MonoBehaviour
 
     static public float GetAxisVertical()
     {
-        return current.joystick.Vertical; // todo deleteme
+        if (!current)
+            return 0;
+
 #if UNITY_STANDALONE
+        if (current.forceOnStandalone)
+            return current.joystick.Vertical;
         return Input.GetAxis("Vertical");
 #else
         return current.joystick.Vertical;
