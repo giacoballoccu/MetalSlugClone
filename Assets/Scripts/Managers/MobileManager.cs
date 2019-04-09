@@ -35,6 +35,13 @@ public class MobileManager : MonoBehaviour
 #endif
     }
 
+    void LateUpdate()
+    {
+        btnPressShoot = false;
+        btnPressJump = false;
+        btnPressGrenade = false;
+    }
+
     public void ClickButtonShoot()
     {
         btnPressShoot = true;
@@ -50,6 +57,11 @@ public class MobileManager : MonoBehaviour
         btnPressGrenade = true;
     }
 
+    bool _GetButtonGrenade()
+    {
+        return btnPressGrenade;
+    }
+
     static public bool GetButtonGrenade()
     {
         if (!current)
@@ -57,11 +69,16 @@ public class MobileManager : MonoBehaviour
 
 #if UNITY_STANDALONE
         if (current.forceOnStandalone)
-           return current.btnPressGrenade;
+           return current._GetButtonGrenade();
         return Input.GetKeyDown(KeyCode.G);
 #else
-        return current.btnPressGrenade;
+        return current._GetButtonGrenade();
 #endif
+    }
+
+    bool _GetButtonFire1()
+    {
+        return btnPressShoot;
     }
 
     static public bool GetButtonFire1()
@@ -71,11 +88,16 @@ public class MobileManager : MonoBehaviour
 
 #if UNITY_STANDALONE
         if (current.forceOnStandalone)
-            return current.btnPressShoot;
+            return current._GetButtonFire1();
         return Input.GetButton("Fire1");
 #else
-        return current.btnPressShoot;
+        return current._GetButtonFire1();
 #endif
+    }
+
+    bool _GetButtonJump()
+    {
+        return btnPressJump;
     }
 
     static public bool GetButtonJump()
@@ -85,18 +107,16 @@ public class MobileManager : MonoBehaviour
 
 #if UNITY_STANDALONE
         if (current.forceOnStandalone)
-            return current.btnPressJump;
+            return current._GetButtonJump();
         return Input.GetButton("Jump");
 #else
-        return current.btnPressJump;
+        return current._GetButtonJump();
 #endif
     }
 
-    void LateUpdate()
+    bool _GetButtonCrouch()
     {
-        btnPressShoot = false;
-        btnPressJump = false;
-        btnPressGrenade = false;
+        return joystick.Vertical < -0.5f;
     }
 
     static public bool GetButtonCrouch()
@@ -106,11 +126,18 @@ public class MobileManager : MonoBehaviour
 
 #if UNITY_STANDALONE
         if (current.forceOnStandalone)
-            return current.joystick.Vertical < -0.6f;
+            return current._GetButtonCrouch();
         return Input.GetButton("Crouch");
 #else
-        return current.joystick.Vertical < -0.6f;
+        return current._GetButtonCrouch();
 #endif
+    }
+
+    float _GetAxisHorizontal()
+    {
+        if (Mathf.Abs(joystick.Horizontal) < 0.5f)
+            return 0;
+        return joystick.Horizontal;
     }
 
     static public float GetAxisHorizontal()
@@ -120,11 +147,18 @@ public class MobileManager : MonoBehaviour
 
 #if UNITY_STANDALONE
         if (current.forceOnStandalone)
-            return current.joystick.Horizontal;
+            return current._GetAxisHorizontal();
         return Input.GetAxis("Horizontal");
 #else
-        return current.joystick.Horizontal;
+        return current._GetAxisHorizontal();
 #endif
+    }
+
+    float _GetAxisVertical()
+    {
+        if (Mathf.Abs(joystick.Vertical) < 0.5f)
+            return 0;
+        return joystick.Vertical;
     }
 
     static public float GetAxisVertical()
@@ -134,10 +168,10 @@ public class MobileManager : MonoBehaviour
 
 #if UNITY_STANDALONE
         if (current.forceOnStandalone)
-            return current.joystick.Vertical;
+            return current._GetAxisVertical();
         return Input.GetAxis("Vertical");
 #else
-        return current.joystick.Vertical;
+        return current._GetAxisVertical();
 #endif
     }
 }
