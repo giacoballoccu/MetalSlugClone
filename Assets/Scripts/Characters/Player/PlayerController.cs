@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
     private bool asObjUp = false;
 
     public GameObject foreground;
-    public new Camera camera;
 
     public enum CollectibleType
     {
@@ -274,9 +273,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    bool IsOutsideScreen()
+    {
+        //Return a value between [0;1] - 0.5 if the player is in the mid of the camera
+        var playerVPPos = Camera.main.WorldToViewportPoint(transform.position);
+
+        //Control if the camera is out of the sprite map
+        if ((playerVPPos.x < 0.03f || playerVPPos.x > 1 - 0.03f))
+            return true;
+        return false;
+    }
+
     void MoveHorizontally()
     {
         float moveH = Input.GetAxis("Horizontal");
+        if (IsOutsideScreen())
+            return;
 
         if (moveH != 0 && !(bottomAnimator.GetBool("isCrouched") && topAnimator.GetBool("isFiring")))
         {
