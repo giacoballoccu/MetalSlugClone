@@ -104,7 +104,7 @@ public class EnemyControl : MonoBehaviour
                     animator.SetBool("isAttacking_2", false);
 
                     if (rb)
-                        rb.isKinematic = true;
+                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
                     shotTime = shotTime + Time.deltaTime;
 
@@ -126,10 +126,10 @@ public class EnemyControl : MonoBehaviour
                     animator.SetBool("isAttacking_2", true);
                     animator.SetBool("isAttacking", false);
 
-                    if (rb && !canMelee)
-                        rb.isKinematic = true;
+                   if (rb && !canMelee)
+                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
                     else
-                        rb.isKinematic = false;
+                        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                     shotTime = shotTime + Time.deltaTime;
 
@@ -148,7 +148,7 @@ public class EnemyControl : MonoBehaviour
                     //Move to the player
                     if (rb && isMovable)
                     {
-                        rb.isKinematic = false;
+                        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                         if (collidingDown)
                         {
                             rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
@@ -241,7 +241,7 @@ public class EnemyControl : MonoBehaviour
             AudioManager.PlayEnemyDeathAudio(deathClip);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Walkable"))
         {
@@ -254,7 +254,6 @@ public class EnemyControl : MonoBehaviour
         if (collision.collider.CompareTag("Walkable"))
         {
             collidingDown = false;
-            Debug.Log("exit");
         }
     }
 

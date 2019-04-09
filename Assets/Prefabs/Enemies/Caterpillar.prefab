@@ -88,7 +88,7 @@ MonoBehaviour:
   attackDistance: 1
   meleeDistance: 1
   facingRight: 0
-  collidingDown: 1
+  collidingDown: 0
   fireDelta: 0.5
 --- !u!50 &2206515877999296332
 Rigidbody2D:
@@ -110,7 +110,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &2206515877999296335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
