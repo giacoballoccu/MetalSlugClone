@@ -106,7 +106,6 @@ public class EnemyControl : MonoBehaviour
                     if (rb)
                         rb.isKinematic = true;
 
-
                     shotTime = shotTime + Time.deltaTime;
 
                     if (shotTime > nextFire)
@@ -242,7 +241,7 @@ public class EnemyControl : MonoBehaviour
             AudioManager.PlayEnemyDeathAudio(deathClip);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Walkable"))
         {
@@ -255,6 +254,7 @@ public class EnemyControl : MonoBehaviour
         if (collision.collider.CompareTag("Walkable"))
         {
             collidingDown = false;
+            Debug.Log("exit");
         }
     }
 
