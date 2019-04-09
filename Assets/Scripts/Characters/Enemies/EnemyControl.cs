@@ -30,7 +30,7 @@ public class EnemyControl : MonoBehaviour
     public bool facingRight = false;
 
     //Enemy gravity
-    private bool collidingDown = false;
+    public bool collidingDown = false;
     Vector2 velocity = Vector2.zero;
 
     [Header("Time shoot")]
@@ -95,7 +95,7 @@ public class EnemyControl : MonoBehaviour
                 animator.SetBool("isFalling", !collidingDown);
 
             float playerDistance = transform.position.x - followPlayer.transform.position.x;
-            if (playerDistance < activationDistance)
+            if (playerDistance < activationDistance && collidingDown)
             {
                 if (Mathf.Abs(playerDistance) <= meleeDistance && canMelee)
                 {
@@ -154,12 +154,10 @@ public class EnemyControl : MonoBehaviour
                         {
                             rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
                         }
-                        else
+                        /*else
                         {
-                            //velocity.y -= 9.81f * Time.deltaTime;
-                            //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
                             rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
-                        }
+                        }*/
 
                         animator.SetBool("isWalking", true);
                         animator.SetBool("isAttacking", false);
@@ -252,7 +250,7 @@ public class EnemyControl : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Walkable"))
         {
