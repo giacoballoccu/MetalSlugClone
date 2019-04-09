@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: runningTarget
       value: 
       objectReference: {fileID: 46880571}
+    - target: {fileID: 992930804, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
+      propertyPath: bossSpawner
+      value: 
+      objectReference: {fileID: 503088114}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b49f14e64d1f4ab10f08330ca0706, type: 3}
 --- !u!1001 &200841295
@@ -1535,6 +1539,36 @@ MonoBehaviour:
     type: 3}
   spawnPoints: {fileID: 2089031680}
   spawnDelay: 0.4
+--- !u!1 &503088113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503088114}
+  m_Layer: 0
+  m_Name: BossSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503088114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503088113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1365498234}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2431320819883578260, guid: b7f8e7b35f7be624e80727a89ad67fae,
@@ -4158,6 +4192,7 @@ Transform:
   - {fileID: 992930803}
   - {fileID: 1330533787}
   - {fileID: 46880570}
+  - {fileID: 503088114}
   m_Father: {fileID: 1062245213}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7842,16 +7877,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7912686890776455077, guid: d957822e884ea974d9441386b3a76460,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7912686890776455077, guid: d957822e884ea974d9441386b3a76460,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7013612830988032838, guid: d957822e884ea974d9441386b3a76460,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -8002,6 +8027,16 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1678862845}
+    - target: {fileID: 7912686890776455077, guid: d957822e884ea974d9441386b3a76460,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912686890776455077, guid: d957822e884ea974d9441386b3a76460,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2852645190868205859, guid: d957822e884ea974d9441386b3a76460,
         type: 3}
       propertyPath: m_IsActive

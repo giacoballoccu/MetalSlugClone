@@ -13,6 +13,7 @@ public class BossController : MonoBehaviour
     private Health health;
     private float maxHealth = 10000;
     private BlinkingSprite blinkingSprite;
+    public Transform bossSpawner;
     public GameObject projSpawner;
     private float spawnOffsetUp = 0.05f;
 
@@ -71,7 +72,7 @@ public class BossController : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        if (!isSpawned && followPlayer.transform.position.x >= 44.6f)
+        if (!isSpawned && followPlayer.transform.position.x >= bossSpawner.position.x)
         {
             isSpawned = true;
             parallax.setActive(false);

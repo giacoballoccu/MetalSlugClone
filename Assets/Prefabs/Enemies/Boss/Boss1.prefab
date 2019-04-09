@@ -442,6 +442,7 @@ MonoBehaviour:
   attackDamage: 10
   isMovable: 1
   deathClip: {fileID: 0}
+  bossSpawner: {fileID: 0}
   projSpawner: {fileID: 1317732850}
   boat: {fileID: 0}
   speed: 0.25
