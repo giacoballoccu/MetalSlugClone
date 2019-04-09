@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Melee")]
     public float meleeDistance = 0.4f;
-    public float damageMelee = 1000f;
+    public float damageMelee = 200f;
 
     private Health health;
     private bool asObjUp = false;
@@ -547,6 +547,12 @@ public class PlayerController : MonoBehaviour
     private RaycastHit2D MeleeRay()
     {
         Vector2 startPos = transform.position;
+
+        if (topAnimator.GetBool("isCrouched"))
+        {
+            startPos = bottom.transform.position;
+        }
+
         float distance = meleeDistance;
         LayerMask layerMask = GameManager.GetEnemyLayer();
         Vector2 direction = (facingRight) ? transform.right : -transform.right;

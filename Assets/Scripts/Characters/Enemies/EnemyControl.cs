@@ -30,7 +30,7 @@ public class EnemyControl : MonoBehaviour
     public bool facingRight = false;
 
     //Enemy gravity
-    private bool collidingDown = false;
+    public bool collidingDown = false;
     Vector2 velocity = Vector2.zero;
 
     [Header("Time shoot")]
@@ -95,7 +95,7 @@ public class EnemyControl : MonoBehaviour
                 animator.SetBool("isFalling", !collidingDown);
 
             float playerDistance = transform.position.x - followPlayer.transform.position.x;
-            if (playerDistance < activationDistance)
+            if (playerDistance < activationDistance && collidingDown)
             {
                 if (Mathf.Abs(playerDistance) <= meleeDistance && canMelee)
                 {
@@ -104,8 +104,7 @@ public class EnemyControl : MonoBehaviour
                     animator.SetBool("isAttacking_2", false);
 
                     if (rb)
-                        rb.isKinematic = true;
-
+                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
                     shotTime = shotTime + Time.deltaTime;
 
@@ -113,7 +112,9 @@ public class EnemyControl : MonoBehaviour
                     {
                         nextFire = shotTime + fireDelta;
 
-                        followPlayer.GetComponent<Health>().Hit(attackDamage);
+                        //Attack player only if it's on the same height
+                        if(transform.position.y + (GetComponent<SpriteRenderer>().bounds.size.y/2) > followPlayer.transform.position.y - 0.5f)
+                            followPlayer.GetComponent<Health>().Hit(attackDamage);
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
@@ -125,10 +126,10 @@ public class EnemyControl : MonoBehaviour
                     animator.SetBool("isAttacking_2", true);
                     animator.SetBool("isAttacking", false);
 
-                    if (rb && !canMelee)
-                        rb.isKinematic = true;
+                   if (rb && !canMelee)
+                        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
                     else
-                        rb.isKinematic = false;
+                        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                     shotTime = shotTime + Time.deltaTime;
 
@@ -147,17 +148,15 @@ public class EnemyControl : MonoBehaviour
                     //Move to the player
                     if (rb && isMovable)
                     {
-                        rb.isKinematic = false;
+                        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                         if (collidingDown)
                         {
                             rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y) * Time.deltaTime);
                         }
-                        else
+                        /*else
                         {
-                            //velocity.y -= 9.81f * Time.deltaTime;
-                            //rb.MovePosition(new Vector2(transform.position.x, velocity.y));
                             rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
-                        }
+                        }*/
 
                         animator.SetBool("isWalking", true);
                         animator.SetBool("isAttacking", false);
@@ -250,7 +249,7 @@ public class EnemyControl : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Walkable"))
         {

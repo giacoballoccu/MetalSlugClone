@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1000
   health: 0
 --- !u!114 &2206515877999296322
 MonoBehaviour:
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fda677e83efc34abfaf1b74f3144b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.8
   attackDamage: 10
   isMovable: 1
   canMelee: 1
@@ -84,10 +84,11 @@ MonoBehaviour:
   projSpawner: {fileID: 0}
   throwableObj: {fileID: 0}
   canThrow: 0
-  activationDistance: 1.8
-  attackDistance: 0.7
+  activationDistance: 3.5
+  attackDistance: 1
   meleeDistance: 1
   facingRight: 0
+  collidingDown: 0
   fireDelta: 0.5
 --- !u!50 &2206515877999296332
 Rigidbody2D:
@@ -109,7 +110,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &2206515877999296335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -124,7 +125,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.67, y: 0.74}
+  m_Size: {x: 1.67, y: 0.79}
   m_Direction: 1
 --- !u!212 &2206515877999296334
 SpriteRenderer:
