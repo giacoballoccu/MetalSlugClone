@@ -14,15 +14,15 @@ public class GameManager : MonoBehaviour
     //scripts access this one through its public static methods
     static GameManager current;
 
-    enum Df {Easy = 1, Medium, Hard }
-    enum Missions { Home = 0, Mission1, Mission2, Mission3, Mission3Boss }
+    public enum Difficulty {Easy = 1, Medium = 2, Hard = 3 }
+    public enum Missions { Home = 0, Mission1, Mission2, Mission3, Mission3Boss }
 
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
     int bombs = 200;
     int heavyMachineAmmo = 0;
-    int difficulty = (int) Df.Medium;
+    Difficulty difficulty = Difficulty.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
     Missions currentMission = Missions.Home;
@@ -340,14 +340,19 @@ public class GameManager : MonoBehaviour
         return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof" || tag == "Bridge" || tag == "EnemyBomb";
     }
 
-    public static void SetDifficultyMode(int difficulty)
+    public void SetDifficultyMode(int difficulty)
+    {
+        SetDifficultyMode((Difficulty)difficulty);
+    }
+
+    public static void SetDifficultyMode(Difficulty difficulty)
     {
         if (current == null)
             return;
         current.difficulty = difficulty;
     }
 
-    public static int GetDifficultyMode()
+    public static Difficulty GetDifficultyMode()
     {
         if (current == null)
             return 0;
