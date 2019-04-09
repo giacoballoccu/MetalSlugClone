@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 348205582986890892}
   - component: {fileID: 348205582986890893}
   - component: {fileID: 348205582986890894}
+  - component: {fileID: 1484372628238204579}
   m_Layer: 5
   m_Name: Mobile Canvas
   m_TagString: Untagged
@@ -102,6 +103,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1484372628238204579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348205582986890895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6bdf4e76ae5e74490218138890e5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadeButton: {fileID: 348205583127616923}
+  jumpButton: {fileID: 348205583361001113}
+  shootButton: {fileID: 348205583061204919}
+  joystick: {fileID: 8482288779606530533}
 --- !u!1 &348205583061204913
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,15 +620,15 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18,
         type: 3}
+      propertyPath: m_Color.a
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 48c0d4d6bebaa934384b07aa1e2f8184,
         type: 3}
-    - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.18039216
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
 --- !u!224 &8482288779606530528 stripped
@@ -620,3 +637,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 348205583579850724}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8482288779606530533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18,
+    type: 3}
+  m_PrefabInstance: {fileID: 348205583579850724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
