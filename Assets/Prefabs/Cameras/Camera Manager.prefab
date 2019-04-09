@@ -52,6 +52,7 @@ MonoBehaviour:
   vcamZ2A: {fileID: 0}
   vcamZ2B: {fileID: 0}
   vcamZ2C: {fileID: 0}
+  vcamZ3A: {fileID: 0}
 --- !u!1001 &737309954454691742
 PrefabInstance:
   m_ObjectHideFlags: 0
