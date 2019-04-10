@@ -24,7 +24,6 @@ public class EnemyControl : MonoBehaviour
     public float attackDistance = 0.7f;         //Far attack
     public float meleeDistance = 0.5f;          //Near attack
     public const float CHANGE_SIGN = -1;
-
     private Rigidbody2D rb;
     private Animator animator;
     public bool facingRight = false;
@@ -87,8 +86,6 @@ public class EnemyControl : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-
         if (health.IsAlive())
         {
             FlipShoot();
@@ -113,8 +110,8 @@ public class EnemyControl : MonoBehaviour
                     {
                         nextFire = shotTime + fireDelta;
 
-                        //Attack player only if it's on the same height
-                        if(transform.position.y + (GetComponent<SpriteRenderer>().bounds.size.y/2) > followPlayer.transform.position.y - 0.5f)
+                        // check also the correct height
+                        if (Mathf.Abs(GetComponent<SpriteRenderer>().bounds.SqrDistance(followPlayer.transform.position)) <= meleeDistance)
                             followPlayer.GetComponent<Health>().Hit(attackDamage);
 
                         nextFire = nextFire - shotTime;
