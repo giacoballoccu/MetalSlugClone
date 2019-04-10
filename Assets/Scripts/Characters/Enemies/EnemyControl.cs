@@ -244,7 +244,7 @@ public class EnemyControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Walkable") || collision.collider.CompareTag("Marco Boat"))
+        if (collision.collider.CompareTag("Walkable") || collision.collider.CompareTag("Marco Boat") || collision.collider.CompareTag("Water Dead"))
         {
             collidingDown = true;
         }
@@ -262,7 +262,10 @@ public class EnemyControl : MonoBehaviour
             }
            
         }
-
+        else if (collision.collider.CompareTag("Water Dead"))
+        {
+            health.Hit(health.GetHealth());
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

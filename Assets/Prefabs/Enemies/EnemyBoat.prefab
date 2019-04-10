@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d5e4b37adf4bb41b2ef0f5a5b6aa07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 5000
   health: 0
 --- !u!114 &1870971872514360416
 MonoBehaviour:
@@ -614,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5914058515875551970}
   - component: {fileID: 4249985992914323480}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Platform
   m_TagString: Walkable
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
