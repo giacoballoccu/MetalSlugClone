@@ -247,7 +247,7 @@ MonoBehaviour:
   attackDamage: 10
   isMovable: 1
   canMelee: 0
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 3cac34f9c66625241b39ece8521fdcc1, type: 3}
   meleeAttackClip: {fileID: 0}
   rangeAttackClip: {fileID: 8300000, guid: 61524556bdb582a46a93dd00128546f7, type: 3}
   projSpawner: {fileID: 1235081829868409212}
