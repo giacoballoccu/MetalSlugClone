@@ -97,7 +97,7 @@ public class ThrowableMovement : MonoBehaviour
     //Destroy the bulled when out of camera
     private void OnBecameInvisible()
     {
-               Despawn();
+        Despawn();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -50,7 +50,7 @@ public class Health : MonoBehaviour
 
     public void Hit(float damage)
     {
-        if (!IsAlive()) // skip already dead
+        if (!IsAlive() || GameManager.IsGameOver()) // skip already dead or gameover
             return;
 
         if (isPlayer) // only if player
