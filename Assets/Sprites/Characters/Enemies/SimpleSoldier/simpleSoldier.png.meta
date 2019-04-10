@@ -1067,7 +1067,7 @@ TextureImporter:
       name: solder_bomb_2
       rect:
         serializedVersion: 2
-        x: 37
+        x: 38
         y: 1842
         width: 27
         height: 36
@@ -1087,7 +1087,7 @@ TextureImporter:
       name: solder_bomb_3
       rect:
         serializedVersion: 2
-        x: 73
+        x: 72
         y: 1842
         width: 28
         height: 36
@@ -1127,7 +1127,7 @@ TextureImporter:
       name: solder_bomb_5
       rect:
         serializedVersion: 2
-        x: 144
+        x: 143
         y: 1842
         width: 35
         height: 39
@@ -1147,7 +1147,7 @@ TextureImporter:
       name: solder_bomb_6
       rect:
         serializedVersion: 2
-        x: 189
+        x: 187
         y: 1842
         width: 40
         height: 42
@@ -1187,7 +1187,7 @@ TextureImporter:
       name: solder_bomb_8
       rect:
         serializedVersion: 2
-        x: 285
+        x: 290
         y: 1842
         width: 43
         height: 38
@@ -1207,7 +1207,7 @@ TextureImporter:
       name: solder_bomb_10
       rect:
         serializedVersion: 2
-        x: 337
+        x: 342
         y: 1841
         width: 36
         height: 42
@@ -1247,7 +1247,7 @@ TextureImporter:
       name: solder_bomb_13
       rect:
         serializedVersion: 2
-        x: 422
+        x: 423
         y: 1841
         width: 35
         height: 35
@@ -1267,7 +1267,7 @@ TextureImporter:
       name: solder_bomb_14
       rect:
         serializedVersion: 2
-        x: 468
+        x: 470
         y: 1841
         width: 29
         height: 34
@@ -1287,7 +1287,7 @@ TextureImporter:
       name: solder_bomb_15
       rect:
         serializedVersion: 2
-        x: 507
+        x: 510
         y: 1841
         width: 28
         height: 33
@@ -1307,7 +1307,7 @@ TextureImporter:
       name: solder_bomb_16
       rect:
         serializedVersion: 2
-        x: 545
+        x: 543
         y: 1842
         width: 29
         height: 36
@@ -1452,7 +1452,7 @@ TextureImporter:
         width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1472,7 +1472,7 @@ TextureImporter:
         width: 11
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1492,7 +1492,7 @@ TextureImporter:
         width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1512,7 +1512,7 @@ TextureImporter:
         width: 20
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1532,7 +1532,7 @@ TextureImporter:
         width: 17
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
