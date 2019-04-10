@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187ca6adb287e8e4280d52235bb60f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageBomb: 15
   vanBombAnimator: {fileID: 6000045305501160612}
   lifeTime: 5

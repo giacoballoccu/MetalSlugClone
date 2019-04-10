@@ -7,7 +7,7 @@ public class VanBombMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private float damageBomb = 5;
+    public float damageBomb = 15;
     public Animator vanBombAnimator;
     public float lifeTime = 5;
 

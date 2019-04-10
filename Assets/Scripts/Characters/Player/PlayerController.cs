@@ -600,11 +600,18 @@ public class PlayerController : MonoBehaviour
         switch (type)
         {
             case CollectibleType.HeavyMachineGun:
-                topAnimator.runtimeAnimatorController = machineGunAnimator;
-                bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
-                GameManager.SetHeavyMachineAmmo(120);
-                UIManager.UpdateAmmoUI();
-                haveMachineGun = true;
+                if (!haveMachineGun)
+                {
+                    topAnimator.runtimeAnimatorController = machineGunAnimator;
+                    bottomAnimator.runtimeAnimatorController = bottomMachineGunAnimator;
+                    GameManager.SetHeavyMachineAmmo(120);
+                    UIManager.UpdateAmmoUI();
+                    haveMachineGun = true;
+                }
+                else
+                {
+                    GameManager.RechargAmmoMG();
+                }
                 break;
             case CollectibleType.MedKit:
                 health.increaseHealth();
