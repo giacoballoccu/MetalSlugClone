@@ -54,6 +54,9 @@ MonoBehaviour:
   meleeTakeClip: {fileID: 8300000, guid: eab3630d1af2af54cb35b5f5a15c1471, type: 3}
   collectibleGrabClip: {fileID: 8300000, guid: 8059f21498c55404fab41460468c5f37, type: 3}
   grenadeGrabClip: {fileID: 8300000, guid: b34eab340273a9747b3b0b3f32b3fcc0, type: 3}
+  metalSlugDestroy1: {fileID: 8300000, guid: 37c0e789ea2b122409fce4db890a6d7d, type: 3}
+  metalSlugDestroy2: {fileID: 8300000, guid: 162dcaaadf6e9d4499e0519b2ce117ed, type: 3}
+  metalSlugDestroy3: {fileID: 8300000, guid: 611f50361f4885f49abe84cf6f46dd12, type: 3}
   levelStart: {fileID: 8300000, guid: 730989ad5611e9d48b1a770a7579587c, type: 3}
   levelComplete: {fileID: 8300000, guid: 5df41c472e810df4491c0a99b694c6d1, type: 3}
   heavyMachineGunGrab: {fileID: 8300000, guid: a4eacecbd1f9fa840bf92fa00f2f7631, type: 3}

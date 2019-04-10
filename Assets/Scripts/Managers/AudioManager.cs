@@ -28,6 +28,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip meleeTakeClip;
     public AudioClip collectibleGrabClip;
     public AudioClip grenadeGrabClip;
+    public AudioClip metalSlugDestroy1;
+    public AudioClip metalSlugDestroy2;
+    public AudioClip metalSlugDestroy3;
 
     [Header("Voice")]
     public AudioClip levelStart;
@@ -281,5 +284,29 @@ public class AudioManager : MonoBehaviour
             return;
         current.playerSource.clip = current.collectibleGrabClip;
         current.playerSource.Play();
+    }
+
+    public static void PlayMetalSlugDestroy1()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.metalSlugDestroy1;
+        current.effectSource.Play();
+    }
+
+    public static void PlayMetalSlugDestroy2()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.metalSlugDestroy2;
+        current.effectSource.Play();
+    }
+
+    public static void PlayMetalSlugDestroy3()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.metalSlugDestroy3;
+        current.effectSource.Play();
     }
 }
