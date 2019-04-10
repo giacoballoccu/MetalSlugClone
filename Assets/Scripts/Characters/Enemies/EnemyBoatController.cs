@@ -31,21 +31,26 @@ public class EnemyBoatController : MonoBehaviour
 
     private void Update()
     {
-        if(health.GetHealth() >= 1000)
+        if (health.GetHealth() >= 1000)
         {
             //Nothing
-        } else if (health.GetHealth() >= 750)
+        }
+        else if (health.GetHealth() >= 750)
         {
             front.SetActive(true);
+            AudioManager.PlayMetalSlugDestroy3();
         }
         else if (health.GetHealth() >= 500)
         {
             center.SetActive(true);
+            AudioManager.PlayMetalSlugDestroy1();
         }
         else if (health.GetHealth() >= 250)
         {
             back.SetActive(true);
-        } else if (!health.IsAlive())
+            AudioManager.PlayMetalSlugDestroy1();
+        }
+        else if (!health.IsAlive())
         {
             front.SetActive(false);
             center.SetActive(false);
@@ -53,6 +58,7 @@ public class EnemyBoatController : MonoBehaviour
 
             explosion.SetActive(true);
             explosion.GetComponent<Animator>().SetBool("isDying", true);
+            AudioManager.PlayMetalSlugDestroy2();
         }
     }
 

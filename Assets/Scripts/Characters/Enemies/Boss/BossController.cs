@@ -155,6 +155,7 @@ public class BossController : MonoBehaviour
 
     private IEnumerator Die()
     {
+        AudioManager.PlayMetalSlugDestroy3();
         animator.SetBool("isDying", true);
         if (rb)
             rb.isKinematic = true;
@@ -168,6 +169,7 @@ public class BossController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.8f);
+        AudioManager.PlayMetalSlugDestroy1();
         Destroy(gameObject);
     }
 
