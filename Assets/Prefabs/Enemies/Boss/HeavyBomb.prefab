@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77a56f16df983e4fb255f08182de1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwableForce: 3.5
+  throwableForce: 3.75
   launcher: 1
   throwable: 2
   canExplode: 1

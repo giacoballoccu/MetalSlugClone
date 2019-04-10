@@ -263,6 +263,11 @@ public class EnemyControl : MonoBehaviour
            
         }
 
+        if(collision.collider.CompareTag("Water Dead"))
+        {
+            StartCoroutine(Die());
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

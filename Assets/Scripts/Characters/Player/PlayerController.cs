@@ -500,11 +500,17 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             topAnimator.SetBool("isJumping", false);
             bottomAnimator.SetBool("isJumping", false);
-        } else if (col.gameObject.CompareTag("Water Dead"))
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log(collision.collider.tag);
+        if (collision.collider.CompareTag("Water Dead"))
         {
             health.Hit(100);
 
-            if (foreground != null) 
+            if (foreground != null)
                 gameObject.transform.parent = foreground.transform;
         }
     }
