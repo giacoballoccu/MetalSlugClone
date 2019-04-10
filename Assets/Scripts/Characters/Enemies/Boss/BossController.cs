@@ -246,13 +246,15 @@ public class BossController : MonoBehaviour
 
     private IEnumerator DestroyBridge(GameObject bridge)
     {
-
-        bridge.GetComponent<Animator>().SetBool("onDestroy", true);
-        yield return new WaitForSeconds(0.2f);
-        bridge.GetComponent<Collider2D>().enabled = false;
-        yield return new WaitForSeconds(1f);
-        bridge.GetComponent<Animator>().SetBool("onDestroy", false);
-        Destroy(bridge);
+        if (bridge)
+        {
+            bridge?.GetComponent<Animator>().SetBool("onDestroy", true);
+            yield return new WaitForSeconds(0.2f);
+            bridge.GetComponent<Collider2D>().enabled = false;
+            yield return new WaitForSeconds(1f);
+            bridge?.GetComponent<Animator>().SetBool("onDestroy", false);
+            Destroy(bridge);
+        }
     }
 
     private void OnDead(float damage)
