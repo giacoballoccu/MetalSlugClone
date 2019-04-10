@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac15555dbf7ce64d8acc943cbb2a90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyColor: {r: 0.9150943, g: 0.63720214, b: 0.06474723, a: 1}
   bulletForce: 2
   lifeTime: 5
   damageShot: 15

@@ -9,6 +9,7 @@ public class BulletMovement : MonoBehaviour
     private float expireTime;
     private bool isSpawned;
 
+    public Color enemyColor;
     public float bulletForce = 3;
     public float lifeTime = 5;
     public float damageShot = 100;
@@ -31,6 +32,8 @@ public class BulletMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(bulletDirection * bulletForce, ForceMode2D.Impulse);
         isSpawned = true;
+        if (launcher == LauncherType.Enemy)
+            GetComponent<SpriteRenderer>().color = enemyColor;
     }
 
     void Update()
