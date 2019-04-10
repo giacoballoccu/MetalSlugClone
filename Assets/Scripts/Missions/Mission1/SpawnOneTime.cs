@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class SpawnOneTime : MonoBehaviour
 {
+
+    public bool random = false;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (!random)
         {
-            GetComponent<EventSpawn>().Trigger();
-            GetComponent<Collider2D>().enabled = false;
+            if (collision.CompareTag("Player"))
+            {
+                GetComponent<EventSpawn>().Trigger();
+                GetComponent<Collider2D>().enabled = false;
+            }
         }
+        else
+        {
+            if (collision.CompareTag("Player"))
+            {
+                GetComponent<EventSpawn>().TriggerRandomCollectible();
+                GetComponent<Collider2D>().enabled = false;
+            }
+        }
+
 
     }
 }

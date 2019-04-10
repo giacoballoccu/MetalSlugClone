@@ -6,11 +6,11 @@ public class CollectibleController : MonoBehaviour
 {
     public PlayerController.CollectibleType type = PlayerController.CollectibleType.HeavyMachineGun;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerController>().getCollectible(type);
+            collision.collider.GetComponent<PlayerController>().getCollectible(type);
             Destroy(gameObject);
         }
     }
