@@ -27,10 +27,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip meleeHitClip;
     public AudioClip meleeTakeClip;
     public AudioClip collectibleGrabClip;
+    public AudioClip grenadeGrabClip;
 
     [Header("Voice")]
     public AudioClip levelStart;
     public AudioClip levelComplete;
+    public AudioClip heavyMachineGunGrab;
 
     [Header("Menu")]
     public AudioClip charSelect; // char selection
@@ -255,5 +257,29 @@ public class AudioManager : MonoBehaviour
         current.musicSource.clip = current.menuSound;
         current.musicSource.loop = true;
         current.musicSource.Play();
+    }
+
+    public static void PlayAmmoGrab()
+    {
+        if (current == null)
+            return;
+        current.playerSource.clip = current.grenadeGrabClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayHeavyMachineGunVoice()
+    {
+        if (current == null)
+            return;
+        current.voiceSource.clip = current.heavyMachineGunGrab;
+        current.voiceSource.Play();
+    }
+
+    public static void PlayMedKitGrab()
+    {
+        if (current == null)
+            return;
+        current.playerSource.clip = current.collectibleGrabClip;
+        current.playerSource.Play();
     }
 }

@@ -13,6 +13,18 @@ public class CollectibleController : MonoBehaviour
         {
             collision.collider.GetComponent<PlayerController>().getCollectible(type);
             GameManager.AddScore(collectiblePoints);
+            if (type==PlayerController.CollectibleType.Ammo) // collectible sound
+            {
+                AudioManager.PlayAmmoGrab();
+            }
+            else if (type == PlayerController.CollectibleType.HeavyMachineGun)
+            {
+                AudioManager.PlayHeavyMachineGunVoice();
+            }
+            else if (type == PlayerController.CollectibleType.MedKit)
+            {
+                AudioManager.PlayMedKitGrab();
+            }
             Destroy(gameObject);
         }
     }
