@@ -451,7 +451,19 @@ public class GameManager : MonoBehaviour
     {
         if (!current)
             return;
-        SceneManager.LoadScene(0);
+        LoadHome();
+    }
+
+    public static void LoadHome()
+    {
+        SceneManager.LoadScene((int)Missions.Home);
+        GameReset();
+    }
+
+    public static void LoadNextMission()
+    {
+        // currentMission is updated in the PlayerWin method
+        SceneManager.LoadScene((int)current.currentMission);
         GameReset();
     }
 
@@ -467,16 +479,12 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitHome()
     {
         yield return new WaitForSeconds(7f);
-        SceneManager.LoadScene(0);
-        GameReset();
+        LoadHome();
     }
 
     private IEnumerator WaitNextMission()
     {
         yield return new WaitForSeconds(7f);
-
-        // currentMission is updated in the PlayerWin method
-        SceneManager.LoadScene((int) current.currentMission);
-        GameReset();
+        LoadNextMission();
     }
 }
