@@ -43,8 +43,6 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-        RefreshAudioText();
-        RefreshPointsText();
         StartCoroutine("blinkStart");
     }
 
@@ -107,6 +105,7 @@ public class MenuManager : MonoBehaviour
 
     public void PressSettings()
     {
+        RefreshAudioText();
         settings.gameObject.SetActive(true);
         choose.gameObject.SetActive(false);
         currentMenu = settings;
@@ -117,6 +116,7 @@ public class MenuManager : MonoBehaviour
 
     public void PressStats()
     {
+        RefreshPointsText();
         stats.gameObject.SetActive(true);
         choose.gameObject.SetActive(false);
         currentMenu = stats;

@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
     {
         shotTime = shotTime + Time.deltaTime;
 
-        if (Input.GetButton("Fire1"))
+        if (MobileManager.GetButtonFire1())
         {
             if (!wasFiring)
             {
@@ -197,11 +197,9 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.GetBombs() > 0)
         {
-            
             shotTime = shotTime + Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.G))
+            if (MobileManager.GetButtonGrenade())
             {
-
                 GameManager.RemoveBomb();
                 if (!wasFiring2)
                 {
@@ -286,7 +284,7 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontally()
     {
-        float moveH = Input.GetAxis("Horizontal");
+        float moveH = MobileManager.GetAxisHorizontal();
         if (IsOutsideScreen())
             return;
 
@@ -317,8 +315,7 @@ public class PlayerController : MonoBehaviour
 
     void MoveVertically()
     {
-        float moveV = Input.GetAxis("Vertical");
-
+        float moveV = MobileManager.GetAxisVertical();
         if (moveV != 0)
         {
             //Yes
@@ -351,7 +348,7 @@ public class PlayerController : MonoBehaviour
 
         jumpTime = jumpTime + Time.deltaTime;
 
-        if (Input.GetButton("Jump") && isGrounded && !bottomAnimator.GetBool("isCrouched"))
+        if (MobileManager.GetButtonJump() && isGrounded && !bottomAnimator.GetBool("isCrouched"))
         {
             if (jumpTime > nextJump)
             {
@@ -370,7 +367,7 @@ public class PlayerController : MonoBehaviour
     void Crouch()
     {
         crouchTime = crouchTime + Time.deltaTime;
-        if (Input.GetButton("Crouch") && Input.GetButton("Jump") && isGrounded)
+        if (MobileManager.GetButtonCrouch() && MobileManager.GetButtonJump() && isGrounded)
         {
             isGrounded = false;
             if (crouchTime > nextCrouch)
@@ -391,7 +388,7 @@ public class PlayerController : MonoBehaviour
                 wasCrounching = true;
             }
         }
-        else if (Input.GetButton("Crouch") && !Input.GetButton("Jump") && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
+        else if (MobileManager.GetButtonCrouch() && !MobileManager.GetButtonJump() && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
         {
             if (crouchTime > nextCrouch)
             {
