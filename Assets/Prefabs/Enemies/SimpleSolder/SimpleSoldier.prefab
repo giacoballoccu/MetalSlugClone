@@ -150,8 +150,10 @@ MonoBehaviour:
   activationDistance: 2
   attackDistance: 1.5
   meleeDistance: 0.5
-  facingRight: 1
+  facingRight: 0
+  collidingDown: 0
   fireDelta: 0.5
+  rangedDelta: 3
 --- !u!61 &1622775180087630579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
+  health: 0
 --- !u!1 &1622775181327549391
 GameObject:
   m_ObjectHideFlags: 0

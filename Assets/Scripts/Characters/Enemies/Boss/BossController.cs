@@ -21,9 +21,9 @@ public class BossController : MonoBehaviour
     private bool isSpawned = false;
 
     [Header("Speeds")]
-    public float speed = 0.5f;
+    public float speed = 0.65f;
     private float chargingSpeed = 0f;
-    private float restSpeed = 0.15f;
+    private float restSpeed = 0.10f;
     private float sprintSpeed = 2f;
     private float initialSpeed = 0.5f;
     
@@ -207,17 +207,23 @@ public class BossController : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 followPlayer.GetComponent<Health>().Hit(attackDamage);
-                //followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
+                collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
+                
             }
 
-            if (collider.CompareTag("Walkable"))
-            {
-                //GameObject bridge = collider.gameObject;
-                //StartCoroutine(DestroyBridge(bridge));
-            }
+            
 
         }
         
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Walkable"))
+        {
+            GameObject bridge = collision.collider.gameObject;
+            StartCoroutine(DestroyBridge(bridge));
+        }
     }
 
     private IEnumerator WaitFire(GameObject throwableObj)
@@ -243,9 +249,9 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         runningTarget.SetRunning(true);
         speed = sprintSpeed;
-        yield return new WaitForSeconds(1.1f);
-        speed = restSpeed;
         yield return new WaitForSeconds(1.2f);
+        speed = restSpeed;
+        yield return new WaitForSeconds(1.5f);
         speed = initialSpeed;
         yield return new WaitForSeconds(5f); // wait until next possible sprint
         canSprint = true;

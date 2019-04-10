@@ -66,6 +66,11 @@ TextureImporter:
     21300122: solder_knife_4
     21300124: solder_knife_5
     21300126: solder_knife_6
+    21300128: granateflyingsoldier_1
+    21300130: granateflyingsoldier_2
+    21300132: granateflyingsoldier_3
+    21300134: granateflyingsoldier_4
+    21300136: granateflyingsoldier_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1434,6 +1439,106 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 586e393550c50444381ca685b48c4161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granateflyingsoldier_1
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1466
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fdad51c62b873439b7cfb83e728be0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granateflyingsoldier_2
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1466
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee2ab89c37f68d47993e36162b704bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granateflyingsoldier_3
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1466
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94145a8d78f64bb4bb42f60ff7128d02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granateflyingsoldier_4
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1468
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbde090c1f288f498f89aff9b79048c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granateflyingsoldier_5
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1468
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f813b5d4a038443a533b466e841a98
       vertices: []
       indices: 
       edges: []
