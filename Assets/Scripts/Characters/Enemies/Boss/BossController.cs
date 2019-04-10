@@ -209,14 +209,22 @@ public class BossController : MonoBehaviour
             if (collision.collider.CompareTag("Player") && collision.collider.transform.gameObject.name == "Player")
             {
                 followPlayer.GetComponent<Health>().Hit(attackDamage);
+<<<<<<< HEAD
                 followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
+=======
+                //followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
+>>>>>>> 972d3e12a3b4f9dd8d86f8b75536603b109cee07
                 
             }
 
             if (collision.collider.CompareTag("Enemy"))
             {
                 collision.collider.gameObject.GetComponent<Health>().onHit(attackDamage);
+<<<<<<< HEAD
                 collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(2f, 0f), ForceMode2D.Impulse);
+=======
+                collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
+>>>>>>> 972d3e12a3b4f9dd8d86f8b75536603b109cee07
             }
             
 
@@ -251,6 +259,10 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         bridge.GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(1f);
+<<<<<<< HEAD
+=======
+        bridge.GetComponent<Animator>().SetBool("onDestroy", false);
+>>>>>>> 972d3e12a3b4f9dd8d86f8b75536603b109cee07
         Destroy(bridge);
     }
 

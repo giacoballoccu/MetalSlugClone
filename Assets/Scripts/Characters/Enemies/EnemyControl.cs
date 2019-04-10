@@ -263,11 +263,14 @@ public class EnemyControl : MonoBehaviour
            
         }
 
+<<<<<<< HEAD
         if(collision.collider.CompareTag("Water Dead"))
         {
             StartCoroutine(Die());
         }
 
+=======
+>>>>>>> 972d3e12a3b4f9dd8d86f8b75536603b109cee07
     }
 
     private void OnCollisionExit2D(Collision2D collision)
