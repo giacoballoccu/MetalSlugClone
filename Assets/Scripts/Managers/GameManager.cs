@@ -184,7 +184,9 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.heavyMachineAmmo--;
+        current.heavyMachineAmmo -= 3;
+        if (current.heavyMachineAmmo < 0)
+            current.heavyMachineAmmo = 0;
         UIManager.UpdateAmmoUI();
     }
 
