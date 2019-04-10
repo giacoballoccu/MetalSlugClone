@@ -1347,7 +1347,7 @@ TextureImporter:
       name: solder_knife_2
       rect:
         serializedVersion: 2
-        x: 67
+        x: 66
         y: 1499
         width: 46
         height: 35
@@ -1367,7 +1367,7 @@ TextureImporter:
       name: solder_knife_3
       rect:
         serializedVersion: 2
-        x: 118
+        x: 124
         y: 1497
         width: 49
         height: 32
@@ -1387,7 +1387,7 @@ TextureImporter:
       name: solder_knife_4
       rect:
         serializedVersion: 2
-        x: 178
+        x: 177
         y: 1497
         width: 43
         height: 32
@@ -1407,7 +1407,7 @@ TextureImporter:
       name: solder_knife_5
       rect:
         serializedVersion: 2
-        x: 222
+        x: 223
         y: 1497
         width: 48
         height: 31
@@ -1427,7 +1427,7 @@ TextureImporter:
       name: solder_knife_6
       rect:
         serializedVersion: 2
-        x: 274
+        x: 275
         y: 1497
         width: 48
         height: 32
