@@ -248,6 +248,21 @@ public class EnemyControl : MonoBehaviour
         {
             collidingDown = true;
         }
+
+        if (collision.collider.CompareTag("Player"))
+        {
+            switch(Random.Range(0, 1))
+            {
+                case 0:
+                    gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1f, 2f), ForceMode2D.Impulse);
+                    break;
+                case 1:
+                    gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1f, 2f), ForceMode2D.Impulse);
+                    break;
+            }
+           
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)

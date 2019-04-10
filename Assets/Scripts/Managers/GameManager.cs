@@ -209,6 +209,17 @@ public class GameManager : MonoBehaviour
         UIManager.UpdateAmmoUI();
     }
 
+    public static void RechargAmmoMG()
+    {
+        //If there is no current Game Manager, exit
+        if (current == null)
+            return;
+
+        current.heavyMachineAmmo += 120;
+
+        UIManager.UpdateAmmoUI();
+    }
+
     public static bool IsGameOver()
     {
         //If there is no current Game Manager, return false

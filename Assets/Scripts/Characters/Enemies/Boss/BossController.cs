@@ -21,11 +21,11 @@ public class BossController : MonoBehaviour
     private bool isSpawned = false;
 
     [Header("Speeds")]
-    public float speed = 0.65f;
+    public float speed = 0.7f;
     private float chargingSpeed = 0f;
     private float restSpeed = 0.10f;
     private float sprintSpeed = 2f;
-    private float initialSpeed = 0.5f;
+    private float initialSpeed = 0.7f;
     
 
     [Header("Throwable")]
@@ -84,11 +84,17 @@ public class BossController : MonoBehaviour
         {
             if (health.IsAlive())
             {
+                /*Check health*/
+                if (health.GetHealth() <= maxHealth / 2)
+                {
+                    StartCoroutine(HalfHealth());
+                }
+                
+                /*Run and attacks*/
                 float playerDistance = transform.position.x - followPlayer.transform.position.x;
                 if (rb && isMovable)
                 {
-                    rb.isKinematic = false;
-                    rb.MovePosition(rb.position + new Vector2(CHANGE_SIGN * Mathf.Sign(playerDistance) * speed, rb.position.y - 0.1f) * Time.deltaTime);
+                    rb.MovePosition(rb.position + new Vector2(1 * speed, 0) * Time.deltaTime);
                 }
 
                 if (canSprint && Random.Range(0, 100) < 10) // 10% chance of sprint
@@ -137,16 +143,9 @@ public class BossController : MonoBehaviour
         // register health delegate
         health.onDead += OnDead;
         health.onHit += OnHit;
-        if(health.GetHealth() <= maxHealth / 2)
-        {
-            StartCoroutine(HalfHealth());
-        }
+        
     }
 
-    private void OnDead(float damage)
-    {
-        StartCoroutine(Die());
-    }
 
     private void OnHit(float damage)
     {
@@ -189,41 +188,53 @@ public class BossController : MonoBehaviour
 
         CameraManager.AfterBossSpawn();
         runningTarget.SetRunning(true);
-        runningTarget.SetSpeed(initialSpeed);
 
         rb.simulated = true;
+        yield return new WaitForSeconds(1.75f);
+
+        runningTarget.SetSpeed(initialSpeed);
     }
 
     private IEnumerator HalfHealth()
     {
         animator.SetBool("isHalfHealth", true);
+        projSpawner.transform.position.Set(-0.63f, -0.21f,0);
         yield return new WaitForSeconds(1f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collider != null)
+        if(collision.collider != null)
         {
-            if (collider.CompareTag("Player"))
+            if (collision.collider.CompareTag("Player") && collision.collider.transform.gameObject.name == "Player")
             {
                 followPlayer.GetComponent<Health>().Hit(attackDamage);
-                collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(3f, 0f));
+                //followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
                 
             }
 
+            if (collision.collider.CompareTag("Enemy"))
+            {
+                collision.collider.gameObject.GetComponent<Health>().onHit(attackDamage);
+                collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
+            }
             
 
         }
         
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collision.collider.CompareTag("Walkable"))
+        if(collider.gameObject != null)
         {
-            GameObject bridge = collision.collider.gameObject;
-            StartCoroutine(DestroyBridge(bridge));
+            if (collider.CompareTag("Walkable"))
+            {
+                GameObject bridge = collider.gameObject;
+                StartCoroutine(DestroyBridge(bridge));
+            }
         }
+
     }
 
     private IEnumerator WaitFire(GameObject throwableObj)
@@ -235,12 +246,28 @@ public class BossController : MonoBehaviour
 
     private IEnumerator DestroyBridge(GameObject bridge)
     {
-        yield return new WaitForSeconds(0.25f);
-        bridge.GetComponent<Collider2D>().enabled = false;
+
         bridge.GetComponent<Animator>().SetBool("onDestroy", true);
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(0.2f);
+        bridge.GetComponent<Collider2D>().enabled = false;
+        yield return new WaitForSeconds(1f);
         bridge.GetComponent<Animator>().SetBool("onDestroy", false);
         Destroy(bridge);
+    }
+
+    private void OnDead(float damage)
+    {
+        this.GetComponent<Animator>().SetBool("isDying", true);
+
+        StopCoroutine("Sprint");
+        StopCoroutine("WaitFire");
+        GameManager.PlayerWin();
+        StopBossCoroutines();
+    }
+
+    private void StopBossCoroutines()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator Sprint()
@@ -251,7 +278,7 @@ public class BossController : MonoBehaviour
         speed = sprintSpeed;
         yield return new WaitForSeconds(1.2f);
         speed = restSpeed;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         speed = initialSpeed;
         yield return new WaitForSeconds(5f); // wait until next possible sprint
         canSprint = true;

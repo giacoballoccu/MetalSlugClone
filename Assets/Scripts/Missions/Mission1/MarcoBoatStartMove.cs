@@ -121,7 +121,7 @@ public class MarcoBoatStartMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && !isStarted)
         {
             isStarted = true;
             collision.gameObject.transform.parent = boat.transform;
