@@ -135,9 +135,16 @@ public class MobileManager : MonoBehaviour
 
     float _GetAxisHorizontal()
     {
+        // remove small sensibility
         if (Mathf.Abs(joystick.Horizontal) < 0.5f)
             return 0;
-        return joystick.Horizontal;
+        // give full sensibility
+        if (joystick.Horizontal > Mathf.Epsilon)
+            return 1;
+        else if (joystick.Horizontal < -Mathf.Epsilon)
+            return -1;
+        else // 0 or whatever
+            return 0; // joystick.Horizontal
     }
 
     static public float GetAxisHorizontal()
@@ -156,9 +163,16 @@ public class MobileManager : MonoBehaviour
 
     float _GetAxisVertical()
     {
+        // remove small sensibility
         if (Mathf.Abs(joystick.Vertical) < 0.5f)
             return 0;
-        return joystick.Vertical;
+        // give full sensibility
+        if (joystick.Vertical > Mathf.Epsilon)
+            return 1;
+        else if (joystick.Vertical < -Mathf.Epsilon)
+            return -1;
+        else // 0 or whatever
+            return 0; // joystick.Vertical
     }
 
     static public float GetAxisVertical()
