@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7b5cbcb68a7263a409a2baf39e36da1d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8679245, g: 0.6973928, b: 0.6918832, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac15555dbf7ce64d8acc943cbb2a90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyColor: {r: 0.9150943, g: 0.63720214, b: 0.06474723, a: 1}
   bulletForce: 2
   lifeTime: 5
   damageShot: 15
