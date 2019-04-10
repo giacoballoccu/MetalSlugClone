@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
+  health: 0
 --- !u!114 &6436869125425301155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +248,8 @@ MonoBehaviour:
   isMovable: 1
   canMelee: 0
   deathClip: {fileID: 0}
+  meleeAttackClip: {fileID: 0}
+  rangeAttackClip: {fileID: 8300000, guid: 61524556bdb582a46a93dd00128546f7, type: 3}
   projSpawner: {fileID: 1235081829868409212}
   throwableObj: {fileID: 6865161004301499006, guid: 3d207e99e046a134094a767949348f2e,
     type: 3}
@@ -255,7 +258,9 @@ MonoBehaviour:
   attackDistance: 1
   meleeDistance: 0.5
   facingRight: 0
+  collidingDown: 0
   fireDelta: 0.5
+  rangedDelta: 2
 --- !u!95 &6436869125425301152
 Animator:
   serializedVersion: 3

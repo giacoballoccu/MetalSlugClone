@@ -190,6 +190,17 @@ public class AudioManager : MonoBehaviour
         current.playerSource.Play();
     }
 
+    public static void PlayEnemyAttackAudio(AudioClip attackClip)
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.enemySource.clip = attackClip;
+        current.enemySource.Play();
+    }
+
     public static void PlayEnemyDeathAudio(AudioClip deathClip)
     {
         //If there is no current AudioManager, exit

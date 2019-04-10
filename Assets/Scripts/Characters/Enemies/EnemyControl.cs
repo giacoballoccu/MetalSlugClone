@@ -11,6 +11,8 @@ public class EnemyControl : MonoBehaviour
     public bool isMovable = true;
     public bool canMelee = true;
     public AudioClip deathClip;
+    public AudioClip meleeAttackClip;
+    public AudioClip rangeAttackClip;
     private Health health;
     private BlinkingSprite blinkingSprite;
     public GameObject projSpawner;
@@ -112,7 +114,11 @@ public class EnemyControl : MonoBehaviour
 
                         // check also the correct height
                         if (Mathf.Abs(GetComponent<SpriteRenderer>().bounds.SqrDistance(followPlayer.transform.position)) <= meleeDistance)
+                        {
                             followPlayer.GetComponent<Health>().Hit(attackDamage);
+                            if (meleeAttackClip)
+                                AudioManager.PlayEnemyAttackAudio(meleeAttackClip);
+                        }
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
@@ -276,6 +282,8 @@ public class EnemyControl : MonoBehaviour
     private IEnumerator WaitSecondaryAttack()
     {
         yield return new WaitForSeconds(0.1f);
+        if (rangeAttackClip)
+            AudioManager.PlayEnemyAttackAudio(rangeAttackClip);
         Instantiate(throwableObj, projSpawner.transform.position, projSpawner.transform.rotation);
         yield return new WaitForSeconds(0.15f);
     }
