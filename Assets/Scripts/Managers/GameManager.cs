@@ -138,14 +138,6 @@ public class GameManager : MonoBehaviour
         return current.score;
     }
 
-    public static void ScoreReset()
-    {
-        if (!current)
-            return;
-
-        current.score = 0;
-    }
-
     public static int GetBombs()
     {
         //If there is no current Game Manager, return 0
@@ -485,6 +477,6 @@ public class GameManager : MonoBehaviour
 
         // currentMission is updated in the PlayerWin method
         SceneManager.LoadScene((int) current.currentMission);
-        ScoreReset();
+        GameReset();
     }
 }
