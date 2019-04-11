@@ -77,10 +77,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  attackDamage: 10
+  attackDamage: 20
   isMovable: 1
   canMelee: 1
   deathClip: {fileID: 0}
+  meleeAttackClip: {fileID: 0}
+  rangeAttackClip: {fileID: 0}
   projSpawner: {fileID: 0}
   throwableObj: {fileID: 0}
   canThrow: 0
@@ -90,6 +92,7 @@ MonoBehaviour:
   facingRight: 0
   collidingDown: 0
   fireDelta: 0.5
+  rangedDelta: 2
 --- !u!50 &2206515877999296332
 Rigidbody2D:
   serializedVersion: 4
