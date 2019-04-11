@@ -1468,8 +1468,6 @@ Transform:
   m_Father: {fileID: 1268712062035649851}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!68 &1558426915915958215
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1489,7 +1487,6 @@ EdgeCollider2D:
   - {x: 40.66902, y: -1.1960071}
   - {x: 40.695484, y: -1.1827803}
   - {x: 45.945065, y: -1.1979697}
->>>>>>> 972d3e12a3b4f9dd8d86f8b75536603b109cee07
 --- !u!1 &3764896097195797347
 GameObject:
   m_ObjectHideFlags: 0
