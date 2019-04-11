@@ -11,6 +11,8 @@ public class EnemyControl : MonoBehaviour
     public bool isMovable = true;
     public bool canMelee = true;
     public AudioClip deathClip;
+    public AudioClip meleeAttackClip;
+    public AudioClip rangeAttackClip;
     private Health health;
     private BlinkingSprite blinkingSprite;
     public GameObject projSpawner;
@@ -24,7 +26,6 @@ public class EnemyControl : MonoBehaviour
     public float attackDistance = 0.7f;         //Far attack
     public float meleeDistance = 0.5f;          //Near attack
     public const float CHANGE_SIGN = -1;
-
     private Rigidbody2D rb;
     private Animator animator;
     public bool facingRight = false;
@@ -87,8 +88,6 @@ public class EnemyControl : MonoBehaviour
         if (GameManager.IsGameOver())
             return;
 
-        //transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-
         if (health.IsAlive())
         {
             FlipShoot();
@@ -113,9 +112,13 @@ public class EnemyControl : MonoBehaviour
                     {
                         nextFire = shotTime + fireDelta;
 
-                        //Attack player only if it's on the same height
-                        if(transform.position.y + (GetComponent<SpriteRenderer>().bounds.size.y/2) > followPlayer.transform.position.y - 0.5f)
+                        // check also the correct height
+                        if (Mathf.Abs(GetComponent<SpriteRenderer>().bounds.SqrDistance(followPlayer.transform.position)) <= meleeDistance)
+                        {
                             followPlayer.GetComponent<Health>().Hit(attackDamage);
+                            if (meleeAttackClip)
+                                AudioManager.PlayEnemyAttackAudio(meleeAttackClip);
+                        }
 
                         nextFire = nextFire - shotTime;
                         shotTime = 0.0f;
@@ -244,7 +247,7 @@ public class EnemyControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Walkable") || collision.collider.CompareTag("Marco Boat"))
+        if (collision.collider.CompareTag("Walkable") || collision.collider.CompareTag("Marco Boat") || collision.collider.CompareTag("Water Dead"))
         {
             collidingDown = true;
         }
@@ -263,14 +266,11 @@ public class EnemyControl : MonoBehaviour
            
         }
 
-<<<<<<< HEAD
-        if(collision.collider.CompareTag("Water Dead"))
+        else if (collision.collider.CompareTag("Water Dead"))
         {
-            StartCoroutine(Die());
+            health.Hit(health.GetHealth());
         }
 
-=======
->>>>>>> 972d3e12a3b4f9dd8d86f8b75536603b109cee07
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -284,6 +284,8 @@ public class EnemyControl : MonoBehaviour
     private IEnumerator WaitSecondaryAttack()
     {
         yield return new WaitForSeconds(0.1f);
+        if (rangeAttackClip)
+            AudioManager.PlayEnemyAttackAudio(rangeAttackClip);
         Instantiate(throwableObj, projSpawner.transform.position, projSpawner.transform.rotation);
         yield return new WaitForSeconds(0.15f);
     }

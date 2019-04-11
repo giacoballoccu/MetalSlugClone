@@ -76,14 +76,19 @@ public class MarcoBoatStartMove : MonoBehaviour
         boat.transform.Find("Player").transform.parent = thirdPart.transform;
 
         boat.GetComponent<Animator>().SetBool("isDying", true);
+        AudioManager.PlayMetalSlugDestroy3();
+
         yield return new WaitForSeconds(2.8f);
         explosion.GetComponent<Animator>().SetBool("isExploding", true);
+        AudioManager.PlayMetalSlugDestroy1();
 
         yield return new WaitForSeconds(.4f);
         waterOnSpawn1.GetComponent<Animator>().SetBool("BoatExploding", true);
         waterOnSpawn2.GetComponent<Animator>().SetBool("BoatExploding", true);
         waterOnSpawn3.GetComponent<Animator>().SetBool("BoatExploding", true);
         waterOnSpawn4.GetComponent<Animator>().SetBool("BoatExploding", true);
+        AudioManager.PlayMetalSlugDestroy2();
+
         yield return new WaitForSeconds(1.4f);
         boat.GetComponent<Animator>().SetBool("isDying", false);
         boat.GetComponent<SpriteRenderer>().enabled = false;

@@ -27,10 +27,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip meleeHitClip;
     public AudioClip meleeTakeClip;
     public AudioClip collectibleGrabClip;
+    public AudioClip grenadeGrabClip;
+    public AudioClip metalSlugDestroy1;
+    public AudioClip metalSlugDestroy2;
+    public AudioClip metalSlugDestroy3;
 
     [Header("Voice")]
     public AudioClip levelStart;
     public AudioClip levelComplete;
+    public AudioClip heavyMachineGunGrab;
 
     [Header("Menu")]
     public AudioClip charSelect; // char selection
@@ -185,6 +190,17 @@ public class AudioManager : MonoBehaviour
         current.playerSource.Play();
     }
 
+    public static void PlayEnemyAttackAudio(AudioClip attackClip)
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        current.enemySource.clip = attackClip;
+        current.enemySource.Play();
+    }
+
     public static void PlayEnemyDeathAudio(AudioClip deathClip)
     {
         //If there is no current AudioManager, exit
@@ -255,5 +271,53 @@ public class AudioManager : MonoBehaviour
         current.musicSource.clip = current.menuSound;
         current.musicSource.loop = true;
         current.musicSource.Play();
+    }
+
+    public static void PlayAmmoGrab()
+    {
+        if (current == null)
+            return;
+        current.playerSource.clip = current.grenadeGrabClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayHeavyMachineGunVoice()
+    {
+        if (current == null)
+            return;
+        current.voiceSource.clip = current.heavyMachineGunGrab;
+        current.voiceSource.Play();
+    }
+
+    public static void PlayMedKitGrab()
+    {
+        if (current == null)
+            return;
+        current.playerSource.clip = current.collectibleGrabClip;
+        current.playerSource.Play();
+    }
+
+    public static void PlayMetalSlugDestroy1()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.metalSlugDestroy1;
+        current.effectSource.Play();
+    }
+
+    public static void PlayMetalSlugDestroy2()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.metalSlugDestroy2;
+        current.effectSource.Play();
+    }
+
+    public static void PlayMetalSlugDestroy3()
+    {
+        if (current == null)
+            return;
+        current.effectSource.clip = current.metalSlugDestroy3;
+        current.effectSource.Play();
     }
 }

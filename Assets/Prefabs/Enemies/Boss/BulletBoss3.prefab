@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3344899479662048602}
   - component: {fileID: 30554251601518993}
   m_Layer: 0
-  m_Name: BulletHeli
+  m_Name: BulletBoss3
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8074557712258021186}
   m_LocalRotation: {x: 0, y: 0, z: 0.05094773, w: 0.99870133}
   m_LocalPosition: {x: 0, y: -0.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.432874, y: 0.6914461, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7b5cbcb68a7263a409a2baf39e36da1d, type: 3}
-  m_Color: {r: 0.8679245, g: 0.6973928, b: 0.6918832, a: 1}
+  m_Color: {r: 1, g: 0.75405663, b: 0.3160377, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

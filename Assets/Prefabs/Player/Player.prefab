@@ -71,7 +71,6 @@ MonoBehaviour:
   meleeDistance: 0.4
   damageMelee: 1000
   foreground: {fileID: 0}
-  camera: {fileID: 0}
 --- !u!50 &1765443406479915050
 Rigidbody2D:
   serializedVersion: 4

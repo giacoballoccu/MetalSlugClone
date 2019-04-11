@@ -48,6 +48,10 @@ public class Boss3Controller : MonoBehaviour
     private bool isInPositionAttack2 = false;
     private bool isFinishedAttack2 = false;
 
+    [Header("Audio")]
+    public AudioClip thunderClip;
+    public AudioClip sunClip;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -170,6 +174,7 @@ public class Boss3Controller : MonoBehaviour
         StopCoroutine(Fire1());
         StopCoroutine(Fire2Wait());
         GameManager.PlayerWin();
+        AudioManager.PlayMetalSlugDestroy2();
         GetComponent<Animator>().SetBool("isDying", true);
         StopBossCoroutines();
     }
@@ -187,16 +192,16 @@ public class Boss3Controller : MonoBehaviour
 
     private IEnumerator Fire1()
     {
-        int nFires = 0;
-
         headSpawner.GetComponent<Animator>().SetBool("prepareAttack1", true);
+        yield return new WaitForSeconds(0.3f);
 
-        yield return new WaitForSeconds(2f);
-
+        if (sunClip)
+            AudioManager.PlayEnemyAttackAudio(sunClip);
+        yield return new WaitForSeconds(1.7f);
 
         headSpawner.GetComponent<Animator>().SetBool("prepareAttack1", false);
-
         // Fire 10 proj
+        int nFires = 0;
         while (nFires < 10 && !GameManager.IsGameOver())
         {
             GameObject bullet = Instantiate(bulletPrefab, prjSpawner.transform.position, prjSpawner.transform.rotation * Quaternion.Euler(0, 0, Random.Range(-halfAngleofCone, halfAngleofCone)));
@@ -204,12 +209,13 @@ public class Boss3Controller : MonoBehaviour
 
             yield return new WaitForSeconds(0.35f);
         }
-
         isAttack1 = false;
     }
 
     private IEnumerator Fire2Wait()
     {
+        if (thunderClip)
+            AudioManager.PlayEnemyAttackAudio(thunderClip);
         yield return new WaitForSeconds(0.8f);
         isInPositionAttack2 = true;
     }

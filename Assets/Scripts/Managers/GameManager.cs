@@ -138,14 +138,6 @@ public class GameManager : MonoBehaviour
         return current.score;
     }
 
-    public static void ScoreReset()
-    {
-        if (!current)
-            return;
-
-        current.score = 0;
-    }
-
     public static int GetBombs()
     {
         //If there is no current Game Manager, return 0
@@ -192,7 +184,9 @@ public class GameManager : MonoBehaviour
         if (current == null)
             return;
 
-        current.heavyMachineAmmo--;
+        current.heavyMachineAmmo -= 3;
+        if (current.heavyMachineAmmo < 0)
+            current.heavyMachineAmmo = 0;
         UIManager.UpdateAmmoUI();
     }
 
@@ -459,7 +453,19 @@ public class GameManager : MonoBehaviour
     {
         if (!current)
             return;
-        SceneManager.LoadScene(0);
+        LoadHome();
+    }
+
+    public static void LoadHome()
+    {
+        SceneManager.LoadScene((int)Missions.Home);
+        GameReset();
+    }
+
+    public static void LoadNextMission()
+    {
+        // currentMission is updated in the PlayerWin method
+        SceneManager.LoadScene((int)current.currentMission);
         GameReset();
     }
 
@@ -475,16 +481,12 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitHome()
     {
         yield return new WaitForSeconds(7f);
-        SceneManager.LoadScene(0);
-        GameReset();
+        LoadHome();
     }
 
     private IEnumerator WaitNextMission()
     {
         yield return new WaitForSeconds(7f);
-
-        // currentMission is updated in the PlayerWin method
-        SceneManager.LoadScene((int) current.currentMission);
-        ScoreReset();
+        LoadNextMission();
     }
 }

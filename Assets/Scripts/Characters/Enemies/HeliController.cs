@@ -159,8 +159,7 @@ public class HeliController : MonoBehaviour
 
     private IEnumerator Die()
     {
-        //PlayDeathAudio();
-
+        AudioManager.PlayMetalSlugDestroy2();
         animator.SetBool("isDying", true);
         if (rb)
             rb.isKinematic = true;
