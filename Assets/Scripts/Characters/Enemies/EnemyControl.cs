@@ -265,10 +265,12 @@ public class EnemyControl : MonoBehaviour
             }
            
         }
+
         else if (collision.collider.CompareTag("Water Dead"))
         {
             health.Hit(health.GetHealth());
         }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
