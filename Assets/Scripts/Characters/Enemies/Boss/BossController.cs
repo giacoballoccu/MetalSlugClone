@@ -250,11 +250,14 @@ public class BossController : MonoBehaviour
     {
         if (bridge)
         {
-            bridge?.GetComponent<Animator>().SetBool("onDestroy", true);
+            if (bridge)
+                bridge.GetComponent<Animator>().SetBool("onDestroy", true);
             yield return new WaitForSeconds(0.2f);
-            bridge.GetComponent<Collider2D>().enabled = false;
+            if (bridge)
+                bridge.GetComponent<Collider2D>().enabled = false;
             yield return new WaitForSeconds(1f);
-            bridge?.GetComponent<Animator>().SetBool("onDestroy", false);
+            if (bridge)
+                bridge.GetComponent<Animator>().SetBool("onDestroy", false);
             Destroy(bridge);
         }
     }
