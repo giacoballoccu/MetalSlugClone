@@ -14,6 +14,15 @@ public class HeliSpawner : MonoBehaviour
     private bool isSpawned;
     private int killedHeli;
 
+    /*void Start()
+    {
+        if (!GetComponent<BoxCollider2D>()) // spawn immediately if trigger collider is missing
+        {
+            isSpawned = true;
+            Initialize();
+        }
+    }*/
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         CheckAndSpawn(collider);
