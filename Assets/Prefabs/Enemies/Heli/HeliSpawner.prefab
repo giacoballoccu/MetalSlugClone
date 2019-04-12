@@ -47,6 +47,22 @@ MonoBehaviour:
   maxHeli: 5
   heliPrefab: {fileID: 1404301092065223393, guid: 234b987bb4471c942b5f01e60abeb02c,
     type: 3}
+  triggerCamera:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SwitchZ2DtoZ2E
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!61 &1773546128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60,7 +76,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.849206, y: -1.0135386}
+  m_Offset: {x: -0.13725567, y: -1.0135386}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -71,5 +87,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7853146, y: 1.6026444}
+  m_Size: {x: 0.36141396, y: 1.6026444}
   m_EdgeRadius: 0

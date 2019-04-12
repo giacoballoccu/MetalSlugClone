@@ -52,7 +52,10 @@ MonoBehaviour:
   vcamZ2A: {fileID: 0}
   vcamZ2B: {fileID: 0}
   vcamZ2C: {fileID: 0}
+  vcamZ2D: {fileID: 0}
+  vcamZ2E: {fileID: 0}
   vcamZ3A: {fileID: 0}
+  vcamZ3B: {fileID: 0}
 --- !u!1001 &737309954454691742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,12 +71,12 @@ PrefabInstance:
     - target: {fileID: 3136398803432475893, guid: 95a0f3f29af37b140b713db793954c0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.1589155
+      value: -22.409096
       objectReference: {fileID: 0}
     - target: {fileID: 3136398803432475893, guid: 95a0f3f29af37b140b713db793954c0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22788101
+      value: -0.4267259
       objectReference: {fileID: 0}
     - target: {fileID: 3136398803432475893, guid: 95a0f3f29af37b140b713db793954c0b,
         type: 3}
