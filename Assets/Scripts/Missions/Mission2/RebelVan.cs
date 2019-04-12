@@ -93,6 +93,7 @@ public class RebelVan : MonoBehaviour
 
     private void OnDead(float damage)
     {
+        StopAllCoroutines();
         StartCoroutine(Die());
     }
 
