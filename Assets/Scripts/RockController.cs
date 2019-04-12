@@ -23,10 +23,9 @@ public class RockController : MonoBehaviour
         {
             collision.gameObject.GetComponent<Health>().onHit(damage);
         }
-
-        if (collision.CompareTag("Walkable"))
+        if (collision.CompareTag("Bullet") || collision.CompareTag("Granate"))
         {
-            StartCoroutine(rockFalling());
+            StartCoroutine(rockHitten());
         }
     }
 
@@ -40,10 +39,11 @@ public class RockController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Bullet") || collision.collider.CompareTag("Granate"))
+        if (collision.collider.CompareTag("Walkable"))
         {
-            StartCoroutine(rockHitten());
+            StartCoroutine(rockFalling());
         }
+
     }
 
     private IEnumerator rockHitten()

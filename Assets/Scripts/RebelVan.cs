@@ -36,7 +36,7 @@ public class RebelVan : MonoBehaviour
     private void Update()
     {
         float playerDistance = transform.position.x - followPlayer.transform.position.x;
-        Debug.Log(Mathf.Abs(playerDistance) + "" + trigger);
+
         if (playerDistance <= trigger)
         {
 

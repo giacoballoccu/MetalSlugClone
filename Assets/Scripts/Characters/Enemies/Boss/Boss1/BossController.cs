@@ -11,7 +11,7 @@ public class BossController : MonoBehaviour
     public bool isMovable = true;
     public AudioClip deathClip;
     private Health health;
-    private float maxHealth = 10000;
+    private float maxHealth;
     private BlinkingSprite blinkingSprite;
     public Transform bossSpawner;
     public GameObject projSpawner;
@@ -61,6 +61,7 @@ public class BossController : MonoBehaviour
        
         followPlayer = GameManager.GetPlayer();
         registerHealth();
+        maxHealth = health.GetMaxHealth();
         rb = GetComponent<Rigidbody2D>();
         blinkingSprite = GetComponent<BlinkingSprite>();
         
