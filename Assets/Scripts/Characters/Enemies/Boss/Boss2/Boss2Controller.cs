@@ -7,7 +7,7 @@ public class Boss2Controller : MonoBehaviour
     public GameObject top;
     private Health health;
     private float maxHealth;
-    private bool isBossActive = true;
+    private bool isBossActive = false;
 
     public Animator topAnimator;
     public Animator bottomAnimator;
@@ -28,13 +28,16 @@ public class Boss2Controller : MonoBehaviour
     public float fireDelta = 3f;
     private float nextFire = 0f;
     private float chargingTime = 1.25f;
-    // Start is called before the first frame update
+
+    [Header("Audio")]
+    public AudioClip rayClip;
+
     void Start()
     {
         topAnimator = top.GetComponent<Animator>();
         registerHealth();
         maxHealth = health.GetMaxHealth();
-        Debug.Log(projSpawner.transform.position);
+        //Debug.Log(projSpawner.transform.position);
     }
 
     // Update is called once per frame
@@ -80,6 +83,8 @@ public class Boss2Controller : MonoBehaviour
         projSpawner.transform.position = new Vector3(projSpawner.transform.position.x + randomX, projSpawner.transform.position.y);
         //Debug.Log(projSpawner.transform.position);
         Instantiate(throwableIndicator, projSpawner.transform.position, projSpawner.transform.rotation);
+        if (rayClip)
+            AudioManager.PlayEnemyAttackAudio(rayClip);
         yield return new WaitForSeconds(chargingTime);
        // Debug.Log(projSpawner.transform.position);
         projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y + fixedYRocks);
@@ -91,6 +96,7 @@ public class Boss2Controller : MonoBehaviour
     public void activeBoss()
     {
         isBossActive = true;
+        AudioManager.StartBossAudio();
     }
 
     private void registerHealth()
@@ -126,8 +132,11 @@ public class Boss2Controller : MonoBehaviour
 
     private IEnumerator Explode()
     {
+        AudioManager.PlayMetalSlugDestroy3();
         bottomAnimator.SetBool("isExploding", true);
         yield return new WaitForSeconds(1.75f);
+
+        AudioManager.PlayMetalSlugDestroy1();
         top.SetActive(false);
         bottomAnimator.SetBool("isDying", true);
     }

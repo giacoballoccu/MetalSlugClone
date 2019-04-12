@@ -2523,6 +2523,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 629447495}
+  - component: {fileID: 629447497}
+  - component: {fileID: 629447496}
   m_Layer: 0
   m_Name: BossSpawner
   m_TagString: Untagged
@@ -2544,6 +2546,60 @@ Transform:
   m_Father: {fileID: 1674122635}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &629447496
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629447494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.65973854, y: 0.7367089}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4105034, y: 2.4734178}
+  m_EdgeRadius: 0
+--- !u!114 &629447497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629447494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20495fb8cb453ec4c8ffc4d397cece58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerCamera:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1339001021}
+        m_MethodName: activeBoss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &640967906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5220,6 +5276,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1339001021 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1176335727687137967, guid: 96eda80ff9213e84e97d8ac0d326ee6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1722641191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf954726bfc90149b0e99911e8c876d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1362446121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6635,21 +6703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1176335727687137964, guid: 96eda80ff9213e84e97d8ac0d326ee6a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.83988994
-      objectReference: {fileID: 0}
-    - target: {fileID: 1176335727687137964, guid: 96eda80ff9213e84e97d8ac0d326ee6a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.83988994
-      objectReference: {fileID: 0}
-    - target: {fileID: 1176335727687137964, guid: 96eda80ff9213e84e97d8ac0d326ee6a,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.83988994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96eda80ff9213e84e97d8ac0d326ee6a, type: 3}

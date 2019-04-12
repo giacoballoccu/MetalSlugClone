@@ -223,6 +223,7 @@ MonoBehaviour:
     type: 3}
   projSpawner: {fileID: 1859471160611076588}
   fireDelta: 3
+  rayClip: {fileID: 8300000, guid: f9e606fe8aac358458cc5d9997e16dcf, type: 3}
 --- !u!1 &1176335728653112433
 GameObject:
   m_ObjectHideFlags: 0
