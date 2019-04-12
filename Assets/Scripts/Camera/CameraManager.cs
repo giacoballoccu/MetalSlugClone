@@ -157,6 +157,12 @@ public class CameraManager : MonoBehaviour
 
 
     #region Mission 2 Switches
+    public static void AfterFirstHeli()
+    {
+        if (current == null)
+            return;
+        current.SwitchZ1EtoZ2A();
+    }
     #endregion
 
 

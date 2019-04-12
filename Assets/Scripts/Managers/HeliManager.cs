@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class HeliManager : MonoBehaviour
 {
-    public int maxHeli = 5;
+    static public int maxHeli = 5;
     public GameObject heliPrefab;
 
     public static List<GameObject> heliList = new List<GameObject>();
     private float secondsWait = 0;
     private bool isSpawned;
+    static private int killedHeli;
+    static HeliManager instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -36,8 +43,10 @@ public class HeliManager : MonoBehaviour
 
     static public void HeliDestroy(GameObject gameObject)
     {
+        killedHeli++;
         heliList.Remove(gameObject);
         SetMainHeliShooter();
+        CheckFinished();
     }
 
     static public void SetMainHeliShooter()
@@ -46,20 +55,22 @@ public class HeliManager : MonoBehaviour
             SetFire(heliList[0]);
     }
 
+    private static void CheckFinished()
+    {
+        if (killedHeli >= maxHeli)
+        {
+            CameraManager.AfterFirstHeli();
+            if (instance)
+                Destroy(instance.gameObject);
+        }
+    }
+
     private IEnumerator WaitHeli(bool first)
     {
         yield return new WaitForSeconds(secondsWait);
         GameObject heli = Instantiate(heliPrefab, transform.position, transform.rotation, transform);
         heliList.Add(heli);
         SetMainHeliShooter();
-    }
-
-    static bool IsAlive(GameObject heli)
-    {
-        if (heli == null)
-            return false;
-
-        return heli.GetComponent<Health>().IsAlive();
     }
 
     static void SetFire(GameObject heli)
