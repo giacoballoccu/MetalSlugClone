@@ -6,24 +6,26 @@ public class RockController : MonoBehaviour
 {
     private Animator animator;
     private Collider2D colllider;
-    //private bool hitten = false;
-    public float damage = 50f;
+    private float damage = 15f;
     private float animationTime;
+    private bool isFallingOnGround;
 
-    // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Update()
     {
-        if (collision.CompareTag("Player"))
+        if (isFallingOnGround)
         {
-            collision.gameObject.GetComponent<Health>().onHit(damage);
+            GetComponent<BoxCollider2D>().transform.Translate(Vector3.down * Time.deltaTime);
         }
-        if (collision.CompareTag("Bullet") || collision.CompareTag("Granate"))
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Bullet") || collider.CompareTag("Granate"))
         {
             StartCoroutine(rockHitten());
         }
@@ -32,25 +34,35 @@ public class RockController : MonoBehaviour
     private IEnumerator rockFalling()
     {
         animator.SetBool("isGrounded", true);
+        isFallingOnGround = true;
         yield return new WaitForSeconds(3.2f);
         animator.SetBool("isGrounded", false);
-        Destroy(this);
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isFallingOnGround)
+            return;
+
         if (collision.collider.CompareTag("Walkable"))
         {
             StartCoroutine(rockFalling());
         }
-
+        else if (collision.collider.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Health>().Hit(damage);
+            StartCoroutine(rockHitten());
+        }
     }
 
     private IEnumerator rockHitten()
     {
         animator.SetBool("isHitten", true);
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<BoxCollider2D>().isTrigger = true;
         yield return new WaitForSeconds(0.6f);
         animator.SetBool("isHitten", false);
-        Destroy(this);
+        Destroy(gameObject);
     }
 }
