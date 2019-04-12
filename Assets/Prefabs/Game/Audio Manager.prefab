@@ -60,6 +60,7 @@ MonoBehaviour:
   levelStart: {fileID: 8300000, guid: 730989ad5611e9d48b1a770a7579587c, type: 3}
   levelComplete: {fileID: 8300000, guid: 5df41c472e810df4491c0a99b694c6d1, type: 3}
   heavyMachineGunGrab: {fileID: 8300000, guid: a4eacecbd1f9fa840bf92fa00f2f7631, type: 3}
+  okayClip: {fileID: 8300000, guid: 4dad0b648ef59f840901164857d5ea94, type: 3}
   charSelect: {fileID: 8300000, guid: 62879fd334b8ed74faf99edbb5364a15, type: 3}
   marco: {fileID: 8300000, guid: 523d2eb004435604d935649b279f9dc7, type: 3}
   menuSound: {fileID: 8300000, guid: ed9ebcf8b8161c5468dcb2d690107b0e, type: 3}

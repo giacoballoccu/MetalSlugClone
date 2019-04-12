@@ -16,6 +16,7 @@ public class CollectibleController : MonoBehaviour
             if (type==PlayerController.CollectibleType.Ammo) // collectible sound
             {
                 AudioManager.PlayAmmoGrab();
+                AudioManager.PlayOkayVoice();
             }
             else if (type == PlayerController.CollectibleType.HeavyMachineGun)
             {

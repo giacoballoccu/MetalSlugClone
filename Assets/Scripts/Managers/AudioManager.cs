@@ -36,6 +36,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip levelStart;
     public AudioClip levelComplete;
     public AudioClip heavyMachineGunGrab;
+    public AudioClip okayClip;
 
     [Header("Menu")]
     public AudioClip charSelect; // char selection
@@ -286,6 +287,14 @@ public class AudioManager : MonoBehaviour
         if (current == null)
             return;
         current.voiceSource.clip = current.heavyMachineGunGrab;
+        current.voiceSource.Play();
+    }
+
+    public static void PlayOkayVoice()
+    {
+        if (current == null)
+            return;
+        current.voiceSource.clip = current.okayClip;
         current.voiceSource.Play();
     }
 
