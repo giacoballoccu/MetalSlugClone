@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -741596541
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: db5c136c013ec124ea47b6a063876398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -221,7 +221,7 @@ MonoBehaviour:
     type: 3}
   throwableIndicator: {fileID: 182429637494860526, guid: a9ab3f42bc9b13446a72e199c59fdccf,
     type: 3}
-  projSpawner: {fileID: 0}
+  projSpawner: {fileID: 1859471160611076588}
   fireDelta: 3
 --- !u!1 &1176335728653112433
 GameObject:
@@ -290,7 +290,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -741596541
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300132, guid: db5c136c013ec124ea47b6a063876398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
