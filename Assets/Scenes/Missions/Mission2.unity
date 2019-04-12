@@ -2492,7 +2492,7 @@ PrefabInstance:
     - target: {fileID: 584048321673705856, guid: 5b1fde4eaeed6b54c8e619a1a3baf1bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 584048321673705856, guid: 5b1fde4eaeed6b54c8e619a1a3baf1bb,
         type: 3}
@@ -2865,126 +2865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1265515360
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1283604857}
-    m_Modifications:
-    - target: {fileID: 8701756918135003612, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_Name
-      value: TriggerCamera 2ze
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003612, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 26.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1523626780}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: t.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchZ1CtoZ1D
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1523626780}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchZ2DtoZ2E
-      objectReference: {fileID: 0}
-    - target: {fileID: 8701756918135003614, guid: 04048e468706b6041bc18b60aa52eb55,
-        type: 3}
-      propertyPath: triggerCamera.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 04048e468706b6041bc18b60aa52eb55, type: 3}
---- !u!4 &1265515361 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8701756918135003613, guid: 04048e468706b6041bc18b60aa52eb55,
-    type: 3}
-  m_PrefabInstance: {fileID: 1265515360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1276955345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3119,7 +2999,6 @@ Transform:
   - {fileID: 309179426}
   - {fileID: 1701198482}
   - {fileID: 1559809512}
-  - {fileID: 1265515361}
   - {fileID: 1702826631}
   - {fileID: 1136428821}
   m_Father: {fileID: 293888820}
@@ -5255,7 +5134,7 @@ PrefabInstance:
     - target: {fileID: 584048321673705856, guid: 5b1fde4eaeed6b54c8e619a1a3baf1bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 584048321673705856, guid: 5b1fde4eaeed6b54c8e619a1a3baf1bb,
         type: 3}

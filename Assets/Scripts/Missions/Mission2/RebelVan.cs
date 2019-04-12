@@ -8,6 +8,7 @@ public class RebelVan : MonoBehaviour
     public GameObject soldier;
     public GameObject spawn;
     public Animator soldierSpawning;
+    public int maxSpawn = 8;
     private Health health;
     private float halfHealth;
     private Animator animator;
@@ -34,11 +35,13 @@ public class RebelVan : MonoBehaviour
 
     private void Update()
     {
+        if (maxSpawn <= 0)
+            return;
+
         float playerDistance = transform.position.x - followPlayer.transform.position.x;
-        Debug.Log(Mathf.Abs(playerDistance) + "" + trigger);
+        //Debug.Log(Mathf.Abs(playerDistance) + "" + trigger);
         if (playerDistance <= trigger)
         {
-
             shotTime = shotTime + Time.deltaTime;
 
             if (shotTime > nextFire)
@@ -56,6 +59,7 @@ public class RebelVan : MonoBehaviour
 
     private IEnumerator Spawn()
     {
+        maxSpawn--;
         if (!hasHalfHealth)
         {
             animator.SetBool("isSpawning", true);
