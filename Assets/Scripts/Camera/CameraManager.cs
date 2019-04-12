@@ -63,10 +63,6 @@ public class CameraManager : MonoBehaviour
     {
         SwitchCameras(vcamZ2B, vcamZ2C);
     }
-    public void SwitchZ2CtoZ3A()
-    {
-        SwitchCameras(vcamZ2C, vcamZ3A);
-    }
     public void SwitchZ2CtoZ2D()
     {
         SwitchCameras(vcamZ2C, vcamZ2D);
@@ -74,6 +70,14 @@ public class CameraManager : MonoBehaviour
     public void SwitchZ2DtoZ2E()
     {
         SwitchCameras(vcamZ2D, vcamZ2E);
+    }
+    public void SwitchZ2CtoZ3A()
+    {
+        SwitchCameras(vcamZ2C, vcamZ3A);
+    }
+    public void SwitchZ2EtoZ3A()
+    {
+        SwitchCameras(vcamZ2E, vcamZ3A);
     }
     #endregion
 
