@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineController : MonoBehaviour
 {
-    private float chargingTime = 1.25f;
+    private float chargingTime = 2f;
     // Start is called before the first frame update
     void Start()
     {
