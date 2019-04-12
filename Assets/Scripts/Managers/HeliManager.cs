@@ -10,10 +10,10 @@ public class HeliManager : MonoBehaviour
     public static List<GameObject> heliList = new List<GameObject>();
     private float secondsWait = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        Initialize();
+        if (collider.CompareTag("Player"))
+            Initialize();
     }
 
     void Initialize()
