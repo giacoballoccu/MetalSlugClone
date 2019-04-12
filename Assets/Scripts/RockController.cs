@@ -6,7 +6,7 @@ public class RockController : MonoBehaviour
 {
     private Animator animator;
     private Collider2D colllider;
-    private bool hitten = false;
+    //private bool hitten = false;
     public float damage = 50f;
     private float animationTime;
 
