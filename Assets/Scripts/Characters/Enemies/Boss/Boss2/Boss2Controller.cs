@@ -133,11 +133,11 @@ public class Boss2Controller : MonoBehaviour
     private IEnumerator Explode()
     {
         AudioManager.PlayMetalSlugDestroy3();
-        bottomAnimator.SetBool("isExploding", true);
+        //bottomAnimator.SetBool("isExploding", true);
         yield return new WaitForSeconds(1.75f);
 
         AudioManager.PlayMetalSlugDestroy1();
-        top.SetActive(false);
+        //top.SetActive(false);
         bottomAnimator.SetBool("isDying", true);
     }
 }
