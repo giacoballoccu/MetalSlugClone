@@ -20,6 +20,8 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera vcamZ2A;
     public CinemachineVirtualCamera vcamZ2B;
     public CinemachineVirtualCamera vcamZ2C;
+    public CinemachineVirtualCamera vcamZ2D;
+    public CinemachineVirtualCamera vcamZ2E;
     [Header("Zone 3")]
     public CinemachineVirtualCamera vcamZ3A;
 
@@ -64,6 +66,14 @@ public class CameraManager : MonoBehaviour
     public void SwitchZ2CtoZ3A()
     {
         SwitchCameras(vcamZ2C, vcamZ3A);
+    }
+    public void SwitchZ2CtoZ2D()
+    {
+        SwitchCameras(vcamZ2C, vcamZ2D);
+    }
+    public void SwitchZ2DtoZ2E()
+    {
+        SwitchCameras(vcamZ2D, vcamZ2E);
     }
     #endregion
 
