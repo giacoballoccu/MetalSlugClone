@@ -7,7 +7,7 @@ public class Boss2Controller : MonoBehaviour
     public GameObject top;
     private Health health;
     private float maxHealth;
-    private bool isBossActive = false;
+    private bool isBossActive = true;
 
     public Animator topAnimator;
     public Animator bottomAnimator;
@@ -84,6 +84,7 @@ public class Boss2Controller : MonoBehaviour
        // Debug.Log(projSpawner.transform.position);
         projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y + fixedYRocks);
         Instantiate(throwableObj, projSpawner.transform.position, projSpawner.transform.rotation);
+        topAnimator.SetBool("isAttacking", false);
         projSpawner.transform.position = initialPosition;
     }
 
