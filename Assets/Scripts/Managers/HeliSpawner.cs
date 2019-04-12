@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HeliManager : MonoBehaviour
+public class HeliSpawner : MonoBehaviour
 {
     public int maxHeli = 5;
     public GameObject heliPrefab;

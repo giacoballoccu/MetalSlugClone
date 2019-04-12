@@ -27,7 +27,7 @@ public class HeliController : MonoBehaviour
     private float height;
     private Animator animator;
     private BlinkingSprite blinkingSprite;
-    private HeliManager spawner;
+    private HeliSpawner spawner;
 
     void Start()
     {
@@ -48,7 +48,7 @@ public class HeliController : MonoBehaviour
         health.onHit += OnHit;
     }
     
-    public void RegisterSpawner(HeliManager spawner)
+    public void RegisterSpawner(HeliSpawner spawner)
     {
         this.spawner = spawner;
     }
