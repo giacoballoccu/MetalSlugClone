@@ -9,11 +9,20 @@ public class HeliManager : MonoBehaviour
 
     public static List<GameObject> heliList = new List<GameObject>();
     private float secondsWait = 0;
+    private bool isSpawned;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player"))
+        CheckAndSpawn(collider);
+    }
+
+    private void CheckAndSpawn(Collider2D collider)
+    {
+        if (!isSpawned && collider.CompareTag("Player"))
+        {
+            isSpawned = true;
             Initialize();
+        }
     }
 
     void Initialize()
