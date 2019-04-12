@@ -153,5 +153,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwableForce: 2.5
   launcher: 1
-  throwable: 2
+  throwable: 4
   canExplode: 0

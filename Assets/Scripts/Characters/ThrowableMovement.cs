@@ -9,6 +9,7 @@ public class ThrowableMovement : MonoBehaviour
     private float throwableDamageEnemy = 10f;
     private float throwableDamageBoss = 25f;
     private float throwableDamageHeavybomb = 50f;
+    private float throwableDamageVomit = 25f;
     public float throwableForce = 2.5f;
 
     public enum LauncherType
@@ -157,6 +158,9 @@ public class ThrowableMovement : MonoBehaviour
                 break;
             case ThrowableType.BossBomb:
                 collision.GetComponent<Health>()?.Hit(throwableDamageBoss);
+                break;
+            case ThrowableType.Vomit:
+                collision.GetComponent<Health>()?.Hit(throwableDamageVomit);
                 break;
         }
 
