@@ -15,6 +15,7 @@ public class RebelVan : MonoBehaviour
     private BlinkingSprite blinkingSprite;
     private float activationDistance;
     private float trigger = 3f;
+    public int nOfSoldiers;
     private bool hasHalfHealth = false;
 
     [Header("Time shoot")]
@@ -41,7 +42,7 @@ public class RebelVan : MonoBehaviour
 
             shotTime = shotTime + Time.deltaTime;
 
-            if (shotTime > nextFire)
+            if (shotTime > nextFire && nOfSoldiers>0)
             {
                 nextFire = shotTime + fireDelta;
 
@@ -49,6 +50,7 @@ public class RebelVan : MonoBehaviour
 
                 nextFire = nextFire - shotTime;
                 shotTime = 0.0f;
+                nOfSoldiers -= 1;
             }
         }
     }

@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4013943516126052428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6866684, y: -0.19476056, z: -5.110924}
+  m_LocalPosition: {x: 0.6866684, y: -0.19476056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4013943514409673417}
@@ -250,6 +250,7 @@ MonoBehaviour:
   soldier: {fileID: 1622775180087630572, guid: b65003e34ff0093489a5091111ee8cf7, type: 3}
   spawn: {fileID: 4013943514885784350}
   soldierSpawning: {fileID: 4013943514409673423}
+  nOfSoldiers: 0
   fireDelta: 4
 --- !u!50 &4013943516126052434
 Rigidbody2D:
