@@ -1,22 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HeliManager : MonoBehaviour
 {
-    static public int maxHeli = 5;
+    public int maxHeli = 5;
     public GameObject heliPrefab;
+    public UnityEvent triggerCamera;
 
     public static List<GameObject> heliList = new List<GameObject>();
     private float secondsWait = 0;
     private bool isSpawned;
-    static private int killedHeli;
-    static HeliManager instance;
-
-    void Awake()
-    {
-        instance = this;
-    }
+    private int killedHeli;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -41,27 +37,26 @@ public class HeliManager : MonoBehaviour
         }
     }
 
-    static public void HeliDestroy(GameObject gameObject)
+    public void HeliDestroy(GameObject heli)
     {
         killedHeli++;
-        heliList.Remove(gameObject);
+        heliList.Remove(heli);
         SetMainHeliShooter();
         CheckFinished();
     }
 
-    static public void SetMainHeliShooter()
+    public void SetMainHeliShooter()
     {
         if (heliList.Count > 0)
             SetFire(heliList[0]);
     }
 
-    private static void CheckFinished()
+    private void CheckFinished()
     {
         if (killedHeli >= maxHeli)
         {
-            CameraManager.AfterFirstHeli();
-            if (instance)
-                Destroy(instance.gameObject);
+            triggerCamera?.Invoke();
+            Destroy(gameObject);
         }
     }
 
@@ -69,11 +64,12 @@ public class HeliManager : MonoBehaviour
     {
         yield return new WaitForSeconds(secondsWait);
         GameObject heli = Instantiate(heliPrefab, transform.position, transform.rotation, transform);
+        heli.GetComponent<HeliController>().RegisterSpawner(this);
         heliList.Add(heli);
         SetMainHeliShooter();
     }
 
-    static void SetFire(GameObject heli)
+    void SetFire(GameObject heli)
     {
         heli.GetComponent<HeliController>().SetFire(true);
     }

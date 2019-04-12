@@ -24,6 +24,7 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera vcamZ2E;
     [Header("Zone 3")]
     public CinemachineVirtualCamera vcamZ3A;
+    public CinemachineVirtualCamera vcamZ3B;
 
     //public bool enableParallax = true;
 
@@ -78,6 +79,10 @@ public class CameraManager : MonoBehaviour
     public void SwitchZ2EtoZ3A()
     {
         SwitchCameras(vcamZ2E, vcamZ3A);
+    }
+    public void SwitchZ3AtoZ3B()
+    {
+        SwitchCameras(vcamZ3A, vcamZ3B);
     }
     #endregion
 
@@ -176,6 +181,12 @@ public class CameraManager : MonoBehaviour
         if (current == null)
             return;
         current.SwitchZ1EtoZ2A();
+    }
+    public static void AfterSecondHeli()
+    {
+        if (current == null)
+            return;
+        current.SwitchZ2DtoZ2E();
     }
     #endregion
 

@@ -27,8 +27,8 @@ public class HeliController : MonoBehaviour
     private float height;
     private Animator animator;
     private BlinkingSprite blinkingSprite;
+    private HeliManager spawner;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,8 +47,12 @@ public class HeliController : MonoBehaviour
         health.onDead += OnDead;
         health.onHit += OnHit;
     }
+    
+    public void RegisterSpawner(HeliManager spawner)
+    {
+        this.spawner = spawner;
+    }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (!health.IsAlive())
@@ -153,7 +157,7 @@ public class HeliController : MonoBehaviour
 
     private void OnDead(float damage)
     {
-        HeliManager.HeliDestroy(gameObject);
+        spawner?.HeliDestroy(gameObject);
         StartCoroutine(Die());
     }
 
