@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class HoleController : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    bool isTriggered;
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.CompareTag("Player"))
+        if (isTriggered)
+            return;
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            isTriggered = true;
             GetComponent<EventSpawn>().Trigger();
         }
     }

@@ -5,11 +5,10 @@ using UnityEngine;
 public class EventSpawn : MonoBehaviour
 {
     public GameObject enemyPrefab;
-        public GameObject enemyPrefabRandom0;
+    public GameObject enemyPrefabRandom0;
     public GameObject enemyPrefabRandom1;
     public GameObject enemyPrefabRandom2;
     public GameObject enemyPrefabRandom3;
-
 
     public Transform spawnPoints;
     public float spawnDelay;
