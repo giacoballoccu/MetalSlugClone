@@ -71,9 +71,15 @@ public class PauseController : MonoBehaviour
             var health = player.GetComponent<Health>();
             health.immortal = !health.immortal;
             if (health.immortal)
+            {
                 godModeText.SetText("GOD MODE ON");
+                GameManager.SetBombs(200);
+            }
             else
+            {
                 godModeText.SetText("GOD MODE OFF");
+                GameManager.SetBombs();
+            }
         }
         else
             godModeText.SetText("GOD MODE DEAD");

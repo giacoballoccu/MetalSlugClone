@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
-    int initialBombs = 200;
+    int initialBombs = 10;
     int bombs;
     int heavyMachineAmmo = 0;
     Difficulty difficulty = Difficulty.Medium;
@@ -201,10 +201,18 @@ public class GameManager : MonoBehaviour
             return;
 
         current.bombs += 10;
-        current.heavyMachineAmmo += 120;
+        //current.heavyMachineAmmo += 120;
 
         UIManager.UpdateBombsUI();
-        UIManager.UpdateAmmoUI();
+        //UIManager.UpdateAmmoUI();
+    }
+
+    public static void SetBombs(int bombs = 10)
+    {
+        if (current == null)
+            return;
+        current.bombs = bombs;
+        UIManager.UpdateBombsUI();
     }
 
     public static void RechargAmmoMG()
