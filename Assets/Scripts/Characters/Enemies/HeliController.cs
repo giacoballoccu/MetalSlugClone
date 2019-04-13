@@ -100,6 +100,7 @@ public class HeliController : MonoBehaviour
         //Vector3 speed = rb.velocity;
         if ((pos.x == 0 && !facingRight) || (pos.x == 1 && facingRight))
         {
+            //Flip heli if it's at the end of the camera
             if (!flipped)
             {
                 changeDirectionX *= -1;
@@ -109,6 +110,7 @@ public class HeliController : MonoBehaviour
         }
         else
         {
+            //Move the heli
             if (flipped && rb.position.y < height + 0.30f && facingRight)
             {
                 changeDirectionY = 1;
@@ -126,8 +128,6 @@ public class HeliController : MonoBehaviour
             rb.MovePosition(rb.position + new Vector2(changeDirectionX * speed, changeDirectionY * speed) * Time.deltaTime);
 
         }
-
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
     private void Fire()
