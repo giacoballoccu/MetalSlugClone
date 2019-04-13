@@ -61,7 +61,7 @@ public class RockController : MonoBehaviour
         animator.SetBool("isHitten", true);
         GetComponent<Rigidbody2D>().isKinematic = true;
         GetComponent<BoxCollider2D>().isTrigger = true;
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.2f); //.6f
         animator.SetBool("isHitten", false);
         Destroy(gameObject);
     }
