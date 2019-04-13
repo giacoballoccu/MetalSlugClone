@@ -68,16 +68,22 @@ TagManager:
   - name: Boat
     uniqueID: 1577918917
     locked: 0
+  - name: Effect (far)
+    uniqueID: 304863773
+    locked: 0
   - name: Enemy
     uniqueID: 3553370755
     locked: 0
   - name: Collectible
     uniqueID: 1776705675
     locked: 0
+  - name: Effect (mid)
+    uniqueID: 1703492091
+    locked: 0
   - name: Player
     uniqueID: 1090199495
     locked: 0
-  - name: Effect
+  - name: Effect (close)
     uniqueID: 223644325
     locked: 0
   - name: Foreground
