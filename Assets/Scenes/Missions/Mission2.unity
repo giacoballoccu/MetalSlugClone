@@ -5180,7 +5180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxScaleX: -11.75
-  parallaxScaleY: -22.5
+  parallaxScaleY: -26.5
   smoothing: 2
   isActive: 1
 --- !u!1001 &1312576047
