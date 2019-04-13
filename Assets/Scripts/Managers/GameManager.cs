@@ -117,6 +117,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static bool ToggleGodMode()
+    {
+        var player = GetPlayer();
+        if (player)
+        {
+            var health = player.GetComponent<Health>();
+            health.immortal = !health.immortal;
+            if (health.immortal)
+            {
+                SetBombs(200);
+                return true;
+            }
+            else
+            {
+                SetBombs();
+                return false;
+            }
+        }
+        return false;
+    }
+
     public static void AddScore(float amount)
     {
         AddScore((int)amount);
