@@ -143,24 +143,28 @@ public class ThrowableMovement : MonoBehaviour
     }
 
 
-    private void ResetMovement(Collider2D collision)
+    private void ResetMovement(Collider2D collider)
     {
+        var target = collider.gameObject;
+        if (GameManager.IsPlayer(collider))
+            target = GameManager.GetPlayer(collider);
+
         switch (throwable)
         {
             case ThrowableType.Grenade:
-                collision.GetComponent<Health>()?.Hit(throwableDamagePlayer);
+                target.GetComponent<Health>()?.Hit(throwableDamagePlayer);
                 break;
             case ThrowableType.EnemyGrenade:
-                collision.GetComponent<Health>()?.Hit(throwableDamageEnemy);
+                target.GetComponent<Health>()?.Hit(throwableDamageEnemy);
                 break;
             case ThrowableType.BossHeavyBomb:
-                collision.GetComponent<Health>()?.Hit(throwableDamageHeavybomb);
+                target.GetComponent<Health>()?.Hit(throwableDamageHeavybomb);
                 break;
             case ThrowableType.BossBomb:
-                collision.GetComponent<Health>()?.Hit(throwableDamageBoss);
+                target.GetComponent<Health>()?.Hit(throwableDamageBoss);
                 break;
             case ThrowableType.Vomit:
-                collision.GetComponent<Health>()?.Hit(throwableDamageVomit);
+                target.GetComponent<Health>()?.Hit(throwableDamageVomit);
                 break;
         }
 

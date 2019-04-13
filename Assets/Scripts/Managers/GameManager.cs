@@ -300,15 +300,25 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectWithTag("Player");
     }
 
-    public static GameObject GetPlayer(Collider2D collider)
+    public static GameObject GetPlayer(GameObject player)
     {
         if (current == null)
             return null;
-        if (collider.gameObject.GetComponent<PlayerController>()) // return itself
-            return collider.gameObject;
-        else if (collider.gameObject.transform.parent.gameObject.GetComponent<PlayerController>()) // return parent
-            return collider.gameObject.transform.parent.gameObject;
+        if (player.GetComponent<PlayerController>()) // return itself
+            return player;
+        else if (player.transform.parent.gameObject.GetComponent<PlayerController>()) // return parent
+            return player.transform.parent.gameObject;
         return GameObject.FindGameObjectWithTag("Player"); // return uncached finded by tag
+    }
+
+    public static GameObject GetPlayer(Collider2D collider)
+    {
+        return GetPlayer(collider.gameObject);
+    }
+
+    public static GameObject GetPlayer(Collision2D collision)
+    {
+        return GetPlayer(collision.collider);
     }
 
     public static GameObject GetRunningTarget() // not cached
