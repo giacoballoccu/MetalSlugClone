@@ -270,12 +270,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool IsOutsideScreen()
+    bool IsOutsideScreen(float xDirection)
     {
         //Return a value between [0;1] - 0.5 if the player is in the mid of the camera
         var playerVPPos = Camera.main.WorldToViewportPoint(transform.position);
 
         //Control if the camera is out of the sprite map
+        //float deltaDir = 0.1f;
+        //if (((playerVPPos.x < deltaDir) && xDirection < 0) || ((playerVPPos.x > 1 - deltaDir) && xDirection > 0))
         if ((playerVPPos.x < 0.03f || playerVPPos.x > 1 - 0.03f))
             return true;
         return false;
@@ -284,7 +286,7 @@ public class PlayerController : MonoBehaviour
     void MoveHorizontally()
     {
         float moveH = MobileManager.GetAxisHorizontal();
-        if (IsOutsideScreen())
+        if (IsOutsideScreen(moveH))
             return;
 
         if (moveH != 0 && !(bottomAnimator.GetBool("isCrouched") && topAnimator.GetBool("isFiring")))
