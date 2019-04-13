@@ -209,30 +209,24 @@ public class BossController : MonoBehaviour
     {
         if(collision.collider != null)
         {
-            if (collision.collider.CompareTag("Player") && collision.collider.transform.gameObject.name == "Player")
+            if (GameManager.IsPlayer(collision))
             {
                 followPlayer.GetComponent<Health>().Hit(attackDamage);
                 followPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
-
-                
             }
-
-            if (collision.collider.CompareTag("Enemy"))
+            else if (collision.collider.CompareTag("Enemy"))
             {
                 collision.collider.gameObject.GetComponent<Health>().onHit(attackDamage);
 
                 collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(2f, 0f), ForceMode2D.Impulse);
 
             }
-            
-
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.gameObject != null)
+        if (collider.gameObject != null)
         {
             if (collider.CompareTag("Walkable"))
             {
@@ -252,8 +246,6 @@ public class BossController : MonoBehaviour
 
     private IEnumerator DestroyBridge(GameObject bridge)
     {
-
-
         if (bridge)
         {
             if (bridge)

@@ -220,12 +220,10 @@ public class Boss3Controller : MonoBehaviour
         isInPositionAttack2 = true;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collider)
     {
-
         hitTime += Time.deltaTime;
-
-        if (collision.CompareTag("Player"))
+        if (GameManager.IsPlayer(collider))
         {
             if (hitTime > hitDelta)
             {

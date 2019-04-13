@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public LayerMask enemyLayer;
     public LayerMask buildingLayer;
     public LayerMask walkableLayer;
+    public LayerMask playerLayer;
 
     void Awake()
     {
@@ -310,27 +311,45 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectWithTag("RunningTarget");
     }
 
+    public static bool IsPlayer(GameObject player)
+    {
+        //return (GetPlayerLayer() & (1<<player.layer)) != 0;
+        return GetPlayerLayer() == (1<<player.layer);
+    }
+
+    public static bool IsPlayer(Collider2D collider)
+    {
+        return IsPlayer(collider.gameObject);
+    }
+
+    public static bool IsPlayer(Collision2D collision)
+    {
+        return IsPlayer(collision.collider);
+    }
+
     public static LayerMask GetEnemyLayer()
     {
-        //If there is no current Game Manager, exit
         if (current == null)
-            return 0;
-
+            return LayerMask.NameToLayer("Enemy");
         return current.enemyLayer;
     }
 
     public static LayerMask GetWalkableLayer()
     {
-        //If there is no current Game Manager, exit
         if (current == null)
-            return 0;
-
+            return LayerMask.NameToLayer("Walkable");
         return current.walkableLayer;
+    }
+
+    public static int GetPlayerLayer()
+    {
+        if (current == null)
+            return LayerMask.NameToLayer("Player");
+        return current.playerLayer.value;
     }
 
     public static LayerMask GetDestructibleLayer()
     {
-        //If there is no current Game Manager, exit
         if (current == null)
             return 0;
 
@@ -339,7 +358,6 @@ public class GameManager : MonoBehaviour
 
     public static bool CanTriggerThrowable(string tag)
     {
-        //If there is no current Game Manager, exit
         if (current == null)
             return false;
 
