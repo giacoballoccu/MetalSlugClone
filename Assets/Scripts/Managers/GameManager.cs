@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     float totalGameTime;                        //Length of the total game time
     bool isGameOver;                            //Is the game currently over?
     int score = 0;
-    int bombs = 200;
+    int initialBombs = 200;
+    int bombs;
     int heavyMachineAmmo = 0;
     Difficulty difficulty = Difficulty.Medium;
     float bgmAudio = 1f;
@@ -58,6 +59,8 @@ public class GameManager : MonoBehaviour
         LoadSettings();
         LoadRecords();
         SaveRecords();
+
+        GameReset();
     }
 
     void Update()
@@ -480,10 +483,16 @@ public class GameManager : MonoBehaviour
     {
         if (!current)
             return;
+        // reset values
         Time.timeScale = 1;
         current.isGameOver = false;
         current.score = 0;
         current.totalGameTime = 0;
+        current.bombs = current.initialBombs;
+        // refresh if mission directly started from editor
+        UIManager.UpdateBombsUI();
+        UIManager.UpdateAmmoUI();
+        UIManager.UpdateScoreUI();
     }
 
     public static void PauseExit()
@@ -495,15 +504,13 @@ public class GameManager : MonoBehaviour
 
     public static void LoadHome()
     {
-        SceneManager.LoadScene((int)Missions.Home);
-        GameReset();
+        LoadScene((int)Missions.Home);
     }
 
     public static void LoadNextMission()
     {
         // currentMission is updated in the PlayerWin method
-        SceneManager.LoadScene((int)current.currentMission);
-        GameReset();
+        LoadScene((int)current.currentMission);
     }
 
     public static bool CanTriggerEnemyBombs(string tag)
@@ -525,5 +532,12 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(7f);
         LoadNextMission();
+    }
+
+    public static void LoadScene(int id, bool skipReset = false)
+    {
+        if (skipReset)
+            GameReset();
+        SceneManager.LoadScene(id);
     }
 }

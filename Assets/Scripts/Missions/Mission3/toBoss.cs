@@ -9,7 +9,7 @@ public class toBoss : MonoBehaviour
     {
         if (GameManager.IsPlayer(collision))
         {
-            SceneManager.LoadScene(4);
+            GameManager.LoadScene((int)GameManager.Missions.Mission3Boss, true);
         }
     }
 }

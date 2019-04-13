@@ -180,7 +180,7 @@ public class MenuManager : MonoBehaviour
 
     public void startMission()
     {
-        SceneManager.LoadScene(GetMissionIndex() + 1);
+        GameManager.LoadScene(GetMissionIndex() + 1);
     }
     /* End mission mode selection */
 
