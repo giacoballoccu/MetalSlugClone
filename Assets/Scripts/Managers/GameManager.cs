@@ -536,7 +536,7 @@ public class GameManager : MonoBehaviour
 
     public static void LoadScene(int id, bool skipReset = false)
     {
-        if (skipReset)
+        if (!skipReset)
             GameReset();
         SceneManager.LoadScene(id);
     }

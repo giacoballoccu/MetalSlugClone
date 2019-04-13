@@ -13,6 +13,7 @@ public class PauseController : MonoBehaviour
     public TextMeshProUGUI sfxText;
     public TextMeshProUGUI bgmTextCounter;
     public TextMeshProUGUI sfxTextCounter;
+    public TextMeshProUGUI godModeText;
 
     private void Start()
     {
@@ -60,6 +61,22 @@ public class PauseController : MonoBehaviour
 
         AudioManager.RefreshAudioVolume();
         RefreshAudioText();
+    }
+
+    public void ToggleGodMode()
+    {
+        var player = GameManager.GetPlayer();
+        if (player)
+        {
+            var health = player.GetComponent<Health>();
+            health.immortal = !health.immortal;
+            if (health.immortal)
+                godModeText.SetText("GOD MODE ON");
+            else
+                godModeText.SetText("GOD MODE OFF");
+        }
+        else
+            godModeText.SetText("GOD MODE DEAD");
     }
 
     public void SetSfxCounterPressed()
