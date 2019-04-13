@@ -295,11 +295,20 @@ public class GameManager : MonoBehaviour
 
     public static GameObject GetPlayer() // not cached
     {
-        //If there is no current Game Manager, exit
         if (current == null)
             return null;
-
         return GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public static GameObject GetPlayer(Collider2D collider)
+    {
+        if (current == null)
+            return null;
+        if (collider.gameObject.GetComponent<PlayerController>()) // return itself
+            return collider.gameObject;
+        else if (collider.gameObject.transform.parent.gameObject.GetComponent<PlayerController>()) // return parent
+            return collider.gameObject.transform.parent.gameObject;
+        return GameObject.FindGameObjectWithTag("Player"); // return uncached finded by tag
     }
 
     public static GameObject GetRunningTarget() // not cached
@@ -356,12 +365,12 @@ public class GameManager : MonoBehaviour
         return GetEnemyLayer() + GetBuildingLayer();
     }
 
-    public static bool CanTriggerThrowable(string tag)
+    public static bool CanTriggerThrowable(Collider2D collider)
     {
         if (current == null)
             return false;
-
-        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || tag == "Player" || tag == "Roof" || tag == "Bridge" || tag == "EnemyBomb";
+        var tag = collider.tag;
+        return tag == "Enemy" || tag == "Building" || tag == "Walkable" || IsPlayer(collider) || tag == "Roof" || tag == "Bridge" || tag == "EnemyBomb";
     }
 
     public void SetDifficultyMode(int difficulty)

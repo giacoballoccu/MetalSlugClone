@@ -106,7 +106,7 @@ public class ThrowableMovement : MonoBehaviour
         if (hasHit)
             return;
 
-        if (GameManager.CanTriggerThrowable(collider.tag) && !(launcher == LauncherType.Player && GameManager.IsPlayer(collider)) && !(launcher == LauncherType.Enemy && (collider.CompareTag("Enemy")|| collider.CompareTag("EnemyBomb"))))
+        if (GameManager.CanTriggerThrowable(collider) && !(launcher == LauncherType.Player && GameManager.IsPlayer(collider)) && !(launcher == LauncherType.Enemy && (collider.CompareTag("Enemy")|| collider.CompareTag("EnemyBomb"))))
         {
             hasHit = true;
 
@@ -114,7 +114,7 @@ public class ThrowableMovement : MonoBehaviour
             {
                 if (throwable == ThrowableType.BossHeavyBomb)
                 {
-                    if (collider.tag == "Walkable")
+                    if (collider.CompareTag("Walkable"))
                     {
                         GameObject hittenTerrain = collider.gameObject;
                         StartCoroutine(DestroyHitten(hittenTerrain));

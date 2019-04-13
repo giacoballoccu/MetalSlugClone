@@ -69,10 +69,10 @@ public class BulletMovement : MonoBehaviour
     {
         if ((launcher != LauncherType.Enemy && (collider.CompareTag("Enemy")) || collider.CompareTag("EnemyBomb")) || (GameManager.IsPlayer(collider) && launcher != LauncherType.Player) || collider.CompareTag("Building") || collider.CompareTag("Roof"))
         {
-            if (collider.gameObject.GetComponent<Health>())
-            {
-                collider.gameObject.GetComponent<Health>().Hit(damageShot);
-            }
+            if (GameManager.IsPlayer(collider))
+                GameManager.GetPlayer(collider).GetComponent<Health>()?.Hit(damageShot);
+            else
+                collider.gameObject.GetComponent<Health>()?.Hit(damageShot);
 
             AudioManager.PlayShotHitAudio();
             Despawn();
