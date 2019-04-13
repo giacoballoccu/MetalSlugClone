@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Effects")]
     public AudioClip normalShotClip;
+    public AudioClip heavyMachineShotClip;
     public AudioClip shotHitClip;
     public AudioClip grenadeHitClip;
     public AudioClip meleeHitClip;
@@ -187,8 +188,26 @@ public class AudioManager : MonoBehaviour
             return;
 
         //Set the clip for music audio, and then tell it to play
-        current.playerSource.clip = current.normalShotClip;
-        current.playerSource.Play();
+        source.clip = clip;
+        source.Play();
+    }
+
+    public static void PlayHeavyMachineShotAudio()
+    {
+        //If there is no current AudioManager, exit
+        if (current == null)
+            return;
+
+        AudioClip clip = current.heavyMachineShotClip;
+        AudioSource source = current.playerSource;
+
+        //Don't overshadow the other sounds
+        if (IsPlayingOtherAudio(clip, source))
+            return;
+
+        //Set the clip for music audio, and then tell it to play
+        source.clip = clip;
+        source.Play();
     }
 
     public static void PlayEnemyAttackAudio(AudioClip attackClip)

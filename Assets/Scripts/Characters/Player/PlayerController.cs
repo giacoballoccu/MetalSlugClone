@@ -162,7 +162,6 @@ public class PlayerController : MonoBehaviour
 
                     if (shotTime > nextFire)
                     {
-                        AudioManager.PlayNormalShotAudio();
                         nextFire = shotTime + fireDelta;
 
                         StartCoroutine(WaitFire());
@@ -537,7 +536,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.1f); //Da il tempo all'animazione di fare il primo frame
         if (haveMachineGun)
         {
-            BulletManager.GetHeavyMachineBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
+            AudioManager.PlayHeavyMachineShotAudio();
+            BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
             yield return new WaitForSeconds(0.05f);
             BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
             yield return new WaitForSeconds(0.05f);
@@ -546,6 +546,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            AudioManager.PlayNormalShotAudio();
             BulletManager.GetNormalBulletPool().Spawn(projSpawner.transform.position, projSpawner.transform.rotation);
         }
         
