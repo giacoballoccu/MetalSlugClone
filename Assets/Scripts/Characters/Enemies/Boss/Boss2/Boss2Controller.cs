@@ -49,12 +49,6 @@ public class Boss2Controller : MonoBehaviour
         {
             if (health.IsAlive())
             {
-
-                /*Check health*/
-                if (health.GetHealth() <= maxHealth / 2)
-                {
-                    HalfHealth();
-                }
                 shotTime = shotTime + Time.deltaTime;
 
                 if (shotTime > nextFire)
@@ -111,6 +105,14 @@ public class Boss2Controller : MonoBehaviour
     {
         GameManager.AddScore(damage);
         top.GetComponent<BlinkingSprite>().Play();
+
+        // fasten if dying
+        if (health.GetHealth() <= maxHealth / 4)
+            chargingTime = .5f;
+        else if (health.GetHealth() <= maxHealth / 3)
+            chargingTime = .75f;
+        else if (health.GetHealth() <= maxHealth / 2)
+            chargingTime = 1f;
     }
 
     private void OnDead(float damage)
