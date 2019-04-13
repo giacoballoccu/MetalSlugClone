@@ -37,7 +37,7 @@ public class VanBombMovement : MonoBehaviour
                 {
                     if (GameManager.IsPlayer(collider))
                     {
-                        collider.GetComponent<Health>().Hit(damageBomb);
+                        GameManager.GetPlayer().GetComponent<Health>().Hit(damageBomb);
                     }
                 }
                 this.enabled = false;
