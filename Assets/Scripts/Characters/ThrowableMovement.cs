@@ -106,7 +106,7 @@ public class ThrowableMovement : MonoBehaviour
         if (hasHit)
             return;
 
-        if (GameManager.CanTriggerThrowable(collision.tag) && !(collision.tag == "Player" && launcher == LauncherType.Player) && !(collision.tag == "Enemy" && launcher == LauncherType.Enemy))
+        if (GameManager.CanTriggerThrowable(collision.tag) && !(launcher == LauncherType.Player && collision.CompareTag("Player")) && !(launcher == LauncherType.Enemy && (collision.CompareTag("Enemy")|| collision.CompareTag("EnemyBomb"))))
         {
             hasHit = true;
 

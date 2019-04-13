@@ -67,7 +67,7 @@ public class BulletMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.CompareTag("Enemy") && launcher != LauncherType.Enemy) || (collision.CompareTag("Player") && launcher != LauncherType.Player) || collision.CompareTag("Building") || collision.CompareTag("Roof"))
+        if ((launcher != LauncherType.Enemy && (collision.CompareTag("Enemy")) || collision.CompareTag("EnemyBomb")) || (collision.CompareTag("Player") && launcher != LauncherType.Player) || collision.CompareTag("Building") || collision.CompareTag("Roof"))
         {
             if (collision.gameObject.GetComponent<Health>())
             {
