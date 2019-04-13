@@ -9,7 +9,7 @@ public class RockController : MonoBehaviour
     private float damage = 15f;
     private float animationTime;
     private bool isFallingOnGround;
-    private int bulletHits = 8;
+    private int bulletHits = 5;
     public BoxCollider2D bodyCollider;
 
     void Start()

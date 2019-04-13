@@ -14,14 +14,15 @@ public class Boss2Controller : MonoBehaviour
 
 
     [Header("Scene Informations")]
-    private float sceneBorderLF = -1.4f;
-    private float sceneBorderRG = 1.4f;
+    //private float sceneBorderLF = -1.4f;
+    //private float sceneBorderRG = 1.4f;
     private float fixedYRocks = 2.5f;
 
     [Header("Throwable")]
     public GameObject throwableObj;
     public GameObject throwableIndicator;
     public GameObject projSpawner;
+    Transform playerTransform;
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
@@ -37,7 +38,7 @@ public class Boss2Controller : MonoBehaviour
         topAnimator = top.GetComponent<Animator>();
         registerHealth();
         maxHealth = health.GetMaxHealth();
-        //Debug.Log(projSpawner.transform.position);
+        playerTransform = GameManager.GetPlayer().transform;
     }
 
     // Update is called once per frame
@@ -72,19 +73,23 @@ public class Boss2Controller : MonoBehaviour
     private IEnumerator Fire()
     {
         //Debug.Log(projSpawner.transform.position);
-        Vector3 initialPosition = projSpawner.transform.position;
-        float randomX = Random.Range(sceneBorderLF, sceneBorderRG);
-        projSpawner.transform.position = new Vector3(projSpawner.transform.position.x + randomX, projSpawner.transform.position.y);
+        //Vector3 initialPosition = projSpawner.transform.position;
+        //float randomX = Random.Range(sceneBorderLF, sceneBorderRG);
+        //projSpawner.transform.position = new Vector3(playerTransform.position.x + randomX, projSpawner.transform.position.y);
+        Vector3 rayPos = new Vector2(playerTransform.position.x, projSpawner.transform.position.y);
         //Debug.Log(projSpawner.transform.position);
-        Instantiate(throwableIndicator, projSpawner.transform.position, projSpawner.transform.rotation);
+        Instantiate(throwableIndicator, rayPos, projSpawner.transform.rotation);
+
         if (rayClip)
             AudioManager.PlayEnemyAttackAudio(rayClip);
         yield return new WaitForSeconds(chargingTime);
-       // Debug.Log(projSpawner.transform.position);
-        projSpawner.transform.position = new Vector3(projSpawner.transform.position.x, projSpawner.transform.position.y + fixedYRocks);
-        Instantiate(throwableObj, projSpawner.transform.position, projSpawner.transform.rotation);
+
+        //Debug.Log(projSpawner.transform.position);
+        Vector3 rockPos = new Vector2(rayPos.x, projSpawner.transform.position.y + fixedYRocks);
+        Instantiate(throwableObj, rockPos, projSpawner.transform.rotation);
+
         topAnimator.SetBool("isAttacking", false);
-        projSpawner.transform.position = initialPosition;
+        //projSpawner.transform.position = initialPosition;
     }
 
     public void activeBoss()
