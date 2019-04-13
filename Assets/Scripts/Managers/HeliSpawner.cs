@@ -30,7 +30,7 @@ public class HeliSpawner : MonoBehaviour
 
     private void CheckAndSpawn(Collider2D collider)
     {
-        if (!isSpawned && collider.CompareTag("Player"))
+        if (!isSpawned && GameManager.IsPlayer(collider))
         {
             isSpawned = true;
             Initialize();

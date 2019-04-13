@@ -65,13 +65,13 @@ public class BulletMovement : MonoBehaviour
         Despawn();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if ((launcher != LauncherType.Enemy && (collision.CompareTag("Enemy")) || collision.CompareTag("EnemyBomb")) || (collision.CompareTag("Player") && launcher != LauncherType.Player) || collision.CompareTag("Building") || collision.CompareTag("Roof"))
+        if ((launcher != LauncherType.Enemy && (collider.CompareTag("Enemy")) || collider.CompareTag("EnemyBomb")) || (GameManager.IsPlayer(collider) && launcher != LauncherType.Player) || collider.CompareTag("Building") || collider.CompareTag("Roof"))
         {
-            if (collision.gameObject.GetComponent<Health>())
+            if (collider.gameObject.GetComponent<Health>())
             {
-                collision.gameObject.GetComponent<Health>().Hit(damageShot);
+                collider.gameObject.GetComponent<Health>().Hit(damageShot);
             }
 
             AudioManager.PlayShotHitAudio();

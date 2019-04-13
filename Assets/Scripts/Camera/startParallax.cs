@@ -6,9 +6,9 @@ public class startParallax : MonoBehaviour
 {
     public Parallaxing parallax;
 
-    private void OnTriggerEnter2D(Collider2D c)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (c.CompareTag("Player"))
+        if (GameManager.IsPlayer(collider))
         {
             parallax.setActive(true);
         }

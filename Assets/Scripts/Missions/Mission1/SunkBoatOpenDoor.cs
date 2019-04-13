@@ -7,12 +7,12 @@ public class SunkBoatOpenDoor : MonoBehaviour
     public GameObject sunkBoat;
     private bool isDone;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         if (isDone)
             return;
 
-        if (collision.CompareTag("Player"))
+        if (GameManager.IsPlayer(collider))
         {
             isDone = true;
             sunkBoat.GetComponent<SunkBoatController>().OpenDoor();

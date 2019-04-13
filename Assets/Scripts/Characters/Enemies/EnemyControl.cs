@@ -252,7 +252,7 @@ public class EnemyControl : MonoBehaviour
             collidingDown = true;
         }
 
-        if (collision.collider.CompareTag("Player"))
+        if (GameManager.IsPlayer(collision))
         {
             switch(Random.Range(0, 1))
             {

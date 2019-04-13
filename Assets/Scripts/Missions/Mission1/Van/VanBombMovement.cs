@@ -17,38 +17,33 @@ public class VanBombMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        StartCoroutine(Explosion(collision));
+        StartCoroutine(Explosion(collider));
     }
 
-    private IEnumerator Explosion(Collider2D collision)
+    private IEnumerator Explosion(Collider2D collider)
     {
         if (rb != null)
         {
-            if (collision.tag == "Player" || collision.tag == "Marco Boat" || collision.tag == "Granate" || collision.tag == "Bullet")
+            if (GameManager.IsPlayer(collider) || collider.tag == "Marco Boat" || collider.tag == "Granate" || collider.tag == "Bullet")
             {
                 vanBombAnimator.SetBool("hasHittenSth", true);
                 {
-                    if (collision.CompareTag("Player"))
+                    if (GameManager.IsPlayer(collider))
                     {
-                        collision.GetComponent<Health>().Hit(damageBomb);
+                        collider.GetComponent<Health>().Hit(damageBomb);
                     }
                 }
-               this.enabled = false;
+                this.enabled = false;
                 Destroy(rb);
                 yield return new WaitForSeconds(1.3f);
+
                 vanBombAnimator.SetBool("hasHittenSth", false);
                 Destroy(gameObject);
             }

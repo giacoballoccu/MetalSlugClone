@@ -11,17 +11,17 @@ public class WaterController : MonoBehaviour
         waterController.SetBool("isInWater", false);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (GameManager.IsPlayer(collider))
         {
             waterController.SetBool("isInWater", true);
         }
     }
 
-    void OnTriggerExit2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (GameManager.IsPlayer(collider))
         {
             waterController.SetBool("isInWater", false);
         }

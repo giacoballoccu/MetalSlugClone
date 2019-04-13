@@ -9,7 +9,7 @@ public class CollectibleController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (GameManager.IsPlayer(collision))
         {
             collision.collider.GetComponent<PlayerController>().getCollectible(type);
             GameManager.AddScore(collectiblePoints);
