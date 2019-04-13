@@ -95,6 +95,7 @@ public class Boss2Controller : MonoBehaviour
     public void activeBoss()
     {
         isBossActive = true;
+        health.immortal = false;
         AudioManager.StartBossAudio();
     }
 
@@ -104,6 +105,8 @@ public class Boss2Controller : MonoBehaviour
         // register health delegate
         health.onDead += OnDead;
         health.onHit += OnHit;
+        // immortal until activeBoss
+        health.immortal = true;
     }
 
     private void OnHit(float damage)

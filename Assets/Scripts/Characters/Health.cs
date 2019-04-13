@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100;
     public float health;
+    public bool immortal;
     private bool isPlayer;
 
     public delegate void OnDamageEvent(float damage);    public OnDamageEvent onHit;    public OnDamageEvent onDead;
@@ -50,7 +51,7 @@ public class Health : MonoBehaviour
 
     public void Hit(float damage)
     {
-        if (!IsAlive() || GameManager.IsGameOver()) // skip already dead or gameover
+        if (!IsAlive() || GameManager.IsGameOver() || immortal) // skip already dead or gameover
             return;
 
         if (isPlayer) // only if player
