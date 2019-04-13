@@ -11,6 +11,7 @@ public class RockController : MonoBehaviour
     private bool isFallingOnGround;
     private int bulletHits = 5;
     public BoxCollider2D bodyCollider;
+    private float colliderFallingFactor = 0.3f;
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class RockController : MonoBehaviour
     {
         if (isFallingOnGround)
         {
-            //bodyCollider.gameObject.transform.Translate(Vector3.down * Time.deltaTime);
+            bodyCollider.offset = new Vector2(bodyCollider.offset.x, bodyCollider.offset.y - colliderFallingFactor * Time.deltaTime);
         }
     }
 

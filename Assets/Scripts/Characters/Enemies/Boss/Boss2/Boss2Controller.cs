@@ -12,10 +12,7 @@ public class Boss2Controller : MonoBehaviour
     public Animator topAnimator;
     public Animator bottomAnimator;
 
-
     [Header("Scene Informations")]
-    //private float sceneBorderLF = -1.4f;
-    //private float sceneBorderRG = 1.4f;
     private float fixedYRocks = 2.5f;
 
     [Header("Throwable")]
@@ -41,11 +38,11 @@ public class Boss2Controller : MonoBehaviour
         playerTransform = GameManager.GetPlayer().transform;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (GameManager.IsGameOver())
             return;
+
         if (isBossActive)
         {
             if (health.IsAlive())
@@ -61,14 +58,10 @@ public class Boss2Controller : MonoBehaviour
 
                     nextFire = nextFire - shotTime;
                     shotTime = 0.0f;
-
                 }
-
             }
-            }
-        
-           
         }
+    }
 
     private IEnumerator Fire()
     {
