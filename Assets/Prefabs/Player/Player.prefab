@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
+  immortal: 0
 --- !u!1 &1765443406516593716
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +366,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765443406731774338}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -395,7 +396,7 @@ GameObject:
   - component: {fileID: 1765443407276444450}
   - component: {fileID: 1765443407276444451}
   - component: {fileID: 1765443407276444448}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WaterStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1765443407358117544}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6470835912323107747}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: GranadeSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
