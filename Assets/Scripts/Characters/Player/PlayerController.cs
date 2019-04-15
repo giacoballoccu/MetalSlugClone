@@ -277,7 +277,7 @@ public class PlayerController : MonoBehaviour
         //Return a value between [0;1] - 0.5 if the player is in the mid of the camera
         var playerVPPos = Camera.main.WorldToViewportPoint(transform.position);
 
-        //Prevent back-walk when camera is blending
+        //Prevent walking back when camera is blending
         if (moveH < -Mathf.Epsilon && cinemachineBrain.IsBlending)
             return true;
 
