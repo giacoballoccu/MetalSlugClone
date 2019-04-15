@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     private bool asObjUp = false;
 
     public GameObject foreground;
+    Cinemachine.CinemachineBrain cinemachineBrain;
 
     public enum CollectibleType
     {
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bottomAnimator = bottom.GetComponent<Animator>();
+        cinemachineBrain = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
         registerHealth();
     }
 
@@ -270,10 +272,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool IsOutsideScreen()
+    bool IsOutsideScreen(float moveH)
     {
         //Return a value between [0;1] - 0.5 if the player is in the mid of the camera
         var playerVPPos = Camera.main.WorldToViewportPoint(transform.position);
+
+        //Prevent back-walk when camera is blending
+        if (moveH < -Mathf.Epsilon && cinemachineBrain.IsBlending)
+            return true;
 
         //Control if the camera is out of the sprite map
         if ((playerVPPos.x < 0.03f || playerVPPos.x > 1 - 0.03f))
@@ -284,7 +290,7 @@ public class PlayerController : MonoBehaviour
     void MoveHorizontally()
     {
         float moveH = MobileManager.GetAxisHorizontal();
-        if (IsOutsideScreen())
+        if (IsOutsideScreen(moveH))
             return;
 
         if (moveH != 0 && !(bottomAnimator.GetBool("isCrouched") && topAnimator.GetBool("isFiring")))
